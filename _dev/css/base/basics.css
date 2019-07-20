@@ -1,0 +1,145 @@
+button, .button, .ssba a, button  {
+ cursor: pointer;
+ font-weight: normal;
+ line-height: normal;
+ margin: 0 0 1.25rem;
+ position: relative;
+ text-decoration: none;
+ text-align: center;
+ -webkit-appearance: none;
+ -webkit-border-radius: 0;
+ display: inline-block;
+ padding:1rem 2rem 1.0625rem 2rem;
+ font-size: 1rem;
+ border-color: transparent;
+ color: white;
+ transition: background-color 300ms ease-out;
+ border-bottom-width:0;
+ background-color: $fsred;
+ &:hover, &:active {
+  background-color: $fsred-dark;
+ }
+}
+
+* {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+*:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+html {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+
+body {
+ font-family: $fontfam1;
+ font-size: $fontsize1;
+ line-height: 1.42857143;
+ color: #333;
+}
+body.home {background-color:#fff;}
+input, button, select, textarea, .ssba a {
+ font-family: inherit;
+ font-size: inherit;
+ line-height: inherit;
+ color:#444;
+}
+
+a {
+ color: #bf0019;text-decoration: none;
+}
+a:hover, a:focus {color: #9a0000;text-decoration: none;}
+a:focus {outline: thin dotted;outline: 5px auto -webkit-focus-ring-color;outline-offset: -2px;}
+
+figure {margin:0;}
+
+#wpadminbar {
+ margin-top:-1.5rem;
+ opacity:0.1!important;
+ &:hover {
+  margin-top: 0;
+  opacity:1!important;
+ }
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+ font-family: $fontfam1;
+ font-weight: 400;
+ line-height: 1.1;
+ color: inherit;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+ font-weight: normal;
+ line-height: 1;
+ color: #777;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+ margin-top: 20px;
+ margin-bottom: 0.75em;
+}
+.home h2 {
+ @mixin atSm {
+  margin-top: 1rem;
+ }
+ @mixin atSmmd {
+ }
+ @mixin atLg {
+  margin-top: 20px;
+ }
+}
+
+.singleresult h1 {
+ margin-top: 0;
+}
+
+h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
+ font-size: 65%;
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small {
+ font-size: 75%;
+}
+
+h1, .h1 { font-size: 28px; }
+h2, .h2 { font-size: 24px; }
+h3, .h3 { font-size: 1.5em; }
+h4, .h4 { font-size: 1.33rem; }
+h5, .h5 { font-size: 14px; }
+h6, .h6 { font-size: 12px; }
+
+p { margin: 0 0 .875rem; }
+.mobiletest {
+ width:0;
+ height:0;
+ position:fixed;
+ top:-1rem;
+ left:-1rem;
+ display:none;
+}
+@mixin atMd {
+ .mobiletest {display:block;}
+
+}
+p + h4, p + h5 {
+ margin-top: 1.5rem;
+}
+h2,h3,h4,h5 {
+ font-weight:600;
+ .entry-content & a {
+  text-decoration:underline;
+  &:not(button) {
+   text-decoration: none;
+   padding-bottom:1px;
+   border-bottom:1px solid $fsred-transparent;
+  }
+  &:hover, &:focus {
+   border-bottom:1px solid $fsred;
+  }
+ }
+}
+
+.entry-content > hr:first-child {display:none!important;}

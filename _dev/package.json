@@ -1,0 +1,74 @@
+{
+ "name": "dev_base",
+ "version": "1.0.0",
+ "description": "dev_base",
+ "main": "index.js",
+ "scripts": {
+  "build:css": "postcss src/app.css -o build/app.css",
+  "build": "npm run build:css"
+ },
+ "author": "",
+ "license": "ISC",
+ "devDependencies": {
+  "@babel/core": "7.3.4",
+  "@babel/preset-env": "7.3.4",
+  "@wordpress/browserslist-config": "^2.3.0",
+  "ajv": "^6.10.0",
+  "async": "^3.1.0",
+  "autoprefixer": "^9.6.1",
+  "babel-loader": "^8.0.5",
+  "browser-sync": "^2.26.3",
+  "browserslist": "^4.5.0",
+  "connect": "^3.7.0",
+  "fs": "0.0.1-security",
+  "gulp": "3.9.1",
+  "gulp-deploy-ftp": "^1.0.1",
+  "gulp-postcss": "^8.0.0",
+  "gulp-sass": "^4.0.2",
+  "gulp-sftp": "^0.1.5",
+  "gulp-sourcemaps": "^2.6.5",
+  "gulp-util": "^3.0.8",
+  "jsftp": "^2.1.3",
+  "object-assign": "^4.1.1",
+  "open-in-editor": "^2.2.0",
+  "open-in-editor-connect": "^1.0.0",
+  "parents": "^1.0.1",
+  "postcss-atroot": "^0.1.3",
+  "postcss-cli": "^6.1.3",
+  "postcss-color-function": "4.0.1",
+  "postcss-extend": "^1.0.5",
+  "postcss-hexrgba": "1.0.0",
+  "postcss-import": "^12.0.1",
+  "postcss-map": "^0.9.0",
+  "postcss-math": "0.0.10",
+  "postcss-mixins": "6.2.0",
+  "postcss-nested": "^3.0.0",
+  "postcss-simple-vars": "4.1.0",
+  "ssh2": "^0.8.5",
+  "through2": "^3.0.1",
+  "webpack": "^4.29.6"
+ },
+ "dependencies": {
+  "gulp-message": "^1.0.4",
+  "include-media": "^1.4.9",
+  "jquery": "3.3.1",
+  "normalize.css": "8.0.1",
+  "parsleyjs": "^2.8.1",
+  "postcss-colour-functions": "^1.5.2",
+  "slick-carousel": "1.8.1"
+ },
+ "browserslist": [
+  "last 1 version",
+  "> 1%",
+  "maintained node versions",
+  "not dead",
+  "Android >= 4",
+  "Firefox >= 20",
+  "iOS >= 8"
+ ],
+ "postcss": {
+  "plugins": {
+   "autoprefixer": {}
+  }
+ }
+}

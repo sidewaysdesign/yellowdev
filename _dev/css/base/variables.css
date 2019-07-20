@@ -1,0 +1,76 @@
+$red: #f60000;
+$blue: #569BF8;
+$darkblue: #2b6bc1;
+$green: #218d49;
+$warning: #EA0210;
+$redTransparent: rgba(207,31,37,0.6);
+
+$fsred-light: #d03b3f;
+$fsred: #CF1F25;
+$fsred-transparent: rgba(207,31,37,0.4);
+$black-transparent: rgba(0,0,0,0.7);
+$black-transparent2: rgba(0,0,0,0.88);
+$fsred-dark:#9a0000;
+$grey: #656565;
+$fog: #cccccc;
+$mist: #e9e9e9;
+$vapor: #f8f8f8;
+$air: #fafafa;
+$cloud: #aaaaaa;
+$silver: #afafaf;
+$charcoal: #484849;
+$lightcharcoal: #77787B;
+
+$transtime0: 0.125s;
+$transtime: 0.25s;
+$transtime2: 0.5s;
+
+$softBorder: 1px solid rgba($grey,0.25);
+
+$fontfam1: 'Sofia Pro Soft', Helvetica, Arial, sans-serif;
+$fontfam2: 'Sofia Pro Soft', Helvetica, Arial, sans-serif;
+$fontfam3: 'Sofia Pro Soft', Helvetica, Arial, sans-serif;
+
+$bodycopylineheight: 1.5;
+
+$contentmaxwidth: 75rem;
+
+$gridgap-tn: 0.5rem;
+$gridgap-smmd: 1rem;
+$gridgap-md: 0.875rem;
+$gridgap: 1rem;
+
+
+$fontsize0: 0.92rem;
+$fontsize1: 1rem;
+$fontsize2: 1.125rem;
+$fontsize3: 1.25rem;
+$fontsize4: 1.625rem;
+$fontsize5: 1.875rem;
+$fontsize6: 2.5rem;
+
+$boxshadow: 2px 2px 12px rgba(0,0,0,0.2);
+$smallFont:0.85rem;
+
+$buttonborderradius-tn: 0.75rem;
+$buttonborderradius: 1.125rem;
+$buttonborderradius-small: resolve($buttonborderradius * .75);
+$buttonsize:2.25rem;
+
+
+.white { color: white; }
+.white-bg { background-color: white; }
+.silver { color: $silver; }
+.silver { background-color: $silver; }
+.grey { color: $grey; }
+.grey { background-color: $grey; }
+.black { color: black; }
+.black-bg { background-color: black; }
+
+/* $breakpoints: ( tn: 31.5em, tnsm:416px, sm: 480px, smmd: 600px, lgminh: 720px, md: 768px, mdlg: 900px, mdmdlg: 992px, lg: 1024px, lgxl:1056px, xl: 1200px xxl: 1320px ); */
+$breakpoints: ( tn: 31.5em, tnsm:26em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 48em, mdlg: 56.25em, mdmdlg: 62em, lg: 64em, lgxl:66em, xl: 72em, xxl: 85em );
+
+ $marginSize: 1rem;
+ $marginSize-sm: 1.5rem;
+ $marginSize-md: 3rem;
+ $marginSize-lg: 8rem;

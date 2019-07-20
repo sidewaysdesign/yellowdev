@@ -1,0 +1,385 @@
+/*
+Theme Name: FSN
+Author: Us Communications
+Version: 1.0
+*/
+
+/* 3rd party packages */
+
+/* SASS and Global'ish Stuff */
+
+/* @import "../../css/app"; */
+
+.white { color: white; }
+
+.white-bg { background-color: white; }
+
+.silver { color: #afafaf; }
+
+.silver { background-color: #afafaf; }
+
+.grey { color: #656565; }
+
+.grey { background-color: #656565; }
+
+.black { color: black; }
+
+.black-bg { background-color: black; }
+
+/* $breakpoints: ( tn: 31.5em, tnsm:416px, sm: 480px, smmd: 600px, lgminh: 720px, md: 768px, mdlg: 900px, mdmdlg: 992px, lg: 1024px, lgxl:1056px, xl: 1200px xxl: 1320px ); */
+
+/* px */
+
+/* px */
+
+/* @define-mixin atSm { @media (min-width: 30rem) { @mixin-content; }}  /* px */
+
+/* px */
+
+/* @define-mixin atSmmd { @media (min-width: 37.5rem) { @mixin-content; }}  /* px */
+
+/* px */
+
+/* px */
+
+/* @define-mixin atMd { @media (min-width: 48rem) { @mixin-content; }}  /* px */
+
+/* px */
+
+/* @define-mixin atMdlg { @media (min-width: 56.25rem) { @mixin-content; }}  /* px */
+
+/* px */
+
+/* @define-mixin atMdmdlg { @media (min-width: 62rem) { @mixin-content; }}  /* px */
+
+/* px */
+
+/* @define-mixin atLg { @media (min-width: 64rem) { @mixin-content; }}  /* 1024px */
+
+/* 1024px */
+
+/* @define-mixin atLgxl { @media (min-width: 66rem) { @mixin-content; }}  /* 1056px */
+
+/* 1056px */
+
+/* @define-mixin atXl { @media (min-width: 75rem) { @mixin-content; }}  /* 1200px */
+
+/* 1200px */
+
+/* 1360px */
+
+/* px */
+
+/* px */
+
+/* px */
+
+/* px */
+
+/* px */
+
+/* px */
+
+/* px */
+
+/* px */
+
+/* 1024px */
+
+/* 1056px */
+
+/* 1200px */
+
+/* 1360px */
+
+/* @define-mixin uptoSm { @media (max-width: 29.9rem) { @mixin-content; }}  /* px */
+
+/* @define-mixin uptoSm { @media (max-width: 29.9rem) { @mixin-content; }}  /* px */
+
+/* px */
+
+/* @define-mixin uptoSmmd { @media (max-width: 37.49rem) { @mixin-content; }}  /* px */
+
+/* px */
+
+/* @define-mixin uptoMd { @media (max-width: 47.99rem) { @mixin-content; }}  /* px */
+
+/* px */
+
+/* px */
+
+/* @define-mixin twixtMd-Xl { @media (min-width: 48rem) and (max-width: 71.99rem) { @mixin-content; }}  /* 768px - 1199px */
+
+/* 768px - 1199px */
+
+/* @define-mixin twixtMd-Lg { @media (min-width: 48rem) and (max-width: 63.99rem) { @mixin-content; }}  /* 768px - 1023px */
+
+/* 768px - 1023px */
+
+button, .button, .ssba a, button  {
+ cursor: pointer;
+ font-weight: normal;
+ line-height: normal;
+ margin: 0 0 1.25rem;
+ position: relative;
+ text-decoration: none;
+ text-align: center;
+ -webkit-appearance: none;
+ -webkit-border-radius: 0;
+ display: inline-block;
+ padding:1rem 2rem 1.0625rem 2rem;
+ font-size: 1rem;
+ border-color: transparent;
+ color: white;
+ -webkit-transition: background-color 300ms ease-out;
+ transition: background-color 300ms ease-out;
+ border-bottom-width:0;
+ background-color: #CF1F25;
+}
+
+button:hover, button:active, .button:hover, .button:active, .ssba a:hover, .ssba a:active, button:hover, button:active {
+  background-color: #9a0000;
+ }
+
+* {-moz-box-sizing: border-box;box-sizing: border-box;}
+
+*:before, *:after {-moz-box-sizing: border-box;box-sizing: border-box;}
+
+html {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+
+body {
+ font-family: 'Sofia Pro Soft', Helvetica, Arial, sans-serif;
+ font-size: 1rem;
+ line-height: 1.42857143;
+ color: #333;
+}
+
+body.home {background-color:#fff;}
+
+input, button, select, textarea, .ssba a {
+ font-family: inherit;
+ font-size: inherit;
+ line-height: inherit;
+ color:#444;
+}
+
+a {
+ color: #bf0019;text-decoration: none;
+}
+
+a:hover, a:focus {color: #9a0000;text-decoration: none;}
+
+a:focus {outline: thin dotted;outline: 5px auto -webkit-focus-ring-color;outline-offset: -2px;}
+
+figure {margin:0;}
+
+#wpadminbar {
+ margin-top:-1.5rem;
+ opacity:0.1!important;
+}
+
+#wpadminbar:hover {
+  margin-top: 0;
+  opacity:1!important;
+ }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+ font-family: 'Sofia Pro Soft', Helvetica, Arial, sans-serif;
+ font-weight: 400;
+ line-height: 1.1;
+ color: inherit;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+ font-weight: normal;
+ line-height: 1;
+ color: #777;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+ margin-top: 20px;
+ margin-bottom: 0.75em;
+}
+
+@media (min-width: 480px) {
+
+.home h2 {
+  margin-top: 1rem
+} }
+
+@media (min-width: 640px) { }
+
+@media (min-width: 1024px) {
+
+.home h2 {
+  margin-top: 20px
+} }
+
+.singleresult h1 {
+ margin-top: 0;
+}
+
+h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
+ font-size: 65%;
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small {
+ font-size: 75%;
+}
+
+h1, .h1 { font-size: 28px; }
+
+h2, .h2 { font-size: 24px; }
+
+h3, .h3 { font-size: 1.5em; }
+
+h4, .h4 { font-size: 1.33rem; }
+
+h5, .h5 { font-size: 14px; }
+
+h6, .h6 { font-size: 12px; }
+
+p { margin: 0 0 .875rem; }
+
+.mobiletest {
+ width:0;
+ height:0;
+ position:fixed;
+ top:-1rem;
+ left:-1rem;
+ display:none;
+}
+
+@media (min-width: 832px) {
+ .mobiletest {display:block;} }
+
+p + h4, p + h5 {
+ margin-top: 1.5rem;
+}
+
+h2, h3, h4, h5 {
+ font-weight:600;
+}
+
+.entry-content h2 a, .entry-content h3 a, .entry-content h4 a, .entry-content h5 a {
+  text-decoration:underline;
+ }
+
+.entry-content h2 a:not(button), .entry-content h3 a:not(button), .entry-content h4 a:not(button), .entry-content h5 a:not(button) {
+   text-decoration: none;
+   padding-bottom:1px;
+   border-bottom:1px solid rgba(207,31,37,0.4);
+  }
+
+.entry-content h2 a:hover, .entry-content h2 a:focus, .entry-content h3 a:hover, .entry-content h3 a:focus, .entry-content h4 a:hover, .entry-content h4 a:focus, .entry-content h5 a:hover, .entry-content h5 a:focus {
+   border-bottom:1px solid #CF1F25;
+  }
+
+.entry-content > hr:first-child {display:none!important;}
+
+/* FSN modules */
+
+body {
+ margin:0;
+ padding:0;
+ font-family: 'Sofia Pro Soft', Helvetica, Arial, sans-serif;
+ font-size: 16px;
+ line-height: 1.33;
+ color: #333;
+ background-color: white;
+ border:none!important;
+}
+
+#content {
+ width:100%
+}
+
+.hs-content-id-10299566781 {
+ max-width:75rem;
+ position: relative;
+ display:block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.hs-content-id-10299566781 .hs-menu-wrapper {
+  background-color: pink;
+  padding:1rem;
+  min-height:5.5rem;
+ }
+
+.hs-content-id-10299566781 .hs-menu-wrapper ul {
+   list-style-type: none;
+   margin:0;
+   padding:0;
+   position: absolute;
+  }
+
+.hs-content-id-10299566781 .hs-menu-item {
+  display:inline-block;
+  float: left;
+  margin-right: 0;
+ }
+
+.hs-content-id-10299566781 .hs-menu-item a {
+   display:block;
+   color:#666;
+   padding:0.75rem 1rem;
+   background-color: gold;
+   min-width:7rem;
+   text-align: center;
+   color: #656565;
+   text-decoration: none;
+  }
+
+.hs-content-id-10299566781 .hs-menu-item:hover > a {
+   color:black;
+  }
+
+.hs-content-id-10299566781 .hs-menu-item:last-child:after {
+    content:'';
+    display:table;
+    clear:both;
+   }
+
+.hs-content-id-10299566781 li {
+
+ }
+
+/*Style for dropdown links*/
+
+.hs-content-id-10299566781 li:hover ul a {
+  background: white;
+  color: #656565;
+ }
+
+/*Hover state for dropdown links*/
+
+.hs-content-id-10299566781 li:hover ul a:hover {
+  background: white;
+  color: black;
+ }
+
+/*Hover state for top level links*/
+
+.hs-content-id-10299566781 li ul { display: none; }
+
+.hs-content-id-10299566781 li ul li { display: block; float: none; }
+
+.hs-content-id-10299566781 li ul li a {
+  width: auto;
+  min-width: 100px;
+ }
+
+/*Display the dropdown on hover*/
+
+.hs-content-id-10299566781 ul li a:hover + .hs-menu-children-wrapper, .hs-content-id-10299566781 .hs-menu-children-wrapper:hover {
+  display: block;
+ }
+
+/*# sourceMappingURL=maps/style.css.map */
