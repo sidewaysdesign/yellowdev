@@ -1,0 +1,29 @@
+.hs-content-id-10299566781 {
+ .widget-type-logo {
+  position:fixed;
+  top:0;
+  left:0;
+  @mixin atMd {
+   left:auto;
+   margin-left: 0;
+   margin-right: 0;
+   display: flex;
+   justify-content: center;
+   align-items:center;
+  }
+  .hs-image-widget {
+   content:url('http://sidewaysdesign.com/partners/yellow/images/yellow_logo.svg');
+   @mixin atSm {
+    max-width:9rem;
+   }
+   @mixin atSmmd {
+   }
+   @mixin atMd {
+    position: relative;
+    max-width:12rem;
+   }
+   @mixin atLg {
+   }
+  }
+ }
+}

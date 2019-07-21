@@ -7,8 +7,8 @@ body {
  color: #333;
  background-color: white;
  border:none!important;
+ background-color: #aaa;
 }
-
 #content {
  width:100%
 }

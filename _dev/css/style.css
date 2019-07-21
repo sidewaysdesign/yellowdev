@@ -11,7 +11,9 @@ Version: 1.0
 @import "base/variables";
 @import "base/breakpoints";
 @import "base/basics";
+@import "base/iconfont";
 
 /* FSN modules */
 @import "modules/body";
 @import "modules/nav";
+@import "modules/logo";

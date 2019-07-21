@@ -8,9 +8,9 @@ $breakpoints: (tn: 31.5em, tnsm:24em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 
 @define-mixin atSmmd { @media (min-width: 640px) { @mixin-content; }}  /* px */
 @define-mixin atLgminh { @media (min-width: 45rem) { @mixin-content; }}  /* px */
 /* @define-mixin atMd { @media (min-width: 48rem) { @mixin-content; }}  /* px */
-@define-mixin atMd { @media (min-width: 832px) { @mixin-content; }}  /* px */
+@define-mixin atMd { @media (min-width: 768px) { @mixin-content; }}  /* px */
 /* @define-mixin atMdlg { @media (min-width: 56.25rem) { @mixin-content; }}  /* px */
-@define-mixin atMdlg { @media (min-width: 900px) { @mixin-content; }}  /* px */
+@define-mixin atMdlg { @media (min-width: 940px) { @mixin-content; }}  /* px */
 /* @define-mixin atMdmdlg { @media (min-width: 62rem) { @mixin-content; }}  /* px */
 @define-mixin atMdmdlg { @media (min-width: 992px) { @mixin-content; }}  /* px */
 /* @define-mixin atLg { @media (min-width: 64rem) { @mixin-content; }}  /* 1024px */

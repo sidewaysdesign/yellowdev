@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2019 by original authors @ fontello.com</metadata>
+<defs>
+<font id="dgsi_icons" horiz-adv-x="1000" >
+<font-face font-family="dgsi_icons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="icon-arrow-left-thick" unicode="&#xe800;" d="M321 60l-290 290 290 290 47-47-243-243 243-243z" horiz-adv-x="444" />
+
+<glyph glyph-name="icon-arrow-left-thin" unicode="&#xe801;" d="M333 72l-279 278 279 278 23-23-255-255 255-255z" horiz-adv-x="444" />
+
+<glyph glyph-name="icon-arrow-right-thick" unicode="&#xe802;" d="M124 60l-48 47 244 243-244 243 48 47 290-290z" horiz-adv-x="444" />
+
+<glyph glyph-name="icon-arrow-right-thin" unicode="&#xe803;" d="M112 72l-24 23 255 255-255 255 24 24 278-279z" horiz-adv-x="444" />
+
+<glyph glyph-name="icon-dashboard-badge" unicode="&#xe804;" d="M631 525h0a235 235 0 0 1-47-5v41h-102l1 61h-175l0-61h-118v-297h207a235 235 0 0 1 233-209h1a235 235 0 0 1 0 470z m-298 72h125l-1-36h-124z m-118-308v247h345l0-22a235 235 0 0 1-164-224c0 0 0-1 0-1z m416-209h-1a210 210 0 0 0 1 420h0a210 210 0 0 0 0-420z" horiz-adv-x="1000" />
+
+<glyph glyph-name="icon-dashboard" unicode="&#xe805;" d="M629 568l0 88h-255v-88h-196v-484h644v484z m-222 54h189l0-54h-189z m382-88v-101a1082 1082 0 0 0-229-38l0 39h-117l0-39a1085 1085 0 0 0-232 39v100z m-263-134l0-49h-49l0 49z m-315-283v283a1119 1119 0 0 1 232-38l0-45h117l0 45a1118 1118 0 0 1 229 37v-282z" horiz-adv-x="1000" />
+
+<glyph glyph-name="icon-locate" unicode="&#xe806;" d="M662 600a227 227 0 0 1-162 67h0a229 229 0 0 1-229-229c0-121 207-398 216-409l13-18 13 18c9 11 216 288 216 409v0a227 227 0 0 1-67 162z m33-162c0-94-149-308-195-371-46 63-195 277-195 371a196 196 0 0 0 195 195h0a196 196 0 0 0 195-194z m-195 119a115 115 0 0 1-17-228v-1h17a115 115 0 0 1 0 229z m3-196h-3a79 79 0 1 0 3 0z" horiz-adv-x="1000" />
+
+<glyph glyph-name="icon-search" unicode="&#xe807;" d="M810 49l-185 191a234 234 0 1 1-25-21l186-194z m-542 355a196 196 0 1 0 196-197 197 197 0 0 0-196 197z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

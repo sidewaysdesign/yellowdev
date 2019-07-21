@@ -18,6 +18,8 @@ sourcemaps = require('gulp-sourcemaps');
 const message = require('gulp-message');
 const sftp = require('gulp-sftp');
 
+// const server = require('gulp-webserver');
+
 var connect = require('connect');
 // var serveStatic = require('serve-static');
 var openInEditor = require('open-in-editor-connect');
@@ -43,14 +45,25 @@ gulp.task('styles', function() {
  .pipe(gulp.dest('../'+settings.localDirectory))
 });
 
+// gulp.task('default', ['server']);
+// gulp.task('server', function() {
+//  gulp.src('../')	// <-- your app folder
+//  .pipe(server({
+//   livereload: true,
+//   open: true,
+//   port: 6000	// set a port to avoid conflicts with other local apps
+//  }));
+// });
+
+
 gulp.task('sync', function () {
  return gulp.src('../'+settings.localDirectory+'style.css')
-		.pipe(sftp({
-   host: 'sidewaysdesign.com',
-   user: 'zippy',
-   pass: 'Side44Side',
-   remotePath: '/home/zippy/sidewaysdesign.com/partners/yellow/css/'
-		}));
+ .pipe(sftp({
+  host: 'sidewaysdesign.com',
+  user: 'zippy',
+  pass: 'Side44Side',
+  remotePath: '/home/zippy/sidewaysdesign.com/partners/yellow/css/'
+ }));
 });
 
 gulp.task('scripts', function(callback) {
@@ -69,7 +82,12 @@ gulp.task('watch', function() {
  browserSync.init(files, {
 
   // Read here http://www.browsersync.io/docs/options/
-  proxy: settings.urlToPreview,
+
+  server: {
+   baseDir: "../"
+  },
+
+  // proxy: settings.urlToPreview, /* UNCOMMENT FOR WP SERVER */
 
   // port: 8080,
 
@@ -83,6 +101,7 @@ gulp.task('watch', function() {
   injectChanges: true
 
  });
+
  // browserSync.init({
  //  notify: false,
  //  proxy: settings.urlToPreview,
@@ -96,7 +115,8 @@ gulp.task('watch', function() {
  gulp.watch(['./js/modules/*.js', './js/*.js'], ['waitForScripts']);
 });
 
-gulp.task('waitForStyles', ['styles','sync'], function() {
+// gulp.task('waitForStyles', ['styles','sync'], function() {
+gulp.task('waitForStyles', ['styles'], function() {
  console.log('../'+settings.localDirectory+'style.css');
  // return gulp.src('../style.css')
  return gulp.src('../'+settings.localDirectory+'style.css')
@@ -107,9 +127,9 @@ gulp.task('waitForScripts', ['scripts'], function() {
  browserSync.reload();
 });
 
-var app = connect();
-app.use(openInEditor('.', {
- editor: { name: 'atom' }
-}));
+// var app = connect();
+// app.use(openInEditor('.', {
+//  editor: { name: 'atom' }
+// }));
 // // app.use(serveStatic('.'));
-app.listen(3001);
+// app.listen(3001);
