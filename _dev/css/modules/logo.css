@@ -17,7 +17,7 @@
   position:relative;
   left:0;
   width:7.25rem;
-  top:0.125rem;
+  top:0;
   /* background-color: pink; */
   @mixin atSmmd {
    top:0.125rem;
@@ -34,26 +34,29 @@
    align-items:center;
   }
   .hs-image-widget {
-   content:url('https://cdn2.hubspot.net/hubfs/2172992/yellow_logo.svg')!important;
-   background-position:0 0;
-   width:$logosize-tn!important;
-   top:0.1875rem;
-   left:-1.125rem;
+   /* content:url('https://cdn2.hubspot.net/hubfs/2172992/yellow_logo.svg')!important; */
+   /* background-position:0 0; */
+   width:$logosize!important;
+   height:auto;
+   max-width:auto!important;
+   min-width:auto!important;
+   /* top:0.1875rem; */
+   left:-1rem;
    @mixin atSm {
     width:$logosize-sm!important;
-   }
-   @mixin atSmmd {
-    top:0;
+    /* width:40px!important; */
    }
    @mixin atMd {
-    top:0.125rem;
-    position: relative;
-    transform:translate(-.75rem, 0.125rem );
+    top:0;
     width:$logosize-md!important;
+
+    /* top:0.125rem; */
+    position: relative;
+    transform:translate(-.75rem );
    }
    @mixin atLg {
     transform:translateX(-.25rem );
-    width:$logosize-lg!important;
+    /* width:$logosize-lg!important; */
    }
   }
  }

@@ -434,7 +434,7 @@ body {
 /* position:fixed; */
 
 body .body-container-wrapper {
-  padding-top:2.8125rem;
+  padding-top:2.75rem;
  }
 
 @media (min-width: 480px) {
@@ -656,12 +656,18 @@ a {
   max-height:100vh;
   overflow-y:auto;
   overflow-x:hidden;
-  padding-top:2.625rem;
+  padding-top:2.125rem;
   background-color: #f1f1f0;
   -webkit-transition: right 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   transition: right 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   box-shadow: 0 0 0 transparent;
  }
+
+@media (min-width: 480px) {
+
+.aws-menu .hs-menu-wrapper {
+   padding-top:2.625rem
+ } }
 
 @media (min-width: 768px) {
 
@@ -743,7 +749,7 @@ a {
    -webkit-align-items:center;
       -moz-box-align:center;
            align-items:center;
-   color: #77787B;
+   color: #888888;
    line-height: 1.2;
   }
 
@@ -1028,7 +1034,7 @@ a {
    .aws-menu .nav-icon-search:after {
     position:absolute;
     bottom:-0.7333333333333333rem;
-    left:-0.75rem;
+    left:-0.625rem;
     width:1px;
     height:2.75rem;
     background-color: #656565;
@@ -1190,7 +1196,7 @@ a {
     height:2rem;
     background-color: orange;
     background-color: transparent;
-    color:#77787B;
+    color:#888888;
    }
 
 @media (min-width: 768px) {
@@ -1306,7 +1312,7 @@ a {
    } }
 
 .aws-menu .hs-menu-depth-1 > .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children:after {
-      color:#77787B;
+      color:#888888;
       -webkit-transition: -webkit-transform 0.125s ease-in-out;
       transition: -webkit-transform 0.125s ease-in-out;
       transition: transform 0.125s ease-in-out;
@@ -1726,26 +1732,34 @@ a {
  transition:.25s ease-in-out;
  -moz-box-sizing:border-box;
       box-sizing:border-box;
- width:3rem;
- height:3rem;
  position:relative;
  position:relative;
  cursor:pointer;
  /* background-color:rgba(255,255,255,0.4); */
- border-radius:0.15000000000000002rem;
  display:block;
  position:fixed;
  top:0.125rem;
- right:0.25rem;
+ right:0.625rem;
  z-index:1000;
+ width:2.5rem;
+ height:2.5rem;
+ border-radius:0.125rem;
 }
+
+@media (min-width: 480px) {
+
+.aws-menu--toggle {
+  width:3rem;
+  height:3rem;
+  border-radius:0.15000000000000002rem
+} }
 
 @media (min-width: 768px) {
 
 .aws-menu--toggle { display:none
 } }
 
-.aws-menu--toggle span { display:block; background:#77787B; border-radius:2px; }
+.aws-menu--toggle span { display:block; background:#888888; border-radius:2px; }
 
 .aws-menu--toggle:hover div span, .aws-menu--toggle:hover div span { background-color: black; }
 
@@ -1758,13 +1772,23 @@ a {
 .aws-menu--toggle .aws-menu--hamburger span {
    -webkit-transition: 0.5s ease-in-out, background-color 0.125s ease-in-out!important;
    transition: 0.5s ease-in-out, background-color 0.125s ease-in-out!important;
-   width:1.7999999999999998rem;
-   height:0.12rem;
    position:relative;
-   top:0.72rem;
-   left:0.30000000000000004rem;
-   margin:0.30000000000000004rem;
+   width:1.5rem;
+   height:2px;
+   top:0.625rem;
+   left:0.25rem;
+   margin:0.25rem;
   }
+
+@media (min-width: 480px) {
+
+.aws-menu--toggle .aws-menu--hamburger span {
+    width:1.7999999999999998rem;
+    height:0.12rem;
+    top:0.72rem;
+    left:0.30000000000000004rem;
+    margin:0.30000000000000004rem
+  } }
 
 .aws-menu--toggle .aws-menu--hamburger span:nth-child(1){ -webkit-transition-delay:.5s; transition-delay:.5s; }
 
@@ -1789,23 +1813,31 @@ a {
 
 .aws-menu--toggle .aws-menu--cross span:nth-child(1){
     height:0%;
-    width:0.12rem;
+    width:0.1rem;
     position:absolute;
     top:17%;
-    left:1.44rem;
+    left:1.2rem;
     -webkit-transition-delay:0s;
             transition-delay:0s;
    }
 
 .aws-menu--toggle .aws-menu--cross span:nth-child(2){
     width:0%;
-    height:0.12rem;
     position:absolute;
-    left:0.51rem;
-    top:1.44rem;
     -webkit-transition-delay:.25s;
             transition-delay:.25s;
+    height:0.1rem;
+    left:0.42500000000000004rem;
+    top:1.2rem;
    }
+
+@media (min-width: 480px) {
+
+.aws-menu--toggle .aws-menu--cross span:nth-child(2){
+     height:0.12rem;
+     left:0.51rem;
+     top:1.44rem
+   } }
 
 .aws-menu--toggle.active .aws-menu--hamburger span {
     width:0%;
@@ -1885,7 +1917,7 @@ body.nav-active .nav--actions:after {
   }
 
 .aws-logo {
- height:2.8125rem;
+ height:2.75rem;
  position: relative;
 }
 
@@ -1923,7 +1955,7 @@ body.nav-active .nav--actions:after {
   position:relative;
   left:0;
   width:7.25rem;
-  top:0.125rem;
+  top:0;
  }
 
 /* background-color: pink; */
@@ -1958,41 +1990,41 @@ body.nav-active .nav--actions:after {
  } }
 
 .aws-logo .widget-type-logo .hs-image-widget {
-   content:url('https://cdn2.hubspot.net/hubfs/2172992/yellow_logo.svg')!important;
-   background-position:0 0;
-   width:7.25rem!important;
-   top:0.1875rem;
-   left:-1.125rem;
+   /* content:url('https://cdn2.hubspot.net/hubfs/2172992/yellow_logo.svg')!important; */
+   /* background-position:0 0; */
+   width:6rem!important;
+   height:auto;
+   max-width:auto!important;
+   min-width:auto!important;
+   /* top:0.1875rem; */
+   left:-1rem;
   }
 
 @media (min-width: 480px) {
 
 .aws-logo .widget-type-logo .hs-image-widget {
-    width:9rem!important
-  } }
-
-@media (min-width: 640px) {
-
-.aws-logo .widget-type-logo .hs-image-widget {
-    top:0
+    width:6.75rem!important
+    /* width:40px!important; */
   } }
 
 @media (min-width: 768px) {
 
 .aws-logo .widget-type-logo .hs-image-widget {
-    top:0.125rem;
+    top:0;
+    width:8.5rem!important;
+
+    /* top:0.125rem; */
     position: relative;
-    -webkit-transform:translate(-.75rem, 0.125rem );
-            transform:translate(-.75rem, 0.125rem );
-    width:10rem!important
+    -webkit-transform:translate(-.75rem );
+            transform:translate(-.75rem )
   } }
 
 @media (min-width: 1024px) {
 
 .aws-logo .widget-type-logo .hs-image-widget {
     -webkit-transform:translateX(-.25rem );
-            transform:translateX(-.25rem );
-    width:12rem!important
+            transform:translateX(-.25rem )
+    /* width:$logosize-lg!important; */
   } }
 
 .aws-logo img {
@@ -2347,7 +2379,7 @@ body.nav-active .nav--actions:after {
    }
 
 .blog-listing-wrapper > .post-listing .post-item .post-header h2 {
-     color:#77787B;
+     color:#888888;
      margin-top: 0.46875rem;
      margin-bottom: 0.375rem;
      font-size:1.25rem;
@@ -2393,7 +2425,7 @@ body.nav-active .nav--actions:after {
     }
 
 .blog-listing-wrapper > .post-listing .post-item .aws-blog--listing-meta .aws-blog--listing-date {
-     color:#77787B;
+     color:#888888;
      position: relative;
      float: left;
      padding:0.375rem 0 0 0;
@@ -2405,7 +2437,7 @@ body.nav-active .nav--actions:after {
       height:1.75rem;
       border-radius: 0.875rem;
       border:1px solid #FFF100;
-      color:#77787B;
+      color:#888888;
       padding:0.375rem 1.5rem 0 1.5rem;
       float:right;
      }
@@ -2450,7 +2482,7 @@ body.nav-active .nav--actions:after {
  }
 
 .aws-blog--meta .author-link {
-   color:#77787B;
+   color:#888888;
  }
 
 .aws-blog--social, .aws-author--social {
@@ -2474,8 +2506,8 @@ body.nav-active .nav--actions:after {
   }
 
 .aws-blog--social li a:hover, .aws-blog--social li a:active, .aws-author--social li a:hover, .aws-author--social li a:active {
-    color:#77787B;
-    border-color:#77787B;
+    color:#888888;
+    border-color:#888888;
    }
 
 .aws-blog--social li + li, .aws-author--social li + li {
@@ -2589,7 +2621,7 @@ text-align:left;
 
 .topic-link {
  padding:0.375rem 0.5325rem 0.25rem 0.625rem;
- color:#77787B!important;
+ color:#888888!important;
  height:2rem;
  border-radius:1rem;
  border:1px solid #b2b2b2;
@@ -2760,7 +2792,7 @@ text-align:left;
    margin-bottom: 0.625rem;
    padding: 0;
    height:auto;
-   color:#77787B;
+   color:#888888;
    border-radius:none;
    padding:0;
    border:none
@@ -2803,7 +2835,7 @@ text-align:left;
  }
 
 .aws-author--image:after {
-   color:#77787B;
+   color:#888888;
    display:inline-block;
    line-height: 1.1;
    font-size: 1.25rem;
@@ -2820,7 +2852,7 @@ text-align:left;
  }
 
 .aws-author--section a {
-   color:#77787B;
+   color:#888888;
   }
 
 .aws-author--section a:hover, .aws-author--section a:active {
@@ -2844,7 +2876,7 @@ text-align:left;
 
 .aws-author--byline {
   display:none;
-  color:#77787B;
+  color:#888888;
  }
 
 @media (min-width: 768px) {
@@ -2913,7 +2945,7 @@ h6, .h6 {
   line-height: 1.625;
   margin-bottom: 1rem;
   margin: 0 0 .875rem;
-  color:#77787B;
+  color:#888888;
  }
 
 .post-body p strong, .aws-author--section p strong, .aws-single-column p strong {

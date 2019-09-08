@@ -25,7 +25,7 @@ $black-transparent2: rgba(0,0,0,0.88);
 $fsred-dark:#9a0000;
 $charcoal: #484849;
 $grey: #656565;
-$lightcharcoal: #77787B;
+$lightcharcoal: #888888;
 $cloud: #b2b2b2;
 $silver: #afafaf;
 $fog: #dadada;
@@ -90,10 +90,9 @@ $rulewidth:2px;
 $transitionall: 0.2s all ease-in;
 $transitionall-slow: 0.5s all ease-in;
 
-$logosize: 12rem;
-$logosize-tn: 7.25rem;
-$logosize-sm: 9rem;
-$logosize-md: 10rem;
+$logosize: 6rem;
+$logosize-sm: 6.75rem;
+$logosize-md: 8.5rem;
 $logosize-lg: 12rem;
 
 $naviconsize: 2rem;
@@ -102,7 +101,7 @@ $naviconsize-md: 2.5rem;
 $naviconwidth: 2.75rem;
 $naviconwidth-mdlg: 2.25rem;
 
-$navheight: 2.8125rem;
+$navheight: 2.75rem;
 $navheight-sm: 3.25rem;
 $navheight-md: 4rem;
 /* NAV END */

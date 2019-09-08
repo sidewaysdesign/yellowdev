@@ -10,23 +10,29 @@
 </div>
 </div> */
 
-$togglesize:3rem;
+$togglesize:2.5rem;
+$togglesize-sm:3rem;
 
 .aws-menu--toggle {
  transition:.25s ease-in-out;
  box-sizing:border-box;
- width:$togglesize;
- height:$togglesize;
  position:relative;
  position:relative;
  cursor:pointer;
  /* background-color:rgba(255,255,255,0.4); */
- border-radius:resolve($togglesize * 0.05);
  display:block;
  position:fixed;
  top:0.125rem;
- right:0.25rem;
+ right:resolve($marginsize - 0.375rem);
  z-index:1000;
+ width:$togglesize;
+ height:$togglesize;
+ border-radius:resolve($togglesize * 0.05);
+ @mixin atSm {
+  width:$togglesize-sm;
+  height:$togglesize-sm;
+  border-radius:resolve($togglesize-sm * 0.05);
+  }
  @mixin atMd { display:none; }
  span { display:block; background:$lightcharcoal; border-radius:2px; }
 &:hover div span, &:hover div span { background-color: black; }
@@ -36,12 +42,19 @@ $togglesize:3rem;
   width:100%;
   span {
    transition: $transtime2 ease-in-out, background-color $transtime0 ease-in-out!important;
-   width:resolve($togglesize * 0.6);
-   height:resolve($togglesize * 0.04);
    position:relative;
-   top:resolve($togglesize * 0.24);
+   width:resolve($togglesize * 0.6);
+   height:2px;
+   top:resolve($togglesize * 0.25);
    left:resolve($togglesize * 0.1);
    margin:resolve($togglesize * 0.1);
+   @mixin atSm {
+    width:resolve($togglesize-sm * 0.6);
+    height:resolve($togglesize-sm * 0.04);
+    top:resolve($togglesize-sm * 0.24);
+    left:resolve($togglesize-sm * 0.1);
+    margin:resolve($togglesize-sm * 0.1);
+    }
    &:nth-child(1){ transition-delay:.5s; }
    &:nth-child(2){ transition-delay:.625s; }
    &:nth-child(3){ transition-delay:.75s; }
@@ -65,11 +78,16 @@ $togglesize:3rem;
    }
    &:nth-child(2){
     width:0%;
-    height:resolve($togglesize * 0.04);
     position:absolute;
+    transition-delay:.25s;
+    height:resolve($togglesize * 0.04);
     left:resolve($togglesize * 0.17);
     top:resolve($togglesize * 0.48);
-    transition-delay:.25s;
+    @mixin atSm {
+     height:resolve($togglesize-sm * 0.04);
+     left:resolve($togglesize-sm * 0.17);
+     top:resolve($togglesize-sm * 0.48);
+     }
    }
   }
  }

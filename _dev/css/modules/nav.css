@@ -131,10 +131,13 @@ $menutoggleoffset: 0.125rem;
   max-height:100vh;
   overflow-y:auto;
   overflow-x:hidden;
-  padding-top:resolve($naviconsize * 1.3125);
+  padding-top:resolve($naviconsize * 1.0625);
   background-color: $vapor;
   transition: right $transtime2 ease-in-out, box-shadow $transtime2 ease-in-out;
   box-shadow: 0 0 0 transparent;;
+  @mixin atSm {
+   padding-top:resolve($naviconsize * 1.3125);
+  }
   @mixin atMd {
    padding-top:resolve($naviconsize-md * 0.8);
    overflow-x:inherit;
@@ -403,7 +406,7 @@ $menutoggleoffset: 0.125rem;
    &:after {
     position:absolute;
     bottom:-resolve($naviconwidth / 3.75);
-    left:-$menuinset;
+    left:-resolve($menuinset - 0.125rem);
     width:1px;
     height:$naviconwidth;
     background-color: $grey;
