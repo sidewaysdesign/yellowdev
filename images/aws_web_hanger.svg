@@ -1,0 +1,27 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="509.267" height="400" viewBox="0 0 509.267 400">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff100;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 17px;
+      }
+
+      .cls-2 {
+        stroke: #231f20;
+      }
+    </style>
+  </defs>
+  <title>aws_web_hanger</title>
+  <path class="cls-1" d="M199.842,125.308c0-13.5,6.458-48.168,48.168-48.168,30.024,0,46.1,24.688,43.632,52.875-2.908,33.168-23.666,48.554-50.845,62.929L52.669,292.45c-14.881,7.87-9.287,30.41,7.547,30.41H437.267c16.835,0,22.428-22.54,7.548-30.41L304.268,218.111"/>
+  <line class="cls-2" x1="303.786" y1="217.845" x2="303.786" y2="217.845"/>
+  <rect class="cls-3" width="509.267" height="400"/>
+</svg>

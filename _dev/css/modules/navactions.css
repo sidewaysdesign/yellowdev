@@ -1,0 +1,41 @@
+.nav--actions {
+ width:2rem;
+ height:2rem;
+ position:fixed;
+ top:0;
+ right:0;
+ display:block;
+ z-index:1000;
+ &:before, &:after {
+  font-size:$naviconsize;
+  font-family:'aws_icons';
+  line-height: 1;
+  position:absolute;
+  top:0;
+  right:0;
+  width:$naviconsize;
+  text-align:center;
+  transition: $transitionall;
+  color:$cloud;
+ }
+ &:hover:before, &:hover:after {
+  color:black;
+ }
+ &:before {
+  content:'\e80e';
+  opacity:1;
+ }
+ &:after {
+  content:'\e810';
+  opacity:0;
+ }
+ body.nav-active & {
+  &:before {
+   color:shamrock;
+   opacity:0;
+  }
+  &:after {
+   opacity:1;
+  }
+ }
+}

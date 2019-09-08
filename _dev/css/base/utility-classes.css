@@ -8,7 +8,7 @@
    /* margin-left: 0; */
    padding: 0 0;
    width:738px;
-   width:calc(100% - resolve($marginSizeMd * 2));
+   width:calc(100% - resolve($marginsizeMd * 2));
    /* max-width:760px; */
   }
   @mixin atMdlg {

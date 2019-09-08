@@ -1,0 +1,16 @@
+.pagination {
+&.page-numbers {
+ list-style-type: none;
+ padding:0;
+ display:block;
+ text-align: center;
+ position: relative;
+ margin-left: auto;
+ margin-right: auto;
+ li {
+  display:inline-block;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+ }
+}
+}

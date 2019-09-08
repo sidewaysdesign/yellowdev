@@ -1,4 +1,15 @@
-$primary: #FFFF00;
+/* @import must be at top of file, otherwise CSS will not work */
+/* @import url("//hello.myfonts.net/count/39f17f");
+@font-face {
+ font-family: 'SofiaPro-Regular';
+ src: url('fonts/39F17F_0_0.eot');
+ src: url('fonts/39F17F_0_0.eot?#iefix') format('embedded-opentype'),
+ url('fonts/39F17F_0_0.woff2') format('woff2'),
+ url('fonts/39F17F_0_0.woff') format('woff');
+} */
+
+$primary: #FFF100;
+$primary-trans: color( $primary alpha(85%) );
 $red: #f60000;
 $blue: #569BF8;
 $darkblue: #2b6bc1;
@@ -12,18 +23,19 @@ $fsred-transparent: rgba(207,31,37,0.4);
 $black-transparent: rgba(0,0,0,0.7);
 $black-transparent2: rgba(0,0,0,0.88);
 $fsred-dark:#9a0000;
-$grey: #656565;
-$fog: #cccccc;
-$mist: #e9e9e9;
-$vapor: #f8f8f8;
-$lightcharcoal: #77787B;
-$air: #fafafa;
-$cloud: #aaaaaa;
-$silver: #afafaf;
 $charcoal: #484849;
+$grey: #656565;
+$lightcharcoal: #77787B;
+$cloud: #b2b2b2;
+$silver: #afafaf;
+$fog: #dadada;
+$mist: #e9e9e9;
+$vapor: #f1f1f0;
+$air: #fafafa;
 
 $transtime0: 0.125s;
 $transtime: 0.25s;
+$transtime1: 0.375s;
 $transtime2: 0.5s;
 
 $softBorder: 1px solid rgba($grey,0.25);
@@ -32,7 +44,7 @@ $fontfam1: 'Sofia Pro Soft', Helvetica, Arial, sans-serif;
 $fontfam2: 'Sofia Pro Soft', Helvetica, Arial, sans-serif;
 $fontfam3: 'Sofia Pro Soft', Helvetica, Arial, sans-serif;
 
-$bodycopylineheight: 1.5;
+$bodycopylineheight: 1.625;
 
 $contentmaxwidth: 75rem;
 
@@ -40,6 +52,7 @@ $gridgap-tn: 0.5rem;
 $gridgap-smmd: 1rem;
 $gridgap-md: 0.875rem;
 $gridgap: 1rem;
+$elementgap: 0.75rem;
 
 
 $fontsize0: 0.92rem;
@@ -48,7 +61,9 @@ $fontsize2: 1.125rem;
 $fontsize3: 1.25rem;
 $fontsize4: 1.625rem;
 $fontsize5: 1.875rem;
-$fontsize6: 2.5rem;
+$fontsize6: 2.25rem;
+$fontsize7: 2.625rem;
+$fontsize8: 3rem;
 
 $boxshadow: 2px 2px 12px rgba(0,0,0,0.2);
 $smallFont:0.85rem;
@@ -58,6 +73,54 @@ $buttonborderradius: 1.125rem;
 $buttonborderradius-small: resolve($buttonborderradius * .75);
 $buttonsize:2.25rem;
 
+/* NAV START */
+
+$menumobilewidth: 16rem;
+$menumobileheight: 2rem;
+$menuinset: 0.75rem;
+$menuinset-md: 0.75rem;
+$menumargin: 0.5rem;
+$menuwidth: 10rem;
+$menushadow: 2px 2px 0.375rem rgba(0,0,0,0.2);
+$menumarginvertical-tn: 0.5rem;
+$menumarginvertical-md: 0.375rem;
+$menumarginvertical: 1.9375rem;
+$menuheight-md: 4.75rem;
+$rulewidth:2px;
+$transitionall: 0.2s all ease-in;
+$transitionall-slow: 0.5s all ease-in;
+
+$logosize: 12rem;
+$logosize-tn: 7.25rem;
+$logosize-sm: 9rem;
+$logosize-md: 10rem;
+$logosize-lg: 12rem;
+
+$naviconsize: 2rem;
+$naviconsize-md: 2.5rem;
+
+$naviconwidth: 2.75rem;
+$naviconwidth-mdlg: 2.25rem;
+
+$navheight: 2.8125rem;
+$navheight-sm: 3.25rem;
+$navheight-md: 4rem;
+/* NAV END */
+
+/* BLOG HEADER */
+$herotextheight: 5rem;
+$herotextheight-tn: 6.5rem;
+$herotextheight-sm: 6.5rem;
+$herotextheight-md: 6.5rem;
+$herotextheight-lg: 8rem;
+
+$leftmargin: 1.125rem;
+$leftmargin-lg: 4.5rem;
+
+$fontsize-heading: 1.375rem;
+$fontsize-heading-sm: 1.625rem;
+$fontsize-heading-md: 1.75rem;
+$fontsize-heading-lg: 1.875rem;
 
 .white { color: white; }
 .white-bg { background-color: white; }
@@ -71,7 +134,49 @@ $buttonsize:2.25rem;
 /* $breakpoints: ( tn: 31.5em, tnsm:416px, sm: 480px, smmd: 600px, lgminh: 720px, md: 768px, mdlg: 900px, mdmdlg: 992px, lg: 1024px, lgxl:1056px, xl: 1200px xxl: 1320px ); */
 $breakpoints: ( tn: 31.5em, tnsm:26em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 48em, mdlg: 56.25em, mdmdlg: 62em, lg: 64em, lgxl:66em, xl: 72em, xxl: 85em );
 
- $marginSize: 1rem;
- $marginSize-sm: 1.5rem;
- $marginSize-md: 3rem;
- $marginSize-lg: 8rem;
+ $marginsize: 1rem;
+ $marginsize-sm: 1.5rem;
+ $marginsize-smmd: 1.5rem;
+ $marginsize-md: 2.5rem;
+ $marginsize-lg: 4rem;
+
+ $contentmarginsize: 1.125rem;
+ $contentmarginsize-sm: 1.375rem;
+ $contentmarginsize-smmd: 1.5rem;
+ $contentmarginsize-md: 1.375rem;
+ $contentmarginsize-lg: 2rem;
+
+ $marginvertical: 1rem;
+ $marginvertical-sm: 1.5rem;
+ $marginvertical-smmd: 1.5rem;
+ $marginvertical-md: 1.5rem;
+ $marginvertical-lg: 1.75rem;
+
+ $maxwidth-lg: 1024px;
+
+$contentpaddingtop: 1.75rem;
+$contentpaddingtop-md: 2.125rem;
+
+$inputheight: 2.5rem;
+$inputheight-sm: 3rem;
+$inputheight-smmd: 3rem;
+$inputheight-md: 3rem;
+
+$inputtext: 1rem;
+$inputtext-sm: 1.125rem;
+$inputtext-smmd: 1.125rem;
+$inputtext-md: 1.125rem;
+
+$buttonwidth: 4.25rem; /* includes gap */
+
+$buttonsmallheight: 1.75rem;
+$buttonsmallheight-sm: 2.5rem;
+$buttonsmallheight-md: 2rem;
+
+$menupaddinglevel3: 0.25rem;
+
+$blogimagewidth: 100%;
+$blogimagewidth-sm: 100%;
+$blogimagewidth-smmd: 8rem;
+$blogimagewidth-md: 10rem;
+$blogimagewidth-lg: 37.5%;

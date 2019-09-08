@@ -1,0 +1,27 @@
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+ padding:0.875rem 0.75rem 0.75rem 0.75rem;
+ line-height: 1;
+ font-size:$inputtext;
+ border:1px solid $cloud;
+ display:block;
+ position:relative;
+ width:100%;
+ height:$inputheight;
+ min-height:$inputheight;
+ @mixin atSm {
+  }
+ @mixin atSmmd {
+  }
+ @mixin atMd {
+  padding:0.875rem 0rem 0.75rem 1rem;
+  font-size:$inputtext-md;
+  min-height:$inputheight-md;
+  }
+ @mixin atLg {
+  }
+ & + button {
+
+ }
+}

@@ -21,12 +21,23 @@ button, .button, .ssba a, button  {
  }
 }
 
-* {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+* {
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ letter-spacing:0;
+}
 
 *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
-html {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+html {
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html, body {
+ max-width: 100% !important;
+ overflow-x: hidden !important;
 
+}
 body {
  font-family: $fontfam1;
  font-size: $fontsize1;
@@ -75,6 +86,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 h1, .h1, h2, .h2, h3, .h3 {
  margin-top: 20px;
  margin-bottom: 0.75em;
+ font-weight:700;
 }
 .home h2 {
  @mixin atSm {
@@ -91,27 +103,7 @@ h1, .h1, h2, .h2, h3, .h3 {
  margin-top: 0;
 }
 
-h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
- font-size: 65%;
-}
 
-h4, .h4, h5, .h5, h6, .h6 {
- margin-top: 10px;
- margin-bottom: 10px;
-}
-
-h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small {
- font-size: 75%;
-}
-
-h1, .h1 { font-size: 28px; }
-h2, .h2 { font-size: 24px; }
-h3, .h3 { font-size: 1.5em; }
-h4, .h4 { font-size: 1.33rem; }
-h5, .h5 { font-size: 14px; }
-h6, .h6 { font-size: 12px; }
-
-p { margin: 0 0 .875rem; }
 .mobiletest {
  width:0;
  height:0;
@@ -128,7 +120,6 @@ p + h4, p + h5 {
  margin-top: 1.5rem;
 }
 h2,h3,h4,h5 {
- font-weight:600;
  .entry-content & a {
   text-decoration:underline;
   &:not(button) {

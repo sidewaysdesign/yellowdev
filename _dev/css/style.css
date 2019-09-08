@@ -1,5 +1,5 @@
 /*
-Theme Name: FSN
+Theme Name: Yellow
 Author: Us Communications
 Version: 1.0
 */
@@ -12,10 +12,27 @@ Version: 1.0
 @import "base/breakpoints";
 @import "base/basics";
 @import "base/iconfont";
+@import "base/dev";
 
 /* FSN modules */
 @import "modules/body";
 @import "modules/nav";
+@import "modules/nav_hero";
+@import "modules/nav_phone";
+@import "modules/nav_toggle";
 @import "modules/navactive";
 @import "modules/navactions";
 @import "modules/logo";
+@import "modules/blog";
+@import "modules/meta";
+@import "modules/topics";
+@import "modules/columns";
+@import "modules/author";
+@import "modules/typography";
+@import "modules/layout";
+@import "modules/blogsubscriber";
+@import "modules/inputs";
+@import "modules/search";
+@import "modules/text-positioned";
+@import "modules/section-imagetext";
+@import "modules/pagination";

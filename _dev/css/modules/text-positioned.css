@@ -1,0 +1,80 @@
+'text-positioned.css'
+.aws-section--image-left {
+ /* background-color: gold; */
+}
+.aws-header--text-positioned {
+ /* background-color: pink; */
+ .hs_cos_wrapper_type_text {
+  padding-top: 0.875rem;
+  display:inline-block;
+  @mixin atMd {
+   padding-top: 0;
+   }
+ }
+
+}
+.aws-section--image-left,
+.aws-section--image-right {
+ @mixin atMd {
+  .aws-header--text-positioned {
+   .hs_cos_wrapper_type_text {
+    width:50%;
+    bottom:0;
+    position: absolute;
+    display:inline-block;
+    @mixin atSm {
+     }
+    @mixin atSmmd {
+     }
+    @mixin atMd {
+     transform: translateY(-0.1ex);
+     }
+    @mixin atLg {
+     transform: translateY(-0.33ex);
+     }
+    @mixin atXl {
+     transform: translateY(-0.25ex);
+     }
+   }
+  }
+  .aws-header--text-positioned.bottom {
+   &-05 .hs_cos_wrapper_type_text { bottom: 5%; }
+   &-07-5 .hs_cos_wrapper_type_text { bottom: 7.5%; }
+   &-10 .hs_cos_wrapper_type_text { bottom:10%; }
+   &-12-5 .hs_cos_wrapper_type_text { bottom:12.5%; }
+   &-15 .hs_cos_wrapper_type_text { bottom:15%; }
+   &-17-5 .hs_cos_wrapper_type_text { bottom:17.5%; }
+   &-20 .hs_cos_wrapper_type_text { bottom:20%; }
+   &-22-5 .hs_cos_wrapper_type_text { bottom:22.5%; }
+   &-25 .hs_cos_wrapper_type_text { bottom:25%; }
+   &-27-5 .hs_cos_wrapper_type_text { bottom:27.5%; }
+   &-30 .hs_cos_wrapper_type_text { bottom:30%; }
+   &-32-5 .hs_cos_wrapper_type_text { bottom:32.5%; }
+   &-35 .hs_cos_wrapper_type_text { bottom:35%; }
+   &-37-5 .hs_cos_wrapper_type_text { bottom:37.5%; }
+   &-40 .hs_cos_wrapper_type_text { bottom:40%; }
+   &-42-5 .hs_cos_wrapper_type_text { bottom:42.5%; }
+   &-45 .hs_cos_wrapper_type_text { bottom:45%; }
+   &-47-5 .hs_cos_wrapper_type_text { bottom:47.5%; }
+   &-50 .hs_cos_wrapper_type_text { bottom:50%; }
+   &-52-5 .hs_cos_wrapper_type_text { bottom:52.5%; }
+   &-55 .hs_cos_wrapper_type_text { bottom:55%; }
+   &-57-5 .hs_cos_wrapper_type_text { bottom:57.5%; }
+   &-60 .hs_cos_wrapper_type_text { bottom:60%; }
+   &-62-5 .hs_cos_wrapper_type_text { bottom:62.5%; }
+   &-65 .hs_cos_wrapper_type_text { bottom:65%; }
+   &-67-5 .hs_cos_wrapper_type_text { bottom:67.5%; }
+   &-70 .hs_cos_wrapper_type_text { bottom:70%; }
+   &-72-5 .hs_cos_wrapper_type_text { bottom:72.5%; }
+   &-75 .hs_cos_wrapper_type_text { bottom:75%; }
+   &-77-5 .hs_cos_wrapper_type_text { bottom:77.5%; }
+   &-82-5 .hs_cos_wrapper_type_text { bottom:82.5%; }
+   &-85 .hs_cos_wrapper_type_text { bottom:85%; }
+   &-87-5 .hs_cos_wrapper_type_text { bottom:87.5%; }
+   &-90 .hs_cos_wrapper_type_text { bottom:90%; }
+   &-92-5 .hs_cos_wrapper_type_text { bottom:92.5%; }
+   &-95 .hs_cos_wrapper_type_text { bottom:95%; }
+   &-97-5 .hs_cos_wrapper_type_text { bottom:97.5%; }
+  }
+ }
+}

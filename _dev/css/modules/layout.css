@@ -1,0 +1,100 @@
+.header-container-wrapper .row-fluid-wrapper.row-depth-1.row-number-1 {
+ position: relative;
+ border-bottom: 1px solid $primary;
+ /* margin-bottom:1px; */
+ z-index:1;
+}
+
+.bg-white { background-color: white;}
+.bg-yellow { background-color: $primary; }
+.bg-grey { background-color: $fog; }
+
+.extend-yellow {
+ background-color: $primary;
+ &:before, &:after { background-color: $primary; }
+}
+.extend-grey {
+ background-color: $vapor;
+ &:before, &:after { background-color: $vapor; }
+}
+.extend-white { &:before, &:after { background-color: white; } }
+
+.extend-yellow,
+.extend-white,
+.extend-grey {
+ overflow:visible;
+ box-sizing: border-box;
+ position:relative;
+ z-index:1;
+ &:before, &:after {
+  top:0;
+  content:'';
+  position:absolute;
+  height:100%;
+ }
+ &:before {
+  left:0;
+  width:50%;
+  width:calc(50vw - 25%);
+  /* margin-left:-100%; */
+  transform:translateX(-100%);
+  z-index:-1;
+  /* margin-left:calc(-50vw + 25%); */
+ }
+ &:after {
+  right:0;
+  width:50%;
+  width:calc(50vw - 25%);
+  transform:translateX(100%);
+  z-index:-1;
+ }
+}
+.header-container-wrapper > .container-fluid > .row-fluid-wrapper > .row-fluid,
+.body-container-wrapper > .container-fluid > .row-fluid-wrapper > .row-fluid,
+footer
+/* .aws-group--search-subscribe > div > .row-depth-1 > .row-fluid */
+/* .aws-blog .blog-post-wrapper, */
+/* .aws-section--image-left .row-fluid, */
+/* [class*="aws-header"] .row-fluid  */
+{
+ position:relative;
+ display:block;
+ width:100%;
+ padding-left: $marginsize;
+ padding-right: $marginsize;
+ @mixin atSm {
+  padding-left: $marginsize-sm;
+  padding-right: $marginsize-sm;
+ }
+ @mixin atMd {
+  padding-left: $marginsize-md;
+  padding-right: $marginsize-md;
+ }
+ @mixin atLg {
+  padding-left: $marginsize-lg;
+  padding-right: $marginsize-lg;
+ }
+ @mixin atXl {
+  padding-left: 0;
+  padding-right: 0;
+  width:$maxwidth-lg;
+  margin-left: auto;
+  margin-right: auto;
+ }
+}
+
+/* .aws-group--search-subscribe > .row-depth-1 > .row-fluid,
+.aws-blog .blog-post-wrapper,
+.aws-section--image-left .row-depth-1 > .row-fluid {
+padding-top:$contentpaddingtop;
+@mixin atSm {
+}
+@mixin atMd {
+padding-top: $contentpaddingtop-md;
+}
+@mixin atLg {
+}
+@mixin atXl {
+}
+
+} */

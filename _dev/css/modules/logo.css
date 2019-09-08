@@ -1,0 +1,65 @@
+.aws-logo {
+ height:$navheight;
+ position: relative;
+ @mixin atSm {
+  height:$navheight-sm;
+  }
+  @mixin atMd {
+   height:$navheight-md;
+  }
+& > div {
+ display:flex;
+ justify-content: center;
+ flex-direction:row;
+}
+ .widget-type-logo {
+  /* position:fixed; */
+  position:relative;
+  left:0;
+  width:7.25rem;
+  top:0.125rem;
+  /* background-color: pink; */
+  @mixin atSmmd {
+   top:0.125rem;
+   width:8.75rem;
+  }
+  @mixin atMd {
+   top:0.1875rem;
+   width:10.75rem;
+   left:auto;
+   margin-left: 0;
+   margin-right: 0;
+   display: flex;
+   justify-content: center;
+   align-items:center;
+  }
+  .hs-image-widget {
+   content:url('https://cdn2.hubspot.net/hubfs/2172992/yellow_logo.svg')!important;
+   background-position:0 0;
+   width:$logosize-tn!important;
+   top:0.1875rem;
+   left:-1.125rem;
+   @mixin atSm {
+    width:$logosize-sm!important;
+   }
+   @mixin atSmmd {
+    top:0;
+   }
+   @mixin atMd {
+    top:0.125rem;
+    position: relative;
+    transform:translate(-.75rem, 0.125rem );
+    width:$logosize-md!important;
+   }
+   @mixin atLg {
+    transform:translateX(-.25rem );
+    width:$logosize-lg!important;
+   }
+  }
+ }
+ img {
+ position: relative;
+  display:block;
+  line-height: 1;
+ }
+}

@@ -1,0 +1,14 @@
+.aws-menu.nav-active {
+ /* margin-left: -10rem!important; */
+ /* .hs-menu-wrapper { margin-right:0; } */
+.body-container-wrapper, .footer-container-wrapper {
+ /* transform:translateX(-resolve($menumobilewidth)); */
+ @mixin atMd {
+  /* transform:translateX(0); */
+ }
+}
+.hs-menu-wrapper {
+ margin-right:0;
+}
+
+}

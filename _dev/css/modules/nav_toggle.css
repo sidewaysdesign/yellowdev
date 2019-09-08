@@ -1,0 +1,92 @@
+/* <div class="aws-menu--toggle">
+<div class="aws-menu--hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="aws-menu--cross">
+<span></span>
+<span></span>
+</div>
+</div> */
+
+$togglesize:3rem;
+
+.aws-menu--toggle {
+ transition:.25s ease-in-out;
+ box-sizing:border-box;
+ width:$togglesize;
+ height:$togglesize;
+ position:relative;
+ position:relative;
+ cursor:pointer;
+ /* background-color:rgba(255,255,255,0.4); */
+ border-radius:resolve($togglesize * 0.05);
+ display:block;
+ position:fixed;
+ top:0.125rem;
+ right:0.25rem;
+ z-index:1000;
+ @mixin atMd { display:none; }
+ span { display:block; background:$lightcharcoal; border-radius:2px; }
+&:hover div span, &:hover div span { background-color: black; }
+ .aws-menu--hamburger {
+  position:absolute;
+  height:100%;
+  width:100%;
+  span {
+   transition: $transtime2 ease-in-out, background-color $transtime0 ease-in-out!important;
+   width:resolve($togglesize * 0.6);
+   height:resolve($togglesize * 0.04);
+   position:relative;
+   top:resolve($togglesize * 0.24);
+   left:resolve($togglesize * 0.1);
+   margin:resolve($togglesize * 0.1);
+   &:nth-child(1){ transition-delay:.5s; }
+   &:nth-child(2){ transition-delay:.625s; }
+   &:nth-child(3){ transition-delay:.75s; }
+  }
+ }
+ .aws-menu--cross {
+  position:absolute;
+  height:100%;
+  width:100%;
+  transform:translateX(0.3125rem) rotate(45deg);
+  transform-origin: center center;
+  span {
+   transition: $transtime2 all ease-in-out;
+   &:nth-child(1){
+    height:0%;
+    width:resolve($togglesize * 0.04);
+    position:absolute;
+    top:17%;
+    left:resolve($togglesize * 0.48);
+    transition-delay:0s;
+   }
+   &:nth-child(2){
+    width:0%;
+    height:resolve($togglesize * 0.04);
+    position:absolute;
+    left:resolve($togglesize * 0.17);
+    top:resolve($togglesize * 0.48);
+    transition-delay:.25s;
+   }
+  }
+ }
+ &.active {
+  .aws-menu--hamburger {
+   span {
+    width:0%;
+    &:nth-child(1){ transition-delay:0s; }
+    &:nth-child(2){ transition-delay:.125s; }
+    &:nth-child(3){ transition-delay:.25s; }
+   }
+  }
+  .aws-menu--cross {
+   span {
+    &:nth-child(1){ height:66%; transition-delay:.375s; }
+    &:nth-child(2){ width:66%; transition-delay:.125s; }
+   }
+  }
+ }
+}

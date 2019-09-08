@@ -3,8 +3,8 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>Copyright (C) 2019 by original authors @ fontello.com</metadata>
 <defs>
-<font id="dgsi_icons" horiz-adv-x="1000" >
-<font-face font-family="dgsi_icons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<font id="aws_icons" horiz-adv-x="1000" >
+<font-face font-family="aws_icons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
 <glyph glyph-name="icon-arrow-left-thick" unicode="&#xe800;" d="M321 60l-290 290 290 290 47-47-243-243 243-243z" horiz-adv-x="444" />
 
@@ -21,6 +21,10 @@
 <glyph glyph-name="icon-locate" unicode="&#xe806;" d="M662 600a227 227 0 0 1-162 67h0a229 229 0 0 1-229-229c0-121 207-398 216-409l13-18 13 18c9 11 216 288 216 409v0a227 227 0 0 1-67 162z m33-162c0-94-149-308-195-371-46 63-195 277-195 371a196 196 0 0 0 195 195h0a196 196 0 0 0 195-194z m-195 119a115 115 0 0 1-17-228v-1h17a115 115 0 0 1 0 229z m3-196h-3a79 79 0 1 0 3 0z" horiz-adv-x="1000" />
 
 <glyph glyph-name="icon-search" unicode="&#xe807;" d="M810 49l-185 191a234 234 0 1 1-25-21l186-194z m-542 355a196 196 0 1 0 196-197 197 197 0 0 0-196 197z" horiz-adv-x="1000" />
+
+<glyph glyph-name="icon-chat-box" unicode="&#xe80b;" d="M320-18v168h-51a98 98 0 0 0-98 99v261a98 98 0 0 0 98 99h462a98 98 0 0 0 98-99v-261a98 98 0 0 0-98-99h-187z m-51 593a65 65 0 0 1-65-65v-261a65 65 0 0 1 65-65h84v-135l180 135h198a65 65 0 0 1 65 65v261a65 65 0 0 1-65 65z" horiz-adv-x="1000" />
+
+<glyph glyph-name="icon-chat-bubble" unicode="&#xe80c;" d="M158 38l72 158a228 228 0 0 0-76 165c0 146 158 266 352 266s351-120 351-266-158-265-351-265a454 454 0 0 0-114 14z m348 555c-176 0-318-104-318-232a199 199 0 0 1 73-148l10-8-52-113 172 53 5-1a421 421 0 0 1 110-15c175 0 318 104 318 232s-143 232-318 232z" horiz-adv-x="1000" />
 
 <glyph glyph-name="icon-hamburger" unicode="&#xe80e;" d="M839 333h-678v34h678z m0 236h-678v-33h678z m0-405h-678v-33h678z" horiz-adv-x="1000" />
 

@@ -1,0 +1,121 @@
+.aws-blog--meta {
+ display:block;
+ padding-bottom:0;
+ @mixin atMd {
+  padding-bottom:0;
+  }
+ &:after {
+  content:'';
+  display:table;
+  clear:both;
+ }
+ margin-bottom: 0;
+ @mixin atMd {
+  margin-bottom: 0.5rem;
+ }
+ p {
+  color:$cloud;
+  font-size:0.92rem;
+  padding-bottom:0.125rem;
+ }
+ .author-link {
+   color:$lightcharcoal;
+ }
+}
+
+.aws-blog--social,
+.aws-author--social {
+ position: relative;
+ display: block;
+ transition: $transtime0 all ease-in;
+ padding:0;
+ list-style-type: none!important;
+ margin:0;
+ margin-top: -0.4375rem;
+
+ li {
+  display:inline-block;
+  color:$cloud;
+  a {
+   color:$cloud;
+   &:hover, &:active {
+    color:$lightcharcoal;
+    border-color:$lightcharcoal;
+   }
+  }
+  & + li {
+    margin-left: 0.1875rem;
+  }
+ }
+ &-facebook, &-twitter, &-linked, &-email {
+  position:relative;
+  display:inline-block;
+  border:1px solid $fog;
+  width:1.75rem;
+  height:1.75rem;
+  color:$cloud;
+  font-size:0.92rem;
+  text-align:center;
+  line-height: 1;
+  padding-top:0.25rem;
+  padding-bottom:0.25rem;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  span { display:none; }
+  &:before { font-family:'aws_icons'; }
+ }
+ &-facebook:before {content:'\f09a';}
+ &-twitter:before {content:'\f099';}
+ &-linked:before {
+  content:'\f0e1';
+  transform:translateY(-1px);
+ }
+ &-email:before {
+  content:'\f0e0';
+  transform:translateY(-1px);
+ }
+}
+.aws-blog--social {
+text-align:left;
+@mixin atSm {
+ text-align:right;
+}
+}
+.aws-meta {
+ &--fontsize {
+  margin-right: -0.4375rem;
+  margin-top: 0.4375rem;
+  margin-top: 0.1875rem;
+  color:$cloud;
+  text-align:right;
+  font-size:0.92rem;
+  transition: $transtime0 all ease-in;
+  a {
+   padding-top:0.5625rem;
+   padding-bottom:0.4375rem;
+   position:relative;
+   transition: $transtime0 all ease-in;
+   span {
+    display:inline-block;
+    position:relative;
+    transform: translateY(0.065rem);
+   }
+   &:hover, &:active {
+    span {
+    color:black!important;
+   }
+   }
+  }
+  span {
+   padding:0.25rem 0.375rem;
+   font-weight:300;
+   font-size:1.375rem;
+   color:$cloud;
+  }
+  @mixin atSmmd {
+   text-align:right;
+  }
+ }
+}

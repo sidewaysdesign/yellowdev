@@ -1,0 +1,134 @@
+.topic-link {
+ padding:0.375rem 0.5325rem 0.25rem 0.625rem;
+ color:$lightcharcoal!important;
+ height:2rem;
+ border-radius:1rem;
+ border:1px solid $cloud;
+ text-transform: uppercase;
+ font-size:0.8rem;
+ line-height: 1;
+ transition:$transtime0 all easi-in;
+ &:hover, &:active {
+  background-color: $air;
+ }
+}
+
+.aws-blog--topics {
+ margin-bottom: 0.5rem;
+ @mixin atMd {
+  margin-bottom: 1rem;
+  }
+ h3 {
+  display:block;
+  font-size:$fontsize1;
+  font-size:$fontsize3;
+  font-weight:500;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  @mixin atSmmd {
+   margin-top: 1.25rem;
+  }
+  @mixin atMd {
+   margin-bottom: 0.875rem;
+   }
+ }
+ ul {
+  list-style-type: none;
+  padding:0 0 0 0;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: -0.5rem;
+  display:inline;
+  @mixin atSm {
+  }
+  @mixin atMd {
+   display: block;
+   margin-top: -0.25rem;
+   margin-bottom: 1.125rem;
+   padding:0;
+  }
+  @mixin atLg {
+   padding:0 0 0 1rem;
+  }
+  li {
+   display:inline-block;
+   margin-bottom: 0.375rem;
+   float:left;
+   @mixin atSm {
+   }
+   @mixin atMd {
+    float:none;
+    display: block;
+   }
+   @mixin atLg {
+   }
+   a {
+    display:block;
+    padding: resolve($buttonsmallheight * .25 ) $elementgap 0.125rem $elementgap;
+   }
+   & + li {
+    margin-right: 0.25rem;
+    @mixin atMd {
+     margin-right: 0;
+    }
+   }
+  }
+ }
+ .filter-expand-link {
+  margin-top: 0;
+  text-transform: uppercase;
+  line-height: 0.75;
+  display:block;
+  float:left;
+  min-height:$buttonsmallheight;
+  padding: resolve($buttonsmallheight * .275 ) $elementgap 0.125rem $elementgap;
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
+  @mixin atMd {
+   margin-left: 0;
+   float:none;
+   display:block;
+   text-transform: none;
+  }
+ }
+ ul li a, .filter-expand-link {
+  font-size:0.88rem;
+  line-height: 1;
+  background-color: $vapor;
+  transition: $transtime0 all linear;
+  &:hover, &:active { background-color: white; }
+  @mixin atSm { }
+  @mixin atMd { font-size:1rem; }
+  @mixin atLg { }
+  .filter-link-count { opacity:0.65; }
+  height:$buttonsmallheight;
+  border-radius:resolve($buttonsmallheight / 2);
+  border:1px solid $cloud;
+  color:$grey;
+  line-height: 1;
+  @mixin atSm {
+   /* padding: resolve($buttonsmallheight-sm * .3 ) 1rem 0.15rem 1rem;
+   height:$buttonsmallheight-sm;
+   border-radius:resolve($buttonsmallheight-sm / 2); */
+  }
+  @mixin atMd {
+   padding: 0 0 0.75rem 0;
+   margin-right: -0.5rem;
+   margin-bottom: 0.625rem;
+   padding: 0;
+   height:auto;
+   color:$lightcharcoal;
+   border-radius:none;
+   padding:0;
+   border:none;
+  }
+ }
+ &:after {
+  content:'';
+  display:table;
+  clear:both;
+ }
+}
