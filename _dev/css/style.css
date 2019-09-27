@@ -1,6 +1,7 @@
 /*
-Theme Name: Yellow
-Author: Us Communications
+/*
+Theme Name: Agilus Work Solutions
+Author: Sideways Design
 Version: 1.0
 */
 
@@ -36,3 +37,7 @@ Version: 1.0
 @import "modules/text-positioned";
 @import "modules/section-imagetext";
 @import "modules/pagination";
+@import "modules/indicators";
+@import "modules/footer";
+@import "modules/searchhero";
+@import "modules/jobsnearme";

@@ -64,34 +64,46 @@ $togglesize-sm:3rem;
   position:absolute;
   height:100%;
   width:100%;
-  transform:translateX(0.3125rem) rotate(45deg);
-  transform-origin: center center;
+  transform:translate(0.4375rem) rotate(45deg);
+  @mixin atSm {
+   transform:translate(0.5rem) rotate(45deg);
+   /* top:20%; */
+  }
+
+  /* transform:translate(25%, 25%) rotate(45deg); */
+  transform-origin: 50% 50%;
   span {
    transition: $transtime2 all ease-in-out;
    &:nth-child(1){
+    transform-origin: center center;
     height:0%;
     width:resolve($togglesize * 0.04);
     position:absolute;
-    top:17%;
-    left:resolve($togglesize * 0.48);
+    margin-left:-resolve($togglesize * 0.02);
+    top:16.5%;
+    left:50%;
+    /* margin-left: -25%; */
     transition-delay:0s;
    }
    &:nth-child(2){
     width:0%;
     position:absolute;
     transition-delay:.25s;
+    margin-top:-resolve($togglesize * 0.02);
     height:resolve($togglesize * 0.04);
-    left:resolve($togglesize * 0.17);
-    top:resolve($togglesize * 0.48);
+    top:50%;
+    left:16.5%;
+    /* margin-left: -25%; */
     @mixin atSm {
-     height:resolve($togglesize-sm * 0.04);
-     left:resolve($togglesize-sm * 0.17);
-     top:resolve($togglesize-sm * 0.48);
+     /* height:resolve($togglesize-sm * 0.04);
+     left:resolve($togglesize-sm * 0.12);
+     top:resolve($togglesize-sm * 0.5); */
      }
    }
   }
  }
  &.active {
+ /* & { */
   .aws-menu--hamburger {
    span {
     width:0%;
@@ -102,8 +114,8 @@ $togglesize-sm:3rem;
   }
   .aws-menu--cross {
    span {
-    &:nth-child(1){ height:66%; transition-delay:.375s; }
-    &:nth-child(2){ width:66%; transition-delay:.125s; }
+    &:nth-child(1){ height:67%; transition-delay:.375s; }
+    &:nth-child(2){ width:67%; transition-delay:.125s; }
    }
   }
  }

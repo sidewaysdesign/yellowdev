@@ -21,23 +21,23 @@
   }
  }
  .hs_cos_wrapper_type_text {
-  font-weight:700;
+  font-kerning: normal;
+  font-weight:600;
   position: relative;
   display:inline-block;
+  font-family:'SofiaProSoftBold';
   font-size:$fontsize6;
   text-align: center;
   width:100%;
+  letter-spacing:-.01rem;
   line-height: 1.12;
-  @mixin atSmmd {
-   font-size:$fontsize7;
-  }
+  font-weight: normal;
+  @mixin atSmmd { font-size:$fontsize7; }
   @mixin atMd {
    display:block;
    position: relative;
    text-align: left;
-   font-size:$fontsize7;
   }
-  @mixin atLg { font-size:$fontsize7; }
   @mixin atXl { font-size:$fontsize8; }
  }
 }
@@ -58,6 +58,7 @@
    width:100%;
    padding-top:0.875rem;
    @mixin atMd {
+    padding-top:0.25rem;
     top:50%;
     position: absolute;
     transform: translateY(-50%);

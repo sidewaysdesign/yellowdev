@@ -1,0 +1,70 @@
+<html class="no-js" lang="en"><!--<![endif]-->
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta http-equiv="content-language" content="en">
+ <link rel="stylesheet" href="./style.css">
+</head>
+<style type="text/css">
+html { overflow:hidden }
+body {
+ width:20rem;
+ height:2.5625rem;
+ margin:0;
+ padding:0;
+ background-color: transparent;
+ overflow:hidden;
+}
+.indicator-dashboard-iframe {
+ display:block;
+ width:2.625rem;
+ height:2.625rem;
+ background-color: transparent;
+ -webkit-transition: none;
+ transition: none;
+ background-position: 0 0;
+ background-repeat: no-repeat;
+ background-size:10.5rem;
+ background-image: url(images/dashboard-indicator-sheet.svg);
+ /* background-image: url(images/dashboard-indicator-sheet-2.svg); */
+ /* background-image: url(images/dashboard-indicator-sheet-3.svg); */
+ /* background-image: url(images/dashboard-indicator-sheet-4.svg); */
+}
+.dashboard-messagecount-0 { background-position: 0 0; }
+.dashboard-messagecount-1 { background-position: -2.625rem 0; }
+.dashboard-messagecount-2 { background-position: -5.25rem 0; }
+.dashboard-messagecount-3 { background-position: -7.875rem 0; }
+.dashboard-messagecount-4 { background-position: 0 -2.625rem; }
+.dashboard-messagecount-5 { background-position: -2.625rem -2.625rem; }
+.dashboard-messagecount-6 { background-position: -5.25rem -2.625rem; }
+.dashboard-messagecount-7 { background-position: -7.875rem -2.625rem; }
+.dashboard-messagecount-8 { background-position: 0 -5.25rem; }
+.dashboard-messagecount-9 { background-position: -2.625rem -5.25rem; }
+.dashboard-messagecount-plus,
+.dashboard-messagecount-max,
+.dashboard-messagecount-10 { background-position: -5.25rem -5.25rem; }
+@media (min-width: 768px) {
+ .indicator-dashboard-iframe { width:2.625rem }
+ .dashboard-messagecount-0 { background-position: 0 0 }
+ .dashboard-messagecount-1 { background-position: -2.5625rem }
+ .dashboard-messagecount-2 { background-position: 5.125rem }
+ .dashboard-messagecount-3 { background-position: 7.6875rem }
+ .dashboard-messagecount-4 { background-position: 0 -2.625rem }
+ .dashboard-messagecount-5 { background-position: 2.5625rem -2.625rem }
+ .dashboard-messagecount-6 { background-position: 5.125rem -2.625rem }
+ .dashboard-messagecount-7 { background-position: 7.6875rem -2.625rem }
+ .dashboard-messagecount-8 { background-position: 0 -5.25rem }
+ .dashboard-messagecount-9 { background-position: 2.5625rem -5.25rem }
+ .dashboard-messagecount-plus,
+ .dashboard-messagecount-max,
+ .dashboard-messagecount-10 { background-position: 5.125rem -5.25rem }
+}
+</style>
+<body>
+ <a href="NEED_LINK_TO_DASHBOARD_PAGE" target="_parent" style="width:100%;display:block;">
+  <div class="indicator-dashboard-iframe dashboard-messagecount-plus"></div>
+ </a>
+</body>
+</html>

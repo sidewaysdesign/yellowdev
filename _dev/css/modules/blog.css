@@ -313,3 +313,9 @@ $metacontentheight: 3rem;
   }
  }
 }
+.hs-blog-post,
+.hs-blog-listing {
+ .body-container-wrapper {
+  padding-top: 0!important;
+ }
+}

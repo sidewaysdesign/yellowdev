@@ -12,19 +12,20 @@ h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .s
 }
 
 h1, .h1 {
- font-weight:700;
+ font-weight:600;
  font-size: 28px;
 }
 
 h2, .h2 {
- font-weight:700;
+ /* font-weight:600; */
+ font-family:'SofiaProSoftBold';
+ font-weight:normal;
  font-size: $fontsize4;
  @mixin atSm {
   }
  @mixin atSmmd {
   }
  @mixin atMd {
-  font-weight:700;
   font-size: $fontsize4;
   }
  @mixin atLg {
@@ -32,6 +33,9 @@ h2, .h2 {
 }
 
 h3, .h3 {
+ font-family:'SofiaProSoftMedium';
+ font-weight:normal!important;
+
 }
 
 h4, .h4 {
@@ -57,8 +61,11 @@ h6, .h6 {
   margin-bottom: 1rem;
   margin: 0 0 .875rem;
   color:$lightcharcoal;
+  font-weight: normal;
+  font-family: 'SofiaProSoftRegular';
   strong {
-   font-weight: 500;
+   font-weight: normal;
+   font-family: 'SofiaProSoftBold';
    color:black;
   }
  }

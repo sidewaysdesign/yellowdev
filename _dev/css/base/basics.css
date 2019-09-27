@@ -25,7 +25,7 @@ button, .button, .ssba a, button  {
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
  box-sizing: border-box;
- letter-spacing:0;
+ letter-spacing:0.005em;
 }
 
 *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
@@ -83,10 +83,17 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
  color: #777;
 }
 
-h1, .h1, h2, .h2, h3, .h3 {
+h1, .h1 {
  margin-top: 20px;
  margin-bottom: 0.75em;
- font-weight:700;
+ font-family:'SofiaProSoftBold';
+ font-weight: normal;
+}
+h2, .h2, h3, .h3 {
+ margin-top: 20px;
+ margin-bottom: 0.75em;
+ font-family:'SofiaProSoftMedium';
+ font-weight: normal;
 }
 .home h2 {
  @mixin atSm {
@@ -134,3 +141,8 @@ h2,h3,h4,h5 {
 }
 
 .entry-content > hr:first-child {display:none!important;}
+
+.aws-hidden {
+ visibility: hidden;
+ display:none!important;
+}

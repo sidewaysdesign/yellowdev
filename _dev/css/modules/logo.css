@@ -34,8 +34,6 @@
    align-items:center;
   }
   .hs-image-widget {
-   /* content:url('https://cdn2.hubspot.net/hubfs/2172992/yellow_logo.svg')!important; */
-   /* background-position:0 0; */
    width:$logosize!important;
    height:auto;
    max-width:auto!important;
@@ -52,10 +50,10 @@
 
     /* top:0.125rem; */
     position: relative;
-    transform:translate(-.75rem );
+    transform:translate(-1.125rem );
    }
    @mixin atLg {
-    transform:translateX(-.25rem );
+    transform:translateX(-1.125rem );
     /* width:$logosize-lg!important; */
    }
   }

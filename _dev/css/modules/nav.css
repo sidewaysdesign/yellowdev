@@ -1,12 +1,12 @@
-$menuitempadding: resolve($menumarginvertical-tn / 0.75) $menuinset resolve($menumarginvertical-tn / 1.5) $menuinset;
-$menuitempadding-depth-2: resolve($menumarginvertical-tn / 0.75) $menuinset resolve($menumarginvertical-tn / 1.5) resolve($menuinset * 2);
-$menuitempadding-depth-3: resolve($menumarginvertical-tn / 0.75) $menuinset resolve($menumarginvertical-tn / 1.5) resolve($menuinset * 3);
+$menuitempadding: 0.8125rem $menuinset 0.625rem $menuinset;
+$menuitempadding-depth-2: 0.8125rem $menuinset 0.625rem resolve($menuinset * 2);
+$menuitempadding-depth-3: 0.8125rem $menuinset 0.625rem resolve($menuinset * 3);
 $menuitempadding-md: $menupaddinglevel3 0 $menupaddinglevel3 0;
 $menuitempadding-depth-2-md: $menupaddinglevel3 0 $menupaddinglevel3 0;
 $menuitempadding-depth-3-md: $menupaddinglevel3 0 $menupaddinglevel3 0;
 $mobilemenuborder: 1px solid $lightcharcoal;
 $menutoggleheight: 2rem;
-$menutoggleoffset: 0.125rem;
+$menutoggleoffset: 0.25rem;
 
 .header-container-wrapper {
  z-index:100;
@@ -17,6 +17,7 @@ $menutoggleoffset: 0.125rem;
  }
 }
 .aws-menu {
+ a, a:active, a:focus{ outline: none!important;}
  box-sizing: border-box;
  min-height: auto!important;
  @mixin atMd {
@@ -24,13 +25,10 @@ $menutoggleoffset: 0.125rem;
  }
  .hs-menu-children-wrapper {
   padding-left:0;
-  /* display:none; */
  }
  .hs_cos_wrapper_type_menu {
-  /* display:none; */
   display:block;
-  position: fixed;
-  top:0;
+  /* position: fixed; */
   right:0;
   min-width:300px;
   margin-right:-100%;
@@ -108,7 +106,7 @@ $menutoggleoffset: 0.125rem;
   z-index:-1;
   .row-number-1 {
    z-index:10;
-   position: fixed;
+   /* position: fixed; */
    top:0;
    left:0;
    border-bottom:$rulewidth solid $primary;
@@ -124,6 +122,7 @@ $menutoggleoffset: 0.125rem;
   box-sizing: border-box;
   display:block;
   position: fixed;
+  top:0;
   right:-15rem;
   left:auto;
   width:15rem;
@@ -133,8 +132,8 @@ $menutoggleoffset: 0.125rem;
   overflow-x:hidden;
   padding-top:resolve($naviconsize * 1.0625);
   background-color: $vapor;
-  transition: right $transtime2 ease-in-out, box-shadow $transtime2 ease-in-out;
-  box-shadow: 0 0 0 transparent;;
+  transition: right $transtime2 ease-in-out, box-shadow $transtime1 ease-in-out;
+  box-shadow: 0 0 0 transparent;
   @mixin atSm {
    padding-top:resolve($naviconsize * 1.3125);
   }
@@ -155,11 +154,12 @@ $menutoggleoffset: 0.125rem;
   &.active {
    box-shadow: -2px 0 8px rgba(0,0,0,0.25);
    right:0;
+   @mixin atMd {
+    box-shadow:none;
+   }
   }
   & > ul {
    display:block;
-   @mixin atMd {
-   }
    @mixin atLg {
    }
   }
@@ -183,17 +183,19 @@ $menutoggleoffset: 0.125rem;
  }
  .hs-menu-item {
   overflow:visible;
-
+display:block;
   /* position: relative; */
   a {
+
    display:block;
    z-index:10;
    position: relative;
    align-items:center;
-   color: $lightcharcoal;
-   line-height: 1.2;
+   line-height: 1;
+   color:black;
+   letter-spacing: 0.015em;
    @mixin atMd {
-    transition: $transitionall;
+    transition: 0.2s opacity ease-in, 0.2s color ease-in;
     display:flex;
     flex-shrink:1;
     min-width:none;
@@ -204,27 +206,11 @@ $menutoggleoffset: 0.125rem;
 
   }
   &:hover > a {
-   color:black;
-  }
-  &:first-child {
-   /* padding-top:resolve($menuinset / 2); */
+   color: $lightcharcoal;
   }
   & + .hs-menu-item {
-   /* padding-bottom:1rem; */
-   /* padding-top:1rem; */
-   a {
-    /* padding:$menuitempadding; */
-   }
    &:last-child { padding-bottom:0; }
-   @mixin atMd {
-    padding: 0;
-    a {
-     /* padding-bottom:0; */
-     /* padding-bottom:resolve($menuinset / 2); */
-     /* padding-top:0; */
-    }
-    content:none;
-   }
+   @mixin atMd { padding: 0; content:none; }
   }
  }
  .hs-menu-wrapper > ul {
@@ -243,6 +229,7 @@ $menutoggleoffset: 0.125rem;
     padding-right:0;
    }
    & > a {
+    font-family:$fontfam2;
     max-width:none;
     padding: $menuitempadding;
     font-weight:500;
@@ -250,14 +237,14 @@ $menutoggleoffset: 0.125rem;
     @mixin atMd {
      max-width:none;
      height: $menuheight-md;
-     padding: $menumarginvertical-md resolve($menuinset-md * .625) $menumarginvertical-md resolve($menuinset-md * .625);
+     /* padding: $menumarginvertical-md resolve($menuinset-md * .625) $menumarginvertical-md resolve($menuinset-md * .625); */
+     padding: $menumarginvertical-md resolve($menuinset-md * 1.5) $menumarginvertical-md resolve($menuinset-md * 1.5);
      text-align: center;
     }
     @mixin atMdlg {
-     padding: $menumarginvertical-md $menuinset-md $menumarginvertical-md $menuinset-md;
     }
     @mixin atLg {
-     padding: $menumarginvertical $menuinset $menumarginvertical $menuinset;
+     padding: $menumarginvertical resolve($menuinset * 2.25) $menumarginvertical resolve($menuinset * 2.25);
     }
    }
    &:last-child { padding-right:0.75rem }
@@ -265,26 +252,12 @@ $menutoggleoffset: 0.125rem;
    &:nth-last-child(2),
    &:nth-last-child(3),
    &:nth-last-child(4),
-   &:nth-last-child(5)
-   {
-    a {
-     @mixin atMd {
-      padding-right: resolve($menuinset / 4);
-      padding-left: resolve($menuinset / 4);
-     }
-    }
-   }
+   &:nth-last-child(5) { a { @mixin atMd { padding-right: 0; padding-left: 0; } } }
    &:nth-last-child(5) {
-    @mixin atMd {
-     padding-left:resolve($menuinset * .75);
-    }
+    @mixin atMd { padding-left:resolve($menuinset * 1); }
+    @mixin atLg { padding-left:resolve($menuinset * 1.5); }
    }
-   &:last-child {
-    margin-left: 0;
-    @mixin atMd {
-     /* margin-left: 0.625rem; */
-    }
-   }
+   &:last-child { margin-left: 0; }
   }
  }
  .hs-menu-depth-1,
@@ -342,12 +315,12 @@ $menutoggleoffset: 0.125rem;
      display:block;
      color: $charcoal;
      padding: $menuitempadding;
-     letter-spacing: 0.02em;
+     letter-spacing: 0.015em;
      text-align: left;
      @mixin atMd {
       padding:$menuinset $menuinset $menuinset $menuinset;
       padding-left:0!important;
-      font-weight: 600;
+      font-weight: 700;
      }
     }
    }
@@ -358,12 +331,12 @@ $menutoggleoffset: 0.125rem;
  .nav-icon-dashboard,
  .nav-icon-chat,
  .nav-icon-members {
-  display:inline;
+  display:block;
   position:relative;
   width:100%;
-  padding-top:0.5rem;
-  padding-bottom:0.5rem;
-  padding-left:resolve($naviconsize - $menuinset / 2);
+  /* padding-top:0.5rem; */
+  /* padding-bottom:0.5rem; */
+  padding-left:resolve($naviconsize - $menuinset / 2 + 0.25rem);
   overflow:visible;
   font-size:1rem;
   @mixin atMd {
@@ -379,7 +352,7 @@ $menutoggleoffset: 0.125rem;
   }
   &:before {
    position: absolute;
-   top:-0.25ex;
+   top:-0.5625ex;
    bottom:auto;
    left:-resolve($naviconsize * 0.2 );
    width:100%;
@@ -387,12 +360,12 @@ $menutoggleoffset: 0.125rem;
    font-family:'aws_icons';
    font-size:$naviconsize;
    font-weight:normal;
-   text-align: center;
    text-align: left;
    @mixin atMd {
     font-size:$naviconsize-md;
     position: absolute;
     top:auto;
+    top:-0.625rem;
     bottom:-resolve($naviconwidth / 4.625);
     left:0;
     text-align: center;
@@ -405,7 +378,7 @@ $menutoggleoffset: 0.125rem;
    padding-left: $menuinset;
    &:after {
     position:absolute;
-    bottom:-resolve($naviconwidth / 3.75);
+    bottom:-resolve($naviconwidth / 3);
     left:-resolve($menuinset - 0.125rem);
     width:1px;
     height:$naviconwidth;
@@ -423,7 +396,6 @@ $menutoggleoffset: 0.125rem;
  .nav-icon-chat { &:before { content:'\e80b'; } }
  .nav-icon-members { &:before { content:'\e80f'; } }
  .hs-menu-depth-2 {
-
   & > .hs-menu-children-wrapper {
    height:auto;
    overflow:hidden;
@@ -446,7 +418,6 @@ $menutoggleoffset: 0.125rem;
     }
    }
   }
-
   @mixin atMd {
    font-size:$fontsize0;
   }
@@ -472,7 +443,7 @@ $menutoggleoffset: 0.125rem;
    width:$menumobilewidth;
    @mixin atMd {
     width:auto;
-    max-width:86px!important;
+    /* max-width:86px!important; */ /* break onto 2 lines if 4 menu items */
    }
    @mixin atMdlg {
     max-width:none!important;
@@ -523,7 +494,7 @@ $menutoggleoffset: 0.125rem;
    }
   }
 
-  /* &:hover, &:nth-child(3) { */
+
   /* .hs-menu-wrapper > ul > .hs-menu-item:hover > a + .hs-menu-children-wrapper { */
   & > .hs-menu-children-wrapper {
    /* TABLEAU MAIN SPECS */
@@ -614,12 +585,14 @@ $menutoggleoffset: 0.125rem;
       position:absolute;
       padding-top:0.1875rem;
       top:$menutoggleoffset;
+      left:auto;
       right:0;
       width:$menutoggleheight;
       height:$menutoggleheight;
-      background-color: pink;
       background-color: transparent;
       @mixin atMd {
+       left:100%;
+       margin-left: -0.75rem;
        transform: all 0;
        width:1px;
        background-color: $silver;
@@ -628,7 +601,11 @@ $menutoggleoffset: 0.125rem;
        height:90%;
        height:calc(100% - resolve($menuinset * 3.625) );
       }
+      @mixin atLg {
+       margin-left: -0.25rem;
+      }
      }
+     &:last-child:after, &:nth-last-child(2):after { content:none; }
      &:hover:after, &:active:after {
       color:black;
      }
@@ -646,16 +623,6 @@ $menutoggleoffset: 0.125rem;
     }
     &, .hs-menu-children-wrapper {
      display:block;
-     /* &:before {
-     content:'';
-     position:relative;
-     top:0;
-     left:0;
-     height:1px;
-     background-color: $menubordercolor;
-     width:100%;
-     z-index:1;
-     } */
      @mixin atMd {
       display:block;
       &:before {
@@ -666,16 +633,16 @@ $menutoggleoffset: 0.125rem;
     }
    }
    .hs-menu-depth-3 {
-    /* padding-left:$menuinset; */
     background-color: $fog;
-    /* display:none; */
     .hs-item-has-children &.active {
      display:block;
     }
     a {
      padding: $menuitempadding-depth-3;
+     @mixin atMd {
+      font-size:0.875rem;
+     }
     }
-
     @mixin atMd {
      display:block;
      padding-left: 0;
@@ -710,11 +677,9 @@ $menutoggleoffset: 0.125rem;
   a {
    padding: $menuitempadding;
   }
-
   @mixin atMd {
    a {
     padding:$menuinset $menuinset $menuinset $menuinset;
-    /* padding: $menuitempadding-depth-2-md; */
    }
   }
   &:before {

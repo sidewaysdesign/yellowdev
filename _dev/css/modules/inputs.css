@@ -1,7 +1,8 @@
 input[type="text"],
 input[type="email"],
 input[type="password"] {
- padding:0.875rem 0.75rem 0.75rem 0.75rem;
+ box-sizing: border-box;
+ padding:0.5rem 0.75rem 0.25rem 0.75rem;
  line-height: 1;
  font-size:$inputtext;
  border:1px solid $cloud;
@@ -11,17 +12,72 @@ input[type="password"] {
  height:$inputheight;
  min-height:$inputheight;
  @mixin atSm {
+  height:$inputheight-sm;
+  min-height:$inputheight-sm;
   }
  @mixin atSmmd {
+  height:$inputheight-smmd;
+  min-height:$inputheight-smmd;
+  padding:0.875rem 0.75rem 0.75rem 0.75rem;
   }
  @mixin atMd {
   padding:0.875rem 0rem 0.75rem 1rem;
   font-size:$inputtext-md;
+  height:$inputheight-md;
   min-height:$inputheight-md;
   }
  @mixin atLg {
   }
  & + button {
+ }
+}
+fieldset {
+ border:none;
+ padding:0;
+ margin:0;
+}
+label {
+ position:relative;
+ display:inline-block;
+ padding-bottom: 0.375rem;
+}
 
+input[type="submit"] {
+ height:$inputheight;
+ min-width:$inputheight;
+ font-family:$fontfam2;
+ border:none;
+ padding:0 0.5rem 0 0.5rem;
+ /* overflow-x: hidden; */
+ border-radius:0;
+ border:none;
+ text-align: center;
+ font-weight:500;
+ font-size:1.2rem;
+ line-height: 1;
+ margin-left:$interinputspacing;
+ @mixin atSm {
+  height:$inputheight-sm;
+  min-width:$inputheight-sm;
+ }
+ @mixin atSmmd {
+  height:$inputheight-smmd;
+  min-width:$inputheight-smmd;
+ }
+ @mixin atMd {
+  height:$inputheight-md;
+  min-width:$inputheight-md;
+  padding:0.1875rem 0.5rem 0 0.5rem;
+ }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+ vertical-align:bottom;
+ border:none;
+ &::placeholder {
+  color:$silver;
  }
 }

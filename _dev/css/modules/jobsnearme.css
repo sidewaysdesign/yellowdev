@@ -1,0 +1,208 @@
+$dotsize-jobsnearme: 0.5rem;
+$dotsize-jobsnearme-sm: 0.625rem;
+$dotsize-jobsnearme-smmd: 2rem;
+$dotsize-jobsnearme-md: 2.625rem;
+$dotsize-jobsnearme-lg: 3rem;
+
+.aws-jobsnearme {
+ &--wrapper {
+
+ }
+ &--contents {
+  position: relative;
+  padding-top: 1.0625rem;
+  @mixin atSmmd {
+   padding-top: 1.5rem;
+   padding-left:7rem;
+  }
+  @mixin atMd {
+   padding-top: 1.875rem;
+   padding-left:15rem;
+  }
+  @mixin atLg {
+   padding-top: 2rem;
+   padding-left:50%;
+  }
+  p {
+   margin-top:0;
+   margin-bottom: 0.5rem;
+  }
+  h2 {
+   position: relative;
+   display:inline-block;
+   margin-top: 0;
+   margin-bottom: 1.25rem;
+   margin-left: -0.25rem;
+   font-family: $fontfam2;
+   font-size:2.25rem;
+   font-weight:normal;
+   letter-spacing: 0;
+   @mixin atSmmd {
+    margin-bottom: 0.75rem;
+    display:block;
+   }
+   @mixin atMd {
+    margin-bottom: 0.625rem;
+    font-size:3.625rem;
+   }
+   @mixin atLg {
+    margin-bottom: 0.75rem;
+    font-size:4.125rem;
+   }
+   &:before, &:after {
+    content:'';
+    display:block;
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin-left:0;
+    height:$dotsize-jobsnearme;
+    bottom:-0.375rem;
+    @mixin atSm {
+     bottom:-0.625rem;
+     height:$dotsize-jobsnearme-sm;
+    }
+    @mixin atSmmd {
+     left:0;
+     bottom:0.625rem;
+     height:$dotsize-jobsnearme-smmd;
+    }
+    @mixin atMd {
+     bottom:0.9375rem;
+     height:$dotsize-jobsnearme-md;
+     margin-left:-100%;
+    }
+    @mixin atLg {
+     bottom:1.125rem;
+     height:$dotsize-jobsnearme-lg;
+    }
+   }
+   &:before {
+    background-color: $primary;
+    width:15rem;
+    width:100vw;
+    right: resolve($dotsize-jobsnearme / 2);
+    @mixin atSm {
+     right: resolve($dotsize-jobsnearme-sm / 2);
+    }
+    @mixin atSmmd {
+     width:10rem;
+     margin-left:-13.0625rem;
+    }
+    @mixin atMd {
+     width:20rem;
+     margin-left:-26rem;
+    }
+    @mixin atLg {
+     width:200%;
+     margin-left:-255%;
+    }
+   }
+   &:after {
+    width:$dotsize-jobsnearme;
+    margin-left:-resolve($dotsize-jobsnearme / 2);
+    border-radius: resolve($dotsize-jobsnearme / 2);
+    background-color: black;
+    /* opacity:0.33; */
+    @mixin atSm {
+     width:$dotsize-jobsnearme-sm;
+     margin-left:-resolve($dotsize-jobsnearme-sm / 2);
+     border-radius: resolve($dotsize-jobsnearme-sm / 2);
+    }
+    @mixin atSmmd {
+     left:-3.0625rem;
+     width:$dotsize-jobsnearme-smmd;
+     margin-left:-resolve($dotsize-jobsnearme-smmd / 2);
+     border-radius: resolve($dotsize-jobsnearme-smmd / 2);
+    }
+    @mixin atMd {
+     left:-6rem;
+     width:$dotsize-jobsnearme-md;
+     margin-left:-resolve($dotsize-jobsnearme-md / 2);
+     border-radius: resolve($dotsize-jobsnearme-md / 2);
+    }
+    @mixin atLg {
+     left:-55%;
+     width:$dotsize-jobsnearme-lg;
+     margin-left:-resolve($dotsize-jobsnearme-lg / 2);
+     border-radius: resolve($dotsize-jobsnearme-lg / 2);
+    }
+   }
+  }
+ }
+ &--suggested {
+  &-wrapper {
+   h4 {
+    margin-top: 0;
+    font-family: $fontfam2;
+    font-size:1rem;
+    font-weight:normal;
+   }
+  }
+  &-links {
+   margin-left: -0.0625rem;
+   padding-top: $interinputspacing;
+   p {
+    display:block;
+    position: relative;
+    margin-top: 0;
+    margin-right:$interinputspacing;
+    padding-bottom: 0.875rem;
+    float:left;
+    a {
+     padding:0.5rem 1rem;
+     border-radius:1rem;
+     background-color: $primary;
+     transition: all $transtime0 ease-in-out;
+     &:hover {
+      background-color: color($primary a(50%));
+      color:black;
+     }
+     &:empty {display:none;}
+    }
+    & + & {
+
+    }
+   }
+  }
+ }
+ &--form {
+  label {
+   display:block;
+   font-family: $fontfam2;
+  }
+  input[type="text"] {
+   box-sizing: border-box;
+   width:70%;
+   width: calc(100% - $inputheight - $interinputspacing);
+   border:1px solid $primary;
+   background-color: $vapor;
+   @mixin atSm { width:calc(100% - $inputheight-sm - $interinputspacing); }
+   @mixin atSmmd { width:calc(100% - $inputheight-smmd - $interinputspacing); }
+   @mixin atMd { width:calc(100% - $inputheight-md - $interinputspacing); }
+   @mixin atLg { }
+  }
+  input[type="submit"] {
+   display:block;
+   position: relative;
+   margin-left:$interinputspacing;
+   background-color: black;
+   color:$primary;
+
+  }
+  fieldset {
+   display:block;
+   position:relative;
+   width:100%;
+  }
+  input[type="text"], input[type="submit"] {
+   display:block;
+   float:left;
+  }
+  &:after {
+   display:table;
+   clear:both;
+   content:'';
+  }
+ }
+}
