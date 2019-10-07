@@ -1,0 +1,10 @@
+.aws-section--form {
+ position:relative;
+ display:block;
+}
+
+.hs-form-field {
+ & + & {
+  margin-top:$formverticalspacing;
+ }
+}

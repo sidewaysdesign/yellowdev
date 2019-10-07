@@ -1,9 +1,20 @@
 .aws-blog--meta {
  display:block;
- padding-bottom:0;
+ position: relative;
+ padding-bottom:0.5rem;
+ #hubspot-author_data {
+  padding-top:0;
+  margin-top:-.25rem;
+  display:inline-block;
+ }
+ #hubspot-topic_data {
+  display:block;
+  padding-top:0.75rem;
+  margin-top:0!important;
+ }
  @mixin atMd {
   padding-bottom:0;
-  }
+ }
  &:after {
   content:'';
   display:table;
@@ -19,7 +30,7 @@
   padding-bottom:0.125rem;
  }
  .author-link {
-   color:$lightcharcoal;
+  color:$slate;
  }
 }
 
@@ -32,6 +43,7 @@
  list-style-type: none!important;
  margin:0;
  margin-top: -0.4375rem;
+ margin-bottom: -0.1875rem;
 
  li {
   display:inline-block;
@@ -39,12 +51,12 @@
   a {
    color:$cloud;
    &:hover, &:active {
-    color:$lightcharcoal;
-    border-color:$lightcharcoal;
+    color:$slate;
+    border-color:$slate;
    }
   }
   & + li {
-    margin-left: 0.1875rem;
+   margin-left: 0.1875rem;
   }
  }
  &-facebook, &-twitter, &-linked, &-email {
@@ -78,16 +90,15 @@
  }
 }
 .aws-blog--social {
-text-align:left;
-@mixin atSm {
- text-align:right;
-}
+ text-align:left;
+ @mixin atTnsm {
+  text-align:right;
+ }
 }
 .aws-meta {
  &--fontsize {
   margin-right: -0.4375rem;
-  margin-top: 0.4375rem;
-  margin-top: 0.1875rem;
+  margin-top: 0;
   color:$cloud;
   text-align:right;
   font-size:0.92rem;
@@ -104,8 +115,8 @@ text-align:left;
    }
    &:hover, &:active {
     span {
-    color:black!important;
-   }
+     color:black!important;
+    }
    }
   }
   span {

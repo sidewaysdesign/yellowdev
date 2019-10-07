@@ -4,14 +4,15 @@
   /* float:left; */
   width:calc(100% - $elementgap - $buttonwidth);
   margin:0;
-  @mixin atSm {
+  @mixin atTnsm {
   }
   @mixin atMd {
    display:block;
   }
  }
+
  input[type="text"] {
-  @mixin atSm {
+  @mixin atTnsm {
    width:80%;
    width:calc(100% - $elementgap - $buttonwidth);
   }
@@ -27,7 +28,7 @@
   line-height: 1;
   width: resolve($buttonwidth);
   /* padding-top:0.25rem; */
-  @mixin atSm {
+  @mixin atTnsm {
    margin-top: 0;
    margin-left:$elementgap;
   }
@@ -50,7 +51,7 @@
     content:'Go!';
     width:100%;
     padding:1rem 0 0.25rem 0;
-    @mixin atSm {
+    @mixin atTnsm {
      min-height: $inputheight-sm;
      max-height: $inputheight-sm;
      font-size:$inputtext-sm;
@@ -85,8 +86,6 @@
  display: block;
  position: relative;
  ul {
-  /* FIX */
-  display:none;
  }
 }
 .aws-unit--search label,
@@ -103,7 +102,7 @@
  input[type="text"],  input[type="email"], button {
   height: $inputheight;
   max-height: $inputheight;
-  @mixin atSm {
+  @mixin atTnsm {
    height: $inputheight-sm;
    max-height: $inputheight-sm;
   }

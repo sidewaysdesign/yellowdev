@@ -1,0 +1,262 @@
+.aws-section {
+ &--wrapper {
+  display:block;
+  position:relative;
+  padding:$marginsize 0 $marginsize 0;
+  @mixin atTn {
+   padding:$marginsize-sm;
+   padding-left: 0;
+   padding-right: 0;
+  }
+  @mixin atSmmd {
+   padding:$marginsize-smmd;
+   padding-left: 0;
+   padding-right: 0;
+  }
+  @mixin atMd {
+   padding:$marginsize-md;
+   padding-left: 0;
+   padding-right: 0;
+  }
+  @mixin atLg {
+   padding-top:$marginvertical-lg;
+   padding-bottom:$marginvertical-lg;
+  }
+  &.vertical-padding--reduced {
+   @mixin atMd { padding:resolve($marginsize-md / 4) 0 resolve($marginsize-md / 4) 0; }
+   @mixin atLg { padding:resolve($marginsize-lg / 4) 0 resolve($marginsize-lg / 4) 0; }
+  }
+  &.vertical-padding--none {
+   @mixin atMd { padding:0; }
+   @mixin atLg { padding:0; }
+  }
+ }
+ &--background {
+  overflow:visible;
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  min-width:100vw;
+  left: calc(50% - 0px);
+  transform:translateX(-50%);
+  margin:0;
+ }
+
+ &--contents {
+  overflow:hidden;
+  display:block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $marginsize;
+  @mixin atTnsm {
+   /* padding: $marginsize-sm; */
+  }
+  @mixin atSmmd {
+   /* padding: $marginsize-smmd; */
+  }
+  @mixin atMd {
+   /* padding: $marginsize-md; */
+  }
+  @mixin atLg {
+   /* padding: resolve($marginsize-lg * 0.5); */
+  }
+  h2 {
+   font-family:$fontfam2;
+   margin-top: 0;
+   margin-bottom: 1rem;
+   /* text-align: center; */
+   @mixin atTnsm {
+   }
+   @mixin atSmmd {
+    text-align: left;
+   }
+   @mixin atMd {
+   }
+   @mixin atLg {
+   }
+  }
+  &.contentalign {
+   &-left {
+    margin-left: 0;
+    margin-right: auto;
+   }
+   &-right {
+    margin-left: auto;
+    margin-right: 0;
+   }
+   &-center {
+    margin-left: auto;
+    margin-right: auto;
+   }
+  }
+  &.contentbg-white, &.contentbg-white-translucent {
+   h2, h3 { color:black; }
+  }
+  &.contentbg-yellow, &.contentbg-yellow-translucent {
+   h2, h3 { color:black; }
+  }
+  &.contentbg-black, &.contentbg-black-translucent {
+   h2, h3 { color: $primary; }
+  }
+ }
+
+ &--form {
+  h3 {
+   margin-top:0;
+   &:empty {
+    display:none;
+   }
+  }
+  form { margin-bottom: 0; }
+  &:last-child { margin-top:0!important; }
+  overflow:hidden;
+  label { }
+  input[type="submit"] {
+   display:block;
+   width:100%;
+   margin:0;
+   margin-top: $marginsize;
+   max-width:9rem;
+   margin-left: auto;
+   margin-right: auto;
+   @mixin atTnsm {
+    max-width:20rem;
+    width:100%;
+   }
+   @mixin atMd {
+    max-width:20rem;
+    margin-left: 0;
+   }
+  }
+  .contentbg-white &, .contentbg-white-translucent & {
+   input {
+    background-color: white;
+    border:1px solid $primary;
+   }
+   h3 { color:$charcoal;}
+   label { color:black; }
+   input[type="submit"] { background-color: $primary; color:black; }
+  }
+  .contentbg-yellow &, .contentbg-yellow-translucent & {
+   h3 { color:black;}
+   input { background-color: white; }
+   label { color:black; }
+   input[type="submit"] { background-color: black; color:$primary; }
+  }
+  .contentbg-black &, .contentbg-black-translucent & {
+   h3 { color:$primary;}
+   input { background-color: white; }
+   label { color:white; }
+   input[type="submit"] { background-color: $primary; color:black; }
+  }
+ }
+}
+
+.contentbg-white, .contentbg-white-translucent, .sectionbg-white { background-color: white;}
+.contentbg-white-translucent, .sectionbg-white-translucent {
+ background-color: white;
+ background-color: rgba(255,255,255,0.82);
+
+}
+.contentbg-yellow, .contentbg-yellow-translucent, .sectionbg-yellow { background-color: $primary; }
+.contentbg-yellow-translucent, .sectionbg-yellow-translucent {
+ background-color: color($primary a(88%));
+ background-blend-mode:soft-light;
+}
+.contentbg-grey, .contentbg-grey-translucent, .sectionbg-grey { background-color: $fog; }
+.contentbg-grey-translucent, .sectionbg-grey-translucent {
+ background-color: $fog;
+ background-blend-mode:multiply;
+}
+.contentbg-black, .contentbg-black-translucent, .sectionbg-black { background-color: black; }
+.contentbg-black-translucent, .sectionbg-black-translucent {
+ background-color: rgba(0,0,0,0.82);
+ background-blend-mode:multiply;
+}
+
+.contentbg-slate, .contentbg-slate-translucent, .sectionbg-slate { background-color: $slate; }
+.contentbg-slate-translucent, .sectionbg-slate-translucent {
+ background-color: color($slate a(88%));
+ background-blend-mode:soft-light;
+}
+.contentbg-cloud, .contentbg-cloud-translucent, .sectionbg-cloud { background-color: $cloud; }
+.contentbg-cloud-translucent, .sectionbg-cloud-translucent {
+ background-color: color($cloud a(88%));
+ background-blend-mode:soft-light;
+}
+.contentbg-silver, .contentbg-silver-translucent, .sectionbg-silver { background-color: $silver; }
+.contentbg-silver-translucent, .sectionbg-silver-translucent {
+ background-color: color($silver a(88%));
+ background-blend-mode:soft-light;
+}
+.contentbg-fog, .contentbg-fog-translucent, .sectionbg-fog { background-color: $fog; }
+.contentbg-fog-translucent, .sectionbg-fog-translucent {
+ background-color: color($fog a(88%));
+ background-blend-mode:soft-light;
+}
+.contentbg-mist, .contentbg-mist-translucent, .sectionbg-mist { background-color: $vapor; }
+.contentbg-mist-translucent, .sectionbg-mist-translucent {
+ background-color: color($mist a(88%));
+ background-blend-mode:soft-light;
+}
+.contentbg-vapor, .contentbg-vapor-translucent, .sectionbg-vapor { background-color: $vapor; }
+.contentbg-vapor-translucent, .sectionbg-vapor-translucent {
+ background-color: color($vapor a(88%));
+ background-blend-mode:soft-light;
+}
+.contentbg-air, .contentbg-air-translucent, .sectionbg-air { background-color: $vapor; }
+.contentbg-air-translucent, .sectionbg-air-translucent {
+ background-color: color($air a(88%));
+ background-blend-mode:soft-light;
+}
+.contentbg-transparent, .sectionbg-transparent { background-color: transparent; }
+
+.col-one-half {
+ width:100%;
+ @mixin atSmmd {
+  width:50%;
+ }
+}
+.col-one-third {
+ width:100%;
+ @mixin atSmmd {
+  width:50%;
+ }
+ @mixin atMd {
+  width:33.3%;
+ }
+}
+.col-one-quarter {
+ width:100%;
+ @mixin atTnsm {
+  width:50%;
+ }
+ @mixin atSmmd {
+  width:50%;
+ }
+ @mixin atMd {
+  width:33.3%;
+ }
+ @mixin atLg {
+  width:25%;
+ }
+}
+.col-two-thirds {
+ width:100%;
+ @mixin atMd {
+  width:66.6%;
+ }
+}
+.col-three-quarters {
+ width:100%;
+ @mixin atMd {
+  width:75%;
+ }
+}

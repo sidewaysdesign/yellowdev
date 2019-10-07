@@ -3,8 +3,8 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .s
 }
 
 h4, .h4, h5, .h5, h6, .h6 {
- margin-top: 10px;
- margin-bottom: 10px;
+ /* margin-top: 10px;
+ margin-bottom: 10px; */
 }
 
 h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small {
@@ -21,12 +21,13 @@ h2, .h2 {
  font-family:'SofiaProSoftBold';
  font-weight:normal;
  font-size: $fontsize4;
- @mixin atSm {
+ @mixin atTnsm {
   }
  @mixin atSmmd {
+  font-size: $fontsize5;
   }
  @mixin atMd {
-  font-size: $fontsize4;
+  font-size: $fontsize6;
   }
  @mixin atLg {
   }
@@ -35,17 +36,31 @@ h2, .h2 {
 h3, .h3 {
  font-family:'SofiaProSoftMedium';
  font-weight:normal!important;
-
+ font-size: $fontsize3;
+ @mixin atTnsm {
+ }
+ @mixin atSmmd {
+  font-size: $fontsize4;
+ }
+ @mixin atMd {
+  font-size: $fontsize5;
+ }
+ @mixin atLg {
+ }
 }
 
 h4, .h4 {
  font-weight:700;
- font-size: 1.33rem;
+ font-size: $fontsize0;
+ margin-bottom: 0;
+ margin-top: 0;
+line-height: 1.25;
+
 }
 
 h5, .h5 {
  font-weight:700;
- font-size: 14px;
+ font-size: 0.875rem;
 }
 
 h6, .h6 {
@@ -55,18 +70,35 @@ h6, .h6 {
 
 .post-body,
 .aws-author--section,
-.aws-single-column {
+.aws-single-column,
+.aws-section--dual
+ {
  p {
   line-height: $bodycopylineheight;
   margin-bottom: 1rem;
   margin: 0 0 .875rem;
-  color:$lightcharcoal;
+  color:$slate;
   font-weight: normal;
   font-family: 'SofiaProSoftRegular';
   strong {
    font-weight: normal;
    font-family: 'SofiaProSoftBold';
    color:black;
+  }
+  a:only-child {
+   letter-spacing:0.05em;
+   font-family:$fontfam4;
+   font-weight:normal;
+   &:after {
+    position:relative;
+    display:inline-block;
+    font-family:'aws_icons';
+    content:'\e818';
+    font-size:133%;
+    margin-left: 0.25ex;
+    bottom:-0.2ex;
+    margin-top:-0.5ex;
+   }
   }
  }
  h2 {
@@ -93,4 +125,15 @@ h6, .h6 {
  *:last-child {
   margin-bottom: 0;
  }
+}
+a {
+ transition: color $transtime0 ease-in-out;
+ &:hover, &:active {
+  color:black;
+ }
+}
+
+p {
+ margin-block-start:0;
+ margin-block-end:0;
 }

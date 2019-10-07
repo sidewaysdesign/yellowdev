@@ -1,23 +1,27 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3a1396");
 /*
-@font-face {font-family: 'SofiaProSoftBold-Italic';src: url('fonts/3A1396_0_0.eot');src: url('fonts/3A1396_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_0_0.woff2') format('woff2'),url('fonts/3A1396_0_0.woff') format('woff');}
-@font-face {font-family: 'SofiaProSoftMedium';src: url('fonts/3A1396_1_0.eot');src: url('fonts/3A1396_1_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_1_0.woff2') format('woff2'),url('fonts/3A1396_1_0.woff') format('woff');}
-@font-face {font-family: 'SofiaProSoftLight';src: url('fonts/3A1396_2_0.eot');src: url('fonts/3A1396_2_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_2_0.woff2') format('woff2'),url('fonts/3A1396_2_0.woff') format('woff');}
-@font-face {font-family: 'SofiaProSoftBold';src: url('fonts/3A1396_3_0.eot');src: url('fonts/3A1396_3_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_3_0.woff2') format('woff2'),url('fonts/3A1396_3_0.woff') format('woff');}
-@font-face {font-family: 'SofiaProSoftLight-Italic';src: url('fonts/3A1396_4_0.eot');src: url('fonts/3A1396_4_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_4_0.woff2') format('woff2'),url('fonts/3A1396_4_0.woff') format('woff');}
-@font-face {font-family: 'SofiaProSoftMedium-Italic';src: url('fonts/3A1396_5_0.eot');src: url('fonts/3A1396_5_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_5_0.woff2') format('woff2'),url('fonts/3A1396_5_0.woff') format('woff');}
-@font-face {font-family: 'SofiaProSoftRegular';src: url('fonts/3A1396_6_0.eot');src: url('fonts/3A1396_6_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_6_0.woff2') format('woff2'),url('fonts/3A1396_6_0.woff') format('woff');}
-@font-face {font-family: 'SofiaProSoftRegular-Italic';src: url('fonts/3A1396_7_0.eot');src: url('fonts/3A1396_7_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_7_0.woff2') format('woff2'),url('fonts/3A1396_7_0.woff') format('woff');}
- */
-@font-face {font-family: 'SofiaProSoftBold-Italic';src: url('fonts/3A1396_0_0.eot');src: url('fonts/3A1396_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_0_0.woff2') format('woff2')}
-@font-face {font-family: 'SofiaProSoftMedium';src: url('fonts/3A1396_1_0.eot');src: url('fonts/3A1396_1_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_1_0.woff2') format('woff2')}
-@font-face {font-family: 'SofiaProSoftLight';src: url('fonts/3A1396_2_0.eot');src: url('fonts/3A1396_2_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_2_0.woff2') format('woff2')}
-@font-face {font-family: 'SofiaProSoftBold';src: url('fonts/3A1396_3_0.eot');src: url('fonts/3A1396_3_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_3_0.woff2') format('woff2')}
-@font-face {font-family: 'SofiaProSoftLight-Italic';src: url('fonts/3A1396_4_0.eot');src: url('fonts/3A1396_4_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_4_0.woff2') format('woff2')}
-@font-face {font-family: 'SofiaProSoftMedium-Italic';src: url('fonts/3A1396_5_0.eot');src: url('fonts/3A1396_5_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_5_0.woff2') format('woff2')}
-@font-face {font-family: 'SofiaProSoftRegular';src: url('fonts/3A1396_6_0.eot');src: url('fonts/3A1396_6_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_6_0.woff2') format('woff2')}
-@font-face {font-family: 'SofiaProSoftRegular-Italic';src: url('fonts/3A1396_7_0.eot');src: url('fonts/3A1396_7_0.eot?#iefix') format('embedded-opentype'),url('fonts/3A1396_7_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftBold-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.woff2') format('woff2'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.woff') format('woff');}
+@font-face {font-family: 'SofiaProSoftMedium';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.woff2') format('woff2'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.woff') format('woff');}
+@font-face {font-family: 'SofiaProSoftLight';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.woff2') format('woff2'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.woff') format('woff');}
+@font-face {font-family: 'SofiaProSoftBold';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.woff2') format('woff2'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.woff') format('woff');}
+@font-face {font-family: 'SofiaProSoftLight-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.woff2') format('woff2'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.woff') format('woff');}
+@font-face {font-family: 'SofiaProSoftMedium-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.woff2') format('woff2'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.woff') format('woff');}
+@font-face {font-family: 'SofiaProSoftRegular';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.woff2') format('woff2'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.woff') format('woff');}
+@font-face {font-family: 'SofiaProSoftRegular-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.woff2') format('woff2'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.woff') format('woff');}
+*/
+@font-face {font-family: 'SofiaProSoftBold-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftMedium';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftLight';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftBold';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftLight-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftMedium-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftRegular';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftRegular-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.woff2') format('woff2')}
+
+
+/* url('https://cdn2.hubspot.net/hubfs/6466776/fonts/ */
+
 
 $primary: #FFF100;
 $primary-trans: color( $primary alpha(85%) );
@@ -36,7 +40,7 @@ $black-transparent2: rgba(0,0,0,0.88);
 $fsred-dark:#9a0000;
 $charcoal: #484849;
 $grey: #656565;
-$lightcharcoal: #888888;
+$slate: #888888;
 $cloud: #b2b2b2;
 $silver: #afafaf;
 $fog: #dadada;
@@ -155,25 +159,25 @@ $fontsize-heading-lg: 1.875rem;
 /* $breakpoints: ( tn: 31.5em, tnsm:416px, sm: 480px, smmd: 600px, lgminh: 720px, md: 768px, mdlg: 900px, mdmdlg: 992px, lg: 1024px, lgxl:1056px, xl: 1200px xxl: 1320px ); */
 $breakpoints: ( tn: 31.5em, tnsm:26em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 48em, mdlg: 56.25em, mdmdlg: 62em, lg: 64em, lgxl:66em, xl: 72em, xxl: 85em );
 
- $marginsize: 1rem;
- $marginsize-sm: 1.5rem;
- $marginsize-smmd: 1.5rem;
- $marginsize-md: 2.5rem;
- $marginsize-lg: 4rem;
+$marginsize: 1rem;
+$marginsize-sm: 1.5rem;
+$marginsize-smmd: 1.5rem;
+$marginsize-md: 2.5rem;
+$marginsize-lg: 4rem;
 
- $contentmarginsize: 1.125rem;
- $contentmarginsize-sm: 1.25rem;
- $contentmarginsize-smmd: 1.5rem;
- $contentmarginsize-md: 1.375rem;
- $contentmarginsize-lg: 2rem;
+$contentmarginsize: 1.125rem;
+$contentmarginsize-sm: 1.25rem;
+$contentmarginsize-smmd: 1.5rem;
+$contentmarginsize-md: 1.375rem;
+$contentmarginsize-lg: 2rem;
 
- $marginvertical: 1rem;
- $marginvertical-sm: 1.5rem;
- $marginvertical-smmd: 1.5rem;
- $marginvertical-md: 1.5rem;
- $marginvertical-lg: 1.75rem;
+$marginvertical: 1rem;
+$marginvertical-sm: 1.5rem;
+$marginvertical-smmd: 1.5rem;
+$marginvertical-md: 1.5rem;
+$marginvertical-lg: 1.875rem;
 
- $maxwidth-lg: 1024px;
+$maxwidth-lg: 1024px;
 
 $contentpaddingtop: 1.75rem;
 $contentpaddingtop-md: 2.125rem;
@@ -204,3 +208,15 @@ $blogimagewidth-lg: 37.5%;
 
 
 $interinputspacing: 0.375rem;
+
+$formverticalspacing: 0.75rem;
+$formverticalspacing-sm: 0.75rem;
+$formverticalspacing-smmd: 0.75rem;
+$formverticalspacing-md: 0.75rem;
+$formverticalspacing-lg: 0.75rem;
+
+$cardsetmaxwidth-md: 48rem;
+$cardsetmaxwidth-lg: 52rem;
+
+$jobsetgap: 1rem;
+$jobsetgap-md: 1.5rem;

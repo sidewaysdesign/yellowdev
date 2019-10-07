@@ -1,0 +1,81 @@
+.aws-section {
+ &--dual, .aws-section--contents&--dual {
+  display:block;
+  padding:0;
+  @mixin atTnsm {
+   display:flex;
+   align-items: center;
+   flex-direction:row;
+   flex-wrap: wrap;
+  }
+  &-image,
+  &-text {
+   h1,h2,h3,h4,h5,h6 {
+    @mixin atTnsm {
+     margin-top:0;
+    }
+   }
+
+   display:block;
+   position:relative;
+   width:100%;
+   @mixin atSmmd {
+    width:50%;
+    float:left;
+   }
+  }
+  &-image {
+   overflow:visible;
+   img {
+    display:block;
+    position:relative;
+    max-width:280px;
+    margin-left: auto;
+    margin-right: auto;
+    @mixin atMd {
+     max-width:100%;
+    }
+   }
+  }
+  &-text {
+   text-align: center;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   @mixin atTnsm {
+    padding-top: 0;
+    padding-bottom: 0;
+   }
+   @mixin atSmmd {
+    text-align: left;
+   }
+  }
+  &-image + &-text, &-text + &-image {
+   margin-top: 1rem;
+   @mixin atTnsm {
+    margin-top: 0;
+   }
+  }
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
+ }
+}
+
+.aws-section--dual.mobile-reverse, .mobile-reverse {
+ display:flex;
+ flex-direction: column-reverse;
+ .aws-section--dual-image,
+ .aws-section--dual-text {
+ }
+ @mixin atSmmd {
+  flex-direction: row;
+ }
+ .aws-section--dual-image + .aws-section--dual-text, .aws-section--dual-text + .aws-section--dual-image {
+  margin-top: 0;
+  @mixin atTnsm {
+   margin-top: 0;
+  }
+ }
+}

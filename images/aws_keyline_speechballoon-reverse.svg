@@ -1,0 +1,29 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="509.267" height="400" viewBox="0 0 509.267 400">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 17px;
+      }
+
+      .cls-3 {
+        stroke: #000;
+      }
+    </style>
+  </defs>
+  <title>aws_keyline_speechballoon-reverse</title>
+  <rect class="cls-1" width="509.267" height="400"/>
+  <g>
+    <path class="cls-2" d="M341.333,307.43c58.972-23.077,99.3-69.78,99.3-123.638,0-76.765-81.932-138.995-183-138.995s-183,62.23-183,139c0,35.129,17.166,67.209,45.464,91.68L97.62,363.891a2.571,2.571,0,0,0,3.993,2.721l78.887-56.75"/>
+    <line class="cls-3" x1="341.333" y1="307.43" x2="341.333" y2="307.43"/>
+  </g>
+</svg>

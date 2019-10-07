@@ -10,28 +10,36 @@ $dotsize-jobsnearme-lg: 3rem;
  }
  &--contents {
   position: relative;
-  padding-top: 1.0625rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
   @mixin atSmmd {
-   padding-top: 1.5rem;
+   padding-top: 1.75rem;
    padding-left:7rem;
   }
   @mixin atMd {
    padding-top: 1.875rem;
    padding-left:15rem;
+   padding-bottom: 1.75rem;
   }
   @mixin atLg {
    padding-top: 2rem;
    padding-left:50%;
+   padding-bottom: 1.75rem;
   }
   p {
    margin-top:0;
    margin-bottom: 0.5rem;
+   strong {
+    font-family:$fontfam4;
+    letter-spacing: 0.01em;
+    font-weight:normal;
+   }
   }
   h2 {
    position: relative;
    display:inline-block;
    margin-top: 0;
-   margin-bottom: 1.25rem;
+   margin-bottom: 1.5rem;
    margin-left: -0.25rem;
    font-family: $fontfam2;
    font-size:2.25rem;
@@ -58,7 +66,7 @@ $dotsize-jobsnearme-lg: 3rem;
     margin-left:0;
     height:$dotsize-jobsnearme;
     bottom:-0.375rem;
-    @mixin atSm {
+    @mixin atTnsm {
      bottom:-0.625rem;
      height:$dotsize-jobsnearme-sm;
     }
@@ -82,7 +90,7 @@ $dotsize-jobsnearme-lg: 3rem;
     width:15rem;
     width:100vw;
     right: resolve($dotsize-jobsnearme / 2);
-    @mixin atSm {
+    @mixin atTnsm {
      right: resolve($dotsize-jobsnearme-sm / 2);
     }
     @mixin atSmmd {
@@ -104,7 +112,7 @@ $dotsize-jobsnearme-lg: 3rem;
     border-radius: resolve($dotsize-jobsnearme / 2);
     background-color: black;
     /* opacity:0.33; */
-    @mixin atSm {
+    @mixin atTnsm {
      width:$dotsize-jobsnearme-sm;
      margin-left:-resolve($dotsize-jobsnearme-sm / 2);
      border-radius: resolve($dotsize-jobsnearme-sm / 2);
@@ -132,11 +140,16 @@ $dotsize-jobsnearme-lg: 3rem;
  }
  &--suggested {
   &-wrapper {
+   margin-top: 0.5rem;
+   @mixin atMd {
+    margin-top: 0;
+    }
    h4 {
     margin-top: 0;
     font-family: $fontfam2;
     font-size:1rem;
     font-weight:normal;
+    margin-bottom:0.625rem;
    }
   }
   &-links {
@@ -164,20 +177,31 @@ $dotsize-jobsnearme-lg: 3rem;
 
     }
    }
+   &:last-child {
+    &:after {
+     content:'';
+     display:table;
+     clear:both;
+    }
+   }
   }
  }
  &--form {
   label {
    display:block;
    font-family: $fontfam2;
+   margin-top: 0.5rem;
+   @mixin atMd {
+    margin-top: 0;
+    }
   }
   input[type="text"] {
    box-sizing: border-box;
    width:70%;
-   width: calc(100% - $inputheight - $interinputspacing);
+   width: 14rem;
    border:1px solid $primary;
    background-color: $vapor;
-   @mixin atSm { width:calc(100% - $inputheight-sm - $interinputspacing); }
+   @mixin atTnsm { width:calc(70% - $inputheight-sm - $interinputspacing); }
    @mixin atSmmd { width:calc(100% - $inputheight-smmd - $interinputspacing); }
    @mixin atMd { width:calc(100% - $inputheight-md - $interinputspacing); }
    @mixin atLg { }

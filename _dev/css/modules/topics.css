@@ -1,12 +1,13 @@
 .topic-link {
  padding:0.375rem 0.5325rem 0.25rem 0.625rem;
- color:$lightcharcoal!important;
+ color:$slate!important;
  height:2rem;
  border-radius:1rem;
  border:1px solid $cloud;
  text-transform: uppercase;
  font-size:0.8rem;
  line-height: 1;
+ white-space: nowrap;
  transition:$transtime0 all easi-in;
  &:hover, &:active {
   background-color: $air;
@@ -39,7 +40,7 @@
   margin-bottom: 0;
   margin-top: -0.5rem;
   display:inline;
-  @mixin atSm {
+  @mixin atTnsm {
   }
   @mixin atMd {
    display: block;
@@ -54,7 +55,7 @@
    display:inline-block;
    margin-bottom: 0.375rem;
    float:left;
-   @mixin atSm {
+   @mixin atTnsm {
    }
    @mixin atMd {
     float:none;
@@ -100,7 +101,7 @@
   background-color: $vapor;
   transition: $transtime0 all linear;
   &:hover, &:active { background-color: white; }
-  @mixin atSm { }
+  @mixin atTnsm { }
   @mixin atMd { font-size:1rem; }
   @mixin atLg { }
   .filter-link-count { opacity:0.65; }
@@ -109,7 +110,7 @@
   border:1px solid $cloud;
   color:$grey;
   line-height: 1;
-  @mixin atSm {
+  @mixin atTnsm {
    /* padding: resolve($buttonsmallheight-sm * .3 ) 1rem 0.15rem 1rem;
    height:$buttonsmallheight-sm;
    border-radius:resolve($buttonsmallheight-sm / 2); */
@@ -120,7 +121,7 @@
    margin-bottom: 0.625rem;
    padding: 0;
    height:auto;
-   color:$lightcharcoal;
+   color:$slate;
    border-radius:none;
    padding:0;
    border:none;

@@ -1,4 +1,4 @@
-/* $lightcharcoal: #888888;
+/* $slate: #888888;
 $cloud: #b2b2b2;
 $silver: #afafaf;
 $fog: #dadada;
@@ -39,7 +39,7 @@ $air: #fafafa; */
  &--row-2,
  &--row-3
  {
-  @mixin atSm {
+  @mixin atTnsm {
    /* padding-left: 2.5rem; */
    /* padding-right: 2.5rem; */
 
@@ -197,7 +197,7 @@ $air: #fafafa; */
    font-size:$fontsize3;
    border:2px solid $fog;
    outline:none!important;
-   @mixin atSm {
+   @mixin atTnsm {
     min-height: $inputheight-sm;
     max-height: $inputheight-sm;
     font-size:$inputtext-sm;
@@ -233,7 +233,7 @@ $air: #fafafa; */
   position:absolute;
   top:0;
   right:0;
-  @mixin atSm {
+  @mixin atTnsm {
    width: resolve($inputheight-sm / 1.25);
    height: $inputheight-sm;
    font-size:resolve($inputtext-sm * 2)!important;
@@ -255,13 +255,13 @@ $air: #fafafa; */
    }
   }
   &:after {
-   content:'\e807';
+   content:'\e808';
    font-family:'aws_icons';
    text-align: left;
    right:0;
    color:$silver;
    position:absolute;
-   @mixin atSm { top: resolve($inputheight-sm * .3); }
+   @mixin atTnsm { top: resolve($inputheight-sm * .3); }
    @mixin atSmmd { top: resolve($inputheight-smmd * .3); }
    @mixin atMd { top: resolve($inputheight-md * .3); }
   }

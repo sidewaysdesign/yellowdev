@@ -2,7 +2,7 @@
  &--image {
   padding-bottom: 0.375rem;
   &:after {
-   color:$lightcharcoal;
+   color:$slate;
    display:inline-block;
    line-height: 1.1;
    font-size: $fontsize3;
@@ -14,7 +14,7 @@
  }
  &--section {
   a {
-   color:$lightcharcoal;
+   color:$slate;
    &:hover, &:active {
     color:black;
    }
@@ -38,7 +38,7 @@
  }
  &--byline {
   display:none;
-  color:$lightcharcoal;
+  color:$slate;
   @mixin atMd {
    display:block;
    position:relative;

@@ -30,7 +30,7 @@
   margin-left: auto;
   margin-right: auto;
   overflow:visible;
-  @mixin atSm {
+  @mixin atTnsm {
   }
   @mixin atMd {
    float:right;
@@ -106,7 +106,7 @@
    margin:0;
    padding:0;
    list-style-type: none;
-   @mixin atSm {
+   @mixin atTnsm {
    }
    @mixin atMd {
     display:flex;
@@ -129,7 +129,7 @@
    line-height: 1.2;
    position: relative;
    /* background-color: white; */
-   color: $lightcharcoal;
+   color: $slate;
    transition: $transitionall;
 
    @mixin atMd {
@@ -183,7 +183,7 @@
     /* max-width:5.5rem; */
     text-align: left;
     padding:$menumarginvertical-tn $menuinset $menumarginvertical-tn $menuinset;
-    @mixin atSm {
+    @mixin atTnsm {
     }
     @mixin atSmmd {
      max-width:none;
@@ -261,7 +261,7 @@
   font-size:1rem;
   width:100%;
   padding-left:resolve($naviconsize - $menuinset / 2);
-  @mixin atSm {
+  @mixin atTnsm {
   }
   @mixin atMd {
    display:block;
@@ -313,13 +313,13 @@
     content:'';
    }
   }
-  &:before { content:'\e807'; }
+  &:before { content:'\e808'; }
  }
  .nav-icon-locate {
   &:after { content:attr(data-number); }
-  &:before { content:'\e806'; }
+  &:before { content:'\e805'; }
  }
- .nav-icon-dashboard { &:before { content:'\e804'; } }
+ .nav-icon-dashboard { &:before { content:'\e805'; } }
  .nav-icon-chat { &:before { content:'\e80b'; } }
  .nav-icon-members { &:before { content:'\e80f'; } }
  .hs-menu-depth-2 {

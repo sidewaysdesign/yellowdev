@@ -1,0 +1,70 @@
+.aws-similarjobs {
+ &--group {
+  position: relative;
+  display:block;
+  margin-right: -resolve($jobsetgap / 2);
+  margin-left: -resolve($jobsetgap / 2);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding:0;
+  @mixin atSmmd {
+   margin-right: -resolve($jobsetgap-md / 2);
+   margin-left: -resolve($jobsetgap-md / 2);
+  }
+  tr {
+   display:flex;
+   flex:1 1 auto;
+   flex-direction:row;
+   flex-wrap: wrap;
+   align-items: stretch;
+   vertical-align:top;
+   margin:0;
+   &:after {
+    content:'';
+    display:table;
+    clear:both;
+   }
+  }
+  td {
+   border-collapse: collapse;
+   position: relative;
+   display:block;
+   box-sizing: border-box;
+   float:left;
+   padding:0;
+   width:25%;
+   display:flex;
+   flex:1 1 auto;
+   flex-direction:row;
+   flex-wrap: wrap;
+   align-items: stretch;
+   vertical-align:top;
+   /* margin-left: resolve($jobsetgap / 2);
+   margin-right: resolve($jobsetgap / 2); */
+  }
+ }
+ &--wrapper {
+  position: relative;
+  display:block;
+  box-sizing: border-box;
+  width:100%;
+ }
+ &--content {
+  position: relative;
+  display:block;
+  /* box-sizing: border-box; */
+  padding: resolve($jobsetgap / 2);
+  margin: resolve($jobsetgap / 2);
+  @mixin atSmmd {
+   padding: resolve($jobsetgap-md);
+   margin: resolve($jobsetgap-md / 2);
+  }
+  /* outline:2px solid red; */
+  height:100%;
+  background-color: white;
+  label {
+   position: relative;
+display:block;
+  }
+ }
+}

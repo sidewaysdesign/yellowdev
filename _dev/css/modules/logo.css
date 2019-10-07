@@ -1,7 +1,7 @@
 .aws-logo {
  height:$navheight;
  position: relative;
- @mixin atSm {
+ @mixin atTnsm {
   height:$navheight-sm;
   }
   @mixin atMd {
@@ -40,7 +40,7 @@
    min-width:auto!important;
    /* top:0.1875rem; */
    left:-1rem;
-   @mixin atSm {
+   @mixin atTnsm {
     width:$logosize-sm!important;
     /* width:40px!important; */
    }

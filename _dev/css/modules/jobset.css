@@ -1,0 +1,153 @@
+.aws-section--jobset {
+ &-wrapper {
+  display:block;
+  position: relative;
+  margin-right:auto;
+  margin-left:auto;
+  /* background-color: orange; */
+  overflow: visible;
+
+  @mixin atMd { max-width:$cardsetmaxwidth-md; }
+  @mixin atLg { max-width:$cardsetmaxwidth-lg; }
+
+ }
+ &-group-wrapper {
+  display:block;
+  position: relative;
+  width:100%;
+  text-align:center;
+ }
+ &-heading {
+  display:block;
+  z-index:1;
+  position: relative;
+  width:90%;
+  width:calc(100% - $marginsize - $marginsize);
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  p {
+   color:$charcoal;
+  }
+  h2 {
+   margin-top: 0;
+   margin-bottom: $interinputspacing;
+   font-family:$fontfam2;
+   @mixin atMd {
+    margin-top: $marginvertical;
+    margin-bottom: 1.125rem;
+   }
+  }
+  @mixin atMd {
+   margin-bottom: 2.5rem;
+  }
+  & + p { margin-top: 0; }
+ }
+ &-group {
+  margin-right: -resolve($jobsetgap / 2);
+  margin-left: -resolve($jobsetgap / 2);
+  padding:0;
+  @mixin atSmmd {
+   margin-right: -resolve($jobsetgap-md / 2);
+   margin-left: -resolve($jobsetgap-md / 2);
+
+  }
+ }
+ &-unit {
+  box-sizing: border-box;
+  display:block;
+  position:relative;
+  margin-right: auto;
+  margin-left: auto;
+  width:100%;
+  background-color: black;
+  color:$primary;
+  text-align: left;
+  transition: all $transtime0 ease-in-out;
+  padding: resolve($marginvertical * .75) resolve($marginvertical / 2) resolve($marginvertical * 2.125) resolve($marginvertical * .75);
+  @mixin atSmmd { padding: $marginvertical resolve($marginvertical / 2) resolve($marginvertical * 2.25) $marginvertical; }
+  @mixin atMd { padding: resolve($marginvertical * .75) resolve($marginvertical / 2) resolve($marginvertical * 1.6875) resolve($marginvertical * .75); }
+  @mixin atMdlg { padding: $marginvertical resolve($marginvertical / 2) resolve($marginvertical * 2.25) $marginvertical; }
+  &:hover, &:active, &.active {
+   background-color: $primary;
+   h2, h3, h4, h5 { color:black; }
+  }
+  h2 { color:$primary; }
+  h3, h4, h5 {
+   color:white;
+  }
+  h2, h3, h4, h5 {
+   font-family:$fontfam2;
+   font-weight:normal;
+  }
+  h2 {
+   margin-bottom: 0.675rem;
+   font-size:1.25rem;
+   line-height: 1.1;
+   letter-spacing: -0.01em;
+   &.smaller {
+    font-size:1.125rem;
+    letter-spacing: 0;
+    @mixin atLg {
+     font-size:1.25rem;
+     letter-spacing: -0.01em;
+     margin-bottom: 0.5rem;
+    }
+   }
+
+  }
+  h3, h4 {
+   margin-top: 0;
+   margin-bottom: 0;
+   font-size:$fontsize0;
+  }
+  h4 {
+   opacity:0.7;
+  }
+  h5 {
+   position:absolute;
+   margin-bottom: 0;
+   line-height: 1;
+   left: resolve($marginvertical * .75);
+   bottom: $marginvertical;
+   @mixin atSmmd {
+    left: $marginvertical;
+   }
+   @mixin atMd { left: resolve($marginvertical * .75); bottom: resolve($marginvertical * .75); }
+   @mixin atMdlg { left: $marginvertical; bottom: $marginvertical; }
+
+  }
+  & + & {
+   margin-top: $marginsize;
+   @mixin atSm {
+    margin-top: 0;
+   }
+  }
+ }
+ &-unit-maincontent {
+  display:block;
+  overflow:hidden;
+  min-height:7rem;
+  @mixin atTn { height:7rem; }
+  @mixin atSm { height:7rem; }
+  @mixin atSmmd { min-height:6.75rem;height:6.75rem; }
+  @mixin atMd { height:9rem; }
+  @mixin atLg { height:9.5rem; }
+ }
+ &-unit-wrapper {
+  display:block;
+  position: relative;
+  width:100%;
+  padding: resolve($jobsetgap / 2);
+  float:left;
+  @mixin atTnsm {
+   width:50%;
+  }
+  @mixin atSm {width:50%;}
+  @mixin atMd {
+   padding: resolve($jobsetgap-md / 2);
+   width:25%;
+  }
+ }
+
+}

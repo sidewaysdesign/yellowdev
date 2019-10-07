@@ -4,7 +4,7 @@ $metacontentheight: 3rem;
   position: relative;
   display:block;
   margin-bottom: 1.25rem;
-  @mixin atSm {
+  @mixin atTnsm {
    }
   @mixin atSmmd {
    }
@@ -37,9 +37,9 @@ $metacontentheight: 3rem;
    mix-blend-mode:soft-light;
    opacity:0.85;
   }
-  @mixin atTn {
-  }
   @mixin atSm {
+  }
+  @mixin atTnsm {
    width:75%;
    &:after {
     content:'';
@@ -77,7 +77,7 @@ $metacontentheight: 3rem;
    background-color: rgba(255,255,255,0.1);
    margin-bottom: -0.25rem;
 
-   @mixin atSm {
+   @mixin atTnsm {
     line-height: 1;
     letter-spacing: -0.015em;
     word-spacing:-0.015em;
@@ -115,7 +115,7 @@ $metacontentheight: 3rem;
    flex: 0 1 auto;
    align-items: flex-end;
    justify-content: flex-start;
-   @mixin atSm {
+   @mixin atTnsm {
     padding-bottom:resolve($herotextheight-sm / 3);
    }
    @mixin atMd {
@@ -128,7 +128,7 @@ $metacontentheight: 3rem;
   }
  }
  &--topics {
-  @mixin atSm {
+  @mixin atTnsm {
   }
   @mixin atMd {
    margin-top: resolve($elementgap * 1.375);
@@ -146,7 +146,7 @@ $metacontentheight: 3rem;
 
 .blog-listing-wrapper {
  padding-top: 0;
- @mixin atSm {
+ @mixin atTnsm {
  }
  @mixin atMd {
   padding-top: 0.6875rem;
@@ -164,7 +164,7 @@ $metacontentheight: 3rem;
     display: block;
     position: relative;
     width:$blogimagewidth;
-    @mixin atSm {
+    @mixin atTnsm {
      width:$blogimagewidth-sm;
     }
     @mixin atSmmd {
@@ -212,7 +212,7 @@ $metacontentheight: 3rem;
    .aws-blog--listing-meta {
     padding-left:$contentmarginsize;
     padding-right: $contentmarginsize;
-    @mixin atSm {
+    @mixin atTnsm {
      padding-left:$contentmarginsize-smmd;
      padding-right: $contentmarginsize-sm;
     }
@@ -251,7 +251,7 @@ $metacontentheight: 3rem;
    .post-header {
     padding-top: $elementgap;
     h2 {
-     color:$lightcharcoal;
+     color:$slate;
      margin-top: resolve($elementgap * 0.625);
      margin-bottom: resolve($elementgap * 0.5);
      font-size:$fontsize3;
@@ -261,7 +261,7 @@ $metacontentheight: 3rem;
       color:black;
      }
     }
-     @mixin atSm {
+     @mixin atTnsm {
      }
      @mixin atSmmd {
       margin-top: resolve($elementgap * .25);
@@ -286,7 +286,7 @@ $metacontentheight: 3rem;
      line-height: 1;
     }
     .aws-blog--listing-date {
-     color:$lightcharcoal;
+     color:$slate;
      position: relative;
      float: left;
      padding:0.375rem 0 0 0;
@@ -297,7 +297,7 @@ $metacontentheight: 3rem;
       height:$buttonsmallheight;
       border-radius: resolve($buttonsmallheight / 2);
       border:1px solid $primary;
-      color:$lightcharcoal;
+      color:$slate;
       padding:0.375rem 1.5rem 0 1.5rem;
       float:right;
       /* margin-right: $elementgap; */

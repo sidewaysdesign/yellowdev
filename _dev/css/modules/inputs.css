@@ -11,7 +11,7 @@ input[type="password"] {
  width:100%;
  height:$inputheight;
  min-height:$inputheight;
- @mixin atSm {
+ @mixin atTnsm {
   height:$inputheight-sm;
   min-height:$inputheight-sm;
   }
@@ -38,8 +38,11 @@ fieldset {
 }
 label {
  position:relative;
- display:inline-block;
- padding-bottom: 0.375rem;
+ display:block;
+ padding-bottom: 0.3125rem;
+ @mixin atMd {
+  padding-bottom: 0.1875rem;
+  }
 }
 
 input[type="submit"] {
@@ -56,7 +59,7 @@ input[type="submit"] {
  font-size:1.2rem;
  line-height: 1;
  margin-left:$interinputspacing;
- @mixin atSm {
+ @mixin atTnsm {
   height:$inputheight-sm;
   min-width:$inputheight-sm;
  }

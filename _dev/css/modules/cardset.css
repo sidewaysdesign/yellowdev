@@ -1,0 +1,132 @@
+$cardgap: 0;
+$cardgap-sm: $interinputspacing;
+$cardgap-smmd: 0.5rem;
+$cardgap-md: 1.5rem;
+$cardgap-lg: 2rem;
+
+.aws-section--cardset {
+ &-wrapper {
+  display:block;  
+  position: relative;
+  margin-right:auto;
+  margin-left:auto;
+  @mixin atMd { max-width:$cardsetmaxwidth-md; }
+  @mixin atLg { max-width:$cardsetmaxwidth-lg; }
+ }
+
+ &-unit-wrapper {
+  display:block;
+  display:block;
+  position: relative;
+  position: relative;
+  text-align:center;
+  @mixin atSm {
+   display:flex;
+   justify-content: space-between;
+  }
+ }
+ &-heading {
+  display:block;
+  z-index:1;
+  position: relative;
+  width:90%;
+  width:calc(100% - $marginsize - $marginsize);
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  p {
+   color:$charcoal;
+  }
+  h2 {
+   margin-top: 0;
+   margin-bottom: $interinputspacing;
+   font-family:$fontfam2;
+   @mixin atMd {
+    margin-bottom: 1.125rem;
+   }
+  }
+  @mixin atMd {
+   margin-bottom: $marginsize;
+  }
+  & + p { margin-top: 0; }
+  @mixin atMd { width:360px; }
+ }
+ &-group {
+  padding-right: 0!important;
+  padding-left: 0!important;
+ }
+ &-unit {
+  display:block;
+  position:relative;
+  width:100%;
+  max-width:240px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: resolve($marginsize * 0.25) resolve($marginsize * 0.5) $marginsize resolve($marginsize * 0.5);
+  background-color: white;
+  text-align: center;
+  @mixin atSm {
+   padding: 0 resolve($marginsize * .375) $marginsize) resolve($marginsize * 0.375);
+  }
+  @mixin atSm {
+   padding: 0 resolve($marginsize * .5) $marginsize) resolve($marginsize * 0.5);
+  }
+  @mixin atMd {
+   padding: resolve($marginsize * 0.25) $marginsize $marginsize $marginsize;
+   &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+   }
+
+  }
+  h4 {
+   margin-top: 0.25rem;
+   margin-bottom: $marginsize;
+   @mixin atMd {
+    margin-top: 1rem;
+   }
+  }
+  img {
+   position:relative;
+   width:100%;
+   max-width:120px;
+  }
+  @mixin atMd {
+   width:auto;
+   max-width:220px;
+  }
+  & + & { margin-top: $marginsize; }
+  @mixin atSm {
+   display:inline-block;
+   width:33%;
+   margin-right: $cardgap-sm;
+   margin-left: $cardgap-sm;
+   & + & { margin-top: 0; }
+  }
+  @mixin atSmmd {
+   width:30%;
+   margin-right: $cardgap-smmd;
+   margin-left: $cardgap-smmd;
+  }
+  @mixin atMd {
+   margin-right: $cardgap-md;
+   margin-left: $cardgap-md;
+  }
+  @mixin atLg {
+   margin-right: $cardgap-lg;
+   margin-left: $cardgap-lg;
+  }
+ }
+}
+.aws-section--cardset-group + .aws-section--section-link {
+ @mixin atMd {
+  max-width:$cardsetmaxwidth-md;
+  margin-right: $cardgap-md;
+  margin-left: $cardgap-md;
+ }
+ @mixin atLg {
+  max-width:$cardsetmaxwidth-lg;
+  margin-right: $cardgap-lg;
+  margin-left: $cardgap-lg;
+ }
+}

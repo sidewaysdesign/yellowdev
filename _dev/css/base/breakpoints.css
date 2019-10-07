@@ -1,26 +1,18 @@
 $breakpoints: (tn: 31.5em, tnsm:24em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 48em, mdlg: 56.25em, mdmdlg: 62em, lg: 64em, lgxl:66em, xl: 72rem);
 
-@define-mixin atTn { @media (min-width: 31.5rem) { @mixin-content; }}  /* px */
-@define-mixin atTnsm { @media (min-width: 24rem) { @mixin-content; }}  /* px */
-/* @define-mixin atSm { @media (min-width: 30rem) { @mixin-content; }}  /* px */
-@define-mixin atSm { @media (min-width: 480px) { @mixin-content; }}  /* px */
-/* @define-mixin atSmmd { @media (min-width: 37.5rem) { @mixin-content; }}  /* px */
+@define-mixin atTn { @media (min-width: 384px) { @mixin-content; }}  /* px */
+@define-mixin atTnsm { @media (min-width: 480px) { @mixin-content; }}  /* px */
+@define-mixin atSm { @media (min-width: 536px) { @mixin-content; }}  /* px */
 @define-mixin atSmmd { @media (min-width: 640px) { @mixin-content; }}  /* px */
-@define-mixin atLgminh { @media (min-width: 45rem) { @mixin-content; }}  /* px */
-/* @define-mixin atMd { @media (min-width: 48rem) { @mixin-content; }}  /* px */
 @define-mixin atMd { @media (min-width: 768px) { @mixin-content; }}  /* px */
-/* @define-mixin atMdlg { @media (min-width: 56.25rem) { @mixin-content; }}  /* px */
 @define-mixin atMdlg { @media (min-width: 940px) { @mixin-content; }}  /* px */
-/* @define-mixin atMdmdlg { @media (min-width: 62rem) { @mixin-content; }}  /* px */
 @define-mixin atMdmdlg { @media (min-width: 992px) { @mixin-content; }}  /* px */
-/* @define-mixin atLg { @media (min-width: 64rem) { @mixin-content; }}  /* 1024px */
 @define-mixin atLg { @media (min-width: 1024px) { @mixin-content; }}  /* 1024px */
-/* @define-mixin atLgxl { @media (min-width: 66rem) { @mixin-content; }}  /* 1056px */
 @define-mixin atLgxl { @media (min-width: 1056px) { @mixin-content; }}  /* 1056px */
-/* @define-mixin atXl { @media (min-width: 75rem) { @mixin-content; }}  /* 1200px */
 @define-mixin atXl { @media (min-width: 1200px) { @mixin-content; }}  /* 1200px */
 @define-mixin atXxl { @media (min-width: 85rem) { @mixin-content; }}  /* 1360px */
 
+@define-mixin atLgminh { @media (min-width: 45rem) { @mixin-content; }}  /* px */
 
 @define-mixin overTn { @media (min-width: 26.01rem) { @mixin-content; }}  /* px */
 @define-mixin overTnsm { @media (min-width: 26.01rem) { @mixin-content; }}  /* px */

@@ -1,0 +1,26 @@
+.aws-section--section-heading {
+ display:block;
+ position: relative;
+ width:90%;
+ width:calc(100% - $marginsize - $marginsize);
+ margin-right: auto;
+ margin-bottom: $marginsize;
+ margin-left: auto;
+ text-align: center;
+ @mixin atMd {
+  max-width:50%;
+  margin-bottom: $marginsize;
+ }
+
+ p { color:$charcoal; }
+ h2 {
+  margin-bottom: $interinputspacing;
+  font-family:$fontfam2;
+  line-height: 1.1;
+  @mixin atMd {
+   margin-top: $marginvertical;
+   margin-bottom: 1.125rem;
+  }
+ }
+ & + p { margin-top: 0; }
+}
