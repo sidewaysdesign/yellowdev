@@ -25,9 +25,9 @@
   font-weight:600;
   position: relative;
   display:inline-block;
-  font-family:'SofiaProSoftBold';
+  font-family:$fontfam4;
   font-size:$fontsize6;
-  text-align: center;
+  /* text-align: center; */
   width:100%;
   letter-spacing:-.01rem;
   line-height: 1.12;
@@ -36,7 +36,7 @@
   @mixin atMd {
    display:block;
    position: relative;
-   text-align: left;
+   /* text-align: left; */
   }
   @mixin atXl { font-size:$fontsize8; }
  }

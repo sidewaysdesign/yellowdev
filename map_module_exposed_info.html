@@ -1,0 +1,109 @@
+<div class="aws-branchmap--wrapper">
+ <div class="aws-branchmap--container">
+  <div id="aws-branchmap--map"></div>
+  <div class="aws-branchmap--list-wrapper">
+   <div class="aws-branchmap--list-contents">
+    <h3>Locations</h2>
+    <ul>
+     {% for location in module.locations %}
+      <li><div class="aws-branchmap--list-unit"><div class="aws-branchmap--location-office"><a href="javascript:function(){return false;}" class="aws-branchmap--city-unit{% if location.ispro %} aws-branchmap--city-pro{% endif %}" data-city="{{ location.office }}">{{ location.office }}</a></div>
+        <div class="aws-branchmap--location-group">{% if location.address1 %}<p>{{ location.address1 }}{% if location.address2 %}<br />{{ location.address2 }}{% endif %}</p>{% endif %}{% if location.telephone1 %}<p class="aws-branchmap--location-telephone"><a href="tel:{{ location.telephone1 |trim|regex_replace("[\\.-]", "") }}\">{{ location.telephone1 |trim|regex_replace("[\\.-]", ".") }}</a></p>{% endif %}{% if location.telephone2 %}<p class="aws-branchmap--location-telephone"><a href="tel:{{ location.telephone2 |trim|regex_replace("[\\.-]", "") }}\">{{ location.telephone2 |trim|regex_replace("[\\.-]", ".") }}</a></p>{% endif %}{% if location.email %}<p class="aws-branchmap--location-email"><a href="mailto:{{ location.email |trim }}\">{{ location.email |trim }}</a></p>{% endif %}<p class="aws-branchmap--city-unit"><a href="javascript:function(){return false;}" class="aws-branchmap--city-unit{% if location.ispro %} aws-branchmap--city-pro{% endif %}" data-city="{{ location.office }}"><button class="aws-branchmap--city-button" data-city="{{ location.office }}">Show on Map</button></a></p></div></div></li>
+      {% endfor %}</ul>
+   </div>
+  </div>
+ </div>
+</div>
+
+<script>
+ function initMap() {
+
+  var mapOptions = {
+   zoom: 4,
+   center: new google.maps.LatLng(50.831, -93.189),
+   disableDefaultUI: true,
+   mapTypeId: google.maps.MapTypeId.ROADMAP,
+styles: [
+{"elementType":"labels.text.fill","stylers":[{"color":"#fff100"}]},
+{"elementType":"labels.text.stroke","stylers":[{"color":"#838383"}, {"visibility":"on"}]},
+{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"color":"#fff100"}, {"visibility":"on"}, {"weight":1}]},
+{"featureType":"administrative.country","elementType":"labels","stylers":[{"color":"#fff100"}, {"visibility":"on"}, {"weight":1}]},
+{"featureType":"administrative.land_parcel","stylers":[{"visibility":"off"}]},
+{"featureType":"administrative.land_parcel","elementType":"geometry","stylers":[{"visibility":"off"}]},
+{"featureType":"administrative.land_parcel","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},
+{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"color":"#fff100"}, {"weight":1}]},
+{"featureType":"landscape","stylers":[{"color":"#777777"}, {"visibility":"off"}]},
+{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},
+{"featureType":"landscape.natural.landcover","stylers":[{"visibility":"off"}]},
+{"featureType":"landscape.natural.terrain","stylers":[{"visibility":"off"}]},
+{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},
+{"featureType":"poi","stylers":[{"visibility":"off"}]},
+{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+{"featureType":"poi","elementType":"labels.text","stylers":[{"visibility":"off"}]},
+{"featureType":"poi.business","stylers":[{"visibility":"off"}]},
+{"featureType":"road","stylers":[{"saturation":10}, {"lightness":45}, {"visibility":"simplified"}]},
+{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#979797"}]},
+{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+{"featureType":"road.highway","stylers":[{"visibility":"simplified"}]},
+{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#979797"}, {"visibility":"simplified"}]},
+{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#979797"}]},
+{"featureType":"transit","stylers":[{"visibility":"off"}]},
+{"featureType":"transit.station.airport","elementType":"labels.icon","stylers":[{"saturation":-75}, {"gamma":0.56}]},
+{"featureType":"transit.station.rail","elementType":"labels.icon","stylers":[{"hue":"#fff100"}, {"saturation":"-68"}, {"lightness":"4"}, {"gamma":"0.75"}]},
+{"featureType":"transit.station.rail","elementType":"labels.text.fill","stylers":[{"color":"#43321e"}]},
+{"featureType":"water","stylers":[{"color":"#e9e9e9"}, {"visibility":"on"}]},
+{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#afafaf"}]},
+{"featureType":"water","elementType":"labels.text.fill","stylers":[{"saturation":-55}, {"lightness":-50}, {"gamma":0.75}]}
+]
+  };
+
+  map = new google.maps.Map(document.getElementById('aws-branchmap--map'), mapOptions);
+  setMarkers(map, locations);
+ }
+
+ // Stores map locations
+ var locations = {
+  {% for location in module.locations %}
+  "{{ location.office |trim }}" : [
+  {% if location.latitude %}{{ location.latitude }}{% else %}49.771532{% endif %},
+  {% if location.longitude %}{{ location.longitude }}{% else %}-96.815844{% endif %},
+  15,
+  "<div class=\"aws-branchmap--location-info\"><h3>{{ location.office |trim }}</h3>{% if location.officetype %}<p class=\"aws-branchmap--location-officetype\">{{ location.officetype }}</p>{% endif %}{% if location.address1 %}<p>{{ location.address1 }}{% endif %}{% if location.address2 %}<br />{{ location.address2 }}</p>{% else %}</p>{% endif %}{% if location.telephone1 %}<p class=\"aws-branchmap--location-telephone\"><a href=\"tel:{{ location.telephone1 |trim|regex_replace("[\\.-]", "") }}\">{{ location.telephone1 |trim|regex_replace("[\\.-]", ".") }}</a></p>{% endif %}{% if location.telephone2 %}<p class=\"aws-branchmap--location-telephone\"><a href=\"tel:{{ location.telephone2 |trim|regex_replace("[\\.-]", "") }}\">{{ location.telephone2 |trim|regex_replace("[\\.-]", ".") }}</a></p>{% endif %}{% if location.email %}<p class=\"aws-branchmap--location-email\"><a href=\"mailto:{{ location.email |trim }}\">{{ location.email |trim }}</a></p>{% endif %}</div>"
+],
+{% endfor %}
+};
+ // Places map markers
+ function setMarkers(map, locations) {
+  for (var i in locations) {
+   var city = locations[i];
+   var myLatLng = {lat: city[0], lng: city[1]};
+   var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map
+   });
+
+   var infowindow = new google.maps.InfoWindow();
+
+   google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    return function() {
+     infowindow.setContent(locations[i][3]);
+     infowindow.open(map, marker);
+    }
+   })(marker, i));
+  }
+ }
+
+ // Pans to marker when link is clicked
+ $('.aws-branchmap--city-button').on('click', function(){
+  var data=locations[ $(this).data('city') ];
+  var laLatLng = new google.maps.LatLng( data[0],  data[1]);
+  map.panTo(laLatLng);
+  map.setZoom( data[2]);
+  if ($(this).hasClass('active')){ }
+  else {
+   $('.aws-branchmap--city-button').removeClass('active');
+   $(this).addClass('active');
+  }
+ });
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwmg_cRKaV6LKTigsoKgl3-Ivbwm-D8g8&callback=initMap"></script>

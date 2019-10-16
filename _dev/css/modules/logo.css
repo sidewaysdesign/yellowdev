@@ -39,21 +39,25 @@
    max-width:auto!important;
    min-width:auto!important;
    /* top:0.1875rem; */
-   left:-1rem;
+   left:-1.25rem;
+   top:-0.0625rem;
    @mixin atTnsm {
     width:$logosize-sm!important;
     /* width:40px!important; */
    }
+   @mixin atSm {
+    top:-0.125rem;
+    left:-1.75rem;
+   }
    @mixin atMd {
+    left:-2.0625rem;
     top:0;
     width:$logosize-md!important;
-
-    /* top:0.125rem; */
     position: relative;
-    transform:translate(-1.125rem );
    }
    @mixin atLg {
-    transform:translateX(-1.125rem );
+    left:-2.0625rem;
+    /* transform:translateX(-1.125rem ); */
     /* width:$logosize-lg!important; */
    }
   }

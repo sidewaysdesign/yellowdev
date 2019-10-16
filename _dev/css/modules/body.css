@@ -1,3 +1,6 @@
+html {
+ font-size:16px;
+}
 body {
  margin:0;
  padding:0;
@@ -54,7 +57,12 @@ img {
 a {
  color:$charcoal;
 }
-
+p {
+ font-size:$fontsize1;
+ @mixin atMd {
+  font-size:$fontsize1b;
+ }
+}
 body:after {
  opacity:0.5;
  position:fixed;
@@ -75,10 +83,10 @@ body:after {
   background-color: khaki;
  }
  @mixin atTnsm {
-  content:'sm';
+  content:'tnsm';
   background-color: pink;
  }
- @mixin atTnsm {
+ @mixin atSm {
   content:'sm';
   background-color: navy;
  }

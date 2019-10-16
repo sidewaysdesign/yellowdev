@@ -50,5 +50,13 @@ Version: 1.0
 @import "modules/jobset";
 @import "modules/similarjobs";
 @import "modules/jobdetails";
+@import "modules/jobdetails-jobcode";
 @import "modules/resourceset";
 @import "modules/connectwithus";
+@import "modules/apply";
+@import "modules/single-column";
+@import "modules/map-branch";
+@import "modules/404";
+@import "modules/search-site";
+@import "modules/register";
+@import "modules/jobsearch";

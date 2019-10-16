@@ -16,7 +16,47 @@ window.addEventListener('resize', function() {
   createHero(1); /* Career resources*/
   createHero(2); /* Hire people */
   initJobset();
+  initNavSearchForm();
+  initJobsNearMeState();
+  window.linksAdded = false;
+  $('.hs-search-results__listing li a').waitUntilExists(function(){
+    patchSearchResultsButtons();
+  });
 });
+
+function initJobsNearMeState() {
+    console.log('initJobsNearMeState');
+ /* append where location to all suggested searches */
+$('.aws-jobsnearme--wrapper').on('blur','[name="where"]',function(){
+  var whereVal = $(this).val();
+
+  $('.aws-jobsnearme--suggested-links').find('.aws-jobsnearme--link').each(function(){
+    var curHref = $(this).attr('href');
+    console.log('href',curHref);
+    var newHref = curHref.replace(/&where.*/,'') + '&where=' + whereVal;
+    $(this).attr('href',newHref);
+  });
+
+});
+}
+function initNavSearchForm() {
+$('.aws-menu').find('.nav-icon-search').parents('.hs-menu-item').addClass('aws-menu--menuitem-search');
+$('.aws-menu--searchform .hs-search-field').appendTo('.aws-menu--menuitem-search');
+//   hs-search-field
+}
+
+function patchSearchResultsButtons() {
+  var linkText = "View page";
+  if (!window.addedlinks) {
+  console.log('patchSearchResultsButtons');
+  console.log('patchSearchResultsButtons ',   $('.hs-search-results__listing > li').length);
+  $('.hs-search-results__listing > li').each(function(){
+  var curlink = $(this).find('a:first-child').attr('href');
+  $(this).find('.hs-search-results__description:last-child').after('<div class="aws-searchresults--button"><a href="'+curlink+'">'+linkText+'</a></div>');
+  });
+    window.addedlinks = true;
+  }
+}
 function prepDashboardIndicator() {
  var indicatorTarget = $('.nav-icon-dashboard').parents('.hs-menu-item');
  var linkLabel = indicatorTarget.text();
@@ -77,15 +117,15 @@ function createHero(num) {
 function populateJobset(jobData){
  var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
  var jobCountTotal = 8;
-//  var jobStartOffset = Math.round(Math.random() * 50);
- var jobStartOffset = 0;
+ var jobStartOffset = Math.round(Math.random() * 50);
+//  var jobStartOffset = 0;
  var filteredJobs = jobData.filter(function(obj) {
   return obj.CATEGORY.includes("Geophysical")
   || obj.CATEGORY.includes("Financial")
   || obj.CATEGORY.includes("Light Industrial")
   || obj.CATEGORY.includes("Engineering");
  });
-//   console.table(filteredJobs);
+  console.table(filteredJobs);
  var jobOutput = '';
  for (i=0;i<jobCountTotal;i++) {
   var curJob = filteredJobs[i+jobStartOffset];
@@ -147,3 +187,67 @@ function longest_word_length(str)
    return res;
   };
  }
+
+
+;(function ($, window) {
+
+var intervals = {};
+var removeListener = function(selector) {
+
+	if (intervals[selector]) {
+
+		window.clearInterval(intervals[selector]);
+		intervals[selector] = null;
+	}
+};
+var found = 'waitUntilExists.found';
+
+/**
+ * @function
+ * @property {object} jQuery plugin which runs handler function once specified
+ *           element is inserted into the DOM
+ * @param {function|string} handler
+ *            A function to execute at the time when the element is inserted or
+ *            string "remove" to remove the listener from the given selector
+ * @param {bool} shouldRunHandlerOnce
+ *            Optional: if true, handler is unbound after its first invocation
+ * @example jQuery(selector).waitUntilExists(function);
+ */
+
+$.fn.waitUntilExists = function(handler, shouldRunHandlerOnce, isChild) {
+
+	var selector = this.selector;
+	var $this = $(selector);
+	var $elements = $this.not(function() { return $(this).data(found); });
+
+	if (handler === 'remove') {
+
+		// Hijack and remove interval immediately if the code requests
+		removeListener(selector);
+	}
+	else {
+
+		// Run the handler on all found elements and mark as found
+		$elements.each(handler).data(found, true);
+
+		if (shouldRunHandlerOnce && $this.length) {
+
+			// Element was found, implying the handler already ran for all
+			// matched elements
+			removeListener(selector);
+		}
+		else if (!isChild) {
+
+			// If this is a recurring search or if the target has not yet been
+			// found, create an interval to continue searching for the target
+			intervals[selector] = window.setInterval(function () {
+
+				$this.waitUntilExists(handler, shouldRunHandlerOnce, true);
+			}, 500);
+		}
+	}
+
+	return $this;
+};
+
+}(jQuery, window));

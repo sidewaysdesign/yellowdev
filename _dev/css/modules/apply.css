@@ -1,0 +1,103 @@
+.aws-submitresume—page {
+ margin-bottom: 3rem!important;
+ #MainContent_divupload div:last-child {
+  background-color: $mist;
+  padding: resolve($gridgap * 2) $gridgap!important;
+  @mixin atTn { padding: resolve($gridgap-tn * 2) $gridgap-tn!important; }
+  @mixin atSmmd { padding: resolve($gridgap-smmd * 2) $gridgap-smmd!important; }
+  @mixin atMd { padding: resolve($gridgap-md * 2) $gridgap-md!important; }
+}
+}
+#MainContent_divupload {
+div:not(:first-child) + br {
+ display:none;
+}
+ #MainContent_generalResume {
+  & > div + div {
+   background-color: $mist;;
+  }
+  padding-top:1rem;
+  font-size:$fontsize3;
+  font-family:$fontfam3;
+  line-height: 1.25;
+  @mixin atSmmd {
+   font-size:$fontsize4;
+   padding-top:2rem;
+  }
+
+ }
+ label {
+  position:relative;
+  display:block;
+  padding-bottom: 0.3125rem;
+  @mixin atMd {
+   padding-bottom: 0.1875rem;
+   }
+ }
+ input {
+ }
+ #MainContent_divFileUpload + br,
+ br + br {
+  display:none;
+ }
+ #btnApply {
+  input {
+   background-color: black;
+   color: $primary;
+   margin:0;
+   width:100%;
+   height:$inputheight!important;
+   @mixin atTnsm {
+    height:$inputheight-sm!important;
+    min-width:$inputheight-sm;
+   }
+   @mixin atSmmd {
+    height:$inputheight-smmd!important;
+    min-width:$inputheight-smmd;
+   }
+   @mixin atMd {
+    height:$inputheight-md!important;
+    min-width:$inputheight-md;
+    padding:0.1875rem 0.5rem 0 0.5rem;
+   }
+  }
+ }
+ #btnApply input,
+ input,
+ label,
+ span[id*="_lbl"],
+ [id*="RequiredField"] {
+  width:100%!important;
+  max-width:300px!important;
+ position: relative;
+ display:block;
+ margin-left: auto;
+ margin-right: auto;
+}
+[id*="RequiredField"] {
+ font-family:$fontfam3;
+ text-align: center;
+ line-height: 1.33;
+ margin-top: 0.375rem;
+ margin-bottom: 0.5rem;
+ font-size:0;
+ letter-spacing: 0.04em;
+ text-transform: uppercase;
+ color:transparent;
+ &:after {
+  color:$slate;
+  font-size:$fontsize0;
+  content:'Required';
+ }
+}
+#MainContent_FileUpload1 {
+ font-size:$fontsize2;
+}
+input[type="file"] {
+ line-height: 0;
+}
+input[type="submit"] {
+ margin-top: 1rem!important;
+
+}
+}

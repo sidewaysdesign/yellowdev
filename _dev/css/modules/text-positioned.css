@@ -5,9 +5,11 @@
 .aws-header--text-positioned {
  /* background-color: pink; */
  .hs_cos_wrapper_type_text {
+  text-align:center;
   padding-top: 0.875rem;
   display:inline-block;
   @mixin atMd {
+   text-align:left;
    padding-top: 0;
    }
  }

@@ -23,6 +23,11 @@ $resourcesetgap-md: 1.5rem;
   @mixin atSmmd  {
    width:100%;
   }
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
  }
  &-heading {
   display:block;
@@ -39,7 +44,7 @@ $resourcesetgap-md: 1.5rem;
   }
   h2 {
    margin-bottom: $interinputspacing;
-   font-family:$fontfam2;
+   font-family:$fontfam3;
    @mixin atMd {
     margin-top: $marginvertical;
     margin-bottom: 1.125rem;
@@ -102,7 +107,6 @@ $resourcesetgap-md: 1.5rem;
    padding: resolve($resourcesetgap / 2);
    /* padding: 0 resolve($resourcesetgap-md / 2) resolve($resourcesetgap-md / 2) resolve($resourcesetgap-md / 2); */
   }
-
  }
  &-image {
   width:100%;
@@ -159,7 +163,7 @@ $resourcesetgap-md: 1.5rem;
   margin-top: resolve($marginvertical / 2);
   padding-right: $marginvertical;
   padding-left: $marginvertical;
-  font-family:$fontfam2;
+  font-family:$fontfam3;
   font-size:$fontsize3;
   font-weight:normal;
   line-height: 1.25;

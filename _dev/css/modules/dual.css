@@ -1,29 +1,62 @@
+.aws-section--contents.aws-section--dual {
+ padding:0;
+ display:block;
+ @mixin atTnsm {
+  display:flex;
+  align-items: center;
+  flex-direction:row;
+  flex-wrap: wrap;
+ }
+}
 .aws-section {
- &--dual, .aws-section--contents&--dual {
-  display:block;
-  padding:0;
-  @mixin atTnsm {
-   display:flex;
-   align-items: center;
-   flex-direction:row;
-   flex-wrap: wrap;
-  }
+ &--dual {
   &-image,
+  &-imagebg,
   &-text {
-   h1,h2,h3,h4,h5,h6 {
-    @mixin atTnsm {
-     margin-top:0;
-    }
-   }
-
    display:block;
+   /* display:flex; */
    position:relative;
    width:100%;
+   height:100%;
+   /* background-color: pink; */
    @mixin atSmmd {
     width:50%;
     float:left;
    }
+   h1,h2,h3,h4,h5,h6 {
+    @mixin atTnsm { margin-top:0; }
+   }
+   p { font-size:$fontsize1;
+
+   }
+   h1 {
+    font-size: $fontsize6;
+    margin-bottom:0.25ex;
+    @mixin atSmmd { font-size: $fontsize7; }
+    @mixin atXl { font-size: $fontsize8; }
+   }
+   &.dual-text {
+    /* span {text-align: center!important;} */
+    @mixin atSmmd {
+     &--inside {
+      /* background-color: blue; */
+      .content-image-text & { text-align: left; }
+      .content-text-image & { text-align: right; }
+     }
+     &--center {
+      text-align: center;
+      /* background-color: red; */
+     }
+     &--outside {
+      text-align:right;
+      /* background-color: green; */
+      .content-image-text & { text-align: right; }
+      .content-text-image & { text-align: left; }
+     }
+    }
+   }
   }
+  /* .aws-section--dual-image.dual-image--inside { */
   &-image {
    overflow:visible;
    img {
@@ -37,10 +70,55 @@
     }
    }
   }
+
+  &-imagebg {
+   position: relative;
+   display:block;
+   width:100%;
+   height:10rem;
+   @mixin atTn {
+   }
+   @mixin atTnsm {
+   }
+   @mixin atSm {
+   }
+   @mixin atSmmd {
+   }
+   @mixin atMd {
+    height:12rem;
+   }
+   @mixin atLg {
+    height:13.5rem;
+   }
+   div { background-position: center center; }
+   @mixin atSmmd {
+    width:50%;
+    &.dual-image {
+     &--inside div {
+      .content-image-text & { background-position: 100% 0; }
+      .content-text-image & { background-position: 0 100%; }
+     }
+     &--center div { background-position: center center; }
+     &--outside div {
+      .content-image-text & { background-position: 0 100%; }
+      .content-text-image & { background-position: 100% 0; }
+     }
+    }
+   }
+
+   div {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position:absolute;
+    display:block;
+    width:100%;
+    height:100%;
+   }
+  }
   &-text {
    text-align: center;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+   /* padding-top: 1rem; */
+   /* padding-bottom: 1rem; */
    @mixin atTnsm {
     padding-top: 0;
     padding-bottom: 0;
@@ -62,13 +140,63 @@
   }
  }
 }
+.content-text-image {
+ .aws-section--dual-image {
+  &.dual-imagebg {
 
+  }
+  &.dual-image--outside {
+   img {
+    @mixin atSmmd {
+     margin-left: auto;
+     margin-right: 0;
+     text-align: right;
+    }
+   }
+  }
+ }
+}
+.hs_cos_wrapper_type_text {
+ .dual-text--left, .dual-text--right {
+  text-align:center!important;
+ }
+ @mixin atSmmd {
+  .dual-text--left & {text-align: left!important;}
+  .dual-text--left & {text-align: left!important;}
+  .dual-text--right & {text-align: right!important;}
+ }
+}
+
+@mixin atSmmd {
+ .dual-text--left .hs_cos_wrapper_type_text { text-align: left!important; }
+ .dual-text--right .hs_cos_wrapper_type_text { text-align: right!important; }
+ flex-direction: row;
+}
+
+.aws-section--dual-image + .aws-section--dual-text,
+.aws-section--dual-imagebg + .aws-section--dual-text,
+.aws-section--dual-text + .aws-section--dual-image,
+.aws-section--dual-text + .aws-section--dual-imagebg {
+ @mixin uptoSmmd { margin-top:0.75rem; }
+ .aws-section--dual.mobile-reverse & {
+  @mixin uptoSmmd { margin-top:0; margin-bottom:1rem }
+ }
+}
 .aws-section--dual.mobile-reverse, .mobile-reverse {
  display:flex;
  flex-direction: column-reverse;
- .aws-section--dual-image,
- .aws-section--dual-text {
+ .aws-section--dual-image, .aws-section--dual-text {
+  @mixin uptoSmmd {
+   margin-bottom:0;
+   text-align:center!important;
+  }
  }
+ .aws-section--dual-image, .aws-section--dual-text {
+  @mixin uptoSmmd {
+   text-align:center!important;
+  }
+ }
+ .aws-section--dual-imagebg { background-position: center center; }
  @mixin atSmmd {
   flex-direction: row;
  }

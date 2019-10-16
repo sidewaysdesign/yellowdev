@@ -1,3 +1,6 @@
+p, ul, li {
+ letter-spacing: $letterspacing;
+}
 h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
  font-size: 65%;
 }
@@ -10,15 +13,16 @@ h4, .h4, h5, .h5, h6, .h6 {
 h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small {
  font-size: 75%;
 }
-
+h1,h2,h3,h4,h5 {
+ font-weight:normal;
+}
 h1, .h1 {
- font-weight:600;
- font-size: 28px;
+ font-family:$fontfam4;
 }
 
 h2, .h2 {
  /* font-weight:600; */
- font-family:'SofiaProSoftBold';
+ font-family:$fontfam4;
  font-weight:normal;
  font-size: $fontsize4;
  @mixin atTnsm {
@@ -34,7 +38,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
- font-family:'SofiaProSoftMedium';
+ font-family:$fontfam3;
  font-weight:normal!important;
  font-size: $fontsize3;
  @mixin atTnsm {
@@ -79,26 +83,44 @@ h6, .h6 {
   margin: 0 0 .875rem;
   color:$slate;
   font-weight: normal;
-  font-family: 'SofiaProSoftRegular';
+  font-family: $fontfam1;
+  ::selection { color:black; background-color: $primary; }
+  @mixin atMd { line-height: $bodycopylineheight-md; }
+
   strong {
    font-weight: normal;
-   font-family: 'SofiaProSoftBold';
+   font-family: $fontfam4;
    color:black;
   }
-  a:only-child {
-   letter-spacing:0.05em;
-   font-family:$fontfam4;
+  a {
+   letter-spacing:$letterspacing;
+   /* font-family:$fontfam4; */
    font-weight:normal;
-   &:after {
-    position:relative;
-    display:inline-block;
-    font-family:'aws_icons';
-    content:'\e818';
-    font-size:133%;
-    margin-left: 0.25ex;
-    bottom:-0.2ex;
-    margin-top:-0.5ex;
+   text-decoration:none;
+   padding-bottom: 0.125rem;
+   display:inline-block;
+   position: relative;
+   color: $slate;
+   &:hover, &:active, &:focus {
+    color:black;
    }
+   &:before {
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0.125rem;
+    width:100%;
+    height:2px;
+    background-color: $primary-dark;
+    display:inline-block;
+    /* font-family:'aws_icons'; */
+    /* content:'\e818'; */
+    /* font-size:133%; */
+    /* margin-left: 0.25ex; */
+    /* bottom:-0.05ex; */
+    /* margin-top:-0.5ex; */
+   }
+
   }
  }
  h2 {
@@ -110,8 +132,8 @@ h6, .h6 {
   @mixin atMd { font-size: $fontsize3; }
   &, strong {
   font-weight:700;
-  margin-bottom: 0.625rem;
-  margin-top: 1.375rem;
+  margin-bottom: 0.875rem;
+  margin-top: 1.4375rem;
   letter-spacing: -0.015em;
   word-spacing:-0.015em;
   color:$charcoal;
@@ -119,7 +141,7 @@ h6, .h6 {
  }
  ul {
   li {
-   margin-bottom: 0.5625rem;
+   margin-bottom: 0.375rem;
   }
  }
  *:last-child {

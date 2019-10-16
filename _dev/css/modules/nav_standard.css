@@ -199,6 +199,9 @@
     }
    }
    &:last-child { padding-right:0.75rem }
+   &:nth-last-child(4) {
+    border:2px solid red;
+   }
    &:nth-last-child(1),
    &:nth-last-child(2),
    &:nth-last-child(3),

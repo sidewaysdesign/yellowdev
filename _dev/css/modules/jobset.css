@@ -9,7 +9,11 @@
 
   @mixin atMd { max-width:$cardsetmaxwidth-md; }
   @mixin atLg { max-width:$cardsetmaxwidth-lg; }
-
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
  }
  &-group-wrapper {
   display:block;
@@ -32,7 +36,7 @@
   h2 {
    margin-top: 0;
    margin-bottom: $interinputspacing;
-   font-family:$fontfam2;
+   font-family:$fontfam3;
    @mixin atMd {
     margin-top: $marginvertical;
     margin-bottom: 1.125rem;
@@ -51,6 +55,11 @@
    margin-right: -resolve($jobsetgap-md / 2);
    margin-left: -resolve($jobsetgap-md / 2);
 
+  }
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
   }
  }
  &-unit {
@@ -77,7 +86,7 @@
    color:white;
   }
   h2, h3, h4, h5 {
-   font-family:$fontfam2;
+   font-family:$fontfam3;
    font-weight:normal;
   }
   h2 {

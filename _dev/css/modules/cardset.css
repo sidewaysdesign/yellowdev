@@ -40,7 +40,7 @@ $cardgap-lg: 2rem;
   h2 {
    margin-top: 0;
    margin-bottom: $interinputspacing;
-   font-family:$fontfam2;
+   font-family:$fontfam3;
    @mixin atMd {
     margin-bottom: 1.125rem;
    }

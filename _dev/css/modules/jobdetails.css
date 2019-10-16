@@ -1,15 +1,63 @@
 $jobdetailsheroheight:7rem;
 $jobdetailsheroheight-sm:7rem;
+$jobdetailsheroheight-smmd:6rem;
 $jobdetailsheroheight-md:6rem;
 $jobdetailsheroheight-lg:10.5rem;
 
+.aws-jobdetails--page {
+ position: relative;
+ display:block;
+ /* overflow:visible; */
+ z-index:1;
+ @mixin atMd {
+  margin-top: -0.5rem;
+ }
+& > div:nth-child(2) {
+ /* position: relative; */
+ background-color: white;
+ &:before, &:after {
+  top:0;
+  width:100%;
+  content:'';
+  position:absolute;
+  height:100%;
+  background-color: white;
+  z-index:-1!important;
+ }
+ &:before {
+  left:0;
+  right:auto;
+  width:50%;
+  width:calc(50vw - 25%);
+  transform:translateX(-100%);
+  transform:translateX(calc(-100% + 1px));
+ }
+ &:after {
+  left:auto;
+  right:0;
+  width:50%;
+  width:calc(50vw - 25%);
+  transform:translateX(100%);
+  transform:translateX(calc(100% - 1px));
+ }
+}
+}
 form[action*="jobdetails"] .body-container-wrapper {
- background-color: $vapor;
+ min-height:570px;
+ background-color: $mist;
+ /* background-color: $air; */
  position: relative;
  display:block;
  /* padding-top:resolve($jobdetailsheroheight / 3)!important; */
- padding-top:resolve($navheight + 1rem)!important;
- @mixin atMd { padding-top:0!important; }
+ padding-top:2.9375rem!important;
+
+ @mixin atSmmd {
+  padding-top:2.875rem!important;
+ }
+ @mixin atMd {
+  /* margin-top: -10.75rem!important; */
+  padding-top:0!important;
+ }
  @mixin atLg {
   padding-top:0!important;
  }
@@ -17,68 +65,8 @@ form[action*="jobdetails"] .body-container-wrapper {
 .aws-jobdetails {
  &--hero {
   &-wrapper {
+   /* outline:2px solid green; */
    transition: none;
-  }
-  &-content {
-   position:relative;
-   width:100%;
-   z-index:10;
-   display:block;
-   display:flex;
-   align-items:flex-start;
-   justify-content: center;
-   flex-direction: column;
-   padding-left: 0;
-   min-height:$jobdetailsheroheight;
-   background-color: $primary;
-   transition: 0 all linear;
-   padding-top:0.5rem;
-   padding-bottom:0.5rem;
-   margin-bottom: 1.5rem;
-   &:before {
-    content:'';
-    top:0;
-    width:100%;
-    width:calc(50vw - 50%);
-    height:100%;
-    position:absolute;
-    display: block;
-    right:100%;
-    background-color: $primary;
-    z-index:-1;
-   }
-   @mixin atTnsm {
-    width:90%;
-    margin-bottom: 1.5rem;
-    &:after {
-     content:'';
-     right:-resolve($jobdetailsheroheight-sm/2);
-     display:block;
-     position:absolute;
-     width:$jobdetailsheroheight-sm;
-     height:$jobdetailsheroheight-sm;
-     background-color: black;
-     top:0;
-     border-radius:50%;
-    }
-   }
-   @mixin atSm {
-    width:75%;
-   }
-   @mixin atMd {
-    padding-top:0.75rem;
-    padding-bottom:0.75rem;
-    min-height:$jobdetailsheroheight-lg;
-    &:after {
-     right:-resolve($jobdetailsheroheight-lg/2);
-     width:$jobdetailsheroheight-lg;
-     height:$jobdetailsheroheight-lg;
-    }
-   }
-   @mixin atLg {
-    width:66.66%;
-    max-width:640px;
-   }
   }
   &-text {
    position: relative;
@@ -120,7 +108,7 @@ form[action*="jobdetails"] .body-container-wrapper {
   &-wrapper {
    transition: 0 all linear;
    min-height:resolve($jobdetailsheroheight / 3);
-   padding-bottom:resolve($jobdetailsheroheight / 4);
+   padding-bottom:2.75rem;
    background-repeat: no-repeat;
    background-size:cover;
    background-position: 50% 50%;
@@ -131,89 +119,27 @@ form[action*="jobdetails"] .body-container-wrapper {
    /* flex: auto; */
    align-items: flex-end;
    justify-content: flex-start;
-   padding-top:1.5rem;
+   padding-top:4.75rem;
    @mixin atTnsm {
-    padding-bottom:resolve($jobdetailsheroheight-sm / 3);
+    padding-top:5.5rem;
+    padding-bottom:3rem;
+   }
+   @mixin atSm {
+    padding-bottom:3rem;
+   }
+   @mixin atSmmd {
+    padding-top:5.25rem;
+    min-height:resolve($jobdetailsheroheight-smmd / 3);
    }
    @mixin atMd {
-    padding-bottom:resolve($jobdetailsheroheight-md / 3);
+    padding-top:3.375rem;
+    padding-bottom:2.5rem;
     min-height:resolve($jobdetailsheroheight-md / 3);
    }
    @mixin atLg {
+    padding-top:3.75rem;
+    padding-bottom:2.75rem;
     min-height:resolve($jobdetailsheroheight-lg / 3);
-   }
-  }
-  &-date {
-   font-size: 0.875rem;
-   margin-top:-2.5875rem;
-   margin-bottom:2.5875rem;
-   height:0;
-   overflow:visible;
-   @mixin atMd {
-    height:auto;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    }
-   &:after {
-    display:block;
-    width:0;
-    height:1rem;
-    content:'';
-    position: relative;
-    @mixin atMd { content:none; }
-   }
-  }
-  &-title {
-   border:2px solid foof;
-   position: relative;
-   display:block;
-   color:black;
-   font-size:$fontsize-heading;
-   font-weight:400;
-   letter-spacing: 0.008em;
-   word-spacing:-0.008em;
-   line-height: 1.1;
-   padding:0 resolve($marginsize * 2 + 2rem) 0 0;
-   @mixin atTnsm {
-    line-height: 1;
-    letter-spacing: 0.015em;
-    word-spacing:-0.015em;
-    font-size:$fontsize-heading-sm;
-    margin-bottom: 0;
-   }
-   @mixin atSm {
-    padding-right:resolve($marginsize-sm * 2 + 2rem);
-}
-   @mixin atMd {
-    padding-right: resolve($marginsize-md * 2 + 1rem);
-    font-size:$fontsize-heading-md;
-    line-height: 1.1;
-    font-weight:700;
-   }
-
-   @mixin atLg {
-    padding-right: resolve($marginsize-lg * 2 - 1rem);
-    font-size:$fontsize-heading-lg;
-    line-height: 1.1;
-    font-weight:700;
-   }
-  }
-  &-location {
-   /* margin-top: 0.25rem; */
-   margin:0;
-   height:0;
-   overflow:visible;
-   @mixin atMd {
-    height:auto;
-    margin-top:0.5rem;
-    }
-   &:before {
-    display:block;
-    width:0;
-    height:1.5rem;
-    content:'';
-    position: relative;
-    @mixin atMd { content:none; }
    }
   }
  }
@@ -223,15 +149,22 @@ form[action*="jobdetails"] .body-container-wrapper {
   }
  }
  &--backlink {
+  background-color: transparent;
+  height:0;
+  /* overflow:visible; */
   a {
    display: inline-block;
    position: relative;
-   padding:0.75rem 0 0.875rem 0;
+   padding:1.125rem 0 0.875rem 0;
    font-family:$fontfam4;
    font-weight:normal;
    letter-spacing:0.05em;
    line-height: 1;
    text-align:center;
+   @mixin atSm {
+
+    padding:1.25rem 0 0.875rem 0;
+   }
    @mixin atSmmd {
     display:block;
     margin-top:resolve($marginvertical / 2);
@@ -253,27 +186,210 @@ form[action*="jobdetails"] .body-container-wrapper {
  }
 }
 label[for^="MainContent_ctl00_sTitle"] {
-  margin-bottom: 0.675rem;
-  font-size:1.25rem;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  @mixin atMd {
-   font-size:$fontsize4;
+ margin-bottom: 0.675rem;
+ font-size:1.25rem;
+ line-height: 1.1;
+ letter-spacing: -0.01em;
+ @mixin atMd {
+  font-size:$fontsize4;
+ }
+ &.smaller {
+  font-size:1.125rem;
+  letter-spacing: 0;
+  @mixin atLg {
+   font-size:1.25rem;
+   letter-spacing: -0.01em;
+   margin-bottom: 0.5rem;
   }
-  &.smaller {
-   font-size:1.125rem;
-   letter-spacing: 0;
+ }
+}
+
+.aws-blog--hero-content {
+ position:relative;
+ width:100%;
+ z-index:10;
+ display:block;
+ display:flex;
+ align-items:flex-start;
+ justify-content: center;
+ flex-direction: column;
+ padding-left: 0;
+ /* min-height:$jobdetailsheroheight; */
+ background-color: transparent;
+ background-image:$dotstripe;
+ background-repeat: no-repeat;
+ background-size:cover;
+ background-position: 100% center;
+ transition: 0 all linear;
+ padding-top:0.25rem;
+ padding-bottom:0.25rem;
+ margin-bottom: 1.5rem;
+ &:before {
+  content:'';
+  top:0;
+  width:100%;
+  width:calc(50vw - 50%);
+  height:100%;
+  position:absolute;
+  display: block;
+  right:100%;
+  background-color: $primary;
+  z-index:-1;
+ }
+ @mixin atTnsm {
+  width:90%;
+  margin-bottom: 1.5rem;
+  padding-top:0.375rem;
+  padding-bottom:0.375rem;
+ }
+ @mixin atSm {
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  width:85%;
+ }
+ @mixin atSmmd {
+  padding-top:0.625rem;
+  padding-bottom:0.625rem;
+
+ }
+ @mixin atMd {
+  padding-top:0.75rem;
+  padding-bottom:0.75rem;
+  /* min-height:$jobdetailsheroheight-lg; */
+  &:after {
+   right:-resolve($jobdetailsheroheight-lg/2);
+   width:$jobdetailsheroheight-lg;
+   height:$jobdetailsheroheight-lg;
+  }
+ }
+ @mixin atLg {
+  width:66.66%;
+  max-width:640px;
+ }
+}
+.aws-blog--hero-date {
+ font-size: $fontsize0a;
+ margin-top:-1.875rem;
+ margin-bottom:1.875rem;
+ height:0;
+ color:$slate;
+ /* overflow:visible; */
+ @mixin atTn {
+  margin-top:-2rem;
+  margin-bottom:2rem;
+
+ }
+ @mixin atSmmd {
+  margin-top:-2.25rem;
+  margin-bottom:2.75rem;
+
+ }
+ @mixin atMd {
+  color:black;
+
+  height:auto;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+ }
+ &:after {
+  display:block;
+  width:0;
+  height:1rem;
+  content:'';
+  position: relative;
+  @mixin atMd { content:none; }
+ }
+}
+.aws-blog--hero-title {
+   border:2px solid foof;
+   position: relative;
+   display:block;
+   color:black;
+   font-size:$fontsize-heading;
+   font-weight:400;
+   letter-spacing: 0.008em;
+   word-spacing:-0.008em;
+   line-height: 1.0;
+   padding:0 resolve($marginsize * 2 + 3rem) 0 0;
+   padding-top:0.1875rem;
+   padding-bottom:0.1875rem;
+   @mixin atTn {
+    padding-top:0.375rem;
+    padding-bottom:0.25rem;
+    line-height: 1;
+    letter-spacing: 0.015em;
+    word-spacing:-0.015em;
+    font-size:$fontsize-heading-sm;
+    margin-bottom: 0;
+   }
+   @mixin atSm {
+    height:auto;
+    padding-right:resolve($marginsize-sm * 2 + 2rem);
+   }
+   @mixin atMd {
+    padding-right: 7.75rem;
+    font-size:$fontsize-heading-md;
+    line-height: 1.1;
+    font-weight:700;
+   }
    @mixin atLg {
-    font-size:1.25rem;
-    letter-spacing: -0.01em;
-    margin-bottom: 0.5rem;
+    padding-right: 8rem;
+    font-size:$fontsize-heading-lg;
+    line-height: 1.1;
+    font-weight:700;
    }
   }
+
+.aws-blog--hero-location {
+ margin:0;
+ height:0;
+ margin-top:0;
+ font-size:$fontsize0a;
+ color:$slate;
+ @mixin atSmmd {
+  font-size:$fontsize1;
+  margin-top: 0;
+  margin-top:0.5rem;
+ }
+ @mixin atMd {
+  color:black;
+  height:auto;
+  margin-top:0.5rem;
+ }
+ &:before {
+  display:block;
+  width:0;
+  height:0.75rem;
+  content:'';
+  position: relative;
+  @mixin atTn {
+   height:1rem;
+  }
+  @mixin atSm {
+   height:1.25rem;
+  }
+  @mixin atSmmd {
+   height:1.25rem;
+  }
+  @mixin atMd {
+   height:1.5rem;
+   content:none;
+  }
+ }
 }
+
+
 label[for^="MainContent_ctl00_sDesc"],
 label[for^="MainContent_ctl00_lblLocation"] {
  margin-top: 0.5rem;
- font-size:$fontsize0;
+ font-size:$fontsize1;
+font-family:$fontfam1!important;
+letter-spacing: 0.01em;
+line-height: 1.4;
+ @mixin atSmmdmd {
+  font-family:$fontfam3;
+  font-size:$fontsize0;
+ }
 }
 label[for^="MainContent_ctl00_lblLocation"] {
 }
@@ -288,5 +404,70 @@ label[for^="MainContent_ctl00_lblLocation"] {
  }
 }
 #MainContent_ctl00 {
+ height:0;
+ /* overflow:visible; */
+ position: relative;
+ display:block;
+background-color: $vapor;
+z-index:10;
+}
+
+.aws-jobdetails-—content {
+ font-family:$fontfam2!important;
+ color:$slate;
+ ::selection {
+  color:black;
+  background-color: $primary;
+ }
+ br + strong span {
+  color:black;
+  position:relative;
+  display:block;
+  font-family:$fontfam2;
+  text-decoration: none!important;
+  margin-bottom:-0.5rem;
+  margin-top:1rem;
+  /* font-size:$fontsize2; */
+
+ }
+ br { margin-top:1rem; }
+ br + br { display:none; }
+}
+
+h4 {
+ text-decoration:none;
+ margin-bottom: 0.5rem;
+}
+
+.aws-jobdetails-—content {
+ font-family:$fontfam2;
+ line-height: 1.62;
+ & > div {
+  position: relative;
+  & > div:first-child {
+   position: relative;
+   width:100%;
+   /* outline: 2px solid purple; */
+   padding-right:0;
+   @mixin atSmmdmd {
+    padding-right:2rem;
+    padding-bottom:2.5rem;
+    width:75%;
+   }
+  }
+  display:block;
+  position: relative;
+  float:none;
+  div:last-child {
+   div {
+    position: relative;
+    display:block;
+    bottom:auto;
+    &:last-child {
+     display:block;
+    }
+   }
+  }
+ }
 
 }

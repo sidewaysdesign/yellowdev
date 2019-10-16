@@ -4,23 +4,16 @@
   position:relative;
   padding:$marginsize 0 $marginsize 0;
   @mixin atTn {
-   padding:$marginsize-sm;
-   padding-left: 0;
-   padding-right: 0;
+   padding: $marginvertical-sm 0 $marginvertical-sm 0;
   }
   @mixin atSmmd {
-   padding:$marginsize-smmd;
-   padding-left: 0;
-   padding-right: 0;
+   padding: $marginvertical-smmd 0 $marginvertical-smmd 0;
   }
   @mixin atMd {
-   padding:$marginsize-md;
-   padding-left: 0;
-   padding-right: 0;
+   padding:$marginvertical-md 0 $marginvertical-md 0;
   }
   @mixin atLg {
-   padding-top:$marginvertical-lg;
-   padding-bottom:$marginvertical-lg;
+   padding:$marginvertical-lg 0 $marginvertical-lg 0;
   }
   &.vertical-padding--reduced {
    @mixin atMd { padding:resolve($marginsize-md / 4) 0 resolve($marginsize-md / 4) 0; }
@@ -49,12 +42,13 @@
  }
 
  &--contents {
-  overflow:hidden;
+  /* overflow:hidden; */
   display:block;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   padding: $marginsize;
+ z-index:1;
   @mixin atTnsm {
    /* padding: $marginsize-sm; */
   }
@@ -68,7 +62,7 @@
    /* padding: resolve($marginsize-lg * 0.5); */
   }
   h2 {
-   font-family:$fontfam2;
+   font-family:$fontfam3;
    margin-top: 0;
    margin-bottom: 1rem;
    /* text-align: center; */

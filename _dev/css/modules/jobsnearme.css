@@ -5,9 +5,6 @@ $dotsize-jobsnearme-md: 2.625rem;
 $dotsize-jobsnearme-lg: 3rem;
 
 .aws-jobsnearme {
- &--wrapper {
-
- }
  &--contents {
   position: relative;
   padding-top: 1.75rem;
@@ -19,16 +16,18 @@ $dotsize-jobsnearme-lg: 3rem;
   @mixin atMd {
    padding-top: 1.875rem;
    padding-left:15rem;
+   padding-left:33.33%;
    padding-bottom: 1.75rem;
   }
   @mixin atLg {
    padding-top: 2rem;
-   padding-left:50%;
+   padding-left:33.33%;
    padding-bottom: 1.75rem;
   }
   p {
    margin-top:0;
    margin-bottom: 0.5rem;
+   line-height: 1.6875;
    strong {
     font-family:$fontfam4;
     letter-spacing: 0.01em;
@@ -39,9 +38,9 @@ $dotsize-jobsnearme-lg: 3rem;
    position: relative;
    display:inline-block;
    margin-top: 0;
-   margin-bottom: 1.5rem;
+   margin-bottom: 1.25rem;
    margin-left: -0.25rem;
-   font-family: $fontfam2;
+   font-family: $fontfam3;
    font-size:2.25rem;
    font-weight:normal;
    letter-spacing: 0;
@@ -98,12 +97,14 @@ $dotsize-jobsnearme-lg: 3rem;
      margin-left:-13.0625rem;
     }
     @mixin atMd {
-     width:20rem;
-     margin-left:-26rem;
+     /* width:20rem;
+     margin-left:-26rem; */
+     width:200%;
+     margin-left:-223%;
     }
     @mixin atLg {
      width:200%;
-     margin-left:-255%;
+     margin-left:-223%;
     }
    }
    &:after {
@@ -124,13 +125,14 @@ $dotsize-jobsnearme-lg: 3rem;
      border-radius: resolve($dotsize-jobsnearme-smmd / 2);
     }
     @mixin atMd {
-     left:-6rem;
+     /* left:-6rem; */
+     left:-23%;
      width:$dotsize-jobsnearme-md;
      margin-left:-resolve($dotsize-jobsnearme-md / 2);
      border-radius: resolve($dotsize-jobsnearme-md / 2);
     }
     @mixin atLg {
-     left:-55%;
+     left:-23%;
      width:$dotsize-jobsnearme-lg;
      margin-left:-resolve($dotsize-jobsnearme-lg / 2);
      border-radius: resolve($dotsize-jobsnearme-lg / 2);
@@ -141,15 +143,15 @@ $dotsize-jobsnearme-lg: 3rem;
  &--suggested {
   &-wrapper {
    margin-top: 0.5rem;
-   @mixin atMd {
-    margin-top: 0;
-    }
    h4 {
-    margin-top: 0;
-    font-family: $fontfam2;
+    position: relative;
+    display: block;
+    margin-top: 0.5rem;
+    font-family: $fontfam4;
     font-size:1rem;
     font-weight:normal;
     margin-bottom:0.625rem;
+    @mixin atMd { margin-top: 0.5rem; }
    }
   }
   &-links {
@@ -160,7 +162,7 @@ $dotsize-jobsnearme-lg: 3rem;
     position: relative;
     margin-top: 0;
     margin-right:$interinputspacing;
-    padding-bottom: 0.875rem;
+    padding-bottom: 0.5rem;
     float:left;
     a {
      padding:0.5rem 1rem;
@@ -189,10 +191,11 @@ $dotsize-jobsnearme-lg: 3rem;
  &--form {
   label {
    display:block;
-   font-family: $fontfam2;
+   font-family: $fontfam4;
    margin-top: 0.5rem;
+   margin-bottom:0.25rem;
    @mixin atMd {
-    margin-top: 0;
+    margin-top: 0.5rem;
     }
   }
   input[type="text"] {
@@ -223,6 +226,7 @@ $dotsize-jobsnearme-lg: 3rem;
    display:block;
    float:left;
   }
+  form {margin-bottom: 0.5rem;}
   &:after {
    display:table;
    clear:both;

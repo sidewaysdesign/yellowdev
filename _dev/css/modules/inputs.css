@@ -14,20 +14,20 @@ input[type="password"] {
  @mixin atTnsm {
   height:$inputheight-sm;
   min-height:$inputheight-sm;
-  }
+ }
  @mixin atSmmd {
   height:$inputheight-smmd;
   min-height:$inputheight-smmd;
   padding:0.875rem 0.75rem 0.75rem 0.75rem;
-  }
+ }
  @mixin atMd {
-  padding:0.875rem 0rem 0.75rem 1rem;
+  padding:0.875rem 1rem 0.75rem 1rem;
   font-size:$inputtext-md;
   height:$inputheight-md;
   min-height:$inputheight-md;
-  }
+ }
  @mixin atLg {
-  }
+ }
  & + button {
  }
 }
@@ -36,19 +36,20 @@ fieldset {
  padding:0;
  margin:0;
 }
-label {
+label, span[id*="_lbl"] {
  position:relative;
  display:block;
  padding-bottom: 0.3125rem;
  @mixin atMd {
   padding-bottom: 0.1875rem;
-  }
+ }
 }
-
+span[id*="_lbl"] + br {
+ display:none;
+}
 input[type="submit"] {
- height:$inputheight;
  min-width:$inputheight;
- font-family:$fontfam2;
+ font-family:$fontfam3;
  border:none;
  padding:0 0.5rem 0 0.5rem;
  /* overflow-x: hidden; */
@@ -59,6 +60,7 @@ input[type="submit"] {
  font-size:1.2rem;
  line-height: 1;
  margin-left:$interinputspacing;
+ height:$inputheight;
  @mixin atTnsm {
   height:$inputheight-sm;
   min-width:$inputheight-sm;
@@ -83,4 +85,18 @@ input[type="submit"] {
  &::placeholder {
   color:$silver;
  }
+}
+
+input[type="file"] {
+ &:active, &:focus {
+  outline:none;
+  cursor:pointer;
+  background-color: rgba(255,255,255,0.3);
+ }
+ border-radius:2rem;
+ font-size:inherit!important;
+ background-color: transparent;
+ padding:0.5rem;
+ border:1px solid white;
+ font-family:$fontfam2!important;
 }

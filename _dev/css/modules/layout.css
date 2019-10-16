@@ -1,27 +1,38 @@
 .header-container-wrapper .row-fluid-wrapper.row-depth-1.row-number-1 {
  position: relative;
- border-bottom: 1px solid $primary;
- /* margin-bottom:1px; */
  z-index:1;
+}
+.header-container-wrapper {
+  border-bottom: 1px solid $primary;
 }
 
 .bg-white { background-color: white!important;}
 .bg-yellow { background-color: $primary; }
 .bg-grey { background-color: $fog!important; }
 
-.extend-yellow {
- background-color: $primary;
- &:before, &:after { background-color: $primary; }
-}
-.extend-grey {
- background-color: $vapor;
- &:before, &:after { background-color: $vapor; }
-}
-.extend-white { &:before, &:after { background-color: white; } }
+.extend-yellow { background-color: $primary; &:before, &:after { background-color: $primary; } }
+.extend-white { background-color: white; &:before, &:after { background-color: white; } }
+.extend-charcoal { background-color: $charcoal; &:before, &:after { background-color: $charcoal; } }
+.extend-grey { background-color: $grey; &:before, &:after { background-color: $grey; } }
+.extend-cloud { background-color: $cloud; &:before, &:after { background-color: $cloud; } }
+.extend-silver { background-color: $silver; &:before, &:after { background-color: $silver; } }
+.extend-fog { background-color: $fog; &:before, &:after { background-color: $fog; } }
+.extend-mist { background-color: $mist; &:before, &:after { background-color: $mist; } }
+.extend-vapor { background-color: $vapor; &:before, &:after { background-color: $vapor; } }
+.extend-air { background-color: $air; &:before, &:after { background-color: $air; } }
 
 .extend-yellow,
 .extend-white,
-.extend-grey {
+.extend-charcoal,
+.extend-grey,
+.extend-slate,
+.extend-cloud,
+.extend-silver,
+.extend-fog,
+.extend-mist,
+.extend-vapor,
+.extend-air
+ {
  overflow:visible;
  box-sizing: border-box;
  position:relative;
@@ -38,6 +49,7 @@
   width:calc(50vw - 25%);
   /* margin-left:-100%; */
   transform:translateX(-100%);
+  transform:translateX(calc(-100% + 1px));
   z-index:-1;
   /* margin-left:calc(-50vw + 25%); */
  }
@@ -45,7 +57,8 @@
   right:0;
   width:50%;
   width:calc(50vw - 25%);
-  transform:translateX(100%);
+  /* transform:translateX(100%); */
+  transform:translateX(calc(100% - 1px));
   z-index:-1;
  }
 }

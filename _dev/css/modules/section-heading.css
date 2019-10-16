@@ -15,7 +15,7 @@
  p { color:$charcoal; }
  h2 {
   margin-bottom: $interinputspacing;
-  font-family:$fontfam2;
+  font-family:$fontfam3;
   line-height: 1.1;
   @mixin atMd {
    margin-top: $marginvertical;

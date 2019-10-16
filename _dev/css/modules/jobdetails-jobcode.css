@@ -1,0 +1,161 @@
+$socialcircle: 2.5rem;
+
+
+.aws-jobdetails {
+ &--jobcode {
+  width:100%;
+  box-sizing: border-box;
+  position:relative;
+  display:block;
+  bottom:auto;
+  text-align:center;
+  @mixin atSmmdmd {
+   width:25%;
+   text-align:left;
+   position:absolute;
+   top:0;
+   left:0;
+   left:75%;
+  }
+ }
+ &--jobcode-title {
+  display:block;
+  width:100%;
+  text-align: center;
+  position: relative;
+  font-family: $fontfam3;
+  @mixin atSmmdmd{
+   font-size:$fontsize2;
+  }
+  font-size:$fontsize1;
+  p span {
+   font-family: $fontfam4;
+   position: relative;
+   display:inline-block;
+   margin-left: 0.5rem;
+   &:before {
+    position: absolute;
+    display:block;
+    content:'';
+    width:1px;
+    left:-0.5rem;
+    height:100%;
+    /* height:2rem; */
+    background-color: $primary;
+   }
+  }
+
+ }
+ &--jobcode-inputs {
+  display:block;
+  position: relative;
+  width:50%;
+  max-width:16rem;
+  margin-left: auto;
+  margin-right: auto;
+  @mixin atSmmdmd {
+   width:100%;
+  }
+  input {
+   margin:1rem 0;
+   display:block;
+   width:100%;
+   font-size:$fontsize1;
+   font-family:$fontfam3;
+   padding:0.6875rem 1rem 0.5rem 1rem;
+   height:auto;
+   box-sizing: border-box;
+   border-radius:2rem;
+   line-height: 1;
+   @mixin atSmmdmd {
+    font-size:$fontsize0;
+    padding:0.5rem 1rem 0.375rem 1rem;
+   }
+   &:focus, &:active {
+    opacity:0.5;
+    outline:none!important;
+   }
+  }
+  input:first-child {
+   background-color: white;
+   border:1px solid $cloud;
+  }
+  input:nth-child(2) {
+   border:1px solid $primary;
+   background-color: $primary;
+  }
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
+ }
+ &--jobcode-sharing {
+  display:block;
+  position: relative;
+  width:100%;
+  position: relative;
+  display: block;
+  margin-bottom:1.5rem;
+  @mixin atSmmdmd {
+   margin-bottom:0;
+  }
+
+  p {
+   font-size:$fontsize0;
+   font-family:$fontfam4;
+   text-align: center;
+   margin: 0 0 0.5rem 0;
+  }
+  ul {
+   margin:0;
+   padding:0;
+   list-style-type:none;
+  }
+
+  display:block;
+  text-align:center;
+  @mixin atMd { float:right; }
+  .aws-jobdetails--sharing {
+   &-twitter, &-facebook, &-linkedin, &-instagram {
+    margin-left: 0.125rem;
+    margin-right: 0.125rem;
+    display:inline-block;
+    margin-top: -0.25rem;
+    width:$socialcircle;
+    height:$socialcircle;
+    text-align: center;
+    border-radius:4rem;
+    box-shadow: 0 0 2px black, 0 0 2px black;
+    background-color: transparent;
+    opacity:1;
+    transition: opacity $transtime0 ease-in-out;
+    font-size:0;
+    color:transparent;
+    @mixin atMd {
+     display:inline-block;
+     &:after {
+      content:'';
+      display:table;
+      clear:both;
+     }
+    }
+    &:before {
+     text-align: center;
+     width:$socialcircle;
+     padding-top:0.5rem;
+     font-family:'aws_icons';
+     font-size:1rem;
+     color: $charcoal;
+     text-align: center;
+     display:block;
+    }
+    &:hover, &:active { opacity:0.7; }
+   }
+   &-twitter:before {content:'\f099'}
+   &-facebook:before {content:'\f09a'}
+   &-linkedin:before {content:'\f0e1'}
+   &-instagram:before {content:'\f16d'}
+  }
+ }
+}

@@ -104,6 +104,7 @@ $air: #fafafa; */
   display:block;
   width:100%;
   p {
+   font-size:$fontsize0!important;
    margin-top: 0;
   }
   @mixin atMd {
@@ -307,7 +308,10 @@ $air: #fafafa; */
    text-align: left;
    /* width:100%; */
   }
-  p { margin:0; }
+  p {
+   margin:0;
+    font-size:$fontsize0!important;
+  }
  }
 }
 .aws-social {

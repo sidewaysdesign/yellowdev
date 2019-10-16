@@ -1,9 +1,10 @@
 $breakpoints: (tn: 31.5em, tnsm:24em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 48em, mdlg: 56.25em, mdmdlg: 62em, lg: 64em, lgxl:66em, xl: 72rem);
 
-@define-mixin atTn { @media (min-width: 384px) { @mixin-content; }}  /* px */
+@define-mixin atTn { @media (min-width: 375px) { @mixin-content; }}  /* px */
 @define-mixin atTnsm { @media (min-width: 480px) { @mixin-content; }}  /* px */
 @define-mixin atSm { @media (min-width: 536px) { @mixin-content; }}  /* px */
 @define-mixin atSmmd { @media (min-width: 640px) { @mixin-content; }}  /* px */
+@define-mixin atSmmdmd { @media (min-width: 704px) { @mixin-content; }}  /* px */
 @define-mixin atMd { @media (min-width: 768px) { @mixin-content; }}  /* px */
 @define-mixin atMdlg { @media (min-width: 940px) { @mixin-content; }}  /* px */
 @define-mixin atMdmdlg { @media (min-width: 992px) { @mixin-content; }}  /* px */
@@ -29,12 +30,12 @@ $breakpoints: (tn: 31.5em, tnsm:24em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 
 
 /* @define-mixin uptoSm { @media (max-width: 29.9rem) { @mixin-content; }}  /* px */
 /* @define-mixin uptoSm { @media (max-width: 29.9rem) { @mixin-content; }}  /* px */
-@define-mixin uptoSm { @media (max-width: 479px) { @mixin-content; }}  /* px */
+@define-mixin uptoSm { @media (max-width: 535px) { @mixin-content; }}  /* px */
 /* @define-mixin uptoSmmd { @media (max-width: 37.49rem) { @mixin-content; }}  /* px */
-@define-mixin uptoSmmd { @media (max-width: 599px) { @mixin-content; }}  /* px */
+@define-mixin uptoSmmd { @media (max-width: 639px) { @mixin-content; }}  /* px */
 /* @define-mixin uptoMd { @media (max-width: 47.99rem) { @mixin-content; }}  /* px */
 @define-mixin uptoMd { @media (max-width: 767px) { @mixin-content; }}  /* px */
-@define-mixin uptoMdlg { @media (max-width: 899px) { @mixin-content; }}  /* px */
+@define-mixin uptoMdlg { @media (max-width: 939px) { @mixin-content; }}  /* px */
 
 /* @define-mixin twixtMd-Xl { @media (min-width: 48rem) and (max-width: 71.99rem) { @mixin-content; }}  /* 768px - 1199px */
 @define-mixin twixtMd-Xl { @media (min-width: 768px) and (max-width: 1200px) { @mixin-content; }}  /* 768px - 1199px */
