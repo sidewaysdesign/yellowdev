@@ -103,7 +103,7 @@ gulp.task('watch', function() {
 
  });
 
- gulp.watch(['./css/*.css', './css/modules/*.css', './css/base/*.css'], ['waitForStyles']);
+ gulp.watch(['./css/*.css', './css/modules/*.css', './css/base/*.css', './css/overrides/*.css'], ['waitForStyles']);
  gulp.watch(['./js/modules/*.js', './js/*.js'], ['waitForScripts']);
 });
 
@@ -111,4 +111,4 @@ gulp.task('waitForStyles', ['stylesx'], function() {
  return gulp.src('../'+settings.localDirectory+'style.css');
 });
 
-gulp.watch("../*.css").on('change', browserSync.reload);
+// gulp.watch("../*.css").on('change', browserSync.reload);

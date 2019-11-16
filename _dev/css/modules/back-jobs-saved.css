@@ -1,0 +1,120 @@
+.aws-jobinfo-applied--results-group_saved,
+.aws-jobinfo-saved--results-summary {
+ display:block;
+ /* margin-top:resolve($gridgap * 0.5);
+ @mixin atTn {margin-top:resolve($gridgap-tn * 0.5);}
+ @mixin atSmmd {margin-top:resolve($gridgap-smmd * 0.5);}
+ @mixin atMd {margin-top:resolve($gridgap-md * 0.5);} */
+ ul {
+  padding:0;
+  margin:0.5rem 0 0 0;
+  li {
+   font-family:$fontfam2;
+   color:$slate;
+   font-size:1rem;
+   padding:0;
+   text-align: left;
+   /* color:$storm; */
+   display:block;
+   float:left;
+    margin-right: 1rem;
+   &:last-child {
+     margin-right:0;
+   }
+   /* width:50%; */
+  }
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
+ }
+}
+.aws-jobinfo-applied--results-group_saved,
+.aws-jobinfo-applied--results-group_applied,
+.aws-jobinfo-saved--results-group_saved {
+ .aws-jobinfo-saved--results-buttons {
+  input[type="submit"] {
+   float:left;
+  }
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
+  input[type="submit"][value="Apply"] {
+   /* padding-left:1.25rem; */
+   /* padding-right:1.25rem; */
+  }
+  input[type="submit"][value="Remove"],
+  input[type="submit"][value="Apply"] {
+   @mixin atMdlg {
+    padding-right:2.25rem;
+    padding-left:2.25rem;
+   }
+  }
+  input[type="submit"][value="Remove"] {
+   @mixin atMdlg {
+    background-image:$action_remove!important;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     background-image:$action_remove_png!important;
+    }
+    border-color:$slate;
+    color:$slate;
+    background-position: 100% 0;
+    background-position: calc(100% + 1px) -1px;
+    transition: opacity $transtime2 ease-in-out 0s, background-position $transtime1 ease-in-out 0.375s;
+    transition: opacity $transtime2 ease-in-out 0s, background-position $transtime1 ease-in-out 0.375s;
+    &.hover, &:hover {
+     border-color:$silver;
+     background-position: 100% 100%;
+     background-position: calc(100% + 1px) calc(100% + 1px);
+     opacity:0.85;
+    }
+    &:active {opacity:0.85;}
+   }
+  }
+ }
+}
+.aws-jobinfo-applied--results-group_saved {
+ ul {
+  margin:0.125rem 0 0.875rem 0;
+  li {
+   text-align: left;
+   /* width:33%; */
+  }
+ }
+}
+.aws-jobinfo-saved--results-buttons {
+ input[type="submit"] {
+  display:block;
+  margin-top: 0.75rem;
+  @mixin atMd {
+   margin-top: 1rem;
+   }
+ }
+}
+.aws-jobinfo-applied--results-group_saved {
+ border:1px solid $silver;
+ /* padding:resolve($gridgap * 1); */
+ /* @mixin atTn {padding:resolve($gridgap-tn * 1);} */
+ /* @mixin atSmmd {padding:resolve($gridgap-smmd * 1);} */
+ /* @mixin atMd {padding:resolve($gridgap-md * 1);} */
+ a[href*="jobdetails.aspx?jobId"] {
+  /* job heading */
+  position: relative;
+  display: block;
+  font-family:$fontfam3;
+  font-size:$fontsize2;
+  line-height:1.15;
+  @mixin atMd {
+   font-size:$fontsize3;
+   padding-right:8rem;
+   margin-top: 0;
+  }
+  @mixin atLg {
+   font-size:$fontsize3a;
+   /* margin-bottom: 0.25rem; */
+  }
+ }
+}

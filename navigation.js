@@ -108,7 +108,7 @@ function createHero(num) {
   var heroText = $('.aws-tableau--hero-text'+num+' .hs_cos_wrapper_type_text').text();
   var phoneNumber = $('.aws-tableau--phone .hs_cos_wrapper_type_text').text();
   var phoneContent = '<div class="aws-menu--phone">'+phoneNumber+'</div>';
-  var heroContent = '<li class="aws-menu--hero'+num+'"><div class="aws-menu--hero-content" style="background-image:url('+heroImage+')"><span>'+heroText+'</span></div>'+phoneContent+'</li>';
+  var heroContent = '<li class="aws-menu--hero'+num+'"><div class="aws-menu--hero-content" style="background-image:url('+heroImage+')"><div><span>'+heroText+'</span></div></div>'+phoneContent+'</li>';
   var heroTarget = $('.aws-menu .hs-menu-depth-1.hs-item-has-children > .hs-menu-children-wrapper').eq(num-1);
   heroTarget.append(heroContent);
  }

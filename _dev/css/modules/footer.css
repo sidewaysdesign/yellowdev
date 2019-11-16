@@ -10,41 +10,8 @@ $air: #fafafa; */
  background-color: $vapor;
 }
 .aws-footer {
- &--container {
-  /* padding-top:4rem; */
-  /* background-color: rgba(255,255,255,0.2); */
-  padding-left: 1rem;
-  padding-right: 1rem;
 
-  @mixin atMd {
-   padding-left: 2.5rem;
-   padding-right: 2.5rem;
-   width:100%;
-   max-width:100%;
 
-  }
-  @mixin atLg {
-   padding-left: 0;
-   padding-right: 0;
-   width:1024px;
-   max-width:1024px;
-  }
-  float:none!important;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  display: block;
- }
- &--row-1,
- &--row-2,
- &--row-3
- {
-  @mixin atTnsm {
-   /* padding-left: 2.5rem; */
-   /* padding-right: 2.5rem; */
-
-  }
- }
  &--row-1 {
   text-align: center;
   width:100%;
@@ -63,6 +30,7 @@ $air: #fafafa; */
  }
  &--row-2 {
   display:block;
+  width:100%;
   /* padding-top:1rem; */
   /* outline:2px solid rgba(0,0,255,0.3); */
   &:after {
@@ -101,6 +69,7 @@ $air: #fafafa; */
   box-sizing: border-box;
   position: relative;
   text-align: center;
+  line-height: 1.42;
   display:block;
   width:100%;
   p {
@@ -131,7 +100,7 @@ $air: #fafafa; */
    letter-spacing: 0.1em;
    font-size:$fontsize0;
    margin-bottom: 0;
-   text-transform: uppercase;
+   /* text-transform: uppercase; */
    @mixin atMd {
     margin-bottom: 0.25rem;
    }
@@ -198,6 +167,7 @@ $air: #fafafa; */
    font-size:$fontsize3;
    border:2px solid $fog;
    outline:none!important;
+   ie-dummy: expression(this.hideFocus=true);
    @mixin atTnsm {
     min-height: $inputheight-sm;
     max-height: $inputheight-sm;
@@ -283,7 +253,7 @@ $air: #fafafa; */
   display:block;
   width:100%;
   text-align: center;
-  font-size:$fontsize0;
+  font-size:0.88rem;
   padding-bottom:0.75rem;
   @mixin atMd {
    padding-bottom:0;

@@ -37,6 +37,14 @@
    @mixin atSm {
     text-align:right;
    }
+   &:focus, &:active {
+    outline:none!important;
+    ie-dummy: expression(this.hideFocus=true);
+   }
+  }
+  &:focus, &:active {
+   outline:none!important;
+   ie-dummy: expression(this.hideFocus=true);
   }
  }
 }

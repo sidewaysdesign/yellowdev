@@ -34,7 +34,7 @@ $iframewindowsize-md: 2.5625rem;
   left:$iframewindowsize;
   margin-top:0.6875rem;
   color:black;
-  font-weight: 500;
+  font-weight: normal;
   content:attr(data-label);
   z-index:-1;
   @mixin atMd { content:none; }

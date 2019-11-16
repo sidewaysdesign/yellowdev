@@ -6,7 +6,7 @@ $cardgap-lg: 2rem;
 
 .aws-section--cardset {
  &-wrapper {
-  display:block;  
+  display:block;
   position: relative;
   margin-right:auto;
   margin-left:auto;
@@ -88,7 +88,8 @@ $cardgap-lg: 2rem;
   }
   img {
    position:relative;
-   width:100%;
+   width:100%!important;
+   height:auto!important;
    max-width:120px;
   }
   @mixin atMd {

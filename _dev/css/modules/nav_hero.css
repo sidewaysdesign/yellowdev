@@ -2,7 +2,7 @@
 .aws-menu--hero2 {
  margin-left: 0;
  position:relative;
- top:resolve($marginvertical-md / 2);
+ top:0.875rem;
  right:0;
  width:100%;
  padding:0;
@@ -16,6 +16,14 @@
   right:2.75rem;
  }
  @mixin atLg {
+  padding-right:resolve($menuoutset*2);
+  display:block;
+  position:absolute!important;
+  width:20%;
+  width:calc(20% + resolve($menuoutset * 4));
+  /* margin-left: -resolve($menuoutset * 3); */
+  margin-right:-resolve($menuoutset*1.5);
+  right:0;
   right:0;
  }
  .aws-menu--hero-content {
@@ -34,11 +42,16 @@
    width:calc(100% + 4rem);
   }
   @mixin atLg {
+   margin-right:-$menuoutset;
+   overflow:visible;
    padding-top: 75%;
+   height: auto;
    min-height:auto;
    width:100%;
   }
-  span {
+  .textband {
+   font-family: $fontfam2;
+   font-weight:normal;
    display:block;
    position:absolute;
    width:100%;
@@ -73,5 +86,25 @@
     left: 1rem;
    }
   }
+  .textband span {
+    z-index:1;
+    color:black;
+    background-color: none!important;
+    padding:none!important;
+    position:relative;
+    display:block;
+    &:before {
+     background-color: !important;
+     content:none!important;
+    }
+  }
+
+ }
+}
+
+@media all and (-ms-high-contrast:none) {
+ .aws-menu--hero1,
+ .aws-menu--hero2 {
+  transform:translateX(-.375rem);
  }
 }

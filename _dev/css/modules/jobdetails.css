@@ -1,3 +1,4 @@
+$pushdottowardmargin: 0.5rem;
 $jobdetailsheroheight:7rem;
 $jobdetailsheroheight-sm:7rem;
 $jobdetailsheroheight-smmd:6rem;
@@ -12,39 +13,39 @@ $jobdetailsheroheight-lg:10.5rem;
  @mixin atMd {
   margin-top: -0.5rem;
  }
-& > div:nth-child(2) {
- /* position: relative; */
- background-color: white;
- &:before, &:after {
-  top:0;
-  width:100%;
-  content:'';
-  position:absolute;
-  height:100%;
+ & > div:nth-child(2) {
+  /* position: relative; */
   background-color: white;
-  z-index:-1!important;
+  &:before, &:after {
+   top:0;
+   width:100%;
+   content:'';
+   position:absolute;
+   height:100%;
+   background-color: white;
+   z-index:-1!important;
+  }
+  &:before {
+   left:0;
+   right:auto;
+   width:50%;
+   width:calc(50vw - 25%);
+   transform:translateX(-100%);
+   transform:translateX(calc(-100% + 1px));
+  }
+  &:after {
+   left:auto;
+   right:0;
+   width:50%;
+   width:calc(50vw - 25%);
+   transform:translateX(100%);
+   transform:translateX(calc(100% - 1px));
+  }
  }
- &:before {
-  left:0;
-  right:auto;
-  width:50%;
-  width:calc(50vw - 25%);
-  transform:translateX(-100%);
-  transform:translateX(calc(-100% + 1px));
- }
- &:after {
-  left:auto;
-  right:0;
-  width:50%;
-  width:calc(50vw - 25%);
-  transform:translateX(100%);
-  transform:translateX(calc(100% - 1px));
- }
-}
 }
 form[action*="jobdetails"] .body-container-wrapper {
  min-height:570px;
- background-color: $mist;
+ /* background-color: $mist; */
  /* background-color: $air; */
  position: relative;
  display:block;
@@ -67,13 +68,38 @@ form[action*="jobdetails"] .body-container-wrapper {
   &-wrapper {
    /* outline:2px solid green; */
    transition: none;
+   /* background-color: white; */
+   &:before, &:after {
+    top:0;
+    content:'';
+    position:absolute;
+    height:100%;
+   }
+   &:before {
+    left:0;
+    width:50%;
+    width:calc(50vw - 25%);
+    /* margin-left:-100%; */
+    transform:translateX(-100%);
+    transform:translateX(calc(-100% + 1px));
+    z-index:-1;
+    /* margin-left:calc(-50vw + 25%); */
+   }
+   &:after {
+    right:0;
+    width:50%;
+    width:calc(50vw - 25%);
+    /* transform:translateX(100%); */
+    transform:translateX(calc(100% - 1px));
+    z-index:-1;
+   }
   }
   &-text {
    position: relative;
    display:block;
    color:black;
    font-size:$fontsize-heading;
-   font-weight:400;
+   font-weight:normal;
    letter-spacing: -0.008em;
    word-spacing:-0.008em;
    line-height: 1.1;
@@ -93,7 +119,7 @@ form[action*="jobdetails"] .body-container-wrapper {
    @mixin atMd {
     font-size:$fontsize-heading-md;
     line-height: 1.1;
-    font-weight:700;
+    font-weight:normal;
     padding:resolve($fontsize-heading-md / 7.5) resolve($jobdetailsheroheight-md / 2 + 1rem) 0 $marginsize-md;
    }
 
@@ -151,6 +177,8 @@ form[action*="jobdetails"] .body-container-wrapper {
  &--backlink {
   background-color: transparent;
   height:0;
+  position:relative;
+  z-index:1000;
   /* overflow:visible; */
   a {
    display: inline-block;
@@ -189,7 +217,11 @@ label[for^="MainContent_ctl00_sTitle"] {
  margin-bottom: 0.675rem;
  font-size:1.25rem;
  line-height: 1.1;
- letter-spacing: -0.01em;
+ letter-spacing: -0.002em;
+ @mixin atSmmd {
+  letter-spacing: -0.01em;
+
+ }
  @mixin atMd {
   font-size:$fontsize4;
  }
@@ -217,13 +249,17 @@ label[for^="MainContent_ctl00_sTitle"] {
  /* min-height:$jobdetailsheroheight; */
  background-color: transparent;
  background-image:$dotstripe;
+ @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  background-image:$dotstripe_png;
+ }
  background-repeat: no-repeat;
  background-size:cover;
- background-position: 100% center;
+ background-position: 100.1% center;
  transition: 0 all linear;
  padding-top:0.25rem;
  padding-bottom:0.25rem;
  margin-bottom: 1.5rem;
+ transform:translateX($pushdottowardmargin);
  &:before {
   content:'';
   top:0;
@@ -243,6 +279,8 @@ label[for^="MainContent_ctl00_sTitle"] {
   padding-bottom:0.375rem;
  }
  @mixin atSm {
+  transform:none;
+
   padding-top:0.5rem;
   padding-bottom:0.5rem;
   width:85%;
@@ -256,15 +294,29 @@ label[for^="MainContent_ctl00_sTitle"] {
   padding-top:0.75rem;
   padding-bottom:0.75rem;
   /* min-height:$jobdetailsheroheight-lg; */
-  &:after {
-   right:-resolve($jobdetailsheroheight-lg/2);
-   width:$jobdetailsheroheight-lg;
-   height:$jobdetailsheroheight-lg;
-  }
+  /* &:after {
+  right:-resolve($jobdetailsheroheight-lg/2);
+  width:$jobdetailsheroheight-lg;
+  height:$jobdetailsheroheight-lg;
+  } */
  }
  @mixin atLg {
   width:66.66%;
   max-width:640px;
+ }
+ &:before {
+  position:absolute;
+  top:0;
+  width:3rem;
+  left:-3rem;
+  background-color: $primary;
+  height:100%;
+  display:block;
+  @mixin atMd {
+   left:-50%;
+   width:50%;
+  }
+
  }
 }
 .aws-blog--hero-date {
@@ -301,44 +353,51 @@ label[for^="MainContent_ctl00_sTitle"] {
  }
 }
 .aws-blog--hero-title {
-   border:2px solid foof;
-   position: relative;
-   display:block;
-   color:black;
-   font-size:$fontsize-heading;
-   font-weight:400;
-   letter-spacing: 0.008em;
-   word-spacing:-0.008em;
-   line-height: 1.0;
-   padding:0 resolve($marginsize * 2 + 3rem) 0 0;
-   padding-top:0.1875rem;
-   padding-bottom:0.1875rem;
-   @mixin atTn {
-    padding-top:0.375rem;
-    padding-bottom:0.25rem;
-    line-height: 1;
-    letter-spacing: 0.015em;
-    word-spacing:-0.015em;
-    font-size:$fontsize-heading-sm;
-    margin-bottom: 0;
-   }
-   @mixin atSm {
-    height:auto;
-    padding-right:resolve($marginsize-sm * 2 + 2rem);
-   }
-   @mixin atMd {
-    padding-right: 7.75rem;
-    font-size:$fontsize-heading-md;
-    line-height: 1.1;
-    font-weight:700;
-   }
-   @mixin atLg {
-    padding-right: 8rem;
-    font-size:$fontsize-heading-lg;
-    line-height: 1.1;
-    font-weight:700;
-   }
-  }
+ position: relative;
+ display:block;
+ color:black;
+ font-size:$fontsize-heading;
+ font-weight:normal;
+ font-family:$fontfam3;
+ font-style:normal;
+ max-width:100%;
+ letter-spacing: 0.008em;
+ word-spacing:-0.008em;
+ line-height: 1.0;
+ padding:0 5.5rem 0 0;
+ padding-top:0.1875rem;
+ padding-bottom:0.1875rem;
+ letter-spacing:-0.01em;
+ @mixin atTn {
+  padding-top:0.375rem;
+  padding-bottom:0.25rem;
+  line-height: 1;
+  /* letter-spacing: 0.015em; */
+  word-spacing:-0.015em;
+  font-size:$fontsize-heading-sm;
+  margin-bottom: 0;
+ }
+ @mixin atSm {
+  height:auto;
+  padding-right:resolve($marginsize-sm * 2 + 2.5rem);
+ }
+ @mixin atMd {
+  padding-right: 9.75rem;
+  font-size:$fontsize-heading-md;
+  line-height: 1.1;
+  font-weight:700;
+ }
+ @mixin atMdlg {
+  padding-right: 10rem;
+ }
+ @mixin atLg {
+  padding-right: 12rem;
+  font-size:$fontsize-heading-lg;
+  line-height: 1.1;
+  font-weight:normal;
+  font-family:$fontfam4;
+ }
+}
 
 .aws-blog--hero-location {
  margin:0;
@@ -377,15 +436,24 @@ label[for^="MainContent_ctl00_sTitle"] {
   }
  }
 }
+.aws-blog--hero-date,
+.aws-blog--hero-title,
+.aws-blog--hero-location {
+ transform:translateX(-$pushdottowardmargin);
+ @mixin atSm {
+  transform:none;
+
+ }
+}
 
 
 label[for^="MainContent_ctl00_sDesc"],
 label[for^="MainContent_ctl00_lblLocation"] {
  margin-top: 0.5rem;
  font-size:$fontsize1;
-font-family:$fontfam1!important;
-letter-spacing: 0.01em;
-line-height: 1.4;
+ font-family:$fontfam1!important;
+ letter-spacing: 0.01em;
+ line-height: 1.4;
  @mixin atSmmdmd {
   font-family:$fontfam3;
   font-size:$fontsize0;
@@ -408,13 +476,20 @@ label[for^="MainContent_ctl00_lblLocation"] {
  /* overflow:visible; */
  position: relative;
  display:block;
-background-color: $vapor;
-z-index:10;
+ background-color: $vapor;
+ z-index:10;
 }
 
 .aws-jobdetails-—content {
  font-family:$fontfam2!important;
  color:$slate;
+ & > div:not(:last-child) * {
+  font-family:inherited!important;
+  background:none!important;
+  background-color: transparent!important;
+  color:inherited!important;
+  padding:0!important;
+ }
  ::selection {
   color:black;
   background-color: $primary;
@@ -423,15 +498,22 @@ z-index:10;
   color:black;
   position:relative;
   display:block;
-  font-family:$fontfam2;
+  font-family:$fontfam2!important;
   text-decoration: none!important;
   margin-bottom:-0.5rem;
   margin-top:1rem;
-  /* font-size:$fontsize2; */
 
  }
- br { margin-top:1rem; }
- br + br { display:none; }
+ /* br { margin-top:1rem; } */
+ br + br {
+  content:'';
+  height:1em;
+  display:block;
+  position:relative!important;
+  margin-top:-0.25rem;
+  /* margin-bottom:0.5rem; */
+  /* line-height: 5%; */
+ }
 }
 
 h4 {
@@ -439,7 +521,8 @@ h4 {
  margin-bottom: 0.5rem;
 }
 
-.aws-jobdetails-—content {
+.aws-jobdetails-—content,
+.aws-jobdetails--content{
  font-family:$fontfam2;
  line-height: 1.62;
  & > div {
@@ -447,7 +530,6 @@ h4 {
   & > div:first-child {
    position: relative;
    width:100%;
-   /* outline: 2px solid purple; */
    padding-right:0;
    @mixin atSmmdmd {
     padding-right:2rem;
@@ -469,5 +551,69 @@ h4 {
    }
   }
  }
+ ul {
+  margin:0;
+  padding:0;
+  margin-bottom:1.5rem;
+  list-style-type: none!important;
+  margin-left: 2.25ex;
+  letter-spacing:$letterspacing;
+  font-size:$fontsize1;
+  @mixin atSmmd { margin-left: 4ex; padding-right:4ex;}
+  @mixin atMd { font-size:$fontsize1b; }
+  @mixin atLg { margin-left: 4.75ex; padding-right:4.75ex;}
+  li {
+   color:$slate;
+   line-height:$bodycopylineheight;
+   @mixin atMd {
+    line-height:$bodycopylineheight-md;
+   }
+   &:before {
+    content:'•';
+    font-size:133%;
+    color:$primary;
+    color:$primary-dark;
+    position:absolute;
+    left:-0.0625ex;
+    display:block;
+    margin-top:-0.6ex;
+    @mixin atSmmd { left:1.5ex; }
+    @mixin atLg { left:2.25ex; }
+   }
+   & + li {
+    margin-top:0.5ex;
+   }
+  }
+ }
 
+ p, p span, ul li {
+  font-size:$fontsize1!important;
+ }
+ span {
+  font-family:$fontfam2!important;
+  strong {
+   font-weight:normal!important;
+   font-family:$fontfam4!important;
+  }
+ }
+}
+
+#MainContent_DetailsView1 {
+
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+ .aws-blog--hero {
+  position:absolute;
+  bottom:2.6rem;
+ }
+ .aws-blog--hero-text {
+  padding-top:1rem;
+ }
+}
+
+@media all and (max-width: 500px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+ .aws-blog--hero-text {
+  padding-top:1rem;
+ }
 }

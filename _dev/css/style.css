@@ -2,7 +2,7 @@
 /*
 Theme Name: Agilus Work Solutions
 Author: Sideways Design
-Version: 1.0
+Version: 1.1
 */
 
 /* 3rd party packages */
@@ -46,17 +46,41 @@ Version: 1.0
 @import "modules/indicators";
 @import "modules/footer";
 @import "modules/searchhero";
-@import "modules/jobsnearme";
 @import "modules/jobset";
 @import "modules/similarjobs";
 @import "modules/jobdetails";
-@import "modules/jobdetails-jobcode";
 @import "modules/resourceset";
 @import "modules/connectwithus";
-@import "modules/apply";
 @import "modules/single-column";
 @import "modules/map-branch";
 @import "modules/404";
 @import "modules/search-site";
-@import "modules/register";
-@import "modules/jobsearch";
+@import "modules/jobsnearme";
+@import "modules/post-filter";
+@import "modules/back-jobsearch";
+@import "modules/back-pages";
+@import "modules/back-register";
+@import "modules/back-titles";
+@import "modules/back-login";
+@import "modules/back-inputs";
+@import "modules/back-apply";
+@import "modules/back-confirmation";
+@import "modules/back-jobcode";
+@import "modules/back-header";
+@import "modules/back-submits";
+@import "modules/back-dashboard";
+@import "modules/back-pager";
+@import "modules/back-resume";
+@import "modules/back-settings";
+@import "modules/back-search-collapse";
+@import "modules/back-search-filtertags";
+@import "modules/back-jobalerts";
+@import "modules/back-jobalerts-make";
+@import "modules/back-jobs-saved";
+@import "modules/back-error";
+@import "modules/back-filters";
+@import "modules/back-alert";
+@import "modules/banner";
+/* @import "modules/bias"; */
+
+@import "overrides/overrides";

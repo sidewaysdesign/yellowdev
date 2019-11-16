@@ -1,0 +1,245 @@
+.aws-submitresume-page,
+.aws-submitresume—page {
+ #MainContent_divupload {
+  padding-top:resolve($gridgap * 1);
+  @mixin atTn {
+   padding-top:resolve($gridgap-tn * 1);
+  }
+  @mixin atSmmd {
+   padding-top:resolve($gridgap-smmd * 1);
+  }
+  @mixin atMd {
+   padding-top:resolve($gridgap-md * 1);
+  }
+ }
+ .aws-dashbaord—page-contact {
+  margin-top:2rem;
+ }
+ .aws-dashbaord—page-contact {
+  p + p {
+   margin-top:1rem;
+  }
+ }
+ .aws-dashbaord--resume-main-summary {
+  padding:resolve($gridgap * 1);
+  @mixin atTn {
+   padding:resolve($gridgap-tn * 1);
+  }
+  @mixin atSmmd {
+   padding:resolve($gridgap-smmd * 1);
+  }
+  @mixin atMd {
+   padding:resolve($gridgap-md * 1);
+  }
+  background-color: $mist;
+ }
+ &:after {
+ content:'';
+ display:table;
+ clear:both;
+ }
+}
+
+.aws-submitresume-page-header--title,
+.aws-submitresume—page-header--title {
+ margin:resolve($gridgap * 2) 0 resolve($gridgap * 2) 0;
+ margin-bottom: 1rem;
+ padding:resolve($gridgap * 1);
+ background-color: white;
+ font-family:$fontfam3;
+ font-size:$fontsize3;
+ @mixin atTn {
+  margin:resolve($gridgap-tn * 2) 0 resolve($gridgap-tn * 2) 0;
+  padding:resolve($gridgap-tn * 1);
+ }
+ @mixin atSmmd {
+  margin:resolve($gridgap-smmd * 2) 0 resolve($gridgap-smmd * 2) 0;
+  padding:resolve($gridgap-smmd * 1);
+ }
+ @mixin atMd {
+  margin:resolve($gridgap-md * 2) 0 resolve($gridgap-md * 2) 0;
+  padding:resolve($gridgap-md * 1);
+ }
+}
+
+#MainContent_specjob {
+ font-family:$fontfam3;
+ font-size:$fontsize1;
+ div {
+  /* padding:0!important; */
+  font-family:$fontfam1;
+ }
+ & > div {
+  display:block;
+  position: relative;
+  padding:resolve($gridgap * 1);
+  @mixin atTn {padding:resolve($gridgap-tn * 1);}
+  @mixin atSmmd {padding:resolve($gridgap-smmd * 1);}
+  @mixin atMd {padding:resolve($gridgap-md * 1);}
+  background-color: white!important;
+ }
+ .aws-resumesubmit--title {
+  display: block;
+  position: relative;
+  font-family:$fontfam3;
+  background-color: $primary;
+  line-height: 1.33;
+  padding:resolve($gridgap / 1.5) $gridgap resolve($gridgap / 2) $gridgap !important;
+  font-size:$fontsize2;
+  margin:-$gridgap -$gridgap $gridgap -$gridgap;
+  @mixin atTn {
+   margin:-$gridgap-tn -$gridgap-tn $gridgap-tn -$gridgap-tn;
+   padding:resolve($gridgap-tn * 1);
+  }
+  @mixin atSmmd {
+   font-size:$fontsize3;
+   margin:-$gridgap-smmd -$gridgap-smmd $gridgap-smmd -$gridgap-smmd;
+   padding:resolve($gridgap-smmd * .75) resolve($gridgap-smmd * 1);
+  }
+  @mixin atMd {
+   margin:-$gridgap-md -$gridgap-md $gridgap-md -$gridgap-md;
+   padding:resolve($gridgap-md * 1);
+  }
+ }
+}
+
+.aws-submit-resume-info-title {
+ font-family:$fontfam4;
+ margin-top: 0!important;
+ font-size:$fontsize4;
+ margin-top: -0.1875rem!important;
+ @mixin atMd {
+  margin-top: 0!important;
+ }
+}
+.aws-submit-resume-info-subtitle {
+ display:block;
+ position: relative;
+ font-family:$fontfam2;
+ font-size:$fontsize1;
+ content:'Don’t have a profile yet?';
+ margin-top:0.125rem;
+ margin-bottom:0.625rem;
+ @mixin atMd {
+  margin-top:0.5rem;
+  margin-bottom:0;
+ }
+}
+
+#div-submit-resume-info {
+ background-color: white;
+ padding:resolve($gridgap * 1);
+ @mixin atTn {padding:resolve($gridgap-tn * 1);}
+ @mixin atSmmd {padding:resolve($gridgap-smmd * 1);}
+ @mixin atMd {
+  padding:resolve($gridgap-md * 1);
+  /* position:absolute; */
+  /* top:0; */
+  /* right:0; */
+  width:50%;
+ }
+}
+
+#MainContent_DetailsView1 {
+ display:block;
+ position: relative;
+ width:100%;
+ tbody, tr, td {
+  width:100%;
+  display:block;
+ }
+ tbody > tr > td {
+  width:100%;
+  display:block;
+ padding:0;
+}
+}
+.aws-submitresume-page,
+.aws-submitresume—page {
+
+.aws-jobdetails--jobcode-title,
+.aws-resumesubmit--location,
+.aws-resumesubmit--posteddate {
+  width:30%;
+  /* outline:2px solid red; */
+  font-family:$fontfam2;
+  display:block;
+  float:left;
+ }
+}
+
+.aws-resumesubmit--jobinfo {
+ width:100%;
+ &:after {
+ content:'';
+ display:table;
+ clear:both;
+ }
+}
+
+#MainContent_div_submit_resume_job_posting {
+ #MainContent_specjob {
+& > div { margin-top: 0.5rem; }
+ }
+}
+
+#MainContent_div_submit_resume_upload_file,
+#MainContent_div_submit_resume_info_profile {
+ margin-top:resolve($gridgap * 2);
+ @mixin atTn {margin-top:resolve($gridgap-tn * 2);}
+ @mixin atSmmd {margin-top:resolve($gridgap-smmd * 2);}
+ @mixin atMd {margin-top:resolve($gridgap-md * 2);}
+ position: relative;
+ @mixin atMd {
+  display:block;
+  width:50%;
+  float:left;
+  }
+}
+#MainContent_div_submit_resume_upload_file {
+ #MainContent_divFileUpload {
+  input[type="file"] { width:100%!important; }
+ }
+ box-sizing: border-box;
+ @mixin atMd {padding-right:resolve($gridgap-md * 1);}
+}
+#MainContent_div_submit_resume_info_profile {
+ @mixin atMd {padding-left:resolve($gridgap-md * 1);}
+}
+#MainContent_div_submit_resume_info {
+ background-color: white;
+ margin-top:2.5rem!important;
+ padding:resolve($gridgap * 2);
+ @mixin atTn {
+  padding:resolve($gridgap-tn * 2);
+ }
+ @mixin atSmmd {
+  margin-top:3.5rem!important;
+  padding:resolve($gridgap-smmd * 1);
+ }
+ @mixin atMd {
+  margin-top:0!important;
+  padding:resolve($gridgap-md * 1);
+ }
+}
+
+#MainContent_div_submit_resume_main {
+ position:relative;
+ display:block;
+ margin-bottom:1rem;
+}
+#MainContent_div_submit_resume_info_profile {
+ @mixin atMd {
+  position: absolute;
+  }
+ display:block;
+ right:0;
+ }
+ #MainContent_divThankyou {
+  position: relative;
+  @mixin atMd {
+   left:-50%;
+   }
+  display:block;
+
+ }

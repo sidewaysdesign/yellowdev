@@ -1,0 +1,109 @@
+
+form[action="./Confirm"],
+.aws-dashbaord--changepwd,
+.aws-dashboard--changepwd,
+.aws-login--form,
+.aws-login-page,
+.aws-login—page,
+.aws-login-logout,
+.aws-register-page,
+.aws-register—page {
+
+ input[type="text"],
+ input[type="email"],
+ input[type="password"],
+ input[type="telephone"],
+ input[type="tel"] {
+  &:focus {
+   border-width:0!important;
+  }
+ }
+
+ input[type="checkbox"] + label {
+  display:inline-block!important;
+ }
+ input[type="submit"] {
+  display:block;
+  position: relative;
+  width:100%;
+  min-width:$inputheight;
+  max-width:240px!important;
+  height:$inputheight;
+  margin-right: auto;
+  margin-bottom:$gridgap;
+  margin-left: auto;
+  margin-top:$gridgap;
+  /* margin-left:$interinputspacing; */
+  padding:0 0.5rem 0 0.5rem;
+  border:none;
+  border-radius:0;
+  /* background-color: $primary; */
+  color:black;
+  font-family:$fontfam3;
+  font-size:1.2rem;
+  font-weight:normal;
+  line-height: 1;
+  text-align: center;
+  @mixin atTnsm {
+   /* width:auto; */
+   min-width:$inputheight-sm;
+   height:$inputheight-sm;
+   margin-bottom:$gridgap-tn;
+  }
+  @mixin atSmmd {
+   margin-left: 0;
+   min-width:$inputheight-smmd;
+   height:$inputheight-smmd;
+   margin-bottom:$gridgap-smmd;
+  }
+  @mixin atMd {
+   min-width:$inputheight-md;
+   height:$inputheight-md;
+   margin-bottom:$gridgap-md;
+   padding:0.125rem 0.5rem 0 0.5rem;
+  }
+  &:hover, &:active {
+   opacity:0.7;
+  }
+ }
+ label,
+ .aws-register-form--skillset > span,
+ .aws-register-form--city > span  {
+  padding-top:0!important;
+  padding-bottom:0.25rem!important;
+  font-family:$fontfam3;
+ }
+ textarea {
+  width:100%!important;
+ }
+
+}
+
+/* rgb(232, 240, 254) !importantinput:-internal-autofill-selected */
+
+
+
+[id^="MainContent_ct"] {
+margin-top:0;
+margin-bottom:0.375rem;
+display: block;
+font-size:$fontsize0;
+}
+
+
+.aws-dashbaord-page-logout {
+ position:absolute;
+ top:-0.375rem;
+ top:-0.375rem;
+ right:0;
+ @mixin atTn {
+  top:-0.875rem;
+ }
+ @mixin atSm {
+   top:-0.75rem;
+
+  }
+@mixin atMd {
+ top:0;
+ }
+}

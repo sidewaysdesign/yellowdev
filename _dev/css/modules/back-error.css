@@ -1,0 +1,68 @@
+.aws-error-page {
+ font-size:125%;
+ /* padding-top:4rem; */
+ overflow:visible;
+ position: relative;
+ z-index:10;
+ background-color: transparent;
+ background-color: $mist;
+ padding-bottom:resolve($gridgap * 4);
+ height:15rem;
+ @mixin atTn {padding-bottom:resolve($gridgap-tn * 2);}
+ @mixin atSmmd {
+  padding-right:20%;
+  height:14rem;
+  padding-bottom:resolve($gridgap-smmd * 2);
+ }
+ @mixin atMd {padding-bottom:resolve($gridgap-md * 2);}
+ &:before {
+  position: relative;
+  display:block;
+  content:'Hmmm...';
+  width:100%;
+  font-family:$fontfam4;
+  font-size: $fontsize5a;
+  height:5rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  @mixin atTn {
+   padding-top: 0.625rem;
+   margin-bottom: 0;
+  }
+  @mixin atSmmd {
+   padding-top: 1.375rem;
+   height:7.5rem;
+   font-size: $fontsize6;
+  }
+  @mixin atMd {
+   height:9.5rem;
+   padding-top: 2.5rem;
+  }
+  @mixin atLg {
+  }
+  @mixin atXl { font-size: $fontsize6; }
+ }
+ &:after {
+  content:'';
+  height:0;
+  overflow:visible;
+  position:absolute;
+  z-index:-1;
+  top:0;
+  display:block;
+  left:-200px;
+  width:6000px;
+  height:4.5rem;
+  background-color: $primary;
+  outline:400px solid $mist;
+  @mixin atTn {
+   height:3.75rem;
+  }
+  @mixin atSmmd {
+   height:5.3125rem;
+  }
+  @mixin atMd {
+   height:7.9375rem;
+ }
+ }
+}

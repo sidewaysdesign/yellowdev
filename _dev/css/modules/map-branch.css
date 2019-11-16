@@ -5,6 +5,14 @@
  @mixin atMd { height:24rem; }
 }
 .aws-branchmap {
+ &--wrapper {
+  margin-top:-1.5rem;
+  padding-bottom:1.5rem;
+  @mixin atMd {
+   margin-top:-5rem;
+   padding-bottom:3rem;
+   }
+ }
  &--container {
   display: block;
   position: relative;
@@ -70,6 +78,7 @@
   }
   &:focus, &:active {
    outline:none!important;
+    ie-dummy: expression(this.hideFocus=true);
    opacity:0.5;
   }
   bottom:$gridgap;

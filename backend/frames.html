@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <style>
+ body {
+  background-color: #666;
+  margin:0;
+  padding:0;
+  border:none;
+  height:100%;
+  overflow:hidden;
+ }
+ iframe {
+  height: 100%;
+  display:block;
+  border:none;
+  margin:0;
+  padding:0;
+  position: relative;
+  box-shadow: -0.5rem 0 1rem black;
+ }
+ .stack { position: relative; display:block; float:left; margin-right:calc(-375px * .25); z-index:2;}
+ .stack { position: relative; display:block; float:left; margin-right:calc(-640px * .25); z-index:2;}
+ .stack:after {
+  content:''; position:absolute; width: 0; height:100%; background-color: #000; display:block; top: 0; right: calc(25% - 2px);
+ }
+ .frame-wrapper { height:100vh; }
+ .stack iframe { display:block; position:relative; width:100%; height:133.3%; margin-bottom:-33.3%;}
+ .stack .frame-wrapper-stack { position:relative; display:block;}
+ .stack .frame-wrapper-stack:first-child { float: none; width:320px; height: 40vh;}
+ /* .stack .frame-wrapper-stack:last-child { float: none; width:375px; height: 60vh; } */
+ .stack .frame-wrapper-stack:last-child { float: none; width:640px; height: 60vh; }
+ .stack .frame-wrapper-stack iframe { height:133%; transform:scale(0.75); }
+ /* .stack .frame-wrapper-stack:first-child iframe { transform-origin: calc(75% * .75 * .5 ) 0; } */
+ .stack .frame-wrapper-stack:first-child iframe { transform-origin: calc(640px / 2 / .75) 0; }
+ /* .stack .frame-wrapper-stack:last-child iframe { transform-origin: 0 calc((40vh - 60vh) * 0.5); } */
+ .stack .frame-wrapper-stack:last-child iframe { transform-origin: 0 calc((40vh - 60vh) * 0); }
+ iframe.large {
+  /* width: calc( 100% - (375px * .75 ) ); */
+  width: calc( 100% - (640px * .75 ) );
+ }
+ #filepath-wrapper {
+  box-sizing: border-box;
+  z-index:100;
+  display:block;
+  padding:0.5rem;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color: #666!important;
+ }
+ #filepath-wrapper input {
+  width:80px;
+  padding:0.25rem;
+  display:block;
+  margin:0.5rem;
+  border:none;
+  background-color:#444;
+  color:white;
+ }
+ #filepath-wrapper input::placeholder {
+  color:white;
+ }
+ #filepath-wrapper:before {
+  z-index:-1;
+  content:'';
+  position: absolute;
+  top:0;
+  display:block;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: black;
+ }
+</style>
+</head>
+<body class="localhost">
+ <div class="stack">
+  <div class="frame-wrapper-stack"><iframe id="iframe1" class="small" src=""></iframe></div>
+  <div class="frame-wrapper-stack"><iframe id="iframe2" class="mobile" src=""></iframe></div>
+ </div>
+ <div class="frame-wrapper">
+  <iframe id="iframe3" class="large" src=""></iframe>
+ </div>
+ <div id="filepath-wrapper"><input id="filepath" type="text" placeholder="HTML filename" /></div>
+</body>
+<script>
+
+function initIframeLoad(iframe) {
+ var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+ if ( iframeDoc.readyState == 'complete' || iframeDoc.readyState == 'interactive' ) {
+  // console.log(iframe.contentWindow.frameElement.id);
+  iframe.contentWindow.addEventListener('scroll', function() {
+   console.log('hey');
+   // var scrollLabel = 'scroll-'+this.frameElement.id;
+   // console.log('scrollLabel',scrollLabel);
+   // sessionStorage.setItem(scrollLabel,this.pageYOffset);
+  });
+  scrollToStoredPosition(iframe);
+  return;
+ }
+ window.setTimeout(initIframeLoad(iframe), 100);
+}
+
+function scrollToStoredPosition(iframe) {
+ // console.log('scrollin');
+ if (iframe.contentDocument.readyState =='complete' || iframeDoc.readyState == 'interactive') {
+  var storedVerticalScroll = sessionStorage.getItem('scroll-'+iframe.id) || 0;
+  iframe.contentWindow.scrollTo(0,400);
+
+ }
+ // console.log('storedVerticalScroll',storedVerticalScroll)
+}
+
+function cleanFilePath(filename) {
+ if (!filename.includes('.htm')) { filename += '.html'; }
+ if (!filename.startsWith('./')) { filename  = './' + filename; }
+ return filename;
+}
+
+function setIframePaths() {
+ var iFramePath = localStorage.getItem('localhost-iframe-path') || './index.html';
+ const iframeDocuments = document.getElementsByTagName("iframe");
+ for ( i = 0; i < iframeDocuments.length; i++ ) {
+  iframeDocuments[i].src = iFramePath;
+  initIframeLoad(iframeDocuments[i]);
+ }
+}
+
+function initFilePathInput() {
+ var filepathfield = document.getElementById("filepath");
+ // console.log('filepathfield',filepathfield);
+ filepathfield.value = localStorage.getItem('localhost-iframe-path');
+ filepathfield.addEventListener('keyup', function(e){
+  if (e.keyCode === 13) {
+   e.preventDefault();
+   localStorage.setItem('localhost-iframe-path',cleanFilePath(this.value));
+   setIframePaths();
+  }
+ });
+}
+window.addEventListener("load", function(){
+ initFilePathInput();
+ setIframePaths();
+ /* note: iframes must have an id */
+ const iframeDocuments = document.getElementsByTagName("iframe");
+ // for ( i = 0; i < iframeDocuments.length; i++ ) {
+ // iframeDocuments[i].src = iFramePath;
+ //  initIframeLoad(iframeDocuments[i]);
+ // }
+});
+</script>
+</html>

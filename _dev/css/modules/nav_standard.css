@@ -120,7 +120,7 @@
  }
  .hs-menu-item {
   overflow:visible;
-
+  line-height:1.2;
   position: relative;
   a {
    display:block;

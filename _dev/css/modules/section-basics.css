@@ -47,7 +47,7 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding: $marginsize;
+  padding: $marginsize 0;
  z-index:1;
   @mixin atTnsm {
    /* padding: $marginsize-sm; */
@@ -195,7 +195,7 @@
  background-color: color($fog a(88%));
  background-blend-mode:soft-light;
 }
-.contentbg-mist, .contentbg-mist-translucent, .sectionbg-mist { background-color: $vapor; }
+.contentbg-mist, .contentbg-mist-translucent, .sectionbg-mist { background-color: $mist; }
 .contentbg-mist-translucent, .sectionbg-mist-translucent {
  background-color: color($mist a(88%));
  background-blend-mode:soft-light;
@@ -205,7 +205,7 @@
  background-color: color($vapor a(88%));
  background-blend-mode:soft-light;
 }
-.contentbg-air, .contentbg-air-translucent, .sectionbg-air { background-color: $vapor; }
+.contentbg-air, .contentbg-air-translucent, .sectionbg-air { background-color: $air; }
 .contentbg-air-translucent, .sectionbg-air-translucent {
  background-color: color($air a(88%));
  background-blend-mode:soft-light;

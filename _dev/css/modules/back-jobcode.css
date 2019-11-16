@@ -1,8 +1,12 @@
 $socialcircle: 2.5rem;
 
-
 .aws-jobdetails {
  &--jobcode {
+  padding:resolve($gridgap * 1) resolve($gridgap * 1) resolve($gridgap * 1) resolve($gridgap * 1);
+  @mixin atTn {padding:$gridgap-tn 0 $gridgap-tn 0 ;}
+  @mixin atSmmd {padding:$gridgap-smmd 0 $gridgap-smmd 0;}
+  @mixin atMd {padding:0 0 $gridgap-md 0;}
+  box-sizing: border-box;
   width:100%;
   box-sizing: border-box;
   position:relative;
@@ -21,9 +25,15 @@ $socialcircle: 2.5rem;
  &--jobcode-title {
   display:block;
   width:100%;
-  text-align: center;
   position: relative;
   font-family: $fontfam3;
+  margin-bottom:resolve($gridgap * 0.5);
+  @mixin atTn {margin-bottom:resolve($gridgap-tn * 0.5);}
+  @mixin atSmmd {
+   text-align: center;
+   margin-bottom:resolve($gridgap-smmd * 0.5);
+  }
+  @mixin atMd {margin-bottom:resolve($gridgap-md * 0.5);}
   @mixin atSmmdmd{
    font-size:$fontsize2;
   }
@@ -43,6 +53,7 @@ $socialcircle: 2.5rem;
     /* height:2rem; */
     background-color: $primary;
    }
+   transform:rotate(0.001deg);
   }
 
  }
@@ -54,12 +65,13 @@ $socialcircle: 2.5rem;
   margin-left: auto;
   margin-right: auto;
   @mixin atSmmdmd {
-   width:100%;
+   width:100%!important;
   }
   input {
-   margin:1rem 0;
+   margin:0.5rem 0!important;
    display:block;
    width:100%;
+   max-width:100%!important;
    font-size:$fontsize1;
    font-family:$fontfam3;
    padding:0.6875rem 1rem 0.5rem 1rem;
@@ -74,11 +86,12 @@ $socialcircle: 2.5rem;
    &:focus, &:active {
     opacity:0.5;
     outline:none!important;
+    ie-dummy: expression(this.hideFocus=true);
    }
   }
   input:first-child {
    background-color: white;
-   border:1px solid $cloud;
+   border:1px solid $silver;
   }
   input:nth-child(2) {
    border:1px solid $primary;
@@ -105,42 +118,47 @@ $socialcircle: 2.5rem;
    font-size:$fontsize0;
    font-family:$fontfam4;
    text-align: center;
-   margin: 0 0 0.5rem 0;
+   margin: 0.75rem 0 -1.125rem 0;
   }
   ul {
    margin:0;
    padding:0;
    list-style-type:none;
+   li {
+    display:inline-block;
+   }
   }
 
   display:block;
   text-align:center;
   @mixin atMd { float:right; }
   .aws-jobdetails--sharing {
+   position: relative;
    &-twitter, &-facebook, &-linkedin, &-instagram {
-    margin-left: 0.125rem;
-    margin-right: 0.125rem;
-    display:inline-block;
-    margin-top: -0.25rem;
-    width:$socialcircle;
-    height:$socialcircle;
-    text-align: center;
-    border-radius:4rem;
-    box-shadow: 0 0 2px black, 0 0 2px black;
-    background-color: transparent;
-    opacity:1;
-    transition: opacity $transtime0 ease-in-out;
-    font-size:0;
-    color:transparent;
-    @mixin atMd {
+    position: relative;
+    a {
+     position: relative;
+     margin-left: 0.125rem;
+     margin-right: 0.125rem;
      display:inline-block;
-     &:after {
-      content:'';
-      display:table;
-      clear:both;
-     }
+     margin-top: -0.25rem;
+     width:$socialcircle;
+     height:$socialcircle;
+     text-align: center;
+     border-radius:4rem;
+     box-shadow: 0 0 2px black, 0 0 2px black;
+     background-color: transparent;
+     opacity:1;
+     transition: opacity $transtime0 ease-in-out;
+     font-size:0!important;
+     color:transparent;
     }
     &:before {
+     margin-left: 0.125rem;
+     margin-right: 0.125rem;
+     position:absolute;
+     left:0;
+     top:1.35em;
      text-align: center;
      width:$socialcircle;
      padding-top:0.5rem;
@@ -149,6 +167,16 @@ $socialcircle: 2.5rem;
      color: $charcoal;
      text-align: center;
      display:block;
+     padding-bottom: 0.5rem;
+    }
+
+    @mixin atMd {
+     display:inline-block;
+     &:after {
+      content:'';
+      display:table;
+      clear:both;
+     }
     }
     &:hover, &:active { opacity:0.7; }
    }

@@ -1,4 +1,5 @@
 .aws-menu--phone {
+ box-sizing: border-box;
  min-width:100%;
  text-align: center;
  background-color: $primary;
@@ -12,6 +13,12 @@
  right:0;
  top:0;
  display:none;
+ text-decoration:none!important;
+ top:0;
+ transition: opacity $transtime ease-in-out;
+ &:hover,&:active {
+  opacity:0.7;
+ }
  @mixin atMd {
   display:block;
   position:absolute;
@@ -22,8 +29,13 @@
   bottom:$marginvertical-md;
  }
  @mixin atLg {
+  top:100%;
+  margin-top:1.75rem;
   right:0;
+  right:calc(0% + resolve($menuoutset * 2));
   width:100%;
+  width:calc(100% - resolve($menuoutset * 2));
+  min-width:calc(100% - resolve($menuoutset * 2));
   bottom:$marginvertical-md;
   font-size:$fontsize2;
  }

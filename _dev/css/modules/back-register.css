@@ -1,0 +1,194 @@
+.aws-register—page--title {
+ margin-top:2rem;
+ margin-bottom:3rem;
+}
+.MainContent_hlSignIn { font-family:$fontfam2; }
+.aws-register—page--title {
+
+ ol, ol li, ul, p {
+  margin: 0 0 .875rem;
+  margin-bottom: 1rem;
+  color:$slate;
+  font-family: $fontfam1;
+  font-size: $fontsize1;
+  font-weight: normal;
+  letter-spacing: $letterspacing;
+  line-height: $bodycopylineheight;
+  ::selection { background-color: $primary; color:black; }
+  @mixin atMd { line-height: $bodycopylineheight-md; }
+  strong {
+   color:black;
+   font-family: $fontfam4;
+   font-weight: normal;
+  }
+ }
+}
+
+.aws-register-login {
+ position: relative;
+ display: block;
+ margin-bottom:1rem;
+ font-family:1rem;
+ a:first-of-type { font-family:$fontfam4; }
+ padding-top:resolve($gridgap * 1);
+ @mixin atTn {padding-top:resolve($gridgap-tn * 2);}
+ @mixin atSmmd {padding-top:resolve($gridgap-smmd * 2);}
+ @mixin atMd {padding-top:resolve($gridgap-md * 1.5);}
+}
+
+#registerwidgets,
+#InputHeader,
+#InfoHeader {
+ font-family: $fontfam4;
+ font-size:$fontsize3a;
+ line-height: 1.2;
+}
+
+.aws-register-form--skillset,
+.aws-register-form--city,
+#InputHeader,
+#InfoHeader,
+#InfoHeader + div {
+ margin-bottom:$gridgap;
+ @mixin atTn {margin-bottom:$gridgap-tn;}
+ @mixin atSmmd {margin-bottom:$gridgap-smmd;}
+ @mixin atMd {margin-bottom:$gridgap-md;}
+}
+.aws-register-form--skillset > span,
+.aws-register-form--city > span  {
+ display: block;
+ position: relative;
+}
+
+.aws-register-form--disclaimer {
+ margin-bottom:resolve( $gridgap * 2 );
+ @mixin atTn {margin-bottom:resolve( $gridgap-tn * 2 );}
+ @mixin atSmmd {margin-bottom:resolve( $gridgap-smmd * 2 );}
+ @mixin atMd {margin-bottom:resolve( $gridgap-md * 2 );}
+}
+
+.aws-login--form {
+ width:100%;
+ @mixin atSmmd {
+  width:48%;
+  width: calc(50% - $gridgap-smmd);
+ }
+@mixin atMd {
+ width: calc 50% - $gridgap-md);
+ }
+}
+.aws-login--form--register {
+ display:block;
+ text-align: left;
+ padding-top: 1.25rem;
+ @mixin atSmmd {
+  padding-top: 0;
+  position:absolute;
+  top:0;
+  right:0;
+  height:100%;
+  width: calc( 50% - $gridgap-smmd );
+ }
+ @mixin atMd {
+  height:auto;
+  /* top:9.75rem; */
+  right:0;
+  width:48%;
+  /* transform:translateY(-50%); */
+  width: calc( 50% - $gridgap-md );
+ }
+}
+.aws-login--form--register {
+ @mixin atSmmd{
+  padding:0!important;
+ }
+ & > div {
+  box-sizing: border-box;
+  width:100%;
+  display: block;
+  padding:resolve($gridgap * 2);
+  position: relative;
+  background-color: white;
+  @mixin atTn { padding:resolve($gridgap-tn * 2); }
+  @mixin atSmmd { padding:resolve($gridgap-smmd * 1); }
+  @mixin atMd { padding:resolve($gridgap-md * 2); }
+ }
+
+ #MainContent_lblRegister {
+  margin-top: 0!important;
+  font-size:$fontsize4;
+  margin-top: -0.1875rem!important;
+  &:after {
+   display:block;
+   font-family:$fontfam2;
+   font-size:$fontsize1;
+   content:'Don’t have a profile yet?';
+   margin-top:0.125rem;
+   margin-bottom:0.625rem;
+   @mixin atMd {
+    margin-top:0.5rem;
+    margin-bottom:0;
+   }
+  }
+  @mixin atMd {
+   margin-top: 0!important;
+  }
+ }
+ #MainContent_btnRegister {
+  display:block;
+  position:relative;
+  width:9rem;
+  margin:0;
+  border-radius:4rem;
+  background-color: $primary;
+  left:-0.125rem;
+  @mixin atSmmd {
+   left:auto;
+   right:resolve($gridgap-smmd * 2);
+   top:0;
+   right:auto;
+  }
+  @mixin atMd {
+   margin-top: 0.5rem;
+  }
+  @mixin atMdlg {
+   right:resolve($gridgap-md * 2);
+   position:absolute;
+   top:50%;
+   transform:translateY(-50%);
+  }
+ }
+ @mixin atSmmd {
+  width:calc(50% - resolve($gridgap-smmd / 1.5 ));
+  padding:resolve($gridgap-smmd * 1);
+ }
+ @mixin atMd {
+  width:calc(50% - resolve($gridgap-md / 1.5 ));
+  padding:resolve($gridgap-md * 3);
+ }
+}
+
+#registerwidgets + div {
+ display: block;
+ position: relative;
+ font-family: $fontfam3;
+ ol {
+  margin-top:resolve($gridgap * 0.5);
+  @mixin atTn {margin-top:resolve($gridgap-tn * 0.5);}
+  @mixin atSmmd {margin-top:resolve($gridgap-smmd * 0.5);}
+  @mixin atMd {margin-top:resolve($gridgap-md * 0.5);}
+  list-style-type: none;
+  margin-left: 1.375rem;
+  li {
+   @mixin atMd {
+    /* padding-left: 0;
+    margin-left: 0rem; */
+    }
+    &:before {
+     @mixin atMd {
+      left:0;
+      }
+    }
+  }
+ }
+}

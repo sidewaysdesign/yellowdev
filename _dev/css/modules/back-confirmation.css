@@ -1,0 +1,74 @@
+[action="./Confirm"] {
+ h2 {
+  position: relative;
+  display: block;
+  margin-top:$gridgap!important;
+ }
+ h2 + div {
+  br {
+   content:' ';
+   display:block;
+   line-height: 2rem;
+   font-size:2rem;
+   margin-top:2rem;
+  }
+ }
+ /* outline:4px solid red; */
+ .body-content {
+  h2:first-child {
+   margin-top:2rem;
+  }
+ }
+ label[for="MainContent_Email"] {
+  margin-top:resolve($gridgap * 0.75);
+  @mixin atTn {margin-top:resolve($gridgap-tn * 0.75);}
+  @mixin atSmmd {margin-top:resolve($gridgap-smmd * 0.75);}
+  @mixin atMd {margin-top:resolve($gridgap-md * 0.75);}
+ }
+ input[type="submit"] {
+  margin-top:0!important;
+  margin-bottom:resolve($gridgap * 2);
+  @mixin atTn {margin-bottom:resolve($gridgap-tn * 2);}
+  @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 2);}
+  @mixin atMd {margin-bottom:resolve($gridgap-md * 2);}
+ }
+}
+
+form[action] .body-content {
+ /* padding-top:2rem; */
+}
+
+.aws-confirm-page {
+ padding-bottom:resolve($gridgap * 2);
+ @mixin atTn {padding-bottom:resolve($gridgap-tn * 2);}
+ @mixin atSmmd {padding-bottom:resolve($gridgap-smmd * 2);}
+ @mixin atMd {padding-bottom:resolve($gridgap-md * 2);}
+ & > br:first-of-type {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  display:block;
+  content:'';
+ }
+ label[for="MainContent_Email"] {
+  position: relative;
+  display: block;
+  margin-top:resolve($gridgap * 2);
+  @mixin atTn {margin-top:resolve($gridgap-tn * 2);}
+  @mixin atSmmd {margin-top:resolve($gridgap-smmd * 2);}
+  @mixin atMd {margin-top:resolve($gridgap-md * 2);}
+ }
+ #MainContent_login {
+  font-family:$fontfam3;
+  position: relative;
+  &:before {
+   content:'';
+   position:absolute;
+   left:0;
+   bottom:-0.1875rem;
+   width:100%;
+   height:2px;
+   background-color: $primary-dark;
+   display:inline-block;
+  }
+ }
+}

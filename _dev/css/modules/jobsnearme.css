@@ -49,6 +49,8 @@ $dotsize-jobsnearme-lg: 3rem;
     display:block;
    }
    @mixin atMd {
+    letter-spacing: -0.015em;
+    word-spacing: 0.05em;
     margin-bottom: 0.625rem;
     font-size:3.625rem;
    }
@@ -196,18 +198,19 @@ $dotsize-jobsnearme-lg: 3rem;
    margin-bottom:0.25rem;
    @mixin atMd {
     margin-top: 0.5rem;
-    }
+   }
   }
   input[type="text"] {
    box-sizing: border-box;
    width:70%;
    width: 14rem;
-   border:1px solid $primary;
    background-color: $vapor;
+   border:1px solid $silver!important;
    @mixin atTnsm { width:calc(70% - $inputheight-sm - $interinputspacing); }
    @mixin atSmmd { width:calc(100% - $inputheight-smmd - $interinputspacing); }
    @mixin atMd { width:calc(100% - $inputheight-md - $interinputspacing); }
    @mixin atLg { }
+   margin-bottom:0!important;
   }
   input[type="submit"] {
    display:block;
@@ -215,12 +218,14 @@ $dotsize-jobsnearme-lg: 3rem;
    margin-left:$interinputspacing;
    background-color: black;
    color:$primary;
-
+   max-width:auto!important;
+   width: 3rem;
   }
   fieldset {
    display:block;
    position:relative;
    width:100%;
+   border:none!important;
   }
   input[type="text"], input[type="submit"] {
    display:block;

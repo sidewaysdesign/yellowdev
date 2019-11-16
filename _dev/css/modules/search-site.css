@@ -109,6 +109,16 @@
 .aws-menu--menuitem-search {
  position: relative;
  display:block;
+ /* margin-bottom:0.375rem; */
+ form {
+  padding:0 0.75rem;
+  margin-bottom:1rem;
+  @mixin atMd {
+   padding:0 0;
+   margin-bottom:0.125rem;
+  }
+
+ }
  .hs-search-field {
   @mixin atMd {
    position:absolute;
@@ -125,12 +135,12 @@
   display:block;
   text-align: left;
   @mixin atMd {
+   content:'Search site';
    font-size:$fontsize0a;
    font-family:$fontfam3;
    margin-top:-0.5rem;
    margin-bottom:0.25rem;
   }
-  content:'Search site';
   color:$slate;
  }
  input[type="text"] {
@@ -141,4 +151,11 @@
  .hs-search-field { display:none!important; }
 &:hover .hs-search-field, &:active .hs-search-field { display:block!important; }
 }
+}
+
+.hs-search-field__input {
+ &:active, &:focus {
+  &::placeholder {content:'hey'}
+  outline:none;
+ }
 }

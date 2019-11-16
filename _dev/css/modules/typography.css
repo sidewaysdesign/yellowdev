@@ -113,12 +113,6 @@ h6, .h6 {
     height:2px;
     background-color: $primary-dark;
     display:inline-block;
-    /* font-family:'aws_icons'; */
-    /* content:'\e818'; */
-    /* font-size:133%; */
-    /* margin-left: 0.25ex; */
-    /* bottom:-0.05ex; */
-    /* margin-top:-0.5ex; */
    }
 
   }

@@ -1,0 +1,56 @@
+/**/
+/* .aws-error-page:before, */
+#titlebanner {
+ background-color: $primary;
+ padding:resolve($gridgap * 1.125) 0 resolve($gridgap * 1) 0;
+ @mixin atTn {
+  padding-top:resolve($gridgap-tn * 1.5);
+  padding-bottom:resolve($gridgap-tn * 1);
+ }
+ @mixin atSmmd {padding:resolve($gridgap-smmd * 1.5) 0 resolve($gridgap-smmd * 1.125) 0;}
+ @mixin atMd {padding:resolve($gridgap-md * 3) 0 resolve($gridgap-md * 3) 0;}
+ & > div {
+  /* max-width:1024px; */
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+  /* & > div { */
+   font-family:$fontfam4;
+   font-size: $fontsize5a;
+   @mixin atSmmd { font-size: $fontsize6; }
+   @mixin atXl { font-size: $fontsize6; }
+  /* } */
+ }
+ margin-bottom:resolve($gridgap * 1);
+ @mixin atTn {margin-bottom:resolve($gridgap-tn * 2);}
+ @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 2);}
+ @mixin atMd {margin-bottom:resolve($gridgap-md * 2);}
+}
+.mvw-manage-main {
+ position: relative;
+}
+.aws-dashbaord-jobalerts-section-title,
+.aws-dashbaord—jobalerts-section-title,
+.aws-dashboard--resume-main-title,
+.aws-dashbaord--resume-main-title,
+.aws-dashbaord—aspwd-section-title,
+.aws-dashbaord—aspwd-section-title {
+ font-family:$fontfam4;
+ display:block;
+padding-top:1.125rem;
+padding-bottom:0.25rem;
+margin-bottom:resolve($gridgap * 1);
+/* border-bottom:2px solid $primary; */
+/* background-color: $mist; */
+@mixin atTn {
+ margin-bottom:resolve($gridgap-tn * 1);
+}
+@mixin atSmmd {
+ margin-bottom:resolve($gridgap-smmd * 1);
+}
+@mixin atMd {
+ border-top:2px solid $mist;
+ margin-bottom:resolve($gridgap-md * 1);
+}
+}

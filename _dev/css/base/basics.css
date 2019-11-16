@@ -26,6 +26,7 @@ button, .button, .ssba a, button  {
  -moz-box-sizing: border-box;
  box-sizing: border-box;
  letter-spacing:0.005em;
+ font-weight:normal;
 }
 
 *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
@@ -53,9 +54,9 @@ input, button, select, textarea, .ssba a {
 }
 
 a {
- color: #bf0019;text-decoration: none;
+ color: $charcoal;text-decoration: none;
 }
-a:hover, a:focus {color: #9a0000;text-decoration: none;}
+a:hover, a:focus {color: black;text-decoration: none;outline:none;}
 a:focus {outline: thin dotted;outline: 5px auto -webkit-focus-ring-color;outline-offset: -2px;}
 
 figure {margin:0;}
@@ -135,14 +136,6 @@ p + h4, p + h5 {
 }
 
 
-.margin-top-0 {margin-top: 0!important;}
-.margin-bottom-0 {margin-bottom: 0!important;}
-.padding-top-0 {padding-top: 0!important;}
-.padding-bottom-0 {padding-bottom: 0!important;}
-@mixin atMd {
- .desktop-padding-top-0 {padding-top: 0!important;}
- .desktop-padding-bottom-0 {padding-bottom: 0!important;}
- }
 
 #divGuest, #divAuthenticated {
  position:fixed;

@@ -1,0 +1,159 @@
+form[action^="./Login"],
+form[action^="./Register"],
+form[action^="./Manage"],
+form[action^="jobdetails"],
+form[action^="./Confirm"],
+form[action^="./submitresume"] {
+ .body-container-wrapper {
+  background-color: transparent;
+ }
+ background-color: $mist;
+}
+
+.aws-login—page,
+.aws-login-page,
+.aws-login-logout,
+.aws-register—page {
+ display:block;
+ position: relative;
+ margin-bottom:2rem;
+ @mixin atMd { margin-top:2rem; }
+ input {
+  box-sizing:border-box;
+  border:1px solid $silver;
+ }
+ #leftside, #rightside {
+  box-sizing: border-box;
+  display:block;
+  width:100%;
+  position: relative;
+  @mixin atSmmd {
+   width:50%;
+   float:left;
+  }
+
+
+ }
+ #leftside {
+  padding-right:resolve($gridgap / 2);
+  @mixin atTn {
+   padding-right:resolve($gridgap-tn / 2);
+  }
+  @mixin atSmmd {
+   padding-right:resolve($gridgap-smmd * .75);
+  }
+  @mixin atMd {
+   padding-right:resolve($gridgap-md * 1);
+  }
+  @mixin atLg {
+   padding-right:resolve($gridgap-md * 2);
+  }
+ }
+ #rightside {
+  padding-left:resolve($gridgap / 2);
+  @mixin atTn {
+   padding-left:resolve($gridgap-tn / 2);
+  }
+  @mixin atSmmd {
+   padding-left:resolve($gridgap-smmd * .75);
+  }
+  @mixin atMd {
+   padding-left:resolve($gridgap-md * 1);
+  }
+  @mixin atLg {
+   padding-left:resolve($gridgap-md * 2);
+  }
+ }
+ #rightside {
+  &:after {
+   display:table;
+   clear:both;
+   content:'';
+  }
+ }
+
+ a {
+  display:inline-block;
+  position: relative;
+  padding-bottom: 0.125rem;
+  color: $slate;
+  font-weight:normal;
+  letter-spacing:$letterspacing;
+  text-decoration:none;
+  &:hover, &:active, &:focus {
+   color:black;
+  }
+  &:before {
+   display:inline-block;
+   position:absolute;
+   bottom:0.125rem;
+   left:0;
+   width:100%;
+   height:2px;
+   background-color: $primary-dark;
+   content:'';
+  }
+ }
+ ul, ol {
+  margin:0;
+  padding:0;
+  margin-bottom:1.5rem;
+  margin-left: 2.25ex;
+  letter-spacing:$letterspacing;
+  font-size:$fontsize1;
+  @mixin atMd { font-size:$fontsize1b; }
+  li {
+   color:$slate;
+   line-height:$bodycopylineheight;
+   @mixin atMd {
+    line-height:$bodycopylineheight-md;
+    & + li {
+     margin-top:1.25ex;
+    }
+   }
+  }
+  ul {
+   list-style-type: none;
+   @mixin atSmmd { margin-left: 4ex; padding-right:4ex;}
+   @mixin atLg { margin-left: 4.75ex; padding-right:4.75ex;}
+   li {
+   }
+   &:before {
+    content:'•';
+    font-size:133%;
+    color:$primary;
+    color:$primary-dark;
+    position:absolute;
+    left:-0.0625ex;
+    display:block;
+    margin-top:-0.6ex;
+    @mixin atSmmd { left:1.5ex; }
+    @mixin atLg { left:2.5ex; }
+   }
+  }
+ }
+}
+
+#forgotten {
+ margin-bottom:0.5rem;
+}
+
+.body-content {
+
+/* *:after {
+ content:'';
+ display:table;
+ clear:both;
+} */
+}
+
+form[action^="./Register"] {
+ #titlebanner  {
+  margin-bottom: 0;
+
+ }
+ .row-fluid-wrapper row-depth-1 row-number-1 #register {
+  padding-top: 0!important;
+  margin-top:-1rem;
+ }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="591.334" height="64" viewBox="0 0 591.334 64">
+  <title>medialanding_aws-button-action</title>
+  <rect width="295.667" height="64" style="fill: #fff"/>
+  <rect x="295.667" width="295.667" height="64" style="fill: #231f20"/>
+  <circle cx="279.667" cy="48" r="12.5" style="fill: #dadada"/>
+  <path d="M277.375,54.488l-5.459-5.459,2.106-2.105,3.353,3.353,8.916-8.916,2.106,2.106Z" style="fill: #fff"/>
+  <circle cx="575.334" cy="16" r="12.5" style="fill: #656565"/>
+  <circle cx="575.334" cy="48" r="12.5" style="fill: #fff100"/>
+  <polygon points="581.669 11.667 579.667 9.666 575.334 13.999 571.002 9.666 569 11.667 573.333 16 569 20.332 571.002 22.334 575.334 18.001 579.668 22.334 581.668 20.332 577.335 16 581.669 11.667" style="fill: #e9e9e9"/>
+  <path d="M573.042,54.488l-5.459-5.459,2.106-2.105,3.353,3.353,8.916-8.916,2.106,2.106Z" style="fill: #231f20"/>
+</svg>

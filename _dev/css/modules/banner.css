@@ -1,0 +1,188 @@
+$bannerheight-smmd: 20.625rem;
+$bannerheight-md: 8.75rem;
+$bannerheight-lg: 10.125rem;
+$bannerfont: 1.125rem;
+$bannerfont-md: 1.1875rem;
+$bannerfont-lg: 1.4375rem;
+.aws-banner {
+ &--wrapper {
+  box-sizing:border-box;
+  display: block;
+  position: relative;
+  width:100%;
+  padding-bottom:115%;
+  width:calc(100% + $marginsize + $marginsize);
+  margin-left:calc(-resolve($marginsize / 2) - resolve($marginsize / 2) ) ;
+  margin-right:calc(-resolve($marginsize / 2) - resolve($marginsize / 2) ) ;
+  @mixin atTn {
+   padding-bottom:100%;
+  }
+  @mixin atTnsm {
+   width:calc(100% + $marginsize-sm + $marginsize-sm);
+   margin-left:calc(-resolve($marginsize-sm / 2) - resolve($marginsize-sm / 2) ) ;
+   margin-right:calc(-resolve($marginsize-sm / 2) - resolve($marginsize-sm / 2) ) ;
+  }
+  * { box-sizing:border-box; }
+  @mixin atSm {
+   height:$bannerheight-smmd;
+   padding-bottom:50%;
+  }
+  @mixin atMd {
+   width:calc(100% + $marginsize-md + $marginsize-md);
+   margin-left:calc(-resolve($marginsize-md / 2) - resolve($marginsize-md / 2) ) ;
+   margin-right:calc(-resolve($marginsize-md / 2) - resolve($marginsize-md / 2) ) ;
+   height:$bannerheight-md;
+   padding-bottom:0;
+  }
+  @mixin atLg { height:$bannerheight-lg; }
+ }
+ &--content {
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  font-family:$fontfam3;
+  font-size:$bannerfont;
+  font-weight:normal;
+  @mixin atSm { padding-bottom:2rem; }
+  @mixin atMd {
+   font-size:1.1875rem;
+   font-size:$bannerfont-md;
+  }
+  @mixin atLg { font-size:$bannerfont-lg; }
+ }
+ &--image {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @mixin atMd {
+   left:50%;
+   width:50%;
+   height:100%;
+  }
+ }
+ &--title {
+  &-wrapper {
+   position:absolute;
+   bottom:3.375rem;
+   width:auto;
+   max-width:85%;
+   border-top-right-radius:10rem;
+   border-bottom-right-radius:10rem;
+   background-color: $primary;
+   line-height:1.2;
+   @mixin atTnsm { bottom:4.5rem; }
+   @mixin atMd {
+    display:flex;
+    z-index:inherit;
+    top:0;
+    left:0;
+    align-items: center;
+    width:50%;
+    max-width:auto;
+    height:100%;
+    border-radius:0;
+   }
+  }
+  &-content {
+   padding:resolve($gridgap / 1.75) resolve($gridgap * 1.5) resolve($gridgap / 1.75) $gridgap;
+   @mixin atTnsm {
+    padding:$gridgap resolve($gridgap * 1.5) $gridgap $gridgap;
+   }
+   @mixin atMd {
+    padding-right: 4.625rem;
+    padding-left: $gridgap-md;
+   }
+   @mixin atLg {
+    padding-left: 1.375rem;
+    padding-right: 5.5rem;
+   }
+  }
+ }
+ &--dot {
+  &-wrapper {
+   position:absolute;
+   top:calc(100% - 3.75rem);
+   right:0;
+   width:auto;
+   overflow:hidden;
+   border-top-left-radius:10rem;
+   border-bottom-left-radius:10rem;
+   background-color: black;
+   color:white;
+   @mixin atTnsm {
+    top:calc(100% - 5.375rem);
+   }
+   @mixin atMd {
+    top:0;
+    left:50%;
+    width:$bannerheight-md;
+    height:$bannerheight-md;
+    margin-left:-resolve($bannerheight-md / 2);
+    border-radius:resolve($bannerheight-md / 2);
+   }
+   @mixin atLg {
+    width:$bannerheight-lg;
+    height:$bannerheight-lg;
+    margin-left:-resolve($bannerheight-lg / 2);
+    border-radius:resolve($bannerheight-lg / 2);
+   }
+   &:after {
+    position: absolute;
+    top:50%;
+    right:0;
+    transform: translateY(-50%);
+    font-family:'aws_icons';
+    font-size:2.375rem;
+    content: '\e824';
+    @mixin atMd {
+     display:block;
+     position: absolute;
+     top:auto;
+     bottom:-2rem;
+     left:0;
+     width:100%;
+     padding:0.25rem;
+     font-size:2.625rem;
+     text-align: center;
+     white-space: nowrap;
+    }
+   }
+  }
+  &-content {
+   width:100%;
+   padding:resolve($gridgap / 1.625) 2.625rem resolve($gridgap / 1.875) resolve($gridgap * 1.5);
+   line-height: 1.1;
+   text-align: left;
+   @mixin atTnsm {
+    padding:$gridgap 3rem $gridgap resolve($gridgap * 1.5);
+    &:after { font-size:2.625rem; }
+   }
+   @mixin atMd {
+    box-sizing: border-box;
+    display:block;
+    position: absolute;
+    top:auto;
+    bottom:3.75rem;
+    width:100%;
+    height:auto;
+    padding:0 0.75rem;
+    text-align: center;
+   }
+   @mixin atLg {
+    bottom:4.25rem;
+    &:after {
+     bottom:5rem;
+     font-size:3rem;
+    }
+   }
+  }
+ }
+}

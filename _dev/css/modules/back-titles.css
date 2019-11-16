@@ -1,0 +1,32 @@
+.aws-login--title,
+.aws-register--title {
+ font-size: $fontsize3;
+ font-family:$fontfam4;
+ line-height: 1.33;
+ margin-top: resolve($gridgap * 2);
+ margin-bottom: resolve($gridgap * 2);
+
+ @mixin atTn {
+  margin-bottom:resolve($gridgap-tn * 2);
+ }
+ @mixin atSmmd {
+  font-size: $fontsize3;
+  margin-bottom: -resolve($gridgap-smmd * 2);
+  margin-bottom: 1rem;
+ }
+ @mixin atMd {
+  font-size: $fontsize3;
+  margin-bottom: -resolve($gridgap-md * 2);
+  letter-spacing: 0;
+  margin-bottom: 1.625rem;
+ }
+ @mixin atLg {
+  font-size: $fontsize4;
+  letter-spacing: 0;
+  margin-bottom: 1.6875rem;
+ }
+}
+
+.aws-forms-title {
+ font-size:$fontsize3;
+}

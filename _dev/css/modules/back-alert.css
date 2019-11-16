@@ -1,0 +1,93 @@
+#MainContent_newAlert {
+ /* */
+ #MainContent_rdbFrequency {
+  width:70%;
+  width:calc(100% - $alertfieldoffset);
+  table, tbody, tr {
+   padding:0;
+   display:inline-block;
+   width:100%;
+   @mixin atMdlg {
+    width:auto;
+    }
+  }
+  tbody {
+   margin:0;
+   padding:0;
+  }
+  tr {
+   margin-right:resolve($gridgap * 0.5);
+   &:last-child {
+    margin-right: 0;
+   }
+   @mixin atTn {margin-right:resolve($gridgap-tn * 0.5);}
+   @mixin atSmmd {margin-right:resolve($gridgap-smmd * 0.5);}
+   @mixin atMd {margin-right:resolve($gridgap-md * 0.5);}
+   td {
+    display:inline-block;
+    margin-right:resolve($gridgap * 1);
+    @mixin atTn {margin-right:resolve($gridgap-tn * 1);}
+    @mixin atSmmd {margin-right:resolve($gridgap-smmd * 1);}
+    @mixin atMd {margin-right:resolve($gridgap-md * 1);}
+    padding:0;
+    input, label {
+     display:inline-block;
+    }
+   }
+  }
+ }
+ .aws-jobsearch-selections {
+  margin-top: -0.75rem!important;
+  @mixin atSm {
+   margin-top: -0.375rem!important;
+  }
+  @mixin atSmmd {
+   margin-top: 0!important;
+  }
+ }
+}
+
+.mvw-manage-main .jobalerts-view {
+ width:100%;
+ input[type="submit"] { display:inline-block!important; }
+ #MainContent_btnShow {
+  border:1px solid $silver;
+  background-color: white;
+ }
+ #MainContent_btnDeleteAllAlerts, #MainContent_btnShow {
+  margin-top:0;
+  margin-bottom:resolve($gridgap * 2);
+  @mixin atTn {margin-bottom:resolve($gridgap-tn * 2);}
+  @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 1);}
+  @mixin atMd {margin-bottom:resolve($gridgap-md * 1);}
+ }
+
+ #MainContent_btnDeleteAllAlerts {
+  margin-right:resolve($gridgap * 0.5);
+  @mixin atTn {margin-right:resolve($gridgap-tn * 0.5);}
+  @mixin atSmmd {margin-right:resolve($gridgap-smmd * 0.5);}
+  @mixin atMd {margin-right:resolve($gridgap-md * 0.5);};
+ }
+}
+
+.mvw-manage-main {
+.jobalerts-create > .jobalerts-create-alert-fieldgroup {
+ @mixin atSmmd {
+  margin-bottom: 1.125rem;
+  margin-top:1.125rem;
+ }
+ }
+ .jobalerts-create-alert-fieldgroup {
+  &:empty { display:none; }
+  position: relative;
+  padding:0;
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
+ }
+ & > jobalerts-create-alert-fieldgroup {
+  padding:0;
+ }
+}

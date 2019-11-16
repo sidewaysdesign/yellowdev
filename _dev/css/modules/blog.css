@@ -4,15 +4,17 @@ $metacontentheight: 3rem;
   position: relative;
   display:block;
   margin-bottom: 1.25rem;
+  margin-left: -$marginsize;
+  margin-right: -$marginsize;
   @mixin atTnsm {
-   }
-  @mixin atSmmd {
-   }
+   margin-left: -$marginsize-sm;
+   margin-right: -$marginsize-sm;
+  }
   @mixin atMd {
+   margin-left: 0;
+   margin-right: 0;
    margin-bottom: 1.5rem;
-   }
-  @mixin atLg {
-   }
+  }
  }
  &--hero {
   position:relative;
@@ -50,6 +52,7 @@ $metacontentheight: 3rem;
     height:$herotextheight-sm;
     background-color: black;
     border-radius:50%;
+    top:0;
    }
   }
   @mixin atMd {
@@ -69,7 +72,7 @@ $metacontentheight: 3rem;
    display:block;
    color:black;
    font-size:$fontsize-heading;
-   font-weight:400;
+   font-weight:normal;
    letter-spacing: -0.008em;
    word-spacing:-0.008em;
    line-height: 1.1;
@@ -89,21 +92,21 @@ $metacontentheight: 3rem;
    @mixin atMd {
     font-size:$fontsize-heading-md;
     line-height: 1.1;
-    font-weight:700;
+    font-weight:normal;
     padding:resolve($fontsize-heading-md / 7.5) resolve($herotextheight-md / 2 + 1rem) 0 $marginsize-md;
    }
 
    @mixin atLg {
     font-size:$fontsize-heading-lg;
     line-height: 1.1;
-    font-weight:700;
+    font-weight:normal;
     padding:resolve($fontsize-heading-lg / 7.5) resolve($herotextheight-lg / 2 + 1rem) 0 $marginsize-lg;
    }
   }
 
   &-wrapper {
    transition: 0 all linear;
-   min-height:resolve($herotextheight * 3);
+   min-height:resolve($herotextheight * 4);
    padding-bottom:resolve($herotextheight / 4);
    background-repeat: no-repeat;
    background-size:cover;
@@ -112,10 +115,9 @@ $metacontentheight: 3rem;
    display:block;
    display:flex;
    flex-direction: row;
-   flex: 0 1 auto;
+   flex: 1 1 auto;
    align-items: flex-end;
    justify-content: flex-start;
-
    @mixin atTnsm {
     padding-bottom:resolve($herotextheight-sm / 3);
    }
@@ -198,7 +200,7 @@ $metacontentheight: 3rem;
     height:auto;
     .post-item.aws-original & {
      &:after {
-      content:'ADD LOGO';
+      /* content:'ADD LOGO'; */
       position:absolute;
       bottom:0;
       left:0;
@@ -325,9 +327,10 @@ $metacontentheight: 3rem;
   }
  }
 }
-.hs-blog-post,
-.hs-blog-listing {
+.hs-blog-post {
  .body-container-wrapper {
   padding-top: 0!important;
  }
 }
+
+.previous-posts-link[href$="/0"] {display:none;}

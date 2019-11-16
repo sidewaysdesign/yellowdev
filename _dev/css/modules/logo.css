@@ -42,11 +42,16 @@
    left:-1.25rem;
    top:-0.0625rem;
    @mixin atTnsm {
+    left:-0.875rem;
     width:$logosize-sm!important;
     /* width:40px!important; */
    }
    @mixin atSm {
-    top:-0.125rem;
+    /* top:-0.125rem; */
+    /* left:-1rem; */
+   }
+   @mixin atSmmd {
+    /* top:-0.125rem; */
     left:-1.75rem;
    }
    @mixin atMd {

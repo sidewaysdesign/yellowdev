@@ -21,7 +21,7 @@ $breakpoints: (tn: 31.5em, tnsm:24em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 
 @define-mixin overSmmd { @media (min-width: .0137.5rem) { @mixin-content; }}  /* px */
 @define-mixin overLgminh { @media (min-width: 45.01rem) { @mixin-content; }}  /* px */
 @define-mixin overMd { @media (min-width: 48.01rem) { @mixin-content; }}  /* px */
-@define-mixin overMdlg { @media (min-width: .0156.25rem) { @mixin-content; }}  /* px */
+@define-mixin overMdlg { @media (min-width: 56.25rem) { @mixin-content; }}  /* px */
 @define-mixin overMdmdlg { @media (min-width: 62.01rem) { @mixin-content; }}  /* px */
 @define-mixin overLg { @media (min-width: 64.01rem) { @mixin-content; }}  /* 1024px */
 @define-mixin overLgxl { @media (min-width: 66.01rem) { @mixin-content; }}  /* 1056px */
@@ -41,3 +41,8 @@ $breakpoints: (tn: 31.5em, tnsm:24em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 
 @define-mixin twixtMd-Xl { @media (min-width: 768px) and (max-width: 1200px) { @mixin-content; }}  /* 768px - 1199px */
 /* @define-mixin twixtMd-Lg { @media (min-width: 48rem) and (max-width: 63.99rem) { @mixin-content; }}  /* 768px - 1023px */
 @define-mixin twixtMd-Lg { @media (min-width: 768px) and (max-width: 1023px) { @mixin-content; }}  /* 768px - 1023px */
+
+@define-mixin ie { @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { @mixin-content } }
+@define-mixin edge { @supports (-ms-ime-align:auto) { @mixin-content } }
+@define-mixin edge_ie { @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { @mixin-content }
+ @supports (-ms-ime-align:auto) { @mixin-content } }

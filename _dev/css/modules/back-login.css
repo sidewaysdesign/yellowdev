@@ -1,0 +1,60 @@
+.aws-login—page {
+ .aws-login--form {
+  margin-top:1rem;
+  padding-right:0;
+  #MainContent_lblRegister {
+   font-family:$fontfam4;
+   text-align: left;
+   @mixin atTn {
+    margin-top:2rem;
+    margin-bottom: 0;
+   }
+  }
+
+  #signin {
+   margin-top:resolve($gridgap / 2);
+   margin-bottom:$gridgap;
+   @mixin atTn {
+    margin-top:resolve($gridgap-tn / 2);
+    margin-bottom:$gridgap-tn;
+   }
+   @mixin atSmmd {
+    margin-top:resolve($gridgap-smmd / 2);
+    margin-bottom:$gridgap-smmd;
+   }
+   @mixin atMd {
+    margin-top:resolve($gridgap-md / 2);
+    margin-bottom:$gridgap-md;
+   }
+  }
+  #forgotten {
+   padding-bottom: 0.5rem;
+   @mixin atSmmd {
+    position:absolute;
+    bottom:0;
+    right:0;
+   }
+   @mixin atMd {
+    right:calc(50% + resolve($gridgap-md / 2));
+    margin-bottom: 0;
+   }
+  }
+ }
+}
+
+.aws-login-logout {
+ padding-top:$gridgap;
+ @mixin atSmmd {
+  padding-top: 0;
+ }
+ #MainContent_lnkbLogout {
+margin:resolve($gridgap * 1) 0;
+@mixin atTn {margin:resolve($gridgap-tn * 1) 0;}
+@mixin atSmmd {margin:resolve($gridgap-smmd * 1) 9;}
+@mixin atMd {margin:resolve($gridgap-md * 1) 0;}
+  }
+ br {
+  content:'';
+  margin-top:1rem;
+ }
+}

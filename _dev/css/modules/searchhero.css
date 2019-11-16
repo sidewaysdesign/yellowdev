@@ -162,6 +162,7 @@
     /* bottom:-resolve( $inputheight - 0.125rem ); */
     background-color:$primary;
     margin-left: 0.4375rem;
+    margin-bottom:0!important;
     @mixin atTnsm {
     }
     @mixin atSmmd {

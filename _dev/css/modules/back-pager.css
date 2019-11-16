@@ -1,0 +1,47 @@
+[id*="_DataPager"] {
+ padding-top:resolve($gridgap * 1);
+ @mixin atTn {padding-top:resolve($gridgap-tn * 1);}
+ @mixin atSmmd {padding-top:resolve($gridgap-smmd * 1);}
+ @mixin atMd {padding-top:resolve($gridgap-md * 1);}
+ box-sizing: border-box;
+ display:block;
+ position: relative;
+ width:100%;
+ font-size:0;
+ text-align: center;
+ .PagerCurrent {
+  width:2rem;
+  border-color:$primary;
+  background-color: $primary;
+ }
+
+ a, span {
+  display:inline-block;
+  position:relative;
+  width:auto;
+  min-width:2rem;
+  height:2rem;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+  padding:0.25rem 0.625rem;
+  border:1px solid $cloud;
+  border-radius:2rem;
+  font-family:$fontfam2;
+  font-size:$fontsize1;
+  line-height: 1.5;
+  @mixin edge_ie {
+   padding: 0.125rem 0.625rem 0.25rem 0.625rem;
+
+  }
+ }
+ a {
+  transition:all $transtime0 ease-in-out;
+  &:hover, &:active {
+   border-color:white;
+   background-color: white;
+  }
+ }
+ span.PagerCurrent:only-child {
+  display:none;
+ }
+}
