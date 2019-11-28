@@ -1,0 +1,33 @@
+.aws-jobsearch--parameters .aws-jobsearch--title-all {
+
+ /* */
+}
+
+
+.aws-jobsearch-jobalerts-nologin {
+ color:$slate;
+ line-height: 1;
+ padding:resolve($gridgap * 1) resolve($gridgap * 1) resolve($gridgap * 0.625) resolve($gridgap * 1);
+ margin-top:resolve($gridgap * 0.5);
+ margin-bottom: 0;
+ @mixin atTn {
+  margin-top:resolve($gridgap-tn * 0.5);
+  padding:resolve($gridgap-tn * 1) resolve($gridgap-tn * 1) resolve($gridgap-tn * 0.625) resolve($gridgap-tn * 1);
+ }
+ @mixin atSmmd {
+  margin-top:resolve($gridgap-smmd * 0.5);
+  padding:resolve($gridgap-smmd * 1) resolve($gridgap-smmd * 1) resolve($gridgap-smmd * 0.625) resolve($gridgap-smmd * 1);
+ }
+ @mixin atMd {
+  margin-top:resolve($gridgap-md * 0.5);
+  padding:resolve($gridgap-md * 1) resolve($gridgap-md * 1) resolve($gridgap-md * 0.625) resolve($gridgap-md * 1);
+ }
+ &:hover, &:active {
+  background-color: $primary;
+  color:black;
+ }
+&:active, &:focus {
+ background-color: $primary;
+ outline:none;
+}
+}

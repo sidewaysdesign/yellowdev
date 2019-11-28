@@ -1,0 +1,42 @@
+.aws-menu--phone {
+ box-sizing: border-box;
+ min-width:100%;
+ text-align: center;
+ background-color: $primary;
+ line-height: 1;
+ border-radius:1rem;
+ min-height:1.875rem;
+ padding:0.5rem 0.25rem 0 0.25rem;
+ letter-spacing: 0.02em;
+ font-size:$fontsize1;
+ position:relative;
+ right:0;
+ top:0;
+ display:none;
+ text-decoration:none!important;
+ top:0;
+ transition: opacity $transtime ease-in-out;
+ &:hover,&:active {
+  opacity:0.7;
+ }
+ @mixin atMd {
+  display:block;
+  position:absolute;
+  top:auto;
+  bottom:0.75rem;
+  width:calc(100% + 4rem);
+  right:-4rem;
+  bottom:$marginvertical-md;
+ }
+ @mixin atLg {
+  top:100%;
+  margin-top:1.75rem;
+  right:0;
+  right:calc(0% + resolve($menuoutset * 2));
+  width:100%;
+  width:calc(100% - resolve($menuoutset * 2));
+  min-width:calc(100% - resolve($menuoutset * 2));
+  bottom:$marginvertical-md;
+  font-size:$fontsize2;
+ }
+}

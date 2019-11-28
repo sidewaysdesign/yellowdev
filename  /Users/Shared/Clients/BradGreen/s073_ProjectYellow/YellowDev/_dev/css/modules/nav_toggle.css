@@ -1,0 +1,122 @@
+/* <div class="aws-menu--toggle">
+<div class="aws-menu--hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="aws-menu--cross">
+<span></span>
+<span></span>
+</div>
+</div> */
+
+$togglesize:2.5rem;
+$togglesize-sm:3rem;
+
+.aws-menu--toggle {
+ transition:.25s ease-in-out;
+ box-sizing:border-box;
+ position:relative;
+ position:relative;
+ cursor:pointer;
+ /* background-color:rgba(255,255,255,0.4); */
+ display:block;
+ position:fixed;
+ top:0.125rem;
+ right:resolve($marginsize - 0.375rem);
+ z-index:1000;
+ width:$togglesize;
+ height:$togglesize;
+ border-radius:resolve($togglesize * 0.05);
+ @mixin atTnsm {
+  width:$togglesize-sm;
+  height:$togglesize-sm;
+  border-radius:resolve($togglesize-sm * 0.05);
+  }
+ @mixin atMd { display:none; }
+ span { display:block; background:$slate; border-radius:2px; }
+&:hover div span, &:hover div span { background-color: black; }
+ .aws-menu--hamburger {
+  position:absolute;
+  height:100%;
+  width:100%;
+  span {
+   transition: $transtime2 ease-in-out, background-color $transtime0 ease-in-out!important;
+   position:relative;
+   width:resolve($togglesize * 0.6);
+   height:2px;
+   top:resolve($togglesize * 0.25);
+   left:resolve($togglesize * 0.1);
+   margin:resolve($togglesize * 0.1);
+   @mixin atTnsm {
+    width:resolve($togglesize-sm * 0.6);
+    height:resolve($togglesize-sm * 0.04);
+    top:resolve($togglesize-sm * 0.24);
+    left:resolve($togglesize-sm * 0.1);
+    margin:resolve($togglesize-sm * 0.1);
+    }
+   &:nth-child(1){ transition-delay:.5s; }
+   &:nth-child(2){ transition-delay:.625s; }
+   &:nth-child(3){ transition-delay:.75s; }
+  }
+ }
+ .aws-menu--cross {
+  position:absolute;
+  height:100%;
+  width:100%;
+  transform:translate(0.4375rem) rotate(45deg);
+  @mixin atTnsm {
+   transform:translate(0.5rem) rotate(45deg);
+   /* top:20%; */
+  }
+
+  /* transform:translate(25%, 25%) rotate(45deg); */
+  transform-origin: 50% 50%;
+  span {
+   transition: $transtime2 all ease-in-out;
+   &:nth-child(1){
+    transform-origin: center center;
+    height:0%;
+    width:resolve($togglesize * 0.04);
+    position:absolute;
+    margin-left:-resolve($togglesize * 0.02);
+    top:16.5%;
+    left:50%;
+    /* margin-left: -25%; */
+    transition-delay:0s;
+   }
+   &:nth-child(2){
+    width:0%;
+    position:absolute;
+    transition-delay:.25s;
+    margin-top:-resolve($togglesize * 0.02);
+    height:resolve($togglesize * 0.04);
+    top:50%;
+    left:16.5%;
+    /* margin-left: -25%; */
+    @mixin atTnsm {
+     /* height:resolve($togglesize-sm * 0.04);
+     left:resolve($togglesize-sm * 0.12);
+     top:resolve($togglesize-sm * 0.5); */
+     }
+   }
+  }
+ }
+ &.active {
+ /* & { */
+  .aws-menu--hamburger {
+   span {
+    width:0%;
+    &:nth-child(1){ transition-delay:0s; }
+    &:nth-child(2){ transition-delay:.125s; }
+    &:nth-child(3){ transition-delay:.25s; }
+   }
+  }
+  .aws-menu--cross {
+   span {
+    &:nth-child(1){ height:67%; transition-delay:.375s; }
+    &:nth-child(2){ width:67%; transition-delay:.125s; }
+   }
+  }
+ }
+}

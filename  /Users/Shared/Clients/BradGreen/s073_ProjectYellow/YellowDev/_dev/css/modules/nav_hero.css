@@ -1,0 +1,110 @@
+.aws-menu--hero1,
+.aws-menu--hero2 {
+ margin-left: 0;
+ position:relative;
+ top:0.875rem;
+ right:0;
+ width:100%;
+ padding:0;
+ display:none;
+
+ @mixin atMd {
+  display:block;
+  position:absolute;
+  width:20%;
+  margin-left: auto;
+  right:2.75rem;
+ }
+ @mixin atLg {
+  padding-right:resolve($menuoutset*2);
+  display:block;
+  position:absolute!important;
+  width:20%;
+  width:calc(20% + resolve($menuoutset * 4));
+  /* margin-left: -resolve($menuoutset * 3); */
+  margin-right:-resolve($menuoutset*1.5);
+  right:0;
+  right:0;
+ }
+ .aws-menu--hero-content {
+  display:block;
+  position:relative;
+  width:100%;
+  height: 0;
+  padding-right: 0;
+  padding-left: 0;
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  @mixin atMd {
+   padding-top: 0;
+   min-height:10.5rem;
+   width:calc(100% + 4rem);
+  }
+  @mixin atLg {
+   margin-right:-$menuoutset;
+   overflow:visible;
+   padding-top: 75%;
+   height: auto;
+   min-height:auto;
+   width:100%;
+  }
+  .textband {
+   font-family: $fontfam2;
+   font-weight:normal;
+   display:block;
+   position:absolute;
+   width:100%;
+   padding:0.5rem 0;
+   background: $primary-trans;
+   line-height: 1;
+   text-align: center;
+   &:before {
+    content:'';
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    position:absolute;
+    display: block;
+    background-color: $primary;
+    mix-blend-mode:soft-light;
+    opacity:1;
+   }
+   @mixin atMd {
+    bottom:0;
+    left: 0;
+   }
+   @mixin atLg {
+    width:calc(100% - 1.5rem);
+    bottom:0.75rem;
+    left: 0.75rem;
+   }
+   @mixin atXl {
+    width:calc(100% - 2rem);
+    bottom:1rem;
+    left: 1rem;
+   }
+  }
+  .textband span {
+    z-index:1;
+    color:black;
+    background-color: none!important;
+    padding:none!important;
+    position:relative;
+    display:block;
+    &:before {
+     background-color: !important;
+     content:none!important;
+    }
+  }
+
+ }
+}
+
+@media all and (-ms-high-contrast:none) {
+ .aws-menu--hero1,
+ .aws-menu--hero2 {
+  transform:translateX(-.375rem);
+ }
+}

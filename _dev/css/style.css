@@ -2,7 +2,7 @@
 /*
 Theme Name: Agilus Work Solutions
 Author: Sideways Design
-Version: 1.1
+Version: 1.3
 */
 
 /* 3rd party packages */
@@ -59,28 +59,33 @@ Version: 1.1
 @import "modules/post-filter";
 @import "modules/back-jobsearch";
 @import "modules/back-pages";
-@import "modules/back-register";
 @import "modules/back-titles";
+@import "modules/back-register";
 @import "modules/back-login";
 @import "modules/back-inputs";
 @import "modules/back-apply";
 @import "modules/back-confirmation";
 @import "modules/back-jobcode";
+
 @import "modules/back-header";
 @import "modules/back-submits";
 @import "modules/back-dashboard";
 @import "modules/back-pager";
-@import "modules/back-resume";
 @import "modules/back-settings";
 @import "modules/back-search-collapse";
 @import "modules/back-search-filtertags";
 @import "modules/back-jobalerts";
-@import "modules/back-jobalerts-make";
 @import "modules/back-jobs-saved";
 @import "modules/back-error";
 @import "modules/back-filters";
 @import "modules/back-alert";
+@import "modules/back-savedsearch";
+@import "modules/back-profile";
+@import "modules/back-jobsearchmain";
+@import "modules/back-forgot";
+@import "modules/back-resume";
 @import "modules/banner";
-/* @import "modules/bias"; */
+@import "modules/modal";
+@import "modules/multi-contact";
 
 @import "overrides/overrides";

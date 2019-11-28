@@ -1,0 +1,33 @@
+#jobsearchmain .aws-jobsearch--parameters {
+ .aws-jobsearch--title-all {
+  float:none;
+  z-index:1000;
+  /* Apply Saved Searches Box */
+  margin-top:resolve($gridgap * 2);
+  margin-bottom:resolve($gridgap * 2);
+  border:1px solid $silver;
+  @mixin atTn {
+   background-color: white;
+   padding: resolve($gridgap-tn * 1.5) resolve($gridgap-tn * 2.25) resolve($gridgap-tn * 2) resolve($gridgap-tn * 2.25);
+   margin-top: resolve($gridgap-tn * 2);
+   margin-bottom: resolve($gridgap-tn * 2);
+  }
+
+  @mixin atSmmd {
+   padding: resolve($gridgap-smmd * 1);
+   margin-top: resolve($gridgap-smmd * 2);
+   margin-bottom: resolve($gridgap-smmd * 2);
+  }
+
+  @mixin atMd {
+   padding: resolve($gridgap-md * 1);
+   margin-top: resolve($gridgap-md * 2);
+   margin-bottom: resolve($gridgap-md * 2);
+   }   font-family:$fontfam3;
+   font-size:$fontsize0;
+   select {
+    margin-top: 0.375rem;
+    margin-bottom: 0;
+   }
+  }
+ }

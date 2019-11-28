@@ -1,0 +1,64 @@
+.indicator-dashboard-iframe {
+ display:block;
+ width:$iframewindowsize;
+ height:$iframewindowsize;
+ background-color: transparent;
+ transition: none;
+ background-image: url(images/dashboard-indicator-sheet.svg);
+ background-position: 0 0;
+ background-repeat: no-repeat;
+ /* background-image: url(images/dashboard-indicator-sheet-2.svg); */
+ /* background-image: url(images/dashboard-indicator-sheet-3.svg); */
+ /* background-image: url(images/dashboard-indicator-sheet-4.svg); */
+ background-size:resolve($iframewindowsize * 4);
+
+ @mixin atMd {
+  width:$iframewindowsize;
+ }
+ &.dashboard-messagecount-0 {
+  background-position: 0 0;
+  @mixin atMd { background-position: 0 0; }
+ }
+ &.dashboard-messagecount-1 {
+  background-position: -resolve($iframewindowsize * 1) 0;
+  @mixin atMd { background-position: -resolve($iframewindowsize-md * 1); }
+ }
+ &.dashboard-messagecount-2 {
+  background-position: -resolve($iframewindowsize * 2) 0;
+  @mixin atMd { background-position: resolve($iframewindowsize-md * 2); }
+ }
+ &.dashboard-messagecount-3 {
+  background-position: -resolve($iframewindowsize * 3) 0;
+  @mixin atMd { background-position: resolve($iframewindowsize-md * 3); }
+ }
+ &.dashboard-messagecount-4 {
+  background-position: 0 -resolve($iframewindowsize * 1);
+  @mixin atMd { background-position: 0 -resolve($iframewindowsize * 1); }
+ }
+ &.dashboard-messagecount-5 {
+  background-position: -resolve($iframewindowsize * 1) -resolve($iframewindowsize * 1);
+  @mixin atMd { background-position: resolve($iframewindowsize-md * 1) -resolve($iframewindowsize * 1); }
+ }
+ &.dashboard-messagecount-6 {
+  background-position: -resolve($iframewindowsize * 2) -resolve($iframewindowsize * 1);
+  @mixin atMd { background-position: resolve($iframewindowsize-md * 2) -resolve($iframewindowsize * 1); }
+ }
+ &.dashboard-messagecount-7 {
+  background-position: -resolve($iframewindowsize * 3) -resolve($iframewindowsize * 1);
+  @mixin atMd { background-position: resolve($iframewindowsize-md * 3) -resolve($iframewindowsize * 1); }
+ }
+ &.dashboard-messagecount-8 {
+  background-position: 0 -resolve($iframewindowsize * 2);
+  @mixin atMd { background-position: 0 -resolve($iframewindowsize * 2); }
+ }
+ &.dashboard-messagecount-9 {
+  background-position: -resolve($iframewindowsize * 1) -resolve($iframewindowsize * 2);
+  @mixin atMd { background-position: resolve($iframewindowsize-md * 1) -resolve($iframewindowsize * 2); }
+ }
+ &.dashboard-messagecount-plus,
+ &.dashboard-messagecount-max,
+ &.dashboard-messagecount-10 {
+  background-position: -resolve($iframewindowsize * 2) -resolve($iframewindowsize * 2);
+  @mixin atMd { background-position: resolve($iframewindowsize-md * 2) -resolve($iframewindowsize * 2); }
+ }
+}

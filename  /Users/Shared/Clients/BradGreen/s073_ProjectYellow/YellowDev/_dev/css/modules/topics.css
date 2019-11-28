@@ -1,0 +1,225 @@
+.topic-link {
+ color:$slate!important;
+ height:2rem;
+ border-radius:1rem;
+ border:1px solid $cloud;
+ text-transform: uppercase;
+ font-size:0.8rem;
+ line-height: 1;
+ white-space: nowrap;
+ transition:$transtime0 all ease-in;
+ display:block;
+ float:left;
+ padding:0.6875rem 0.5rem 0 0.625rem;
+ @mixin atSm {
+ }
+ @mixin uptoMd {
+  margin-bottom:0.5rem;
+  margin-top:0;
+  margin-right:0.25rem;
+ }
+ @mixin atMd {
+  float:none;
+  display:inline-block;
+ }
+ &:hover, &:active {
+  background-color: $air;
+ }
+}
+#hubspot-author_data {
+ display:block;
+ position: relative;
+}
+#hubspot-topic_data {
+ display:block;
+ overflow-x:hidden;
+ white-space: normal;
+ font-size:0;
+ color:transparent;
+ width:100%;
+ max-width:100%;
+ &:before {
+  font-weight:normal;
+  font-family:$fontfam1;
+  font-size:0.92rem;
+  line-height: 1.75;
+  color:$slate;
+  content:'Topics';
+  display:block;
+  position: relative;
+ }
+ @mixin atSm {
+  color:inherit;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  /* top:2rem; */
+  position: relative;
+  /* &:after {
+   position:absolute;
+   top:0.375rem;
+   left:0;
+   width:100%;
+   height:1px;
+   opacity:0.5;
+   background-color: $slate;
+  } */
+ }
+ @mixin atMd {
+  top:0;
+  font-size:inherit;
+  &:before, &:after {
+   content:none;
+  }
+ }
+}
+
+.aws-blog--topics {
+ margin-bottom: 0.5rem;
+ @mixin atMd {
+  margin-bottom: 1rem;
+ }
+ h3 {
+  display:block;
+  font-size:$fontsize1;
+  font-size:$fontsize3;
+  font-weight:500;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+  @mixin atSmmd {
+   margin-top: 1.25rem;
+  }
+  @mixin atMd {
+   margin-bottom: 0.875rem;
+  }
+ }
+ .widget-module {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  @mixin atSmmd {
+   margin-left: 0;
+   margin-right: 0;
+  }
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
+ }
+ ul {
+  list-style-type: none;
+  padding:0 0 0 0;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: -0.5rem;
+  display:inline;
+  @mixin atTnsm {
+  }
+  @mixin atMd {
+   display: block;
+   margin-top: -0.25rem;
+   margin-bottom: 1.125rem;
+   padding:0;
+  }
+  @mixin atLg {
+   padding:0 0 0 1rem;
+  }
+  li {
+   display:inline-block;
+   margin-bottom: 0;
+   float:left;
+   @mixin atSmmd {
+    margin-bottom: 0.375rem;
+   }
+   @mixin atMd {
+    float:none;
+    display: block;
+   }
+   @mixin atLg {
+   }
+   a {
+    display:block;
+    padding: resolve($buttonsmallheight * .25 ) 0.5rem 0.125rem 0.5rem;
+    @mixin atSmmd {
+     padding: resolve($buttonsmallheight * .25 ) $elementgap 0.125rem $elementgap;
+    }
+   }
+   & + li {
+    margin-right: 0;
+    @mixin atSmmd {
+     margin-right: 0.25rem;
+    }
+    @mixin atMd {
+     margin-right: 0;
+    }
+   }
+  }
+ }
+ .filter-expand-link {
+  margin-top: 0;
+  text-transform: uppercase;
+  line-height: 0.75;
+  display:block;
+  float:left;
+  min-height:$buttonsmallheight;
+  padding: resolve($buttonsmallheight * .275 ) $elementgap 0.125rem $elementgap;
+
+  &:after {
+   content:'';
+   display:table;
+   clear:both;
+  }
+  @mixin atMd {
+   margin-left: 0;
+   float:none;
+   display:block;
+   text-transform: none;
+  }
+ }
+ ul li a, .filter-expand-link {
+  font-size:0.88rem;
+  font-size:1rem;
+  line-height: 1;
+  transition: $transtime0 all linear;
+  &:hover, &:active { color:black; }
+  @mixin atMd { font-size:1rem; }
+  .filter-link-count { opacity:0.65; }
+  height:$buttonsmallheight;
+  color:$grey;
+  line-height: 1;
+  @mixin atMd {
+   padding: 0 0 0.75rem 0;
+   margin-right: -0.5rem;
+   margin-bottom: 0.625rem;
+   padding: 0;
+   height:auto;
+   color:$slate;
+   border-radius:none;
+   padding:0;
+   border:none;
+  }
+ }
+ &:after {
+  content:'';
+  display:table;
+  clear:both;
+ }
+}
+
+.aws-blog--meta #hubspot-topic_data {
+ padding-top:0.5625rem;
+ padding-bottom:1rem;
+ margin-right:0;
+ @mixin atTnsm {
+  min-width:200%;
+  margin-right:-100%;
+  padding-bottom:0;
+ }
+ @mixin atMd {
+  margin-right:0;
+ }
+ &:after {
+  content:'';
+  display:table;
+  clear:both;
+ }
+}

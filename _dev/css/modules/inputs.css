@@ -36,6 +36,7 @@
   margin-bottom: 1rem;
   padding:0.75rem 2rem 0.5rem 0.5rem;
   border-radius: 0;
+  border:1px solid $silver;
   background-color: white;
   background-image:url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 45" style="enable-background:new 0 0 30 45;" xml:space="preserve"><path class="st0" fill="%23a0a0a0" d="M15,38.2L5.9,29l1.4-1.4l7.7,7.7l7.7-7.7l1.4,1.4L15,38.2z M24.1,16L15,6.8L5.9,16l1.4,1.4L15,9.7l7.7,7.7	L24.1,16z"/></svg>');
   background-position: 97% center;
@@ -296,13 +297,13 @@ select, textarea, .hs-input {
    @mixin atSm {
     width:50%!important;
     float:left!important;
-    &:first-child {
+    &:nth-last-child(2) {
      padding-right:resolve( $gridgap / 2);
      @mixin atTn { padding-right:resolve( $gridgap-tn / 2); }
      @mixin atSmmd { padding-right:resolve( $gridgap-smmd / 2); }
      @mixin atMd { padding-right:resolve( $gridgap-md / 2); }
     }
-    &:last-child {
+    &:nth-last-child(1) {
      margin-top:0!important;
      padding-left:resolve( $gridgap / 2);
      @mixin atTn { padding-left:resolve( $gridgap-tn / 2); }
@@ -362,9 +363,63 @@ select, textarea, .hs-input {
 
  }
  .hs-form, .aspNetHidden ~ .body-container-wrapper {
-  label, #skillset > span, .aws-dashbaord—aspwd-section--txt {
+  label, #skillset > span, .aws-dashbaord—aspwd-section--txt,
+  .hs-form-field label {
    @mixin atMd {
-    font-size:0.88rem;
+    font-size:0.88rem!important;
    }
   }
+  .hs-form-field label span {
+   @mixin atMd {
+    font-size: 1rem;
+    @mixin atMd {
+     font-size: 0.88rem;
+    }
+   }
+  }
+  input[type="radio"] + span,
+  input[type="checkbox"] + span {
+   font-size:1rem;
+  }
+  li.hs-form-radio,
+  li.hs-form-checkbox {
+   display:block;
+   position:relative;
+   margin-top:resolve($gridgap * 0.5)!important;
+   @mixin atTn {margin-top:resolve($gridgap-tn * 0.375)!important;}
+   @mixin atSmmd {margin-top:resolve($gridgap-smmd * 0.375)!important;}
+   @mixin atMd {margin-top:resolve($gridgap-md * 0.25)!important;}
+  }
+  fieldset .hs-richtext h3 {
+   padding:0;
+   font-family: $fontfam4;
+   margin:resolve($gridgap * 0.5) 0 resolve($gridgap * 0.75) 0;
+   @mixin atTn {margin-bottom:resolve($gridgap-tn * 0.5) 0 resolve($gridgap-tn * 0.75) 0;}
+   @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 0.5) 0 resolve($gridgap-smmd * 0.75) 0;}
+   @mixin atMd {margin-bottom:resolve($gridgap-md * 0.5) 0 resolve($gridgap-md * 0.75) 0;}
+  }
  }
+
+ .aws-section--form-contents {
+  ul {
+   margin-bottom:0;
+  }
+  textarea {
+   min-height: 6rem;
+  }
+  padding-top:resolve($gridgap * 2);
+  @mixin atTn {padding-top:resolve($gridgap-tn * 2);}
+  @mixin atSmmd {padding-top:resolve($gridgap-smmd * 2);}
+  @mixin atMd {padding-top:resolve($gridgap-md * 2);}
+  .hs-form .actions input[type="submit"] {
+   margin-top:resolve($gridgap * 2);
+   @mixin atTn {
+    margin:resolve($gridgap-tn * 2) 0 !important;
+   }
+   @mixin atSmmd {
+    margin:resolve($gridgap-smmd * 2) 0 !important;
+   }
+   @mixin atMd {
+    margin:resolve($gridgap-md * 2) 0 !important;}
+   }
+  }

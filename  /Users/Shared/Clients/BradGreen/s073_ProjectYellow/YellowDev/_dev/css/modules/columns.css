@@ -1,0 +1,26 @@
+.aws-group--search-subscribe .aws-group--search,
+.aws-group--search-subscribe .aws-group--subscribe,
+.aws-column--half {
+ position: relative;
+ display:block;
+ width:100%;
+ @mixin atTnsm {
+  position: relative;
+  float:left;
+  width:50%;
+  &:last-child {
+   &:after {
+    width:100%;
+    content:'';
+    display:table;
+    clear:both;
+   }
+  }
+ }
+ @mixin atMd {
+  &.aws-column--mini {
+   float:left;
+   width:50%;
+  }
+ }
+}

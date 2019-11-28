@@ -1,7 +1,10 @@
 $leftcolor: $fog;
 $rightcolor: $mist;
-form[action*="./jobsearch"] {
+form[action*="./jobSearch"],
+form[action*="./jobsearch"],
+form[action="./internaljobsearch"] {
  .row-fluid-wrapper + .row-fluid-wrapper {
+  /* job search background */
   background-color: $rightcolor!important;
  }
 }
@@ -14,7 +17,9 @@ form[action*="./jobsearch"] {
  /* x */
  overflow:visible;
  background-color: $rightcolor;
- &:before, &:after { background-color: $rightcolor; }
+ &:before, &:after {
+  background-color: $rightcolor;
+ }
  @mixin atTn {
   padding: $gridgap 0 $marginvertical-sm 0;
  }
@@ -250,7 +255,7 @@ form[action*="./jobsearch"] {
   width:75%;
   padding-left:resolve($gridgap-md * 1);
   float:left;
-  form[action="./internaljobsearch"] & {
+  form[action^="./internaljobsearch"] & {
    width:100%;
   }
  }
@@ -274,13 +279,13 @@ form[action*="./jobsearch"] {
   @mixin atMd {margin-bottom: 1.625rem;}
  }
 }
-
+#MainContent_ListView1_itemPlaceholderContainer,
 #MainContent_JobboardsSummary_itemPlaceholderContainer {
  display:block;
  position: relative;
  ul {
   margin:0;
-  padding:0;
+  padding:0!important;
   list-style-type: none;
  }
 
@@ -291,7 +296,8 @@ form[action*="./jobsearch"] {
  .aws-jobinfo-applied--results-group_applied,
  .aws-jobinfo-saved--results-group_applied,
  .aws-jobsearch--results-group_saved,
- .aws-jobsearch--results-group_applied {
+ .aws-jobsearch--results-group_applied,
+ .aws-jobinfo-saved--results-group_saved-inactive {
   display:block;
   position: relative;
   left:0;
@@ -326,17 +332,17 @@ form[action*="./jobsearch"] {
   display: block;
   /* job heading */
   position: relative;
-  font-family:$fontfam3;
+  font-family:$fontfam4;
   font-size:$fontsize2;
   font-weight:normal;
   line-height:1.15;
   @mixin atMd {
    margin-top: 0;
    padding-right:8rem;
-   font-size:$fontsize3;
+   font-size:$fontsize2;
   }
   @mixin atLg {
-   font-size:$fontsize3a;
+   font-size:$fontsize2;
   }
  }
  .aws-jobsearch--results-buttons {
@@ -345,7 +351,7 @@ form[action*="./jobsearch"] {
     margin-left: 0!important;
     margin-right: 0!important;
    }
-   }
+  }
   div {
    /* display:flex; */
    /* flex-direction:row; */
@@ -378,7 +384,7 @@ form[action*="./jobsearch"] {
   border-style:solid;
  }
  input[name*="btnApply"] {
-  margin-right: 0;
+  /* margin-right: 0; */
   /* margin-right: -$gridgap-md; */
   &.hover, &:hover,&:active {
    border-color:$silver;
@@ -455,8 +461,10 @@ form[action*="./jobsearch"] {
   padding-top:0.75rem;
  }
 }
+.aws-formgroup--group-selector,
 .jobalerts-create,
-.aws-jobsearch--hero-content {
+.aws-jobsearch--hero-content,
+.aws-jobsearch--parameters .aws-jobsearch--title-all {
  select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -509,8 +517,8 @@ form[action*="./jobsearch"] {
 .aws-jobsearch--page {
  input[id*="MainContent_JobboardsSummary_btnSave"] {
   @mixin atTnsm {
-  background-image:$action_off;
- }
+   background-image:$action_off;
+  }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
    background-image:$action_off_png;
   }
@@ -531,12 +539,12 @@ form[action*="./jobsearch"] {
    opacity:0.6;
   }
  }
-
+.aws-jobsearch--results-group_applied input[id^="MainContent_JobboardsSummary_btnSave_"],
  .aws-jobsearch--results-group_saved input[id^="MainContent_JobboardsSummary_btnSave_"] {
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
    @mixin atTnsm {
-   background-image:$action_on_png!important;
-  }
+    background-image:$action_on_png!important;
+   }
   }
   background-position: 100% 100%;
   background-position: calc(100% + 1px) calc(100% + 1px);
@@ -552,8 +560,6 @@ form[action*="./jobsearch"] {
    border-color:black!important;
    background-color: white!important;
    background-image:$action_on!important;
-
-
   }
   &.hover, &:hover {
    background-position: 100% 0;
@@ -562,38 +568,56 @@ form[action*="./jobsearch"] {
   }
   &:active {opacity:0.85;}
  }
- input[id^="MainContent_JobboardsSummary_btnApply_"] {
-  &, &.hover, &:hover, &:active {
-   /* border-color:black!important; */
-   /* background-color:black!important; */
-   background-image:$action_next!important;
-   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    background-image:$action_next_png!important;
-   }
-   transition: opacity $transtime2 ease-in-out 0s, background-position $transtime1 ease-in-out 0.375s;
-   background-position: 100% 0;
-   background-position: calc(100% + 1px) -1px;
-   &.hover, &:hover {
-    opacity:0.85;
-    background-position: 100% 100%;
-    background-position: calc(100% + 1px) calc(100% + 1px);
-   }
-   &:active {opacity:0.85;}
+ .aws-jobsearch--results-group_applied input[id^="MainContent_JobboardsSummary_btnSave_"] {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   @mixin atTnsm { background-image:$action_on_fixed_png!important; }
+  }
+  @mixin atTnsm {
+   background-image:$action_on_fixed!important;
+   border-color:$silver!important;
+   cursor:default;
+  }
+  &.hover, &:hover {
+   background-position: 100% 100%;
+   background-position: calc(100% + 1px) calc(100% + 1px);
+   opacity:1;
   }
  }
+
+
+
  .aws-jobsearch--results-group_applied input[id^="MainContent_JobboardsSummary_btnApply_"] {
   &, &.hover, &:hover, &:active {
    border-color:black!important;
-   /* background-color:black!important; */
+   background-color:$silver!important;
    background-image:none!important;
    color:white!important;
    cursor:default;
-   opacity:0.3!important;
+   opacity:1!important;
+   border:none!important;
    &:active {opacity:1;}
   }
  }
 }
-
+input[id^="MainContent_JobboardsSummary_btnApply_"] {
+ &, &.hover, &:hover, &:active {
+  /* border-color:black!important; */
+  /* background-color:black!important; */
+  background-image:$action_next!important;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   background-image:$action_next_png!important;
+  }
+  transition: opacity $transtime2 ease-in-out 0s, background-position $transtime1 ease-in-out 0.375s;
+  background-position: 100% 0;
+  background-position: calc(100% + 1px) -1px;
+  &.hover, &:hover {
+   opacity:0.85;
+   background-position: 100% 100%;
+   background-position: calc(100% + 1px) calc(100% + 1px);
+  }
+  &:active {opacity:0.85;}
+ }
+}
 .aws-page--parameters-results {
  /* outline:2px solid orange; */
  &:after {
@@ -608,4 +632,15 @@ form[action*="./jobsearch"] {
 .aws-jobsearch--results {
  /* outline:2px solid cyan; */
 
+}
+
+.aws-jobsearch-count {
+ display:inline;
+ font-family:$fontfam3;
+}
+
+.hs-menu-item.hs-menu-depth-1.hs-item-has-children {
+ &.active, .collapsible:hover {
+  background-color: transparent!important;
+ }
 }

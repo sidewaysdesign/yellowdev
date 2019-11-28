@@ -1,0 +1,29 @@
+form[action*="./Forgot"] {
+.body-container-wrapper {
+
+ background-color: $rightcolor!important;
+ padding-bottom:resolve($gridgap * 2);
+ @mixin atTn {padding-bottom:resolve($gridgap-tn * 2);}
+ @mixin atSmmd {padding-bottom:resolve($gridgap-smmd * 2);}
+ @mixin atMd {padding-bottom:resolve($gridgap-md * 2);}
+}
+}
+
+.aws-forgot--title {
+ font-family:$fontfam3;
+ font-size:$fontsize2;
+ margin-bottom:resolve($gridgap * 1);
+ @mixin atTn {margin-bottom:resolve($gridgap-tn * 1);}
+ @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 1);}
+ @mixin atMd {margin-bottom:resolve($gridgap-md * 1);}
+}
+.aws-forgot--form {
+ label {
+  font-family:$fontfam2;
+  margin-bottom:resolve($gridgap * 0.25);
+  @mixin atTn {margin-bottom:resolve($gridgap-tn * 0.25);}
+  @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 0.25);}
+  @mixin atMd {margin-bottom:resolve($gridgap-md * 0.25);}
+ }
+
+}

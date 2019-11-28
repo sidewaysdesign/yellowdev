@@ -1,0 +1,65 @@
+.modalpopup {
+ /* */
+display:block;
+.jobalerts-create-alert-fieldgroup-emailtitle {
+ padding-left: 0;
+}
+.Controls {
+ margin-top:resolve($gridgap * 1);
+ @mixin atTn {margin-top:resolve($gridgap-tn * 1);}
+ @mixin atSmmd {margin-top:resolve($gridgap-smmd * 1);}
+ @mixin atMd {margin-top:resolve($gridgap-md * 1);}
+}
+}
+/* position:fixed;
+margin-left: auto;
+margin-right:auto; */
+.updatepanel {
+ position:fixed;
+ display:block;
+ margin-left: auto;
+ margin-right: auto;
+ left:50%;
+ top:50%;
+ transform:translate(-50%, -50%);
+ background-color: white;
+ padding:resolve($gridgap * 1.5);
+ @mixin atTn {padding:resolve($gridgap-tn * 2);}
+ @mixin atSmmd {padding:resolve($gridgap-smmd * 2);}
+ @mixin atMd {padding:resolve($gridgap-md * 2);}
+}
+.modalbackground {
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ z-index:999;
+ background-color: $charcoal;
+ opacity:0.75;
+}
+
+#MainContent_RadioButtonList2 {
+ tbody {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+ }
+}
+.popuptitle {
+ font-family:$fontfam3;
+ margin: 0 0 resolve($gridgap * 1) 0;
+ @mixin atTn {margin: 0 0 resolve($gridgap-tn * 1) 0;}
+ @mixin atSmmd {margin: 0 0 resolve($gridgap-smmd * 1) 0;}
+ @mixin atMd {margin: 0 0 resolve($gridgap-md * 1) 0;}
+}
+
+#MainContent_btnSaveEmailFreq,
+#MainContent_btnCancelEmailFreq {
+ display:inline-block;
+ margin:0 resolve($gridgap * 0.5);
+ @mixin atTn {margin:0 resolve($gridgap-tn * 0.5);}
+ @mixin atSmmd {margin:0 resolve($gridgap-smmd * 0.5);}
+ @mixin atMd {margin:0 resolve($gridgap-md * 0.5);}
+}

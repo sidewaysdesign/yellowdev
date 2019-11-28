@@ -1,0 +1,233 @@
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3a1396");
+@font-face {font-family: 'SofiaProSoftBold-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_0_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftMedium';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_1_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftLight';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_2_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftBold';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_3_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftLight-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_4_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftMedium-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_5_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftRegular';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_6_0.woff2') format('woff2')}
+@font-face {font-family: 'SofiaProSoftRegular-Italic';src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.eot');src: url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.eot?#iefix') format('embedded-opentype'),url('https://cdn2.hubspot.net/hubfs/6466776/fonts/3A1396_7_0.woff2') format('woff2')}
+
+$primary: #FFF100;
+$primary-dark: #ffe428;
+/* $primary: purple; */
+$primary-trans: color( $primary alpha(85%) );
+$red: #f60000;
+$warning: #EA0210;
+
+
+$black-transparent: rgba(0,0,0,0.7);
+$black-transparent2: rgba(0,0,0,0.88);
+
+$charcoal: #484849;
+$grey: #656565;
+$slate: #626262;
+$cloud: #b0b0b0;
+$storm: #a0a0a0;
+$silver: #afafaf;
+$fog: #dadada;
+$mist: #e9e9e9;
+$vapor: #f1f1f0;
+$air: #fafafa;
+
+$transtime0: 0.125s;
+$transtime: 0.25s;
+$transtime1: 0.375s;
+$transtime2: 0.5s;
+
+$softBorder: 1px solid rgba($grey,0.25);
+
+$fontfam1: 'SofiaProSoftLight', Helvetica, Arial, sans-serif;
+$fontfam2: 'SofiaProSoftRegular', Helvetica, Arial, sans-serif;
+$fontfam3: 'SofiaProSoftMedium', Helvetica, Arial, sans-serif;
+$fontfam4: 'SofiaProSoftBold', Helvetica, Arial, sans-serif;
+
+$bodycopylineheight: 1.5;
+$bodycopylineheight-md: 1.6875;
+
+$contentmaxwidth: 75rem;
+
+$gridgap-tn: 0.5rem;
+$gridgap-smmd: 1rem;
+$gridgap-md: 0.875rem;
+$gridgap: 1rem;
+$elementgap: 0.875rem;
+
+
+$fontsize0a: 0.88rem;
+$fontsize0: 0.92rem;
+$fontsize1: 1.0625rem;
+$fontsize1b: 1.125rem;
+$fontsize2: 1.125rem;
+$fontsize3: 1.25rem;
+$fontsize3a: 1.4375rem;
+$fontsize4: 1.6875rem;
+$fontsize5: 1.875rem;
+$fontsize5a: 2rem;
+$fontsize6: 2.25rem;
+$fontsize7: 2.625rem;
+$fontsize8: 3rem;
+
+$letterspacing:0.003em;
+
+
+$boxshadow: 2px 2px 12px rgba(0,0,0,0.2);
+$smallFont:0.85rem;
+
+$buttonborderradius-tn: 0.75rem;
+$buttonborderradius: 1.125rem;
+$buttonborderradius-small: resolve($buttonborderradius * .75);
+$buttonsize:2.25rem;
+
+/* NAV START */
+
+$menumobilewidth: 16rem;
+$menumobileheight: 2rem;
+$menuinset: 0.75rem;
+$menuinset-md: 0.75rem;
+$menumargin: 0.5rem;
+$menuwidth: 10rem;
+$menushadow: 0 3px 4px rgba(0,0,0,0.15);
+$menumarginvertical-tn: 0.5rem;
+$menumarginvertical-md: 0.375rem;
+$menumarginvertical: 1.9375rem;
+$menuheight-md: 4.75rem;
+$rulewidth:2px;
+$transitionall: 0.2s all ease-in;
+$transitionall-slow: 0.5s all ease-in;
+
+$logosize: 6rem;
+$logosize-sm: 6.75rem;
+$logosize-md: 8.5rem;
+$logosize-lg: 12rem;
+
+$naviconsize: 2rem;
+$naviconsize-md: 1.875rem;
+
+$naviconwidth: 2.75rem;
+$naviconwidth-mdlg: 2.25rem;
+
+$navheight: 2.75rem;
+$navheight-sm: 3.25rem;
+$navheight-md: 4rem;
+/* NAV END */
+
+/* BLOG HEADER */
+$herotextheight: 5rem;
+$herotextheight-tn: 6.5rem;
+$herotextheight-sm: 6.5rem;
+$herotextheight-md: 6.5rem;
+$herotextheight-lg: 8rem;
+
+$leftmargin: 1.125rem;
+$leftmargin-lg: 4.5rem;
+
+$fontsize-heading: 1.375rem;
+$fontsize-heading-sm: 1.625rem;
+$fontsize-heading-md: 1.75rem;
+$fontsize-heading-lg: 1.875rem;
+
+.white { color: white; }
+.white-bg { background-color: white; }
+.silver { color: $silver; }
+.silver { background-color: $silver; }
+.grey { color: $grey; }
+.grey { background-color: $grey; }
+.black { color: black; }
+.black-bg { background-color: black; }
+
+/* $breakpoints: ( tn: 31.5em, tnsm:416px, sm: 480px, smmd: 600px, lgminh: 720px, md: 768px, mdlg: 900px, mdmdlg: 992px, lg: 1024px, lgxl:1056px, xl: 1200px xxl: 1320px ); */
+$breakpoints: ( tn: 31.5em, tnsm:26em, sm: 30em, smmd: 37.5em, lgminh: 45em, md: 48em, mdlg: 56.25em, mdmdlg: 62em, lg: 64em, lgxl:66em, xl: 72em, xxl: 85em );
+
+
+$menuoutset: 0.84375rem;
+
+
+
+$marginsize: 1rem;
+$marginsize-sm: 1.5rem;
+$marginsize-smmd: 1.5rem;
+$marginsize-md: 2.5rem;
+$marginsize-lg: 4rem;
+
+$contentmarginsize: 1.125rem;
+$contentmarginsize-sm: 1.25rem;
+$contentmarginsize-smmd: 1.5rem;
+$contentmarginsize-md: 1.375rem;
+$contentmarginsize-lg: 2rem;
+
+$marginvertical: 1rem;
+$marginvertical-sm: 1.5rem;
+$marginvertical-smmd: 1.5rem;
+$marginvertical-md: 1.5rem;
+$marginvertical-lg: 1.875rem;
+
+$maxwidth-lg: 1024px;
+
+$contentpaddingtop: 1.75rem;
+$contentpaddingtop-md: 2.125rem;
+
+$inputheight: 2.5rem;
+$inputheight-sm: 2.875rem;
+$inputheight-smmd: 3rem;
+$inputheight-md: 3rem;
+
+$inputtext: 1rem;
+$inputtext-sm: 1.125rem;
+$inputtext-smmd: 1.125rem;
+$inputtext-md: 1.125rem;
+
+$buttonwidth: 4.25rem; /* includes gap */
+
+$buttonsmallheight: 1.75rem;
+$buttonsmallheight-sm: 2rem;
+$buttonsmallheight-md: 2rem;
+
+$menupaddinglevel3: 0.25rem;
+
+$blogimagewidth: 100%;
+$blogimagewidth-sm: 100%;
+$blogimagewidth-smmd: 8rem;
+$blogimagewidth-md: 10rem;
+$blogimagewidth-lg: 37.5%;
+
+
+$interinputspacing: 0.375rem;
+
+$formverticalspacing: 0.75rem;
+$formverticalspacing-sm: 0.75rem;
+$formverticalspacing-smmd: 0.75rem;
+$formverticalspacing-md: 0.75rem;
+$formverticalspacing-lg: 0.75rem;
+
+$cardsetmaxwidth-md: 48rem;
+$cardsetmaxwidth-lg: 52rem;
+
+$jobsetgap: 1rem;
+$jobsetgap-md: 1.5rem;
+
+$dotstripe: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="985" height="66" viewBox="0 0 985 66"><title>dotstripe</title><rect width="952" height="66" transform="translate(952 66) rotate(180)" style="fill: %23FFF100"/><circle cx="952" cy="33" r="33"/></svg>');
+$dotstripe_png: url('https://cdn2.hubspot.net/hubfs/6466776/website_common_images/aws-dotstripe.png');
+$actionbutton: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="591.334" height="64" viewBox="0 0 591.334 64"><rect width="295.667" height="64" style="fill: %23fff"/><rect x="295.667" width="295.667" height="64" style="fill: %23231f20"/><circle cx="279.667" cy="48" r="12.5" style="fill: %23dadada"/><path d="M277.375,54.488l-5.459-5.459,2.106-2.105,3.353,3.353,8.916-8.916,2.106,2.106Z" style="fill: %23fff"/><circle cx="575.334" cy="16" r="12.5" style="fill: %23656565"/><circle cx="575.334" cy="48" r="12.5" style="fill: %23fff100"/><polygon points="581.669 11.667 579.667 9.666 575.334 13.999 571.002 9.666 569 11.667 573.333 16 569 20.332 571.002 22.334 575.334 18.001 579.668 22.334 581.668 20.332 577.335 16 581.669 11.667" style="fill: %23e9e9e9"/><path d="M573.042,54.488l-5.459-5.459,2.106-2.105,3.353,3.353,8.916-8.916,2.106,2.106Z" style="fill: %23231f20"/></svg>');
+$action_off: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="295.667" height="64" viewBox="0 0 295.667 64"><rect width="295.667" height="64" style="fill: %23fff"/><circle cx="279.667" cy="48" r="12.5" style="fill: %23dadada"/><path d="M277.375,54.488l-5.459-5.459,2.106-2.105,3.353,3.353,8.916-8.916,2.106,2.106Z" style="fill: %23fff"/></svg>');
+$action_off_png: url('https://cdn2.hubspot.net/hubfs/6466776/website_common_images/aws-button-off.png');
+$action_on: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="295.667" height="64" viewBox="0 0 295.667 64"><rect width="295.667" height="64" style="fill: %23231f20"/><circle cx="279.667" cy="16" r="12.5" style="fill: %23656565"/><circle cx="279.667" cy="48" r="12.5" style="fill: %23fff100"/><polygon points="286.002 11.667 284 9.666 279.667 13.999 275.335 9.666 273.333 11.667 277.666 16 273.333 20.332 275.335 22.334 279.667 18.001 284.001 22.334 286.001 20.332 281.668 16 286.002 11.667" style="fill: %23e9e9e9"/><path d="M277.375,54.488l-5.459-5.459,2.106-2.105,3.353,3.353,8.916-8.916,2.106,2.106Z" style="fill: %23231f20"/></svg>');
+$action_on_png: url('https://cdn2.hubspot.net/hubfs/6466776/website_common_images/aws-button-on.png');
+$action_next: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="295.667" height="64" viewBox="0 0 295.667 64"><rect width="295.667" height="64" style="fill: %23fff"/><path d="M279.667,35.5a12.5,12.5,0,1,0,12.5,12.5A12.5,12.5,0,0,0,279.667,35.5Zm.918,19.834-2-2,3.918-3.918h-9.577l0-2.83H282.5l-3.917-3.917,2-2L287.919,48Z" style="fill: %23dadada"/></svg>');
+$action_next_png: url('https://cdn2.hubspot.net/hubfs/6466776/website_common_images/aws-button-next.png');
+$action_remove: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="295.667" height="64" viewBox="0 0 295.667 64"><circle cx="279.667" cy="48" r="12.5" style="fill: %23dadada"/><polygon points="286.002 43.667 284 41.666 279.667 45.999 275.335 41.666 273.333 43.667 277.666 48 273.333 52.332 275.335 54.334 279.667 50.001 284.001 54.334 286.001 52.332 281.668 48 286.002 43.667" style="fill: %23ffffff"/></svg>');
+$action_remove_png: url('https://cdn2.hubspot.net/hubfs/6466776/website_common_images/icon-action-remove.png');
+$action_reset: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M22.5,39.719a17.2,17.2,0,0,1-14.91-8.612l2.6-1.5a14.218,14.218,0,0,0,26.393-9.061l2.972-.414A17.23,17.23,0,0,1,24.868,39.554,16.954,16.954,0,0,1,22.5,39.719ZM8.417,24.454A14.214,14.214,0,0,1,34.81,15.393l2.6-1.5A17.218,17.218,0,0,0,5.445,24.868Zm29.815-21.1h-3V13.2H25.391v3H38.232ZM9.768,31.8h9.841v-3H6.768V41.643h3Z" style="fill: %23b0b0b0"/></svg>');
+$action_reset_hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M22.5,39.719a17.2,17.2,0,0,1-14.91-8.612l2.6-1.5a14.218,14.218,0,0,0,26.393-9.061l2.972-.414A17.23,17.23,0,0,1,24.868,39.554,16.954,16.954,0,0,1,22.5,39.719ZM8.417,24.454A14.214,14.214,0,0,1,34.81,15.393l2.6-1.5A17.218,17.218,0,0,0,5.445,24.868Zm29.815-21.1h-3V13.2H25.391v3H38.232ZM9.768,31.8h9.841v-3H6.768V41.643h3Z" style="fill: %23656565"/></svg>');
+$action_reset_hover_png: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path d="M22.5,39.719a17.2,17.2,0,0,1-14.91-8.612l2.6-1.5a14.218,14.218,0,0,0,26.393-9.061l2.972-.414A17.23,17.23,0,0,1,24.868,39.554,16.954,16.954,0,0,1,22.5,39.719ZM8.417,24.454A14.214,14.214,0,0,1,34.81,15.393l2.6-1.5A17.218,17.218,0,0,0,5.445,24.868Zm29.815-21.1h-3V13.2H25.391v3H38.232ZM9.768,31.8h9.841v-3H6.768V41.643h3Z" style="fill: %23656565"/></svg>');
+
+$close_x: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45"><line x1="34.5" y1="10.503" x2="10.5" y2="34.503" style="fill: none;stroke: %23b0b0b0;stroke-miterlimit: 10;stroke-width: 3px"/><line x1="10.5" y1="10.503" x2="34.5" y2="34.503" style="fill: none;stroke: %23b0b0b0;stroke-miterlimit: 10;stroke-width: 3px"/></svg>');
+$close_x_png: url('https://cdn2.hubspot.net/hubfs/6466776/website_common_images/icon-x.png');
+$close_x_hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45"><line x1="34.5" y1="10.503" x2="10.5" y2="34.503" style="fill: none;stroke: %23000000;stroke-miterlimit: 10;stroke-width: 3px"/><line x1="10.5" y1="10.503" x2="34.5" y2="34.503" style="fill: none;stroke: %23000000;stroke-miterlimit: 10;stroke-width: 3px"/></svg>');
+$close_x_hover_png: url('https://cdn2.hubspot.net/hubfs/6466776/website_common_images/icon-x-hover.png');
+$alert_bell: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="2 -4 54 54"><path fill="%23626262" d="M21.75,5.075v3.77a10.807,10.807,0,0,0-10.3,10.574c0,7.641-1.259,8.772-3,10.338-.212.189-.428.385-.662.607l-.37.368a2.778,2.778,0,0,0,1.96,4.747h8.836a4.349,4.349,0,0,0,8.574,0h8.836a2.778,2.778,0,0,0,1.96-4.747l-.383-.379c-.221-.211-.437-.407-.649-.6-1.742-1.566-3-2.7-3-10.338A10.807,10.807,0,0,0,23.25,8.845V5.075ZM22.5,37.6a2.86,2.86,0,0,1-2.751-2.116h5.5A2.86,2.86,0,0,1,22.5,37.6Zm14.305-4.407a1.243,1.243,0,0,1-1.182.791H9.377a1.278,1.278,0,0,1-.9-2.184l.357-.357c.211-.2.417-.384.618-.566,2.17-1.949,3.5-3.545,3.5-11.453a9.349,9.349,0,0,1,9.55-9.111,9.349,9.349,0,0,1,9.55,9.111c0,7.908,1.329,9.5,3.5,11.453.2.182.407.366.605.555l.37.368A1.242,1.242,0,0,1,36.805,33.188Z"/></svg>');
+$alert_bell_png: url('https://cdn2.hubspot.net/hubfs/6466776/website_common_images/icon-bell.png');
+
+
+$alertfieldoffset: 10rem;

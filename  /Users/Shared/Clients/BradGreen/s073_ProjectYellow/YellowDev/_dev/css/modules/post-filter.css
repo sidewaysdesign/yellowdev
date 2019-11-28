@@ -1,0 +1,57 @@
+.aws-blog--post-filter {
+ h3 {
+  font-size:$fontsize2;
+  line-height:1.15;
+  @mixin atMd {
+   font-size:$fontsize3;
+   padding-right:8rem;
+   margin-top: 0;
+  }
+  @mixin atLg {
+   font-size:$fontsize4;
+  }
+ }
+.widget-module {
+ ul {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+  li {
+   display:inline-block;
+   a {
+    color:$slate!important;
+    height:2rem;
+    border-radius:1rem;
+    border:1px solid $cloud;
+    text-transform: uppercase;
+    font-size:0.8rem;
+    line-height: 1;
+    white-space: nowrap;
+    transition:$transtime0 all ease-in;
+    display:block;
+    float:left;
+    padding:0.6875rem 0.5rem 0 0.625rem;
+    @mixin atSm {
+    }
+    @mixin uptoMd {
+     margin-bottom:0.25rem;
+     margin-top:0;
+     margin-right:0.25rem;
+    }
+    @mixin atMd {
+     float:none;
+     display:inline-block;
+    }
+    &:hover, &:active {
+     background-color: $air;
+    }
+   }
+  }
+ }
+}
+.filter-expand-link { display:none; }
+padding-bottom:resolve($gridgap * 2);
+@mixin atTn {padding-bottom:resolve($gridgap-tn * 2);}
+@mixin atSmmd {padding-bottom:resolve($gridgap-smmd * 2);}
+@mixin atMd {padding-bottom:resolve($gridgap-md * 2);}
+}

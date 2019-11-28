@@ -1,0 +1,86 @@
+.aws-formgroup--multi-headings {
+ margin:0;
+ padding:0;
+ margin-bottom:0!important;
+}
+.aws-formgroup--heading {
+ font-family:$fontfam4;
+ font-size:$fontsize4;
+ line-height:  1.2;
+ @mixin atMd { font-size:$fontsize6; }
+}
+
+.aws-formgroup--group-selector {
+ margin:resolve($gridgap * 1) 0 resolve($gridgap * 1) 0;
+ @mixin atTn {
+  margin:resolve($gridgap-tn * 1) 0 resolve($gridgap-tn * 1) 0;
+ }
+ @mixin atSmmd {
+  margin:resolve($gridgap-smmd * 1) 0 resolve($gridgap-smmd * 1) 0;
+ }
+ @mixin atMd {
+  margin:resolve($gridgap-md * 2) 0 resolve($gridgap-md * 6) 0;
+ }
+ h3 {
+  font-family:$fontfam4;
+  font-size:$fontsize3;
+  margin-bottom:resolve($gridgap * 1);
+  @mixin atTn {margin-bottom:resolve($gridgap-tn * 1);}
+  @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 1);}
+  @mixin atMd {margin-bottom:resolve($gridgap-md * 1);}
+ }
+ select {
+  @mixin atMd {
+   max-width:50%;
+
+  }
+ }
+}
+.aws-section--form-contents .hs-form {
+
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="telephone"],
+input[type="tel"],
+textarea,
+select {
+ border:1px solid $silver;
+}
+.inputs-list {
+ padding-left: 0;
+ margin-top: 0;
+}
+label {
+ font-size:$fontsize1;
+}
+h3 {
+ color:black;
+ font-size:$fontsize2;
+}
+}
+
+.aws-jobinfo-applied--results-summary {
+ li {
+ display:inline;
+  margin-right:resolve($gridgap * 1);
+  @mixin atTn {margin-right:resolve($gridgap-tn * 1);}
+  @mixin atSmmd {margin-right:resolve($gridgap-smmd * 1);}
+  @mixin atMd {margin-right:resolve($gridgap-md * 1);}
+ }
+ }
+
+.aws-jobinfo-applied--results-buttons {
+ padding-top:resolve($gridgap * 1);
+ @mixin atTn {padding-top:resolve($gridgap-tn * 1);}
+ @mixin atSmmd {padding-top:resolve($gridgap-smmd * 1);}
+ @mixin atMd {padding-top:resolve($gridgap-md * 1);}
+}
+
+.aws-jobinfo-saved--results-buttons {
+ margin-bottom:-resolve($gridgap * 1); 
+ @mixin atTn {margin-bottom:-resolve($gridgap-tn * 1);}
+ @mixin atSmmd {margin-bottom:-resolve($gridgap-smmd * 1);}
+ @mixin atMd {margin-bottom:-resolve($gridgap-md * 1);}
+}

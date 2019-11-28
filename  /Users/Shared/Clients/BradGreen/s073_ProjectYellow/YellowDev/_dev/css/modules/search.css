@@ -1,0 +1,115 @@
+.aws-unit--search {
+ input[type="text"], button {
+  box-sizing: border-box;
+  /* float:left; */
+  width:calc(100% - $elementgap - $buttonwidth);
+  margin:0;
+  @mixin atTnsm {
+  }
+  @mixin atMd {
+   display:block;
+  }
+ }
+
+ input[type="text"] {
+  @mixin atTnsm {
+   width:80%;
+   width:calc(100% - $elementgap - $buttonwidth);
+  }
+ }
+ button {
+  position:absolute;
+  right:0;
+  bottom:0;
+  margin-top: $elementgap;
+  padding:0;
+  border:0!important;
+  /* background-color: black; */
+  line-height: 1;
+  width: resolve($buttonwidth);
+  /* padding-top:0.25rem; */
+  @mixin atTnsm {
+   margin-top: 0;
+   margin-left:$elementgap;
+  }
+  span {
+   position: relative;
+   display:block;
+   background-color: black;
+   &:after {
+    display:block;
+    position:relative;
+    height: $inputheight;
+    max-height: $inputheight;
+    overflow-x: hidden;
+    color:white;
+    font-size:1.2rem;
+    font-weight:500;
+    text-align: center;
+    line-height: 1;
+    margin:0;
+    content:'Go!';
+    width:100%;
+    padding:1rem 0 0.25rem 0;
+    @mixin atTnsm {
+     min-height: $inputheight-sm;
+     max-height: $inputheight-sm;
+     font-size:$inputtext-sm;
+    }
+    @mixin atSmmd {
+     min-height: $inputheight-smmd;
+     max-height: $inputheight-smmd;
+     font-size:$inputtext-smmd;
+    }
+    @mixin atMd {
+     padding:1rem 0 0.25rem 0;
+     font-size:1.2rem;
+     &:after {
+      min-height: $inputheight-md;
+      max-height: $inputheight-md;
+      font-size:$inputtext-md;
+     }
+    }
+    @mixin atLg {
+    }
+   }
+  }
+  svg {display:none;}
+ }
+ &:after {
+  display:table;
+  clear:both;
+  content:'';
+ }
+}
+.aws-unit--subscribe {
+ display: block;
+ position: relative;
+ ul {
+ }
+}
+.aws-unit--search label,
+.aws-unit-subscribe h3 {
+ label {
+  margin-bottom: 0.375rem;
+  font-size:1ree;
+  font-weight:700!important;
+ }
+}
+
+.aws-unit--search,
+.aws-unit--subscribe {
+ input[type="text"],  input[type="email"], button {
+  height: $inputheight;
+  max-height: $inputheight;
+  @mixin atTnsm {
+   height: $inputheight-sm;
+   max-height: $inputheight-sm;
+  }
+  @mixin atMd {
+   display:block;
+   height: $inputheight-md;
+   max-height: $inputheight-md;
+  }
+ }
+}

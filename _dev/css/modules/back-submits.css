@@ -1,4 +1,10 @@
 /* #MainContent_btnDeleteAllAlerts, */
+input.hs-button.primary[type="submit"],
+.aws-forgot--form input[type="submit"],
+#MainContent_btnResumeProfileUpdate,
+.aws-dashbaord--resume-profile-buttons input[value="View"],
+.updatepanel #MainContent_btnSaveEmailFreq,
+#MainContent_btnResumeProfileStart,
 .aws-jobinfo-applied--results-buttons input[type="submit"],
 #MainContent_div_submit_resume_upload_file input[type="submit"],
 #MainContent_div_submit_resume_info input[type="submit"],
@@ -18,6 +24,11 @@
  border-radius:4rem!important;
  background-color: $primary;
  cursor:pointer;
+ &:active {
+  border:none!important;
+  background-color: $primary-dark!important;
+  color:black!important;
+ }
  @mixin atMd { width:auto; }
 }
 
@@ -47,7 +58,7 @@
  padding-right:0.625rem!important;
  padding-left:0.625rem!important;
  /* transform:translateY(-50%); */
- border:1px solid $cloud;
+ border:1px solid $slate;
  border-radius:4rem!important;
  background-color: white;
  color:$slate;
@@ -61,18 +72,27 @@
   width:auto;
  }
  form[action="./Login"] & {
-  position: relative;
   display: inline-block;
+  position: relative;
+  top:auto!important;
   min-width: 8rem;
   text-align: center;
-  top:auto!important;
   &:before {
    content:none;
   }
  }
 }
-
-#jobalerts-view > input[type="submit"],
+#MainContent_btnDeleteAllResume,
+#MainContent_btnCancelEmailFreq,
+#MainContent_btnRemoveExpiredAppliedJobs,
+input[value="New saved search"],
+#MainContent_btnRemoveExpiredSavedJobs,
+#MainContent_btnResumeProfileStart,
+.aws-dashbaord--resume-namewithclear input[type="submit"],
+/* #jobalerts-view > input[type="submit"], */
+input[value="Update emails alerts"],
+input[value="Update email alerts"],
+#MainContent_btnDeleteAllAlerts,
 #MainContent_div_submit_resume_upload_file input[type="submit"],
 #MainContent_div_submit_resume_info input[type="submit"],
 .aws-dashbaord--ascontact input[type="submit"],
@@ -88,6 +108,7 @@ input[name*="btnSave"],
 input[name*="btnApply"] {
  box-sizing: border-box;
  display:block;
+ height:2rem;
  margin: $gridgap resolve($gridgap / 3) 0 resolve($gridgap / 3);
  @mixin atTnsm {
   margin: $gridgap resolve($gridgap / 2) 0 resolve($gridgap / 2);
@@ -98,7 +119,6 @@ input[name*="btnApply"] {
  font-family: $fontfam3;
  font-size: $fontsize0;
  font-weight: normal!important;
- height:2rem;
  line-height: 1;
  cursor:pointer;
  @mixin atSm {
@@ -129,10 +149,11 @@ input[name*="btnApply"] {
    }
   }
  }
- 
+
  #jobalerts-view > input[type="submit"] {
-  outline:4px solid red!!important;
+  /* outline:4px solid red!!important; */
  }
+
  input[type="submit"][id*="MainContent_JobAlertsSummary_btnView_"],
  #MainContent_btnSave,
  #MainContent_btnCancel,
@@ -180,6 +201,13 @@ input[name*="btnApply"] {
  }
 }
 
+#jobalerts-view > input[value="New saved search"] {
+ @mixin uptoSm {
+  margin-top: 0;
+  margin-bottom:$gridgap;
+ }
+}
+
 .aws-dashbaord--ascontact input[type="submit"] {
  margin-top: 0.5rem;
 }
@@ -188,7 +216,7 @@ input[name*="btnApply"] {
  position: absolute;
  top:0;
  right:0;
- width:100%;
+ width:auto;
  margin-top: -0.375rem;
  padding-right:0.25rem;
 
@@ -199,9 +227,10 @@ input[name*="btnApply"] {
   width:auto;
   height:$buttonsmallheight-sm;
   margin: 0 0 $gridgap auto;
+  padding:0.4375rem 0.75rem 0.125rem 0.75rem;
   border-radius: 2rem;
   background-color: white;
-  background-image:$alert_bell;
+  /* background-image:$alert_bell; */
   background-position:100% center;
   background-repeat: no-repeat;
   background-size:contain;
@@ -212,25 +241,25 @@ input[name*="btnApply"] {
   line-height: 1;
   cursor:pointer;
   transition: background-color $transtime ease-in-out;
-  padding:0.4375rem 2.1875rem 0.125rem 0.75rem;
   &:hover, &:active {
    background-color: $primary;
   }
-  @mixin ie { background-image:$alert_bell_png;
+  /* @mixin ie { background-image:$alert_bell_png; */
   }
   @mixin atTn { margin: 0 0 $gridgap-tn auto; }
   @mixin atSm {
    height:$buttonsmallheight-sm;
+   margin: -0.75rem -2.25rem $gridgap-tn auto;
    padding:0.3125rem 2.1875rem 0 0.75rem;
   }
   @mixin atSmmd {
-   margin: 0 0 $gridgap-smmd auto;
+   margin: -0.5rem -2.375rem $gridgap-smmd auto;
    padding:0.125rem 2.375rem 0 0.75rem;
    font-size:$fontsize1;
   }
   @mixin atMd {
    height:$buttonsmallheight-md;
-   margin: 0 0 $gridgap-md auto;
+   margin: -0.6875rem -2.5rem $gridgap-md auto;
    padding:0.3125rem 2.5rem 0.125rem 0.75rem;
   }
   @mixin edge_ie {
@@ -238,7 +267,6 @@ input[name*="btnApply"] {
   }
  }
 
-}
 .aws-login-logout #MainContent_lnkbLogout {
  padding:0.4375rem 2.375rem 0.125rem 0.75rem;
  @mixin atSm {
@@ -277,5 +305,90 @@ input[name*="btnApply"] {
  @mixin atMd {
   margin-top: resolve($gridgap-md * 2);
   margin-bottom: resolve($gridgap-md * 4);
+ }
+}
+#MainContent_btnRemoveExpiredSavedJobs {
+ margin-bottom:resolve($gridgap * 1);
+ border:1px solid $silver;
+ @mixin atTn {margin-bottom:resolve($gridgap-tn * 1);}
+ @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 1);}
+ @mixin atMd {margin-bottom:resolve($gridgap-md * 1);}
+}
+
+/* yellow button active state */
+input.hs-button.primary[type="submit"],
+.aws-forgot--form input[type="submit"],
+#MainContent_btncountsaved,
+#MainContent_btnCountApplied,
+input[id^="MainContent_JobboardsSummary_btnDetail_"],
+#MainContent_btnResumeProfileUpdate,
+#MainContent_btnResumeProfileCreate,
+input[value="See job description"],
+.aws-jobalerts-results-buttons input[value="Run search"],
+#MainContent_btnDeleteAllAlerts {
+ transition:all $transtime ease-in-out;
+
+ &:active {
+  border:none!important;
+  color:black!important;
+  background-color: $primary-dark!important;
+ }
+}
+
+/* #MainContent_btnRemoveExpiredAppliedJobs, */
+/* #MainContent_lnkbLogout, */
+input[value="New saved search"],
+input[value="Update emails alerts"],
+input[value="Update email alerts"]
+ {
+ transition:all $transtime ease-in-out;
+ &:hover {
+  border-color:$silver!important;
+  color:$storm!important;
+ }
+}
+/* white button active state */
+.aws-dashbaord--resume-profile-buttons input[value="Edit"],
+.aws-dashbaord--resume-profile-buttons input[value="Delete"],
+#MainContent_btnDeleteAllResume,
+#MainContent_btnCancelEmailFreq,
+input[value="Remove"],
+input[value="New saved search"],
+input[value="Update emails alerts"],
+input[value="Update email alerts"],
+#MainContent_btnCreate[value="New saved search"],
+#MainContent_btnRemoveExpiredAppliedJobs {
+border:1px solid $slate;
+margin-bottom:resolve($gridgap * 1);
+@mixin atTn {margin-bottom:resolve($gridgap-tn * 1);}
+@mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 1);}
+@mixin atMd {margin-bottom:resolve($gridgap-md * 1);}
+&:active {
+ border-color:black;
+ background-color: white;
+ color:black;
+ opacity:1;
+}
+}
+#MainContent_btnResumeProfileStart,
+#MainContent_btnDeleteAllResume,
+#MainContent_btnResumeProfileUpdate,
+#MainContent_btnResumeProfileCancel,
+.aws-dashbaord--resume-profile-buttons input[type="submit"] {
+  display:inline-block;
+}
+
+#MainContent_btnResumeProfileUpdate {
+ @mixin atTnsm {
+  margin-right:resolve($gridgap * 0.5);
+  @mixin atTn {margin-right:resolve($gridgap-tn * 0.5);}
+  @mixin atSmmd {margin-right:resolve($gridgap-smmd * 0.5);}
+  @mixin atMd {margin-right:resolve($gridgap-md * 0.5);}
+ }
+}
+
+input.hs-button.primary[type="submit"] {
+ &:hover {
+  color:black!important;
  }
 }

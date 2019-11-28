@@ -1,0 +1,371 @@
+
+.hs-form {
+ .inputs-list {
+  margin-left:0!important;
+  padding-right:0!important;
+  list-style-type: none!important;
+  li {
+   &:before {
+    content:none;
+   }
+   label {
+    font-family:$fontfam1;
+    font-weight:normal;
+   }
+  }
+  &.no-list { padding-left:0!important; }
+  &.hs-error-msgs {
+   margin-top:0.56255rem!important;
+  }
+ }
+
+ textarea {
+  width:100%!important;
+ }
+
+ select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width:100%;
+  width:100%!important;
+  height:$inputheight;
+  max-height:$inputheight;
+  margin-bottom: 1rem;
+  padding:0.75rem 2rem 0.5rem 0.5rem;
+  border-radius: 0;
+  background-color: white;
+  background-image:url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 45" style="enable-background:new 0 0 30 45;" xml:space="preserve"><path class="st0" fill="%23a0a0a0" d="M15,38.2L5.9,29l1.4-1.4l7.7,7.7l7.7-7.7l1.4,1.4L15,38.2z M24.1,16L15,6.8L5.9,16l1.4,1.4L15,9.7l7.7,7.7	L24.1,16z"/></svg>');
+  background-position: 97% center;
+  background-position: calc(100% - 0.375rem) center;
+  background-repeat: no-repeat;
+  background-size:1rem;
+  color:$slate;
+  font-family:$fontfam1;
+  font-size:$fontsize1!important;
+  font-weight:normal;
+  cursor:pointer;
+  @mixin atSmmd {
+   height: $inputheight-sm;
+   max-height: $inputheight-sm;
+   padding:0.75rem 2rem 0.5rem 0.75rem;
+  }
+  @mixin atMd {
+   display:block;
+   height: $inputheight-md;
+   max-height: $inputheight-md;
+   font-size:$inputtext-md;
+   &:active, &:focus {
+    ie-dummy: expression(this.hideFocus=true);
+    outline:none;
+   }
+   & + br { display:none; }
+  }
+ }
+ input[type="submit"] {
+  display:block!important;
+  position: relative!important;
+  width:100%!important;
+  max-width:240px!important;
+  margin-top:$gridgap!important;
+  margin-right: auto!important;
+  margin-left: auto!important;
+  @mixin atTn {
+   margin-top:$gridgap-tn!important;
+  }
+  @mixin atSmmd {
+   margin-top:$gridgap-smmd!important;
+  }
+  @mixin atMd {
+   margin-top:$gridgap-md!important;
+  }
+ }
+ .inputs-list:not(.hs-error-msgs) {
+  @mixin atLg {
+   columns: 2!important;
+   break-inside: avoid!important;
+  }
+ }
+ fieldset + fieldset {
+  margin-top:$gridgap!important;
+  @mixin atTn {
+   margin-top:$gridgap-tn!important;
+  }
+  @mixin atSmmd {
+   margin-top:$gridgap-smmd!important;
+  }
+  @mixin atMd {
+   margin-top:$gridgap-md!important;
+  }
+ }
+}
+
+.aws-submit-resume-upload-file [id*="MainContent_lbl"],
+.hs-form label,
+.jobalerts-create-alerttitle,
+.jobalerts-create-alert-fieldtitle {
+ padding-top:0!important;
+ padding-bottom:0.25rem!important;
+ font-family:$fontfam3;
+}
+.aws-section--background.sectionbg-mist .actions .hs-button {
+ /* border:10px solid red!important; */
+}
+input[type="submit"].hs-button.primary {
+ .aws-section--background.sectionbg-mist .hs-form &,
+ .aws-section--background.sectionbg-vapor .hs-form  &,
+ .aws-section--background.sectionbg-air .hs-form  & {
+  background-color: $primary!important;
+  color:black!important;
+ }
+}
+
+select, textarea, .hs-input {
+ box-sizing:border-box;
+ .sectionbg-yellow &,
+ .sectionbg-black & {
+  border:none!important;
+ }
+ .sectionbg-fog &,
+ .sectionbg-cloud &,
+ .sectionbg-mist &,
+ .sectionbg-silver & {
+  /* border:1px solid $silver!important; */
+ }
+}
+.aws-section--wrapper .hs-input {}
+ .hs-form-radio { margin-top:0!important; }
+
+ input[type="text"],
+ input[type="email"],
+ input[type="password"],
+ input[type="telephone"],
+ input[type="tel"] {
+  box-sizing: border-box!important;
+  display:block;
+  position:relative;
+  width:100%;
+  height:$inputheight;
+  min-height:$inputheight;
+  padding:0.5rem 0.75rem 0.25rem 0.75rem;
+  font-size:$inputtext;
+  border:1px solid $silver;
+  line-height: 1;
+  &:active, &:focus {
+   outline:none;
+  }
+  @mixin atTnsm {
+   height:$inputheight-sm;
+   min-height:$inputheight-sm;
+  }
+  @mixin atSmmd {
+   height:$inputheight-smmd;
+   min-height:$inputheight-smmd;
+   padding:0.875rem 0.75rem 0.75rem 0.75rem;
+  }
+  @mixin atMd {
+   height:$inputheight-md;
+   min-height:$inputheight-md;
+   padding:0.875rem 1rem 0.75rem 1rem;
+   font-size:$inputtext-md;
+  }
+ }
+
+ .aws-section--form-contents {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="telephone"],
+  input[type="tel"] {
+   width:100%!important;
+  }
+ }
+ input[type="checkbox"],
+ input[type="radio"] {
+  margin-rightt:0!important;
+  margin-left:0!important;
+  transform:translateY(-0.25ex);
+ }
+ .hs-form-checkbox-display,
+ .hs-form-radio-display {
+  span {
+   display:inline-block!important;
+   position:relative!important;
+   margin-left:0.1875rem!important;
+  }
+ }
+ .hs-form-checkbox,
+ .hs-form-radio {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+ }
+
+
+ fieldset {
+  position: relative;
+  margin:0;
+  padding:0;
+  border:none!important;
+
+ }
+ label, span[id*="_lbl"] {
+  display:block;
+  position:relative;
+  padding-bottom: 0.3125rem;
+  @mixin atMd {
+   padding-bottom: 0.3125rem;
+  }
+ }
+ span[id*="_lbl"] + br { display:none; }
+
+ input[type="submit"] {
+  height:$inputheight;
+  margin-left:$interinputspacing;
+  padding:0 0.5rem 0 0.5rem;
+  border:none;
+  /* overflow-x: hidden; */
+  border-radius:0;
+  font-family:$fontfam3;
+  font-size:1.2rem;
+  font-weight:normal;
+  line-height: 1;
+  text-align: center;
+  min-width:inherit;
+  @mixin atTnsm {
+   min-width:$inputheight-sm;
+   height:$inputheight-sm;
+  }
+  @mixin atSmmd {
+   min-width:$inputheight-smmd;
+   height:$inputheight-smmd;
+  }
+  @mixin atMd {
+   min-width:$inputheight-md;
+   height:$inputheight-md;
+   padding:0.25rem 0.5rem 0 0.5rem;
+  }
+  &:active, &:focus {
+   ie-dummy: expression(this.hideFocus=true);
+   outline:none;
+  }
+  @mixin edge_ie {
+   padding:0.5625rem 0.5rem 0.6875rem 0.5rem;
+
+  }
+ }
+ .form-title:empty {
+  display:none!important;
+ }
+ input[type="file"] {
+  padding:0.75rem;
+  border:1px solid white;
+  background-color: transparent;
+  color:$silver;
+  font-family:$fontfam2!important;
+  /* border-radius:2rem; */
+  font-size:inherit!important;
+  &:active, &:focus {
+   ie-dummy: expression(this.hideFocus=true);
+   outline:none;
+   background-color: rgba(255,255,255,0.3);
+   cursor:pointer;
+  }
+ }
+ .input { margin: 0!important; }
+
+ .form-columns-2 {
+  .hs-form-field {
+   display:block;
+   position: relative;
+   width:100%!important;
+   margin-top:0!important;
+   float:none!important;
+   &:last-child {
+    margin-top:$gridgap!important;
+    @mixin atTn {
+     margin-top:$gridgap-tn!important;
+    }
+    @mixin atSmmd {
+     margin-top:$gridgap-smmd!important;
+    }
+    @mixin atMd {
+     margin-top:$gridgap-md!important;
+    }
+   }
+   @mixin atSm {
+    width:50%!important;
+    float:left!important;
+    &:first-child {
+     padding-right:resolve( $gridgap / 2);
+     @mixin atTn { padding-right:resolve( $gridgap-tn / 2); }
+     @mixin atSmmd { padding-right:resolve( $gridgap-smmd / 2); }
+     @mixin atMd { padding-right:resolve( $gridgap-md / 2); }
+    }
+    &:last-child {
+     margin-top:0!important;
+     padding-left:resolve( $gridgap / 2);
+     @mixin atTn { padding-left:resolve( $gridgap-tn / 2); }
+     @mixin atSmmd { padding-left:resolve( $gridgap-smmd / 2); }
+     @mixin atMd { padding-left:resolve( $gridgap-md / 2); }
+
+    }
+   }
+  }
+ }
+
+ input,
+ input[type="text"],
+ input[type="email"],
+ input[type="password"],
+ input[type="telephone"],
+ input[type="tel"],
+ textarea,
+ select {
+  .sectionbg-yellow + div &,
+  .sectionbg-black + div &,
+  .contents-sectionbg-yellow &,
+  .contents-sectionbg-black &,
+  .contentbg-black-translucent &,
+  .contentbg-yellow-translucent & {
+   border:none!important;
+  }
+  .sectionbg-fog + div &,
+  .sectionbg-cloud + div &,
+  .sectionbg-mist + div &,
+  .sectionbg-silver + div &,
+  .contents-sectionbg-fog &,
+  .contents-sectionbg-cloud &,
+  .contents-sectionbg-mist &,
+  .contents-sectionbg-silver & {
+  }
+  &::placeholder { color:$silver; }
+ }
+
+ input[type="submit"] {
+  .contents-sectionbg-yellow & {
+   border:none!important;
+   background-color: white!important;
+  }
+  .contents-sectionbg-black & {
+   border:none!important;
+   background-color: $primary!important;
+  }
+  .contents-sectionbg-fog &,
+  .contents-sectionbg-cloud &,
+  .contents-sectionbg-mist &,
+  .contents-sectionbg-silver & {
+   border:none!important;
+   background-color: $primary!important;
+  }
+
+ }
+ .hs-form, .aspNetHidden ~ .body-container-wrapper {
+  label, #skillset > span, .aws-dashbaord—aspwd-section--txt {
+   @mixin atMd {
+    font-size:0.88rem;
+   }
+  }
+ }

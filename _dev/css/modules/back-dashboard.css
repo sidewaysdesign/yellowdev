@@ -149,8 +149,8 @@
   }
   &:hover, &:active {
    @mixin uptoSm{
-   opacity:1;
-  }
+    opacity:1;
+   }
    background-color: $vapor;
   }
   display:block;
@@ -219,18 +219,24 @@
 }
 
 .jobalerts-view {
+ @mixin uptoTn {
+  input[type="submit"] {
+   margin-left: 0!important;
+  }
+ }
  #MainContent_btnCreate {
   display:block;
-  position:absolute;
   top:0;
-  top:0.8125rem;
+  position:relative;
   right:0;
   height:$buttonsmallheight-sm;
   margin: 0 0 $gridgap auto;
-  padding:0.25rem 2.375rem 0.125rem 0.75rem;
-  background-image: $alert_bell;
+  padding:0.25rem 0.75rem 0.125rem 0.75rem;
+  margin: 0 0 $gridgap auto;
+  border:1px solid $silver;
+  /* background-image: $alert_bell; */
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-   background-image: $alert_bell_png;
+   /* background-image: $alert_bell_png; */
   }
   border-radius:2rem;
   background-position:100% center;
@@ -238,10 +244,27 @@
   background-size:contain;
   color:$slate;
   font-family:$fontfam3;
-  font-size:$fontsize1;
+  font-size:$fontsize0;
   font-weight:normal!important;
   font-weight:lighter!important;
   line-height: 1;
+  @mixin atSm {
+   float:right;
+   margin: 0 0 $gridgap 0!important;
+  }
+  @mixin atSmmd {
+   font-size:$fontsize1;
+  }
+  @mixin atMd {
+   float:none;
+   padding:0.25rem 1.5rem 0.125rem 1.5rem;
+   margin: 0 0 $gridgap 0!important;
+  }
+  @mixin atLg {
+   margin: 0 0 $gridgap auto!important;
+   /* top:0.8125rem; */
+   /* position:absolute; */
+  }
  }
 }
 
@@ -301,7 +324,7 @@
 .aws-jobalerts-results-summary {
  box-sizing: border-box;
  padding:resolve($gridgap * 1);
- /* border:1px solid $mist; */
+ border:1px solid $mist;
  @mixin atTn { padding:$gridgap-tn;}
  @mixin atSmmd { padding:$gridgap-smmd;}
  @mixin atMd { padding:$gridgap-md; }
@@ -352,7 +375,8 @@
 .aws-jobinfo-applied--results-group_saved,
 .aws-jobinfo-applied--results-group_applied,
 .aws-jobsearch--results-group_saved,
-.aws-jobsearch--results-group_applied {
+.aws-jobsearch--results-group_applied,
+.aws-jobinfo-saved--results-group_saved-inactive {
  box-sizing: border-box;
  display: block;
  position: relative;
@@ -385,7 +409,7 @@
   }
   @mixin atMd {
    a {
-    padding:$gridgap-md $gridgap-md resolve($gridgap-md * 0.5625) $gridgap-md;
+    padding:$gridgap-md $gridgap-md resolve($gridgap-md * 0.75) $gridgap-md;
    }
   }
  }
@@ -593,14 +617,45 @@
     font-size:1.75rem;
     content:'\e828';
    }
-    &:first-child:before { content:'\e829'; }
-    &:nth-child(2):before { content:'\e828'; }
-    &:nth-child(3):before { content:'\e80a'; }
-    &:empty:before {content:none;}
+   &:first-child:before { content:'\e829'; }
+   &:nth-child(2):before { content:'\e828'; }
+   &:nth-child(3):before { content:'\e80a'; }
+   &:empty:before {content:none;}
   }
  }
 }
 .aws-jobsearch--results-summary_li,
 .aws-jobsearch--results-summary-jobcode {
  display:inline;
+}
+
+span[id^='MainContent_JobboardsSummary_lblPostedDate_'] {
+ display:inline;
+}
+
+.aws-jobinfo-saved--results-group_saved-inactive {
+ .aws-jobinfo-saved--results-group_saved-title {
+  background-color: $mist!important;
+  color:$storm!important;
+  &:after {
+   content:'Expired';
+   position:absolute;
+   font-family:$fontfam3;
+   text-transform: uppercase;
+   top:resolve($gridgap * 1);
+   right:resolve($gridgap * 1);
+   @mixin atTn {
+    top:resolve($gridgap-tn * 1);
+    right:resolve($gridgap-tn * 1);
+   }
+   @mixin atSmmd {
+    top:resolve($gridgap-smmd * 1);
+    right:resolve($gridgap-smmd * 1);
+   }
+   @mixin atMd {
+    top:resolve($gridgap-md * 1);
+    right:resolve($gridgap-md * 1);
+   }
+  }
+ }
 }

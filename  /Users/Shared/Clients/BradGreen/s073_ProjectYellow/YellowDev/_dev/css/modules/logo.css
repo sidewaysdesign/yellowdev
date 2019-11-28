@@ -1,0 +1,75 @@
+.aws-logo {
+ height:$navheight;
+ position: relative;
+ @mixin atTnsm {
+  height:$navheight-sm;
+  }
+  @mixin atMd {
+   height:$navheight-md;
+  }
+& > div {
+ display:flex;
+ justify-content: center;
+ flex-direction:row;
+}
+ .widget-type-logo {
+  /* position:fixed; */
+  position:relative;
+  left:0;
+  width:7.25rem;
+  top:0;
+  /* background-color: pink; */
+  @mixin atSmmd {
+   top:0.125rem;
+   width:8.75rem;
+  }
+  @mixin atMd {
+   top:0.1875rem;
+   width:10.75rem;
+   left:auto;
+   margin-left: 0;
+   margin-right: 0;
+   display: flex;
+   justify-content: center;
+   align-items:center;
+  }
+  .hs-image-widget {
+   width:$logosize!important;
+   height:auto;
+   max-width:auto!important;
+   min-width:auto!important;
+   /* top:0.1875rem; */
+   left:-1.25rem;
+   top:-0.0625rem;
+   @mixin atTnsm {
+    left:-0.875rem;
+    width:$logosize-sm!important;
+    /* width:40px!important; */
+   }
+   @mixin atSm {
+    /* top:-0.125rem; */
+    /* left:-1rem; */
+   }
+   @mixin atSmmd {
+    /* top:-0.125rem; */
+    left:-1.75rem;
+   }
+   @mixin atMd {
+    left:-2.0625rem;
+    top:0;
+    width:$logosize-md!important;
+    position: relative;
+   }
+   @mixin atLg {
+    left:-2.0625rem;
+    /* transform:translateX(-1.125rem ); */
+    /* width:$logosize-lg!important; */
+   }
+  }
+ }
+ img {
+ position: relative;
+  display:block;
+  line-height: 1;
+ }
+}

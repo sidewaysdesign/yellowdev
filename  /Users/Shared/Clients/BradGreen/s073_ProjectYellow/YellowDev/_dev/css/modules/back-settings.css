@@ -1,0 +1,46 @@
+.aws-dashbaord--ascontact {
+/**/
+input {
+ transition:all $transtime1 ease-in-out;
+margin-bottom:resolve($gridgap * 1);
+@mixin atTn {margin-bottom:resolve($gridgap-tn * 1);}
+@mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 1);}
+@mixin atMd {margin-bottom:resolve($gridgap-md * 1);}
+}
+.aws-dashbaord—aspwd-section--txt {
+ padding-top:0!important;
+ padding-bottom:0.25rem!important;
+ font-family:$fontfam3;
+}
+
+#MainContent_btnEditContact {
+ margin-left: 0!important;
+}
+margin-bottom:1rem;
+@mixin atMd {
+ margin-bottom: 2rem;
+ }
+ input[value="Save"] {
+  border:1px solid $silver;
+  &:hover, &:active {
+   color:$slate;
+   opacity:0.7;
+  }
+ }
+}
+
+
+
+/* aws-dashbaord—aspwd-section--txt  */
+
+
+/*
+<div id="changecontact" class="aws-dashbaord--ascontact">
+<input name="ctl00$MainContent$txtFirstName" type="text" value="Richard" id="MainContent_txtFirstName">
+<input name="ctl00$MainContent$txtLastName" type="text" value="cote" id="MainContent_txtLastName">
+<input name="ctl00$MainContent$txtEmail" type="text" value="sidewaysdesign@gmail.com" id="MainContent_txtEmail">
+<input name="ctl00$MainContent$txtPhone" type="text" id="MainContent_txtPhone">
+<input type="submit" name="ctl00$MainContent$btnEditContact" value="Edit" id="MainContent_btnEditContact">
+<input type="submit" name="ctl00$MainContent$btnSaveContact" value="Save" id="MainContent_btnSaveContact">
+</div>
+*/

@@ -38,23 +38,28 @@
  }
 }
 
-.aws-jobsearch-Alerts-existing {
+.aws-dashbaord--resume-profile,
+.asw-rb-aws-jobalerts-results-section {
+ background-color: white;
  border:1px solid $mist;
- margin-bottom:resolve($gridgap * 1);
- padding:resolve($gridgap * 1);
+ padding:resolve($gridgap * 1) resolve($gridgap * 1) 0 resolve($gridgap * 1);
+ margin-bottom:resolve($gridgap * 2);
  @mixin atTn {
-  padding: resolve($gridgap-tn * 1);
-  margin-bottom: resolve($gridgap-tn * 1);
+  padding: $gridgap-tn $gridgap-tn 0 $gridgap-tn;
+  margin-bottom: resolve($gridgap-tn * 2);
+ }
+ @mixin atSm {
+  padding: resolve($gridgap-tn * 1.5) resolve($gridgap-tn * 1.5) 0 resolve($gridgap-tn * 1.5);
  }
 
  @mixin atSmmd {
-  padding: resolve($gridgap-smmd * 1);
-  margin-bottom: resolve($gridgap-smmd * 1);
+  padding: $gridgap-smmd $gridgap-smmd 0 $gridgap-smmd;
+  margin-bottom: $gridgap-smmd;
  }
 
  @mixin atMd {
-  padding: resolve($gridgap-md * 1);
-  margin-bottom: resolve($gridgap-md * 1);
+  padding: $gridgap-md $gridgap-md 0 $gridgap-md;
+  margin-bottom: $gridgap-md;
  }
 }
 .aws-jobalerts-results-name {
@@ -86,10 +91,12 @@
 
 .aws-jobalerts-results-fields {
  position:relative;
-
 }
 $rowpadding:0.625rem;
 /* .aws-jobalerts-results-name, */
+.aws-dashbaord--resume-profile-title,
+.aws-dashbaord--resume-profile-details,
+.aws-dashbaord--resume-profile-filename,
 .jobalerts-alert-frequency,
 .jobalerts-create-alerttitle,
 .aws-jobalerts-results-Keyword,
@@ -188,6 +195,7 @@ $rowpadding:0.625rem;
   input[type="submit"] {
    transition:all $transtime0 ease-in-out;
    &:nth-child(n+2) {
+    background-color: white;
     border:1px solid $silver;
     &.hover, &:hover,&:active {
      opacity:0.6;
@@ -204,35 +212,44 @@ $rowpadding:0.625rem;
  }
 }
 
-.aws-jobsearch-selections-choices {
+.jobalerts-create .aws-jobsearch-selections-choices {
  padding-left:0;
  padding-top:0.25rem;
  margin-bottom:0;
  @mixin atTn {margin-bottom:resolve($gridgap-tn * 0.5);}
  @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 1);}
  @mixin atMd {margin-bottom:resolve($gridgap-md * 1);}
-  @mixin atTnsm { padding-left:$alertfieldoffset; }
-input {
- background-color: white!important;
- margin-right:0!important;
-}
-&:empty {
- display:none;
-}
+ @mixin atTnsm {
+  padding-left:$alertfieldoffset;
+  .aws-jobsearch-main-title & {
+   padding-left:0;
+  }
+ }
+ input {
+  background-color: white!important;
+  margin-right:0!important;
+ }
+ &:empty {
+  display:none;
+ }
 }
 .jobalerts-create-alert-fieldgroup-emailtitle {
- @mixin atTnsm { padding-left:$alertfieldoffset; }
+ @mixin atTnsm {
+  padding-left:$alertfieldoffset;
+ }
  @mixin atMd {
   transform:translateY(-0.625rem);
  }
  & + .jobalerts-create-alert-fieldgroup {
   margin-bottom: 0;
-  @mixin atTnsm { left:$alertfieldoffset; }
+  @mixin atTnsm {
+   left:$alertfieldoffset;
+  }
  }
 }
 
-.aws-jobsearch-selections-button {
-  &:after {
+.jobalerts-create .aws-jobsearch-selections-button {
+ &:after {
   /* content:''; */
   /* height:1px;
   background-color: $silver;
@@ -258,6 +275,9 @@ input {
  input {
   padding-left: $alertfieldoffset;
   background-color: white!important;
+ }
+ &:empty {
+  display:none;
  }
 }
 .jobalerts-create {

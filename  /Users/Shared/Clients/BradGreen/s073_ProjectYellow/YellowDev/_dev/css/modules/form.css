@@ -1,0 +1,44 @@
+.aws-section--form {
+ position:relative;
+ display:block;
+}
+.aws-section--contents h3,
+.aws-section--form {
+ padding-left:$gridgap;
+ padding-right:$gridgap;
+ @mixin atTn {
+  padding-left:$gridgap-tn;
+  padding-right:$gridgap-tn;
+ }
+ @mixin atSmmd {
+  padding-left:$gridgap-smmd;
+  padding-right:$gridgap-smmd;
+ }
+ @mixin atMd {
+  padding-left:$gridgap-md;
+  padding-right:$gridgap-md;
+ }
+}
+.aws-section--jobset-unit,
+.aws-section--internaljobs-unit {
+ h3 {
+  padding-left: 0;
+  padding-right: 0;
+  }
+}
+.hs-form-field {
+ & + & {
+  margin-top:$formverticalspacing;
+ }
+}
+/* Hubspot-generated forms */
+.aws-section--contents {
+ fieldset {
+  max-width:inherit!important;
+ }
+}
+.aws-formgroup {
+ &--group-selector {
+  h3 {padding-left:0;}
+ }
+}

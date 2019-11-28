@@ -1,0 +1,283 @@
+.jobalerts-create {
+ position: relative;
+ padding:resolve($gridgap * 1);
+ margin-bottom:resolve($gridgap * 1);
+ @mixin atTn {
+  padding: resolve($gridgap-tn * 1);
+  margin-bottom: resolve($gridgap-tn * 1);
+ }
+ @mixin atSmmd {
+  padding: resolve($gridgap-smmd * 1);
+  margin-bottom: resolve($gridgap-smmd * 1);
+ }
+ @mixin atMd {
+  padding: resolve($gridgap-md * 1);
+  margin-bottom: resolve($gridgap-md * 1);
+ }
+ background-color: $mist;
+ & > label:first-child {
+  font-size:$fontsize3;
+  margin-bottom:resolve($gridgap * 0.5);
+  @mixin atTn {margin-bottom:resolve($gridgap-tn * 0.5);}
+  @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 0.5);}
+  @mixin atMd {margin-bottom:resolve($gridgap-md * 0.5);}
+ }
+ input[type="text"] {
+  margin-bottom:1rem;
+ }
+ &:before {
+  position:relative;
+  display:block;
+  content:'Alert Details';
+  font-size:$fontsize3;
+  font-family: $fontfam2;
+  margin-bottom:resolve($gridgap * 0.75);
+  @mixin atTn {margin-bottom:resolve($gridgap-tn * 0.75);}
+  @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 0.75);}
+  @mixin atMd {margin-bottom:resolve($gridgap-md * 0.75);}
+ }
+}
+
+.aws-dashbaord--resume-profile,
+.asw-rb-aws-jobalerts-results-section {
+ border:1px solid $mist;
+ margin-bottom:resolve($gridgap * 1);
+ padding:resolve($gridgap * 1);
+ @mixin atTn {
+  padding: resolve($gridgap-tn * 1);
+  margin-bottom: resolve($gridgap-tn * 1);
+ }
+
+ @mixin atSmmd {
+  padding: resolve($gridgap-smmd * 1);
+  margin-bottom: resolve($gridgap-smmd * 1);
+ }
+
+ @mixin atMd {
+  padding: resolve($gridgap-md * 1);
+  margin-bottom: resolve($gridgap-md * 1);
+ }
+}
+.aws-jobalerts-results-name {
+ /* hide HTML text */
+ color:transparent;
+ font-size:0;
+ line-height:0;
+}
+.aws-jobalerts-results-name-label {
+ /* job heading */
+ color:$slate;
+ position: relative;
+ display: block;
+ font-family:$fontfam3;
+ font-size:$fontsize2;
+ line-height:1.15;
+ @mixin atSm {
+  font-size:$fontsize3a;
+ }
+ @mixin atMd {
+  padding-right:8rem;
+  margin-top: -0.125rem;
+ }
+ @mixin atLg {
+  font-size:$fontsize4;
+ }
+}
+
+
+.aws-jobalerts-results-fields {
+ position:relative;
+
+}
+$rowpadding:0.625rem;
+/* .aws-jobalerts-results-name, */
+.jobalerts-alert-frequency,
+.jobalerts-create-alerttitle,
+.aws-jobalerts-results-Keyword,
+.aws-jobalerts-results-prov,
+.aws-jobalerts-results-city,
+.aws-jobalerts-results-ss {
+ border-bottom:1px solid $vapor;
+ position:relative;
+ color:$slate;
+ font-size:$fontsize0;
+ margin-top: 0.25rem;
+ padding-bottom: 0.25rem;
+ @mixin atTnsm {
+  font-size:$fontsize1;
+  padding: 0.375rem 0;
+  margin-bottom: 0.375rem;
+ }
+ span {
+  font-size:$fontsize1;
+  box-sizing: border-box;
+  display:block;
+  position:relative;
+  left:0;
+  width:100%;
+  background-color:transparent;
+  font-family:$fontfam3;
+  padding:0.4375rem 0.5rem 0.1875rem 0.5rem;
+  @mixin atTnsm {
+   top:-.0625rem;
+   position:absolute;
+   left:$alertfieldoffset;
+   width:60%;
+   width:calc(100% - $alertfieldoffset);
+   min-height:2.1875rem;
+  }
+  &:empty:after {
+   font-family:$fontfam1;
+   content:'(empty)';
+   opacity:0.5;
+  }
+ }
+
+}
+.jobalerts-alert-frequency {
+ border-bottom:none;
+}
+.jobalerts-create-alerttitle,
+.jobalerts-create-alert-fieldtitle {
+ position:relative;
+ color:$slate;
+ font-size:$fontsize0;
+ margin-top: 0.25rem;
+ padding-bottom: 0.25rem;
+ font-family:$fontfam1;
+ @mixin atTnsm {
+  font-size:$fontsize1;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+ }
+ & + input, & + select {
+  font-size:$fontsize1;
+  box-sizing: border-box;
+  display:block;
+  position:relative;
+  background-color: white!important;
+  border:1px solid $silver!important;
+  left:0;
+  width:100%;
+  background-color:$vapor;
+  font-family:$fontfam3;
+  padding:0.625rem 0.5rem 0.1875rem 0.5rem;
+  @mixin atTnsm {
+   top:-1rem;
+   position:absolute;
+   left:$alertfieldoffset;
+   width:60%;
+   width:calc(100% - $alertfieldoffset);
+   min-height:2.1875rem;
+  }
+  &:empty:after {
+   font-family:$fontfam1;
+   content:'(empty)';
+   opacity:0.5;
+  }
+ }
+}
+
+.jobalerts-create-alerttitle {
+ border-bottom:none;
+ @mixin atSmmd {
+  margin-bottom: 1.625rem;
+ }
+}
+.aws-jobalerts-results-buttons {
+ & > div {
+  input[type="submit"] {
+   transition:all $transtime0 ease-in-out;
+   &:nth-child(n+2) {
+    background-color: white;
+    border:1px solid $silver;
+    &.hover, &:hover,&:active {
+     opacity:0.6;
+     border-color:inherit;
+     color:$charcoal;
+    }
+   }
+  }
+  display:flex;
+  width:100%;
+  position: relative;
+  align-items:stretch;
+  justify-content: flex-start;
+ }
+}
+
+.jobalerts-create .aws-jobsearch-selections-choices {
+ padding-left:0;
+ padding-top:0.25rem;
+ margin-bottom:0;
+ @mixin atTn {margin-bottom:resolve($gridgap-tn * 0.5);}
+ @mixin atSmmd {margin-bottom:resolve($gridgap-smmd * 1);}
+ @mixin atMd {margin-bottom:resolve($gridgap-md * 1);}
+ @mixin atTnsm {
+  padding-left:$alertfieldoffset;
+  .aws-jobsearch-main-title & {
+   padding-left:0;
+  }
+ }
+ input {
+  background-color: white!important;
+  margin-right:0!important;
+ }
+ &:empty {
+  display:none;
+ }
+}
+.jobalerts-create-alert-fieldgroup-emailtitle {
+ @mixin atTnsm {
+  padding-left:$alertfieldoffset;
+ }
+ @mixin atMd {
+  transform:translateY(-0.625rem);
+ }
+ & + .jobalerts-create-alert-fieldgroup {
+  margin-bottom: 0;
+  @mixin atTnsm {
+   left:$alertfieldoffset;
+  }
+ }
+}
+
+.jobalerts-create .aws-jobsearch-selections-button {
+ &:after {
+  /* content:''; */
+  /* height:1px;
+  background-color: $silver;
+  width:100%;
+  display:block;
+  position:absolute;
+  top:-0.5rem; */
+ }
+ padding-top:resolve($gridgap * 1);
+ margin-bottom:resolve($gridgap * 1);
+ @mixin atTn {
+  margin-top:resolve($gridgap-tn * 1);
+  margin-bottom:resolve($gridgap-tn * 1);
+ }
+ @mixin atSmmd {
+  margin-top:resolve($gridgap-smmd * 1);
+  margin-bottom:resolve($gridgap-smmd * 1);
+ }
+ @mixin atMd {
+  margin-top:resolve($gridgap-md * 1);
+  margin-bottom:resolve($gridgap-md * 1);
+ }
+ input {
+  padding-left: $alertfieldoffset;
+  background-color: white!important;
+ }
+ &:empty {
+  display:none;
+ }
+}
+.jobalerts-create {
+ /* &:before { content:none!important; } */
+ .jobalerts-create-alert-fieldgroup:first-child {
+  margin-top: 0!important;
+  &:before {content:none!important;}
+ }
+}

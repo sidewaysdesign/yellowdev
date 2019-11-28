@@ -9,6 +9,9 @@
  },
  "author": "",
  "license": "ISC",
+ "scripts": {
+    "fix-memory-limit": "cross-env LIMIT=2048 increase-memory-limit"
+  },
  "devDependencies": {
   "@babel/core": "7.3.4",
   "@babel/preset-env": "7.3.4",
@@ -55,8 +58,8 @@
   "include-media": "^1.4.9",
   "jquery": "3.3.1",
   "normalize.css": "8.0.1",
-  "parsleyjs": "^2.8.1",
   "postcss-colour-functions": "^1.5.2",
+  "run-scripts": "^0.4.0",
   "slick-carousel": "1.8.1"
  },
  "browserslist": [
