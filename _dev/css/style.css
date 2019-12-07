@@ -87,5 +87,6 @@ Version: 1.3
 @import "modules/banner";
 @import "modules/modal";
 @import "modules/multi-contact";
+@import "modules/form-buttons";
 
 @import "overrides/overrides";
