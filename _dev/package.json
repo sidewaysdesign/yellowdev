@@ -24,7 +24,7 @@
   "browserslist": "^4.5.0",
   "connect": "^3.7.0",
   "fs": "0.0.1-security",
-  "gulp": "^3.9.1",
+  "gulp": "^4.0.2",
   "gulp-deploy-ftp": "^1.0.1",
   "gulp-postcss": "^8.0.0",
   "gulp-sass": "^4.0.2",
